@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們</title>
+    <link rel="stylesheet" href="css.reset.css">
+    <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
+
+    <style>
+
+        nav{
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid yellow;
+            width: 100%;
+            padding: 0 5%;
+            backdrop-filter: blur(5px);
+            box-sizing: border-box;
+            height: 60px;
+        }
+
+        header ul{
+            /* border: 1px solid red; */
+            display: flex;
+            align-items: center;
+        }
+        header ul li{
+            margin-left: 30px;
+        }
+
+        header span{
+            border: 1px solid red;         
+        }
+        header span img{           
+            margin-top: 15px;
+            border: 1px solid blue;
+        }
+        /* header h1 {
+            position: absolute;
+            top: 170px;
+            left: 536px;
+            color: white;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transform: rotate(-9.828deg);
+        }
+        header h2 {
+            position: absolute;
+            top: 288px;
+            left: 615px;
+            color: white;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        } */
+        article{
+            position: relative;
+            background-position: center;
+            background-size: 150%; 
+            background-repeat: no-repeat;
+            background-image: url(/imgs/contact-us-bgi.jpg);
+            width: 1280px;
+            height: 320vh;
+            z-index: -1;
+        }
+        article::before{
+            content: "";
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5), transparent);
+            width: 1280px;
+            height: 300vh;
+            position: absolute;
+            z-index: -1;
+        }
+        .main-content{
+            width: 822px;
+            height: 1441px;
+            z-index: 5;
+            position: absolute;
+            left: 50%;
+            top: 250px;
+            transform: translateX(-50%);
+            /* backdrop-filter: blur(40px); */
+            background-color: #fff;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1{
+            color: white;
+            text-shadow: 0 2px gray;
+            position: absolute;
+            left: 50%;
+            top: 160px;
+            transform: translateX(-50%);
+            z-index: -1;
+            font-size: 120px;
+            text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        article h2{
+            font-size: 22px;
+            margin-top: 30px;
+            width: 404px;
+            height: 54px;
+            border-radius: 10px;
+            background: rgba(31, 71, 136, 0.30);
+            text-align: center;
+            line-height: 54px;
+        }
+        .information, 
+        .contact-form{
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+            width: 80%;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .information div{
+            display: flex;
+            width: 100%;
+            justify-content: start;
+        }
+        .information p{
+            display: inline-block;
+            width: 50%;
+            margin: 20px 0;
+            left: 0;
+            
+        }
+
+        .information div:first-of-type::before{
+            content: "";
+            background-color: #000000;
+            width: 1px;
+            top:110px;
+            left: 49%;
+            height: 40px;
+            position: absolute;
+        }
+
+        .information div, 
+        .contact-form div{
+            margin: 10px;
+            border-bottom: 1px solid black;
+        }
+
+        .contact-form div:first-of-type{
+            margin-top: 30px;
+        }
+        .contact-form div{
+            width: 100%;
+            margin: 14px;
+            border: 1px solid yellow;
+        }
+        .contact-form input{
+            width: 70%;
+            margin: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span><a href=""><img src="/imgs/logo horizontal.svg" alt=""></a> </span>
+            <ul> 
+                <li><a href="">關於書旅</a></li>
+                <li><a href="">加入書旅</a></li>
+                <li><a href="">書站地圖</a></li>
+                <li><a href="">常見問題</a></li>
+                <li><a href="">最新消息</a></li>
+                <li><a href="">會員中心</a></li>
+                <li><a href="">聯絡我們</a></li>
+                <li><a href=""><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
+            </ul>
+        </nav>
+
+
+    </header>
+    <article>
+        <h1>CONTACT</h1>
+        <div class="main-content">
+            <div class="information">
+                <h2>聯絡資訊 INFORMATION</h2>
+                <div>   
+                    <p>電話<br>
+                        03-4251108</p>
+                    <p>信箱<br>
+                        booktrave@gmail.com
+                    </p>
+                </div>  
+                <div>
+                    <p>地址
+                        <br>203桃園市中壢區復興路46號9樓
+                    </p>
+                </div> 
+
+            </div>
+            <form action="" class="contact-form">                 
+                <h2>聯絡表單CONTACT FORM</h2>
+                <div> 
+                    姓名<input type="text">
+                </div>
+                <div> 
+                    性別<input type="radio" name="sex">男性 <input type="radio" name="sex"> 女性
+                </div>
+                <div> 
+                    電話<input type="number">
+                </div>
+                <div> 
+                    <label for="">
+                        信箱<input type="email">
+                    </label>
+                    
+                
+                </div>
+                    主旨 <input type="text">
+                </div>
+                <div> 
+                    內容
+                    <textarea></textarea>
+                </div>
+                <button >確認送出</button>                   
+            </form>
+        </div>
+    </article>
+</body>
+</html>
