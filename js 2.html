@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+
+// 1
+        let orangePrice = 40;
+        let orangeNum = 30;
+        let totle = orangeNum * orangePrice;
+        if(totle >= 500){
+            totle = totle*0.9
+            document.write(`你買了${orangeNum}顆橘子， 一顆是${orangePrice}元，超過五百，打九折，一共是${totle}元<br><br>`)
+        } else {
+            document.write(`你買了${orangeNum}顆橘子， 一顆是${orangePrice}元，沒過五百，所以沒打折，一共是${totle}元<br><br>`) 
+        }
+
+
+// 2
+        let orangePrice2 = 40;
+        let orangeNum2 = 30;
+        let totle2 = orangeNum2 * orangePrice2;
+        if(totle2 >= 1000){
+            totle2 = totle2*0.7
+            document.write(`你買了${orangeNum2}顆橘子， 一顆是${orangePrice2}元，超過一千，所以打七折，一共是${totle2}元<br><br>`)
+        } else if( totle2 >= 500 ) {
+            totle2 = totle2*0.9
+            document.write(`你買了${orangeNum2}顆橘子， 一顆是${orangePrice2}元，超過五百，沒到一千，所以打九折，一共是${totle2}元<br><br>`)  
+        } else {
+            document.write(`你買了${orangeNum2}顆橘子， 一顆是${orangePrice2}元，沒超過一千，所以沒打折，一共是${totle2}元<br><br>`)  
+        }
+
+
+
+
+// 3
+        let orangePrice3 = 40;
+        let orangeNum3 = 50;
+        let totle3 = orangeNum3 * orangePrice3;
+        let caseNum = 1;
+
+        if (caseNum == 1) {
+            if (orangeNum3 < 40) {
+                orangePrice3 = 30;
+                totle3 = orangeNum3 * orangePrice3;
+                document.write(`一共是${totle3}元<br><br>`);
+            } else if (orangeNum3 >= 40) {
+                orangePrice3 = 25;
+                totle3 = orangeNum3 * orangePrice3;
+                document.write(`一共是${totle3}元<br><br>`);
+            } else {
+                orangePrice3 = 20;
+                totle3 = orangeNum3 * orangePrice3;
+                document.write(`一共是${totle3}元<br><br>`);
+            }
+        } else if (caseNum == 2) {
+            if (orangeNum3 < 40) {
+                orangePrice3 = 25;
+                totle3 = orangeNum3 * orangePrice3;
+                document.write(`一共是${totle3}元<br><br>`);
+            } else if (orangeNum3 >= 40) {
+                orangePrice3 = 20;
+                totle3 = orangeNum3 * orangePrice3;
+                document.write(`一共是${totle3}元<br><br>`);
+            } else {
+                orangePrice3 = 15;
+                totle3 = orangeNum3 * orangePrice3;
+                document.write(`一共是${totle3}元<br><br>`);
+            }
+        } else if (caseNum == 3) {
+            if (orangeNum3 < 40) {
+                orangePrice3 = 20;
+                totle3 = orangeNum3 * orangePrice3;
+                document.write(`一共是${totle3}元<br><br>`);
+            } else if (orangeNum3 >= 40) {
+                orangePrice3 = 15;
+                totle3 = orangeNum3 * orangePrice3;
+                document.write(`一共是${totle3}元<br><br>`);
+            } else {
+                orangePrice3 = 10;
+                totle3 = orangeNum3 * orangePrice3;
+                document.write(`一共是${totle3}元<br><br>`);
+            }
+        }
+
+
+labe1
+label
+
+// 4
+        let number = 10;
+        let odd = 0 ;
+        let even = 0 ;
+        let sum = 0;
+        
+        for(let i = 1 ; i <= number; i++ ) {
+            sum += i
+
+            if(i%2 == 0){
+                even += i
+            } else if(i%2 == 1){
+                odd += i
+            }
+
+        }
+        document.write(`輸入的數字是${number} ，全部總和是${sum}偶數總和為${even} 奇數總和為${odd}
+<br><br>`);
+
+// 5
+        let totleMoney = 0;
+        let ball = 0;
+
+        for(let i = 1; i <=10; i++){
+            let ball = Math.floor(Math.random()*10)
+            let money = ball*100
+            document.write(`摸第${i}次，摸到彩球面額是${ball}，獲得${money}元<br>`)
+            totleMoney += money
+
+        }
+
+
+        document.write(`總共獲得${totleMoney}元<br>`)
+     
+
+
+label
+
+    </script>
+</body>
+</html>

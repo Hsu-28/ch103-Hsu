@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book map</title>
+    <link rel="stylesheet" href="css.reset.css">
+    <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
+    <style>
+        
+        nav{
+            position:absolute ;
+            height: 70px;
+            width: 100%;
+            backdrop-filter: blur(5px);
+        }
+        ul{
+            height: 70px;
+            border: 1px solid red;
+        }
+        header ul{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        li{
+            margin-right: 15px; 
+        }
+        header ul :last-child{
+            margin-right: 30px;
+        }
+
+        header img{
+            background-color: rgba(63, 93, 132, 0.50);
+        }
+        header::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 442px;
+            background-color: rgba(63, 93, 132, 0.50);
+        }
+        header h1, header h2{
+            position: absolute;
+            color: #fff;    
+        }
+        header h1{
+            text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            font-family: Shanti;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            left: 50%;
+            top: 145.68px;
+            transform: translateX(-50%) rotate(-9.828deg);
+            position: absolute;
+            color: #fff;      
+        }
+        header h2{
+            text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            font-family: Shanti;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            left: 50%;
+            top: 269px;
+            transform: translateX(-50%); 
+            position: absolute;
+            color: #fff;
+        }
+
+
+        body{
+            background-color: #F4F4EC;
+        }
+
+      .btns{
+        width: 822px;
+        height: 96px;
+        border: 1.5px solid #1F4788;
+        border-radius: 25px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-top: 87px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #fff;
+      }
+      .btns button{
+        width: 130px;
+        height: 46px;
+        border-radius: 15px;
+        border:1.4px solid #64799c;
+        background-color: #fff;
+      }
+      .btns .all:hover,
+      .btns .north:hover,
+      .btns .middle:hover,
+      .btns .south:hover,
+      .btns .east:hover{
+        background-color: #FCDD65;
+        
+      }
+      .btns a{
+        text-decoration: none;
+      }
+      
+      /* .btns button:first-of-type{
+        background-color: #FCDD65;
+        
+      } */
+      .site{
+        display: flex;
+        justify-content: center;
+        width: 822px;
+        height: 300px;
+        inset: 50px 0 0 0;
+        margin: 40px auto;
+        border: 3px solid #1F4788;
+      }
+      .site div:first-of-type{
+        width: 50%;
+        
+      }
+      .site img{
+        width: 100%;
+        border-radius: 50px 0px 0px 50px;
+        height: 300px;
+      }
+      .site div:last-of-type{
+        width: 50%;
+        height: 300px;
+        border-radius: 0px 50px 50px 0px;
+        background: rgba(255, 255, 255, 0.80);
+        border: 1px solid red;
+
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>關於書旅</li>
+                <li>加入書旅</li>
+                <li>書站地圖</li>
+                <li>常見問題</li>
+                <li>最新消息</li>
+                <li>會員中心</li>
+                <li>聯絡我們</li>
+                <li><a href=""><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
+            </ul>
+        </nav>
+        <img src="/imgs/book map.jpg" alt="">
+        <h1>Book point map</h1>
+        <h2>書站地圖</h2>
+    </header>
+    
+    <article class="main-contain">
+        <div class="btns">
+            <a href=""><button class="all">全部 </button></a>  
+            <a href=""><button class="north"><a href="">北部</a></button></a>
+            <a href=""><button class="middle"><a href="">中部</a></button></a>
+            <a href=""><button class="south"><a href="">南部</a</button></a>
+            <a href=""><button class="east"><a href="">東部</a></button></a>                      
+        </div>
+        <div class="book-point" >
+            <div class="site">
+                <div><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
+                <div><h3> 1.we cat cafe</h3>
+                    <p>書籍數: 23</p>
+                    <p>電話: 034251108</p>
+                    <p>營業時間: 全年無休</p>
+                    <p>地址:320桃園市中壢區復興路46號9樓</p>
+                    <p>其他說明:歡迎來嚕貓</p></div>
+            </div>
+            <div class="site">
+                <div><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
+                <div><h3> 1.we cat cafe</h3>
+                    <p>書籍數: 23</p>
+                    <p>電話: 034251108</p>
+                    <p>營業時間: 全年無休</p>
+                    <p>地址:320桃園市中壢區復興路46號9樓</p>
+                    <p>其他說明:歡迎來嚕貓</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer></footer>
+</body>
+</html>

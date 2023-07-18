@@ -13,60 +13,39 @@
             position: fixed;
             display: flex;
             justify-content: space-between;
-            border: 1px solid yellow;
             width: 100%;
             padding: 0 5%;
             backdrop-filter: blur(5px);
             box-sizing: border-box;
             height: 60px;
+            z-index: 10;
         }
 
         header ul{
-            /* border: 1px solid red; */
             display: flex;
             align-items: center;
         }
         header ul li{
             margin-left: 30px;
         }
-
-        header span{
-            border: 1px solid red;         
+        header ul li a{
+            text-decoration: none;
+            color: black;
         }
+
+
         header span img{           
             margin-top: 15px;
-            border: 1px solid blue;
         }
-        /* header h1 {
-            position: absolute;
-            top: 170px;
-            left: 536px;
-            color: white;
-            font-size: 60px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            transform: rotate(-9.828deg);
-        }
-        header h2 {
-            position: absolute;
-            top: 288px;
-            left: 615px;
-            color: white;
-            font-size: 28px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        } */
+
         article{
             position: relative;
-            background-position: center;
-            background-size: 150%; 
+            background-position: 50% 38%;
+            background-size: 135%; 
             background-repeat: no-repeat;
             background-image: url(/imgs/contact-us-bgi.jpg);
             width: 1280px;
             height: 320vh;
-            z-index: -1;
         }
         article::before{
             content: "";
@@ -74,7 +53,7 @@
             width: 1280px;
             height: 300vh;
             position: absolute;
-            z-index: -1;
+            z-index: 2;
         }
         .main-content{
             width: 822px;
@@ -82,7 +61,7 @@
             z-index: 5;
             position: absolute;
             left: 50%;
-            top: 250px;
+            top: 270px;
             transform: translateX(-50%);
             /* backdrop-filter: blur(40px); */
             background-color: #fff;
@@ -92,15 +71,13 @@
             align-items: center;
         }
         h1{
-            color: white;
-            text-shadow: 0 2px gray;
-            position: absolute;
+            color: white;            
+            position: fixed;
             left: 50%;
             top: 160px;
             transform: translateX(-50%);
-            z-index: -1;
-            font-size: 120px;
-            text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            text-shadow: 2px 2px #000000;
+            font-size: 150px;
         }
 
         article h2{
@@ -113,7 +90,7 @@
             text-align: center;
             line-height: 54px;
         }
-        .information, 
+        .information,
         .contact-form{
             display: flex;
             flex-wrap: nowrap;
@@ -130,12 +107,15 @@
             display: flex;
             width: 100%;
             justify-content: start;
+            margin: 10px;
+            border-bottom: 1px solid black;
         }
         .information p{
             display: inline-block;
             width: 50%;
             margin: 20px 0;
             left: 0;
+            line-height: 30px;
             
         }
 
@@ -143,30 +123,103 @@
             content: "";
             background-color: #000000;
             width: 1px;
-            top:110px;
+            top:120px;
             left: 49%;
-            height: 40px;
+            height: 50px;
             position: absolute;
         }
 
-        .information div, 
         .contact-form div{
-            margin: 10px;
+            margin:10px 0;
+            width: 100%;
+            padding: 10px;
             border-bottom: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items:  center;  
+        } 
+        .contact-form div input{
+            border: none;
+            height: 100%;
+            width: 90%;
+            padding: 5px 0;
+            vertical-align: center;
+            align-items: center;
+            display: inline-block;
+            caret-color: #1F4788;
+            font-size: 22px;
+            border: 2px;
+    
         }
 
-        .contact-form div:first-of-type{
-            margin-top: 30px;
+        ::placeholder {
+        font-size: 14px; /* 设置占位符文本的字体大小 */
+        color: #999; /* 设置占位符文本的颜色 */
+    }
+        .contact-form div input:focus{
+            outline: none;
+            caret-color: #1F4788;
+            font-size: 22px;
+      
         }
-        .contact-form div{
+
+
+
+        article .main-content .contact-form .sexdiv {
+            display: flex;
+            justify-content: left;
+        }
+
+        article .contact-form .sexdiv input{
+            width: 20px; 
+            border-color: black;
+        }
+        article .contact-form .sexdiv label{
+            width: 30px;
+            margin-left: 25px;
+            font-size: 14px;
+            padding-top: 2px;  
+        }
+
+        article .contact-form .sexdiv label:first-of-type{
+            margin-left: 35px;
+        }
+
+
+        .contact-form  h2 + div{
+            margin-top: 35px;
+        }
+        article .contact-form .content-div{
+            display: flex;
+            align-items: start;
+            flex-direction: column ;
+            border: none;
+        }
+        
+        article .contact-form .submit-btn{
+            color: white;
+            width: 194px;
+            height: 43px;
+            border-radius: 10px;
+            background: rgba(31, 71, 136, 0.7);
+            font-family: Inter;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border: 1px solid white;
+            margin-top: 20px;
+        }
+        #content-input{
             width: 100%;
-            margin: 14px;
-            border: 1px solid yellow;
+            height: 200px;
+            border: 1px solid gray;
         }
-        .contact-form input{
-            width: 70%;
-            margin: 14px;
+        #content-input:focus{
+            outline-color: gray;
         }
+</style>
+
     </style>
 </head>
 <body>
@@ -206,33 +259,45 @@
                 </div> 
 
             </div>
-            <form action="" class="contact-form">                 
+
+            <form action="#" class="contact-form">                 
                 <h2>聯絡表單CONTACT FORM</h2>
                 <div> 
-                    姓名<input type="text">
+                    <label for="name-input">姓名</label>
+                    <input type="text" placeholder="請輸入您的姓名" id="name-input">
                 </div>
-                <div> 
-                    性別<input type="radio" name="sex">男性 <input type="radio" name="sex"> 女性
-                </div>
-                <div> 
-                    電話<input type="number">
-                </div>
-                <div> 
-                    <label for="">
-                        信箱<input type="email">
-                    </label>
-                    
-                
-                </div>
-                    主旨 <input type="text">
-                </div>
-                <div> 
-                    內容
-                    <textarea></textarea>
-                </div>
-                <button >確認送出</button>                   
+
+                  <div class="sexdiv">
+                    <span>性別</span>
+                    <label for="male-input">男性</label>
+                    <input type="radio" name="sex" id="male-input">
+                    <label for="female-input">女性</label>
+                    <input type="radio" name="sex" id="female-input">
+                  </div>
+
+                  <div>
+                    <label for="phone-input">電話</label>
+                    <input type="phone" id="phone-input" placeholder="請輸入市話或手機號碼">
+                  </div>
+                  
+                  <div>
+                    <label for="email-input">信箱</label>
+                    <input type="email" id="email-input" placeholder="請輸入信箱">
+                  </div>
+                  
+                  <div>
+                    <label for="subject-input">主旨</label>
+                    <input type="text" id="subject-input" placeholder="請輸入主旨">
+                  </div>
+                  
+                  <div class="content-div">
+                    <label for="content-input">內容</label>
+                    <textarea id="content-input"></textarea>
+                  </div>
+                    <button type="submit" class="submit-btn" >確認送出</button>                   
             </form>
         </div>
     </article>
+    
 </body>
 </html>

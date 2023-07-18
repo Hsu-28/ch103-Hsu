@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --hi: 2;
+        }     
+        div{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+        }
+        .item{
+            background-color: gray;
+            width: calc( 100%/ var(--hi) - 10px*2 );
+            height: 200px;
+            margin: 10px;
+        }
+
+        @media screen and (min-width:768px) {  
+             .item{ 
+                ---hi: 3;
+            }
+        }
+
+
+        @media screen and (min-width:960px) {
+            .item{ 
+                --hi: 4;
+            }
+        }
+        @media screen and (min-width:1024px) {  
+             .item{ 
+                ---hi: 5;
+            }
+        }
+           
+
+        
+    </style>
+</head>
+
+<body>
+    
+    <div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
