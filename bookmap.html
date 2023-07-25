@@ -4,34 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book map</title>
-    <link rel="stylesheet" href="css.reset.css">
+    <link rel="stylesheet" href="css/css.reset.css">
+    <link rel="stylesheet" href="css/footer.css">
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
     <style>
-        
+        /* 排版設計、背景、卡片資料、按鈕連結 */
+        footer{
+            margin-top: 30vh;
+        }
         nav{
-            position:absolute ;
-            height: 70px;
-            width: 100%;
-            backdrop-filter: blur(5px);
-        }
-        ul{
-            height: 70px;
-            border: 1px solid red;
-        }
-        header ul{
+            position: fixed;
             display: flex;
-            justify-content: end;
-            align-items: center;
-        }
-        li{
-            margin-right: 15px; 
-        }
-        header ul :last-child{
-            margin-right: 30px;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 5%;
+            backdrop-filter: blur(5px);
+            box-sizing: border-box;
+            height: 60px;
+            z-index: 10;
         }
 
-        header img{
-            background-color: rgba(63, 93, 132, 0.50);
+        header ul{
+            display: flex;
+            align-items: center;
+        }
+        header ul li{
+            margin-left: 30px;
+        }
+        header ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+
+        header span img{           
+            margin-top: 15px;
         }
         header::before{
             content: "";
@@ -74,12 +81,17 @@
 
         body{
             background-color: #F4F4EC;
+            background-image: url(imgs/booksite-img.jpg);
+            background-size:  90%;
+            background-position: center;
+            background-repeat: repeat-y;
+
         }
 
       .btns{
-        width: 822px;
+        width: 70%;
         height: 96px;
-        border: 1.5px solid #1F4788;
+        border: 1.5px solid #b1bed4;
         border-radius: 25px;
         left: 0;
         right: 0;
@@ -94,8 +106,10 @@
         width: 130px;
         height: 46px;
         border-radius: 15px;
-        border:1.4px solid #64799c;
+        border:1.4px solid #566c92;
         background-color: #fff;
+        color: rgb(7, 7, 7);
+        font-size: 18px;
       }
       .btns .all:hover,
       .btns .north:hover,
@@ -107,37 +121,117 @@
       }
       .btns a{
         text-decoration: none;
+        color: rgb(53, 52, 52);
       }
       
-      /* .btns button:first-of-type{
-        background-color: #FCDD65;
-        
-      } */
+
       .site{
         display: flex;
         justify-content: center;
-        width: 822px;
-        height: 300px;
+        width: 80%;
+        height: 250px;
         inset: 50px 0 0 0;
         margin: 40px auto;
-        border: 3px solid #1F4788;
-      }
-      .site div:first-of-type{
-        width: 50%;
+        position: relative;
         
       }
-      .site img{
-        width: 100%;
-        border-radius: 50px 0px 0px 50px;
-        height: 300px;
+      .img-content,
+      .site-info{
+        box-shadow: 1px 1px 2px gray;
       }
-      .site div:last-of-type{
-        width: 50%;
-        height: 300px;
-        border-radius: 0px 50px 50px 0px;
-        background: rgba(255, 255, 255, 0.80);
-        border: 1px solid red;
 
+      .site:hover .site-info{
+        box-shadow: 3px 3px 3px rgb(86, 84, 84);
+      }
+      .site:hover .img-content{
+        box-shadow: 3px 3px 3px rgb(86, 84, 84);
+        /* width: 60%; */
+      }
+
+      .site:hover .img-content{
+        box-shadow: 3px 3px 3px rgb(86, 84, 84);
+        width: 50%;
+        transform: scaleX(1.2);
+        transform-origin: left;
+        transition: width .3s ,
+                    transform .3s ;
+      } 
+
+      .site:hover .img-content img{
+        box-shadow: 3px 3px 3px rgb(86, 84, 84);
+        transform: scale(120%);
+        transition: transform .4s;
+        overflow: hidden;
+      }
+
+
+      .img-content{
+        width: 30%;
+        border-radius: 50px 0px 0px 50px; 
+        overflow: hidden;
+      }
+      .site img{
+        height: 100%;
+        aspect-ratio:1.5 /1.2;
+        border-radius: 50px 0px 0px 50px;
+      }
+
+    .site-info{
+        width: 75%;
+        height: 100%;
+        border-radius: 0px 50px 50px 0px;
+        background: rgb(255, 255, 255);
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        position: relative;
+        
+    }
+      .site-info > div:first-of-type{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        font-size: 16px;
+        line-height: normal;
+      }
+      .site-info > div:first-of-type h3{
+        font-size: 28px;
+        margin-left: 20px;
+      }
+      .site-info > div:first-of-type p{
+        margin-bottom: 15px;
+        margin-left: 20px;
+      }
+
+      .site-info > div:first-of-type + div {
+        margin-top: -10px;
+        margin-left: 20px;
+        color: gray;
+        position: relative;
+      }
+
+      .site-info > div:first-of-type + div::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -20px;
+        height: 1px;
+        width: 80%;
+        background-color: rgb(87, 87, 87);
+      }
+
+      .books{
+        position: absolute;
+        background-color: #FCDD65;
+        left: 90%;
+        top: 0;
+        height: 65%;
+        width: 5%;
+        font-size: 18px;
+        writing-mode: vertical-rl;
+      }
+      .books span{
+        writing-mode: horizontal-tb;
       }
     </style>
 </head>
@@ -168,28 +262,204 @@
             <a href=""><button class="south"><a href="">南部</a</button></a>
             <a href=""><button class="east"><a href="">東部</a></button></a>                      
         </div>
+
+
         <div class="book-point" >
             <div class="site">
-                <div><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
-                <div><h3> 1.we cat cafe</h3>
-                    <p>書籍數: 23</p>
-                    <p>電話: 034251108</p>
-                    <p>營業時間: 全年無休</p>
-                    <p>地址:320桃園市中壢區復興路46號9樓</p>
-                    <p>其他說明:歡迎來嚕貓</p></div>
-            </div>
-            <div class="site">
-                <div><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
-                <div><h3> 1.we cat cafe</h3>
-                    <p>書籍數: 23</p>
-                    <p>電話: 034251108</p>
-                    <p>營業時間: 全年無休</p>
-                    <p>地址:320桃園市中壢區復興路46號9樓</p>
-                    <p>其他說明:歡迎來嚕貓</p>
+                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
+                <div class="site-info">
+                    <div>
+                        <h3>We Cat Cafe</h3>
+                        <p>營業時間: 全年無休</p>
+                        <p>電話: 034251108</p>
+                        <p>地址:320桃園市中壢區復興路46號9樓</p>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明:歡迎來嚕貓</p>
+                    </div>
                 </div>
+                <div class="books"><p>書籍數 <span>23</span> </p> </div>
+            </div>
+
+            <div class="site">
+                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
+                <div class="site-info">
+                    <div>
+                        <h3>We Cat Cafe</h3>
+                        <p>營業時間: 全年無休</p>
+                        <p>電話: 034251108</p>
+                        <p>地址:320桃園市中壢區復興路46號9樓</p>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明:歡迎來嚕貓</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>23</span> </p> </div>
+            </div>
+
+            <div class="site">
+                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
+                <div class="site-info">
+                    <div>
+                        <h3>We Cat Cafe</h3>
+                        <p>營業時間: 全年無休</p>
+                        <p>電話: 034251108</p>
+                        <p>地址:320桃園市中壢區復興路46號9樓</p>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明:歡迎來嚕貓</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>23</span> </p> </div>
+            </div>
+
+            <div class="site">
+                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
+                <div class="site-info">
+                    <div>
+                        <h3>We Cat Cafe</h3>
+                        <p>營業時間: 全年無休</p>
+                        <p>電話: 034251108</p>
+                        <p>地址:320桃園市中壢區復興路46號9樓</p>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明:歡迎來嚕貓</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>23</span> </p> </div>
+            </div>
+
+            <div class="site">
+                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
+                <div class="site-info">
+                    <div>
+                        <h3>We Cat Cafe</h3>
+                        <p>營業時間: 全年無休</p>
+                        <p>電話: 034251108</p>
+                        <p>地址:320桃園市中壢區復興路46號9樓</p>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明:歡迎來嚕貓</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>23</span> </p> </div>
+            </div>
+
+            <div class="site">
+                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
+                <div class="site-info">
+                    <div>
+                        <h3>We Cat Cafe</h3>
+                        <p>營業時間: 全年無休</p>
+                        <p>電話: 034251108</p>
+                        <p>地址:320桃園市中壢區復興路46號9樓</p>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明:歡迎來嚕貓</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>23</span> </p> </div>
+            </div>
+
+            <div class="site">
+                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
+                <div class="site-info">
+                    <div>
+                        <h3>We Cat Cafe</h3>
+                        <p>營業時間: 全年無休</p>
+                        <p>電話: 034251108</p>
+                        <p>地址:320桃園市中壢區復興路46號9樓</p>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明:歡迎來嚕貓</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>23</span> </p> </div>
+            </div>
+
+            <div class="site">
+                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
+                <div class="site-info">
+                    <div>
+                        <h3>We Cat Cafe</h3>
+                        <p>營業時間: 全年無休</p>
+                        <p>電話: 034251108</p>
+                        <p>地址:320桃園市中壢區復興路46號9樓</p>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明:歡迎來嚕貓</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>23</span> </p> </div>
             </div>
         </div>
+
+
     </article>
-    <footer></footer>
+
+
+    <footer>
+        <div class="footer-logo">
+
+            <div class="logo-img">
+                <a href="index.html">
+                    <img src="imgs/logo vertical.svg" alt="">
+                </a>
+            </div>          
+        </div>
+        <div class="main-footer">
+           <div>
+                <ul>
+                    <li> <a href="">關於書旅</a>
+                        <ul>
+                            <li>書旅介紹</li>
+                            <li>團隊成員</li>
+                        </ul>
+                    </li>
+                    <li> <a href="members.html">加入書旅</a>
+                        <ul>
+                            <li>會員登入</li>
+                            <li>會員註冊</li>
+                        </ul>
+                    </li>
+                    <li> <a href="allnews.html">書旅消息</a>
+                        <ul>
+                            <li>書旅小報</li>
+                            <li>媒體報導</li>
+                            <li>全部消息</li>
+                        </ul>
+                    </li>
+                    <li> <a href="faqs.html">常見問題</a> </li>
+                    <li> <a href="bookmap.html">書站地圖</a> </li>
+                    <li> <a href="contactUs.html">聯絡我們</a>
+                        <ul>
+                            <li>聯絡地址</li>
+                            <li>聯絡表單</li>
+                        </ul>
+                    </li>
+                </ul>
+           </div> 
+            <div>
+                <p>
+                    本網站為緯育TibaMe前端工程師專業技術養成班第75期學員專題作品，本平台僅供學習、展示之用。<br>
+                    ©2023 Book travel. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+        <div class="footer-media">
+            <div class="medialink-f medialink"> <a href=""><i class="fa-brands fa-square-facebook"></i></a></div>
+            <div class="medialink-t medialink"> <a href=""><i class="fa-brands fa-square-twitter"></i></a></div>
+            <div class="medialink-l medialink"> <a href=""><i class="fa-brands fa-line"></i></a></div>
+            <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.reset.css">
+    <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
+    <style>
+footer{
+    width: 1280px;
+    height: 185px;
+    display: flex;
+    background-color: #1F4788;
+    color: white;
+}
+.footer-logo{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-footer{
+    width: 70%;
+}
+.footer-media{
+    width: 15%;
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+}
+.medialink-f{
+    color:white;
+    font-size: 30px;
+    grid-column: 2/3;
+                grid-row: 2/3;
+}
+.medialink-f{
+    color:white;
+    font-size: 30px;
+    grid-column: 2/3;
+     grid-row: 2/3;
+}
+.medialink-t{
+    color:white;
+    font-size: 30px;
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.medialink-l{
+    color:white;
+    font-size: 30px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.medialink-g{
+    color:white;
+    font-size: 30px;
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+.medialink{
+    margin: auto;
+}
+/* .medialink a{
+    margin: auto;
+    border: 1px solid red;
+    這邊不懂  不是應該要 設在a 上面嗎
+} */
+
+.medialink a{
+    color: white
+}
+.main-footer{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+.main-footer div{
+    height: 45%;
+}
+.main-footer  ul{
+    display: flex;
+    flex-flow:  row wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 16px;
+}
+.main-footer ul ul{
+    display: flex;
+    flex-flow:  column wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgb(216, 214, 214);
+}
+.main-footer ul ul li{
+    margin: 5px 0;
+}
+.main-footer div:last-child p {
+  margin-top: 15px; /* 适当调整上边距的值 */
+  line-height:20px ;
+  font-size: 14px;
+}
+.main-footer ul a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="footer-logo">
+
+            <div class="logo-img">
+                <a href="">
+                    <img src="imgs/logo vertical.svg" alt="">
+                </a>
+            </div>          
+        </div>
+        <div class="main-footer">
+           <div>
+                <ul>
+                    <li> <a href="">關於書旅</a>
+                        <ul>
+                            <li>書旅介紹</li>
+                            <li>團隊成員</li>
+                        </ul>
+                    </li>
+                    <li> <a href="">加入書旅</a>
+                        <ul>
+                            <li>會員登入</li>
+                            <li>會員註冊</li>
+                        </ul>
+                    </li>
+                    <li> <a href="">書旅消息</a>
+                        <ul>
+                            <li>書旅小報</li>
+                            <li>媒體報導</li>
+                            <li>全部消息</li>
+                        </ul>
+                    </li>
+                    <li> <a href="">常見問題</a> </li>
+                    <li> <a href="">書站地圖</a> </li>
+                    <li> <a href="">聯絡我們</a>
+                        <ul>
+                            <li>聯絡地址</li>
+                            <li>聯絡表單</li>
+                        </ul>
+                    </li>
+                </ul>
+           </div>
+                
+            
+            <div>
+                <p>
+                    圖片僅供參考，人名、資料雷同純屬巧合<br>
+                    本網站為緯育TibaMe前端工程師專業技術養成班第75期學員專題作品，本平台僅供學習、展示之用。<br>
+                    ©2023 Book travel. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+        <div class="footer-media">
+            <div class="medialink-f medialink"> <a href=""><i class="fa-brands fa-square-facebook"></i></a></div>
+            <div class="medialink-t medialink"> <a href=""><i class="fa-brands fa-square-twitter"></i></a></div>
+            <div class="medialink-l medialink"> <a href=""><i class="fa-brands fa-line"></i></a></div>
+            <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.reset.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
+    <style>
+        header{
+            background-image: url(imgs/fqs.jpg);
+            width: 1280px;
+            height: 450px;
+            background-color: rgba(63, 93, 132, 0.50);
+        }
+        
+        nav{
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 5%;
+            backdrop-filter: blur(5px);
+            box-sizing: border-box;
+            height: 60px;
+            z-index: 10;
+        }
+
+        header ul{
+            display: flex;
+            align-items: center;
+        }
+        header ul li{
+            margin-left: 30px;
+        }
+        header ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+
+        header span img{           
+            margin-top: 15px;
+        }
+        header h1 {
+            position: absolute;
+            top: 170px;
+            left: 536px;
+            color: white;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transform: rotate(-9.828deg);
+        }
+        header h2 {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        body{
+            background-color: #F4F4EC;
+        }
+        .qs{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 70%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: 100px;
+
+        }
+        .question label{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 26px;
+            width: 100%;
+            border-top: 1px solid gray;
+            height: 100px;
+            align-items: center;
+        }
+        .question-content{
+            display: none;
+        } 
+        #q1:checked ~ .q1-content,
+        #q1:checked ~ .question1,
+        #q2:checked ~ .q2-content,
+        #q2:checked ~ .question2,
+        #q3:checked ~ .q3-content,
+        #q3:checked ~ .question3,
+        #q4:checked ~ .q4-content,
+        #q4:checked ~ .question4,
+        #q5:checked ~ .q5-content,
+        #q5:checked ~ .question5,
+        #q6:checked ~ .q6-content,
+        #q6:checked ~ .question6,
+        #q7:checked ~ .question7,
+        #q7:checked ~ .q7-content{
+            display: block;
+            background-color: white;
+        }
+        
+        input{
+            display: none;
+        }
+        .question-content div{
+            width: 80%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+        #q1:checked ~ .question div,
+        #q2:checked ~ .question div,
+        #q3:checked ~ .question div,
+        #q4:checked ~ .question div,
+        #q5:checked ~ .question div,
+        #q6:checked ~ .question div,
+        #q7:checked ~ .question div
+        {
+            padding:0 10%;
+        }
+        /* #q1:checked ~ .question label{
+            padding:0 10%;
+        } 為什麼不行*/
+
+        .question img{
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span><a href=""><img src="imgs/logo horizontal.svg" alt=""></a> </span>
+            <ul> 
+                <li><a href="">關於書旅</a></li>
+                <li><a href="">加入書旅</a></li>
+                <li><a href="">書站地圖</a></li>
+                <li><a href="">常見問題</a></li>
+                <li><a href="">最新消息</a></li>
+                <li><a href="">會員中心</a></li>
+                <li><a href="">聯絡我們</a></li>
+                <li><a href=""><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
+            </ul>
+        </nav>
+        <div>
+            <h1 class="title"><strong>F</strong> &  <strong>Q</strong>s</h1>
+            <h2>常見問題</h2>
+        </div>
+    </header>
+
+    
+    <article>
+        <div class="qs">
+            <input type="checkbox" id="q1">
+            <div class="question question1">
+                <label for="q1" >
+                <div>Q1: &nbsp; 這邊是第一題</div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>              
+            </div>
+            <div class="q1-content question-content">
+                <div >
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
+                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
+                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+                </div>
+            </div>
+
+            <input type="checkbox" id="q2">
+            <div class="question question2">
+                <label for="q2" >
+                <div>Q2: &nbsp; 這邊是第二個問題</div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>
+            </div>
+            <div class="q2-content question-content">
+                <div >
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
+                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
+                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+                </div>
+            </div>
+
+            <input type="checkbox" id="q3">
+            <div class="question question3">
+                <label for="q3" >
+                <div>Q3: &nbsp; 這邊是第三個問題</div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>
+            </div>
+            <div class="q3-content question-content">
+                <div >
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
+                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
+                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+                </div>
+            </div>
+
+            <input type="checkbox" id="q4">
+            <div class="question question4">
+                <label for="q4" >
+                <div>Q4: &nbsp; 這邊是第四個問題</div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>
+            </div>
+            <div class="q4-content question-content">
+                <div >
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
+                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
+                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+                </div>
+            </div>
+
+            <input type="checkbox" id="q5">
+            <div class="question question5">
+                <label for="q5" >
+                <div>Q5: &nbsp; 這邊是第四個問題</div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>
+            </div>
+            <div class="q5-content question-content">
+                <div >
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
+                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
+                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+                </div>
+            </div>
+
+            <input type="checkbox" id="q6">
+            <div class="question question6">
+                <label for="q6" >
+                <div>Q6: &nbsp; 這邊是第四個問題</div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>
+            </div>
+            <div class="q6-content question-content">
+                <div >
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
+                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
+                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+                </div>
+            </div>
+
+            <input type="checkbox" id="q7">
+            <div class="question question7">
+                <label for="q7" >
+                <div>Q7: &nbsp; 這邊是第四個問題</div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>
+            </div>
+            <div class="q7-content question-content">
+                <div >
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
+                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
+                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+                </div>
+            </div>
+         
+           
+    </article>
+    <footer>
+        <div class="footer-logo">
+
+            <div class="logo-img">
+                <a href="index.html">
+                    <img src="imgs/logo vertical.svg" alt="">
+                </a>
+            </div>          
+        </div>
+        <div class="main-footer">
+           <div>
+                <ul>
+                    <li> <a href="">關於書旅</a>
+                        <ul>
+                            <li>書旅介紹</li>
+                            <li>團隊成員</li>
+                        </ul>
+                    </li>
+                    <li> <a href="members.html">加入書旅</a>
+                        <ul>
+                            <li>會員登入</li>
+                            <li>會員註冊</li>
+                        </ul>
+                    </li>
+                    <li> <a href="allnews.html">書旅消息</a>
+                        <ul>
+                            <li>書旅小報</li>
+                            <li>媒體報導</li>
+                            <li>全部消息</li>
+                        </ul>
+                    </li>
+                    <li> <a href="faqs.html">常見問題</a> </li>
+                    <li> <a href="bookmap.html">書站地圖</a> </li>
+                    <li> <a href="contactUs.html">聯絡我們</a>
+                        <ul>
+                            <li>聯絡地址</li>
+                            <li>聯絡表單</li>
+                        </ul>
+                    </li>
+                </ul>
+           </div> 
+            <div>
+                <p>
+                    本網站為緯育TibaMe前端工程師專業技術養成班第75期學員專題作品，本平台僅供學習、展示之用。<br>
+                    ©2023 Book travel. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+        <div class="footer-media">
+            <div class="medialink-f medialink"> <a href=""><i class="fa-brands fa-square-facebook"></i></a></div>
+            <div class="medialink-t medialink"> <a href=""><i class="fa-brands fa-square-twitter"></i></a></div>
+            <div class="medialink-l medialink"> <a href=""><i class="fa-brands fa-line"></i></a></div>
+            <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
+        </div>
+    </footer>
+</body>
+</html>

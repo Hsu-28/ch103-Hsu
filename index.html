@@ -4,47 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>書旅首頁</title>
-
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css.reset.css">
+    <link rel="stylesheet" href="css/css.reset.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+  
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
 
 <style>
-    /* html{
-        width: 1280px;
+    /* 字型、hav、css ，*/
+    /* 左上logo、nav定位排版、banner效果、底色、卡牌翻頁、?部書站link、跑馬燈、遮罩跑出來、下方js
     } */
-header{
-    height: 60px;
 
-}
-nav{
-    height: 100%;
-    background-color: #fff;
-}
+    
+    
 
-header ul{
-    height: 100%;
-    text-align: right;
-    display: flex;
-    justify-content: right;
-    font-size: 0px;  
-}
+    
+  @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 
-header ul li{
-    height: 23px;
-    width: 65px;
-    text-align: middle;
-    font-size: 16px;
-    margin:auto 18px;
+
+    footer{
+        margin-top: 800px;
+        font-family: 'Kosugi Maru', sans-serif;
+    }
+    body {
+  font-family: 'Kosugi Maru', sans-serif;
 }
-header ul li a{
-    color: #000;
-    font-family: Noto Sans TC;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 524;
-    line-height: normal;
-    text-decoration: none;
-}
+    nav{
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 5%;
+            backdrop-filter: blur(5px);
+            box-sizing: border-box;
+            height: 60px;
+            z-index: 10;
+        }
+
+        header ul{
+            display: flex;
+            align-items: center;
+        }
+        header ul li{
+            margin-left: 30px;
+        }
+        header ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+
+        header span img{           
+            margin-top: 15px;
+        }
 .banner{
     position: relative;
 }
@@ -53,6 +66,7 @@ header ul li a{
     right: 0px;
     border-radius: 0 0 0 100px;
 }
+
 .banner div{
     display: block;
     height: 516px;
@@ -62,7 +76,6 @@ header ul li a{
     left: 24px;
     top: 190px;
     color: #000;
-    font-family: Sintony;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -85,7 +98,6 @@ header ul li a{
     left: 256px;
     top: 248px;
     color: #000;
-    font-family: Sintony;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -108,7 +120,6 @@ header ul li a{
     left: 280px;
     top: 336px;
     color: #000;
-    font-family: Sintony;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -158,7 +169,6 @@ header ul li a{
     text-align: left;
     padding: 0px 30px;
     color: #000;
-    font-family: Noto Sans TC;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -241,7 +251,6 @@ header ul li a{
 }
 .steps h2{
     color: #1F4788;
-    font-family: Noto Sans TC;
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
@@ -282,7 +291,6 @@ header ul li a{
 }
 .site-content :nth-child(1){
     color: #084A8E;
-    font-family: Noto Sans TC;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -293,7 +301,6 @@ header ul li a{
 
 .site-content :nth-child(2){
     color: #000;
-    font-family: Noto Sans TC;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -301,7 +308,6 @@ header ul li a{
 }
 .site-content :nth-child(3){
     color: #084A8E;
-    font-family: Noto Sans TC;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -311,7 +317,6 @@ header ul li a{
 }
 .site-location h2{
     color: #000;
-    font-family: Noto Sans TC;
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
@@ -320,7 +325,6 @@ header ul li a{
 
 .site-location h3{
     color: #000;
-    font-family: Sintony;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -328,7 +332,6 @@ header ul li a{
 }
 .site-location ul h3{
     color: #000;
-    font-family: Sintony;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -364,7 +367,6 @@ header ul li a{
 
 .news div:first-of-type{
     color: #FCDD65;
-    font-family: Inter;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -450,12 +452,11 @@ header ul li a{
 /* .draw-straws {
     background-color: #F4F4EC;
     z-index: -5;
-    會蓋掉位元素 為什麼
+    會蓋掉偽元素 為什麼
 } */
 .draw-straws h2{
     margin-top: 100px;
     color: #FFF;
-    font-family: Noto Sans TC;
     font-size: 52px;
     font-style: normal;
     font-weight: 400;
@@ -534,6 +535,58 @@ header ul li a{
   }
 
 
+.swing:hover img {
+  animation: custom-swing 1.5s;
+  -webkit-animation: custom-swing 3s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+@keyframes custom-swing {
+   8% { transform: rotate3d(0, 0, 1, 20deg); }
+  16% { transform: rotate3d(0, 0, 1, -15deg); }
+  24% { transform: rotate3d(0, 0, 1, 10deg); }
+  32% { transform: rotate3d(0, 0, 1, -5deg); }
+  40% { transform: rotate3d(0, 0, 1, 0deg); }
+}
+.swing p:last-of-type{
+    line-height: 25px;
+}
+
+.north:hover {
+    color: #FCDC65;
+}
+
+.north:hover h3{
+    color:#FCDC65
+}
+
+.middle:hover {
+    color: #FCDC65;
+}
+
+.middle:hover h3{
+    color:#FCDC65
+}
+
+.south:hover {
+    color: #FCDC65;
+}
+
+.south:hover h3{
+    color:#FCDC65
+}
+
+.east:hover:hover {
+    color: #FCDC65;
+}
+
+.east:hover h3{
+    color:#FCDC65
+}
+
+
+
+
 
    
 
@@ -546,16 +599,17 @@ header ul li a{
 <body>
     <header>
         <nav>
-            <ul>
+            <span><a href=""><img src="imgs/logo horizontal.svg" alt=""></a> </span>
+            <ul> 
                 <li><a href="">關於書旅</a></li>
                 <li><a href="">加入書旅</a></li>
                 <li><a href="">書站地圖</a></li>
-                <li> <a href="">常見問題</a></li>
+                <li><a href="">常見問題</a></li>
                 <li><a href="">最新消息</a></li>
-                <li> <a href="">會員中心</a></li>
+                <li><a href="">會員中心</a></li>
                 <li><a href="">聯絡我們</a></li>
                 <li><a href=""><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
-            </ul>                  
+            </ul>
         </nav>
     </header>
     <article class="banner">
@@ -581,23 +635,23 @@ header ul li a{
         
     </article>
     <article class="steps">
-        <div class="join-member">
+        <div class="join-member swing">
             <p>01</p>
-            <div><img src="imgs/order1.svg" alt="join member"></div>
+            <div ><img src="imgs/order1.svg" alt="join member"></div>
             <h2>加入書旅會員</h2>
             <p>不論是熱愛分享書籍、現場閱讀、又或是想借書回府，愛閱讀的你都能在這裡找到一群志同道合的朋友。
             </p>
         </div>
-        <div class="search-site">
+        <div class="search-site swing">
             <p>02</p>
             <div><img src="imgs/order2.svg" alt="search book site"></div>
             <h2>探索鄰近借書點</h2>
             <p>
                 探索生活中的借書點，這些寶藏地點藏滿了各種書籍，等待著你前去發掘。</p>
         </div>
-        <div class="engoy-read">
+        <div class="engoy-read swing">
             <p>03</p>
-            <div> <img src="/imgs/order3.svg" alt="enjoy reading"></div>
+            <div > <img src="imgs/order3.svg" alt="enjoy reading"></div>
             <h2>享受閱讀樂趣</h2>
             <p>
                 確定借書點後，趁著閒暇時光，走出家門，與書籍共度美好時光。讓借書成為你的生活習慣，開啟每天的冒險之旅！</p>
@@ -632,7 +686,7 @@ header ul li a{
                     <span><i class="fa-solid fa-chevron-right"></i></span>
                 </li>
                 <li>
-                    <div class="north">
+                    <div class="middle">
                         <h3><strong>中</strong>部書站</h3>
                         <span>翻開書籍，沏一壺好茶，茶香縈繞中，香茗共書韻入喉</span>
                     </div>               
@@ -646,7 +700,7 @@ header ul li a{
                     <span><i class="fa-solid fa-chevron-right"></i></span>
                 </li>
                 <li>
-                    <div class="north">
+                    <div class="east">
                         <h3><strong>東</strong>部書站</h3>
                         <span>以好書佐山川美景，海濱書屋，閱讀與海風同行</span>
                     </div>               
@@ -723,8 +777,61 @@ header ul li a{
         <img class="books" src="imgs/book7.png" alt="">
         <img  src="imgs/again.svg" alt="">
     </article>
+
     <footer>
-        
+        <div class="footer-logo">
+
+            <div class="logo-img">
+                <a href="index.html">
+                    <img src="imgs/logo vertical.svg" alt="">
+                </a>
+            </div>          
+        </div>
+        <div class="main-footer">
+           <div>
+                <ul>
+                    <li> <a href="">關於書旅</a>
+                        <ul>
+                            <li>書旅介紹</li>
+                            <li>團隊成員</li>
+                        </ul>
+                    </li>
+                    <li> <a href="members.html">加入書旅</a>
+                        <ul>
+                            <li>會員登入</li>
+                            <li>會員註冊</li>
+                        </ul>
+                    </li>
+                    <li> <a href="allnews.html">書旅消息</a>
+                        <ul>
+                            <li>書旅小報</li>
+                            <li>媒體報導</li>
+                            <li>全部消息</li>
+                        </ul>
+                    </li>
+                    <li> <a href="faqs.html">常見問題</a> </li>
+                    <li> <a href="bookmap.html">書站地圖</a> </li>
+                    <li> <a href="contactUs.html">聯絡我們</a>
+                        <ul>
+                            <li>聯絡地址</li>
+                            <li>聯絡表單</li>
+                        </ul>
+                    </li>
+                </ul>
+           </div> 
+            <div>
+                <p>
+                    本網站為緯育TibaMe前端工程師專業技術養成班第75期學員專題作品，本平台僅供學習、展示之用。<br>
+                    ©2023 Book travel. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+        <div class="footer-media">
+            <div class="medialink-f medialink"> <a href=""><i class="fa-brands fa-square-facebook"></i></a></div>
+            <div class="medialink-t medialink"> <a href=""><i class="fa-brands fa-square-twitter"></i></a></div>
+            <div class="medialink-l medialink"> <a href=""><i class="fa-brands fa-line"></i></a></div>
+            <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
+        </div>
     </footer>
 </body>
 </html>

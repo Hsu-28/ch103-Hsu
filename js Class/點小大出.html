@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0060)http://10.1.4.138/CHD103_JS/BOM/showLarge/showLargeImage.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>點小圖秀大圖</title>
+<style>
+	div img{
+		width: 55px;
+		height: 56px;
+	}
+</style>
+</head>
+
+<body cz-shortcut-listen="true">
+<div>
+<img id="large" src="./點小圖秀大圖_files/M1_002.gif" style="width:202px;height:185px;">
+</div>
+<div>
+	<img src="./點小圖秀大圖_files/M1_001.gif">
+	<img src="./點小圖秀大圖_files/M1_002.gif">
+	<img src="./點小圖秀大圖_files/M1_003.gif">
+	<img src="./點小圖秀大圖_files/M1_004.gif">
+	<img src="./點小圖秀大圖_files/M1_005.gif">
+</div>
+<script>
+function showLarge(e){
+  document.getElementById("large").src = e.target.src
+}
+
+function init(){
+	let small = document.querySelectorAll("img");
+	for(let i = 1; i<=small.length; i++) {
+		small[i].onclick = showLarge;
+	}
+	
+}
+
+window.addEventListener("load", init, false);
+</script>
+
+
+</body></html>

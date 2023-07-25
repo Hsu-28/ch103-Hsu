@@ -1,0 +1,118 @@
+footer{
+    width: 1280px;
+    height: 185px;
+    display: flex;
+    background-color: #1F4788;
+    color: white;
+}
+.footer-logo{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-footer{
+    width: 70%;
+}
+.footer-media{
+    width: 15%;
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+}
+.medialink-f{
+    color:white;
+    font-size: 30px;
+    grid-column: 2/3;
+                grid-row: 2/3;
+}
+.medialink-f{
+    color:white;
+    font-size: 30px;
+    grid-column: 2/3;
+     grid-row: 2/3;
+}
+.medialink-t{
+    color:white;
+    font-size: 30px;
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.medialink-l{
+    color:white;
+    font-size: 30px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.medialink-g{
+    color:white;
+    font-size: 30px;
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+.medialink{
+    margin: auto;
+}
+/* .medialink a{
+    margin: auto;
+    border: 1px solid red;
+    這邊不懂  不是應該要 設在a 上面嗎
+} */
+
+.medialink a{
+    color: white
+}
+.main-footer{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+.main-footer div{
+    height: 45%;
+}
+
+.main-footer > div:first-of-type{
+    width: 90%;
+}
+
+.main-footer  ul{
+    display: flex;
+    flex-flow:  row wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 16px;
+}
+.main-footer ul ul{
+    display: flex;
+    flex-flow:  column wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgb(216, 214, 214);
+}
+.main-footer ul ul li{
+    margin: 5px 0;
+}
+.main-footer div:last-child p {
+  margin-top: 40px; 
+  line-height:15px ;
+  font-size: 12px;
+  position: relative;
+}
+
+.main-footer div:last-child p::before{
+    content: "";
+    background: linear-gradient(to left, transparent, #FCDC65, transparent);;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    height: 1px;
+    width: 100%;
+}
+
+.main-footer ul a {
+    text-decoration: none;
+    color: white;
+}

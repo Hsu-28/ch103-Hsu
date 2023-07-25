@@ -3,72 +3,443 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>book-travel</title>
-    <link rel="stylesheet" href="">
+    <title>好書查詢</title>
+    <link rel="stylesheet" href="css/css.reset.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
+    <style>
+            header{
+            background-image: url(imgs/booksearchbanner.jpg);
+            width: 1280px;
+            height: 450px;
+            background-color: rgba(63, 93, 132, 0.50);
+            }
+            
+            nav{
+                position: fixed;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0 5%;
+                backdrop-filter: blur(5px);
+                box-sizing: border-box;
+                height: 60px;
+                z-index: 10;
+            }
 
+            header ul{
+                display: flex;
+                align-items: center;
+            }
+            header ul li{
+                margin-left: 30px;
+            }
+            header ul li a{
+                text-decoration: none;
+                color: black;
+            }
+
+
+            header span img{           
+                margin-top: 15px;
+            }
+            header h1 {
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                
+                color: white;
+                font-size: 60px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                transform: rotate(-9.828deg)
+                           translateX(-50%);
+            }
+            header h2 {
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+            .search-bar{
+                margin-right: 5%;
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                height: 100px;
+            }
+            .search-bar div{
+                margin: 10px;
+            }
+            .content{
+                width: 1200px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns:  21.9% 21.9% 21.9% 21.9%;
+                grid-template-rows:  412px 412px 412px ;
+                grid-gap:  50px 4.1%;
+                /* background-color: pink; */
+            }
+
+            .cards{
+                box-shadow: 1px 1px 2px rgb(182, 181, 181);
+                position: relative;
+                cursor: pointer;
+            }
+            .cards:hover {
+                box-shadow: 1px 1px 4px rgb(116, 114, 114);
+            }
+            .cards:hover img{
+                transform: scale(120%);
+                transition: transform 0.3s;
+            }
+            .card1{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                
+            }
+            .card2{
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+            .card3{
+                grid-column: 3/4;
+                grid-row: 1/2;
+
+            }
+            .card4{
+                grid-column: 4/5;
+                grid-row: 1/2;
+
+            }
+            .card5{
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+
+            /* .cards:nth-child(2n)::after{
+                content:"";
+                width: 100%;
+                height: 50%;
+                position: absolute;
+                left: 100%;
+                top: 0;
+                background-color: yellow;
+            } */
+            .cards:nth-child(2n+1)::after{
+                content:"";
+                width: 100%;
+                height: 40%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: #FCDD65;
+                z-index: -1;
+            }
+            .cards:nth-child(2n)::after{
+                content:"";
+                width: 100%;
+                height: 40%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: #5EB4E7;
+                z-index: -1;
+            }
+            .card-img{
+                width: 174px;
+                height: 174px;
+                margin: 50px auto;
+                z-index: 3;
+            }
+            .card-img img{
+                height: 100%;
+                
+            }
+            .card-title{
+                width: 100%;
+                margin: 10px auto;
+                display: inline-block;
+                padding:  0 auto;
+                text-align: center;
+            }
+            .card-author{
+                width: 100%;
+                margin: 10px auto;
+                display: inline-block;
+                padding:  0 auto;
+                text-align: center;
+            }
+            .card-information{
+                margin: 0 10px;
+            }
+            .content-page{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                font-size: 20px;
+                margin: 40px 0;
+                color: black;
+            }
+
+            .content-page a{
+                text-decoration: none;
+                color: rgb(80, 78, 78);
+                margin: 0 10px;
+                display: block;
+                width: 30px;
+                text-align: center;
+            }
+            
+    </style>
     
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <img src="/images/logo.svg" alt="">
-            </div>
-            <div class="title-list">
-                <div>關於書旅</div>
-                <div>加入書旅</div>
-                <div>書站地圖</div>
-                <div>常見問題</div>
-                <div>最新消息</div>
-                <div>會員中心</div>
-                <div>聯絡我們</div>
-                <div><i class="fa-sharp fa-regular fa-magnifying-glass"></i></div>
-            </div>   
+            <span><a href=""><img src="imgs/logo horizontal.svg" alt=""></a> </span>
+            <ul> 
+                <li><a href="">關於書旅</a></li>
+                <li><a href="">加入書旅</a></li>
+                <li><a href="">書站地圖</a></li>
+                <li><a href="">常見問題</a></li>
+                <li><a href="">最新消息</a></li>
+                <li><a href="">會員中心</a></li>
+                <li><a href="">聯絡我們</a></li>
+                <li><a href=""><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
+            </ul>
         </nav>
-
-        <div class="index">
+        <div>
+            <h1 class="title">Book search</h1>
+            <h2>好書搜尋</h2>
         </div>
     </header>
-    <main>
-        <div class="title-block">
-            <div class="title-en">Books</div>
-            <div class="title-ch">書籍查詢</div>
-            <div class="title-content">最近有看到什麼好書嗎?
-                <br>
-                希望你能找到自己心目中的好書!</div>
-        </div>
-        <div class="search-bar">
-            <div class="book-name"></div>
-            <div class="publisher"></div>
-            <div class="author"></div>
-            <div class="search-icon"></div>
-        </div>
-        <section class="content">
-            <div class="card">
-                <div class="card-img">
-                    <img src="/images/bookimg1.webp" alt="here is logo">
-                </div>
-                <div class="card-title">書名: 金魚都能懂的CSS必學屬性網頁設計必備寶典</div>
-                <div class="card-p">作者:Amos</div>
-                <div class="card-p">出版社:博碩</div>
-                <div class="card-p">ISBN:9789864348824</div>
-                <div class="card-p">書籍位置：桃園市</div>
-                <div class="card-p">書站點:we cat cafe</div>
-            </div>
-        </section>
-        <div class="content-page">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-        </div>
-        
-    </main>
-    <footer>
+    <div class="search-bar">
+        <div>書名</div>
+        <div>地點</div>
+        <div>作者</div>
+        <div><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i> _____________</div>
+    </div>
 
+    <section class="content">
+        <div class="card1 cards">
+            <div class="card-img">
+                <img src="imgs/book1.png" alt="here is logo">
+            </div>
+            <div class="card-title">金魚都能懂的CSS必學屬性<br>網頁設計必備寶典</div>
+            <div class="card-author">Amos</div>
+            <div class="card-information">
+                <div>書籍位置：桃園市</div>
+                <div>書站點:we cat cafe</div>
+            </div>
+            
+        </div>
+
+        <div class="card2 cards">
+            <div class="card-img">
+                <img src="imgs/book4.png" alt="here is logo">
+            </div>
+            <div class="card-title">給和平一個機會</div>
+            <div class="card-author">約翰·列儂</div>
+            <div class="card-information">
+                <div>書籍位置：台北市</div>
+                <div>書站點: TAIPEI 101</div>
+            </div>
+        </div>
+
+        <div class="card3 cards">
+            <div class="card-img">
+                <img src="imgs/book5.png" alt="here is logo">
+            </div>
+            <div class="card-title">哈利波特 <br>被詛咒的孩子 </div>
+            <div class="card-author">JK 羅琳</div>
+            <div class="card-information">
+                <div>書籍位置：桃園市</div>
+                <div>書站點:we cat cafe</div>
+            </div>
+        </div>
+
+        <div class="card4 cards">
+            <div class="card-img">
+                <img src="imgs/book6.png" alt="here is logo" height="250" width="">
+                <!-- 尺寸沒作用 因為被複寫?-->
+            </div>
+            <div class="card-title">無法抗拒的法式鐵盒餅乾</div>
+            <div class="card-author">黛博拉．杜邦達蓋</div>
+            <div class="card-information">
+                <div>書籍位置：桃園市</div>
+                <div>書站點:we cat cafe</div>
+            </div>
+        </div>
+        <div class="card5 cards">
+            <div class="card-img">
+                <img src="imgs/book1.png" alt="here is logo">
+            </div>
+            <div class="card-title">金魚都能懂的CSS必學屬性<br>網頁設計必備寶典</div>
+            <div class="card-author">Amos</div>
+            <div class="card-information">
+                <div>書籍位置：桃園市</div>
+                <div>書站點:we cat cafe</div>
+            </div>
+        </div>
+        <div class="card6 cards">
+            <div class="card-img">
+                <img src="imgs/book4.png" alt="here is logo">
+            </div>
+            <div class="card-title">給和平一個機會</div>
+            <div class="card-author">約翰·列儂</div>
+            <div class="card-information">
+                <div>書籍位置：台北市</div>
+                <div>書站點: TAIPEI 101</div>
+            </div>
+        </div>
+
+        <div class="card7 cards">
+            <div class="card-img">
+                <img src="imgs/book5.png" alt="here is logo">
+            </div>
+            <div class="card-title">哈利波特 <br>被詛咒的孩子 </div>
+            <div class="card-author">JK 羅琳</div>
+            <div class="card-information">
+                <div>書籍位置：桃園市</div>
+                <div>書站點:we cat cafe</div>
+            </div>
+        </div>
+
+        <div class="card8 cards">
+            <div class="card-img">
+                <img src="imgs/book6.png" alt="here is logo" height="250" width="">
+                <!-- 尺寸沒作用 因為被複寫?-->
+            </div>
+            <div class="card-title">無法抗拒的法式鐵盒餅乾</div>
+            <div class="card-author">黛博拉．杜邦達蓋</div>
+            <div class="card-information">
+                <div>書籍位置：桃園市</div>
+                <div>書站點:we cat cafe</div>
+            </div>
+        </div>
+        <div class="card9 cards">
+            <div class="card-img">
+                <img src="imgs/book1.png" alt="here is logo">
+            </div>
+            <div class="card-title">金魚都能懂的CSS必學屬性<br>網頁設計必備寶典</div>
+            <div class="card-author">Amos</div>
+            <div class="card-information">
+                <div>書籍位置：桃園市</div>
+                <div>書站點:we cat cafe</div>
+            </div>
+            
+        </div>
+
+        <div class="card10 cards">
+            <div class="card-img">
+                <img src="imgs/book4.png" alt="here is logo">
+            </div>
+            <div class="card-title">給和平一個機會</div>
+            <div class="card-author">約翰·列儂</div>
+            <div class="card-information">
+                <div>書籍位置：台北市</div>
+                <div>書站點: TAIPEI 101</div>
+            </div>
+        </div>
+
+        <div class="card11 cards">
+            <div class="card-img">
+                <img src="imgs/book5.png" alt="here is logo">
+            </div>
+            <div class="card-title">哈利波特 <br>被詛咒的孩子 </div>
+            <div class="card-author">JK 羅琳</div>
+            <div class="card-information">
+                <div>書籍位置：桃園市</div>
+                <div>書站點:we cat cafe</div>
+            </div>
+        </div>
+
+        <div class="card12 cards">
+            <div class="card-img">
+                <img src="imgs/book6.png" alt="here is logo" height="250" width="">
+                <!-- 尺寸沒作用 因為被複寫?-->
+            </div>
+            <div class="card-title">無法抗拒的法式鐵盒餅乾</div>
+            <div class="card-author">黛博拉．杜邦達蓋</div>
+            <div class="card-information">
+                <div>書籍位置：桃園市</div>
+                <div>書站點:we cat cafe</div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="content-page">
+        <a href=""><div> 1 </div></a>
+        <a href=""><div> 2</div></a>
+        <a href=""><div> 3</div></a>
+    </div>
+
+    <footer>
+        <div class="footer-logo">
+
+            <div class="logo-img">
+                <a href="index.html">
+                    <img src="imgs/logo vertical.svg" alt="">
+                </a>
+            </div>          
+        </div>
+        <div class="main-footer">
+           <div>
+                <ul>
+                    <li> <a href="">關於書旅</a>
+                        <ul>
+                            <li>書旅介紹</li>
+                            <li>團隊成員</li>
+                        </ul>
+                    </li>
+                    <li> <a href="members.html">加入書旅</a>
+                        <ul>
+                            <li>會員登入</li>
+                            <li>會員註冊</li>
+                        </ul>
+                    </li>
+                    <li> <a href="allnews.html">書旅消息</a>
+                        <ul>
+                            <li>書旅小報</li>
+                            <li>媒體報導</li>
+                            <li>全部消息</li>
+                        </ul>
+                    </li>
+                    <li> <a href="faqs.html">常見問題</a> </li>
+                    <li> <a href="bookmap.html">書站地圖</a> </li>
+                    <li> <a href="contactUs.html">聯絡我們</a>
+                        <ul>
+                            <li>聯絡地址</li>
+                            <li>聯絡表單</li>
+                        </ul>
+                    </li>
+                </ul>
+           </div> 
+            <div>
+                <p>
+                    本網站為緯育TibaMe前端工程師專業技術養成班第75期學員專題作品，本平台僅供學習、展示之用。<br>
+                    ©2023 Book travel. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+        <div class="footer-media">
+            <div class="medialink-f medialink"> <a href=""><i class="fa-brands fa-square-facebook"></i></a></div>
+            <div class="medialink-t medialink"> <a href=""><i class="fa-brands fa-square-twitter"></i></a></div>
+            <div class="medialink-l medialink"> <a href=""><i class="fa-brands fa-line"></i></a></div>
+            <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
+        </div>
     </footer>
     
 
-    <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
+   
 </body>
 </html>
 

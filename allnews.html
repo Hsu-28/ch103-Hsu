@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新消息</title>
+    <link rel="stylesheet" href="css/css.reset.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
+    <style>
+        /* footer{
+            margin-top: -50px;
+        } */
+        article{
+            margin-top: 50px;
+        }
+        header{
+            width: 1280px;
+            height: 450px;
+            overflow: hidden;
+        }
+        nav{
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 5%;
+            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, .4);
+            box-sizing: border-box;
+            height: 60px;
+            z-index: 10;
+        }
+        header ul{
+            display: flex;
+            align-items: center;
+        }
+        header ul li{
+            margin-left: 30px;
+        }
+        header ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        header{
+            background-image: url(imgs/allnewsbanner.jpg);
+            box-shadow: 0px 2px 4px black ;
+        }
+
+        header span img{           
+            margin-top: 15px;
+        }
+        header h1 {
+            position: absolute;
+            top: 170px;
+            left: 500px;
+            color: white;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transform: rotate(-9.828deg);
+        }
+        header h2 {
+            position: absolute;
+            top: 268px;
+            left: 615px;
+            color: white;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        article{
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+
+
+        .container{
+            display: flex;
+            font-size: 0;
+            justify-content: space-evenly;
+            
+        }
+        .container-g{
+            background-image: url(imgs/allnewsg.jpg);
+            background-size: 110%;
+            background-position: center;
+        }
+        .content.container-m{
+            background-image: url(imgs/Group\ 212.jpg);
+            background-size: 110%;
+            background-position: 50% 10%;
+        }
+        .container-a{
+            background-image: url(imgs/allnewsa.jpg);
+        }
+
+        .content{
+            width: 33.33333%;
+            height: 550px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-size: 100%;
+            position: relative;
+        }
+        .content >.title{
+            width: 70%;
+            height: 100px;
+            margin-left: 0;
+            margin-right: 0;
+            margin: 0 auto;
+            margin-top: 85%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+            font-size: 40px;
+        }
+        .content >.title h3{
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .content >.title h3:last-of-type{
+            font-size: 32px;
+        }
+
+
+
+           /* hover特效 */
+        .hover{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            top: 100%;
+            left: -100%;
+            background-color: rgba(255, 255, 255, .8);
+            /* transition: transform .4s,
+                        opacity .4s .2s;
+                        加這行打架 */
+            opacity: 0;
+            cursor: pointer;
+            }
+        .container-g:hover .hover,
+        .container-m:hover .hover,
+        .container-a:hover .hover {
+            top: 100%;
+            left: 0%;
+            transform: translateY(-100%);
+            opacity: 1;
+            transition: transform .4s,
+                        opacity .4s .2s;
+        }
+
+        .hovercontent{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .hover-title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hover-title h3{
+            font-size: 40px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .hover-title h3:last-of-type{
+            font-size: 32px;
+        }
+        .hovercontent p{
+            text-align: center;
+            margin-top: 30px;
+        }
+        .container-g:hover .title,
+        .container-m:hover .title,
+        .container-a:hover .title{
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+ .hello{
+    width: 700px;
+    height: 300px;
+    border: 1px solid red;
+ }
+
+
+ 
+ /* 第三層 */
+ .a-content,
+ .m-content,
+ .g-content{
+    display: flex;
+    background-image: url(imgs/allnewsbgi.jpg);
+    background-color: rgba(225,225, 225, 1);
+    position: absolute;
+    width: 1280px;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    height: 550px;
+    overflow: auto; 
+}
+.a-content> :first-child,
+.m-content> :first-child,
+.g-content> :first-child {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+.a-content h3,
+.m-content h3,
+.g-content h3{
+    writing-mode: vertical-lr;
+    font-size: 40px;
+    background-color: #FCDC65;
+    vertical-align: center;
+    width: 90px;
+    padding-left: 0;
+    padding-right: 0;
+    padding: auto;
+}
+.cards{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.cards::-webkit-scrollbar {
+  width: 6px;
+  background-color: black;
+}/* 這邊沒效果 */
+.cards::-webkit-scrollbar-thumb {
+  background-color: #FCDC65; /* 這邊沒效果 */
+}
+
+.report{
+    width: 35%;
+    margin: 30px 0;
+    background-color: white;
+    box-shadow: 1px 1px 3px gray ;
+}
+.report-content{
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.report-content div{
+    width: 100%;
+    overflow: hidden;
+}
+.report img{
+    width: 100%;   
+    vertical-align: top;   
+}
+
+
+.report h4{
+    font-size: 16px;
+    margin-top: 10px;
+} 
+.report p{
+    font-size: 14px;
+    margin: 15px 0;
+} 
+
+.report:hover {
+    color: white;
+    background-color: #1F4788; 
+}
+.report:hover img{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    
+}
+
+.g-content{
+    transform: translateX(100%);
+    opacity: 0;
+    transition:  transform .4s;
+}
+.m-content{
+    transform: translateX(66.666%);
+    opacity: 0;
+    transition:  transform .4s;
+}
+.a-content{
+    transform: translateX(33.333%);
+    opacity: 0;
+    transition:  transform .4s;
+}
+
+/* .container-g:hover .g-content{
+    display: flex; 
+    opacity: 1;
+   
+    transform: translateX(-100%); 
+} */
+
+.g-content.show{
+    transform: translateX(0);
+    opacity: 1;
+}
+.m-content.show{
+    transform: translateX(-33.333%);
+    opacity: 1;
+}
+.a-content.show{
+    transform: translateX(-66.666%);
+    opacity: 1;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <span>
+                <img src="imgs/logo horizontal.svg" alt="">
+            </span>
+            <ul>
+                <li><a href="">關於書旅</a></li>
+                <li><a href="">加入書旅</a></li>
+                <li><a href="">書站地圖</a></li>
+                <li><a href="">常見問題</a></li>
+                <li><a href="">最新消息</a></li>
+                <li><a href="">會員中心</a></li>
+                <li><a href="">聯絡我們</a></li>
+                <li><a><i class="fa-solid fa-magnifying-glass fa-lg" style="color: black;"></i></a></li>
+            </ul>
+        </nav>
+        <h1>Lastest news</h1>
+        <h2>最新消息</h2>
+    </header>
+    <article>
+        <section class="container">
+            <section class="container-g content">               
+                <div class="title">
+                    <h3>書旅小報</h3>
+                    <h3>Gazette</h3>
+                </div>
+                
+                <div class="hover">
+                    <div class="hovercontent">
+                        <div class="hover-title">
+                            <h3>書旅小報</h3>
+                            <h3>Gazette</h3>
+                        </div>                   
+                        <p>歡迎來到書旅小報，這裡將為您展示書旅世界的新動向！從最新借書點、導覽推薦，到用戶分享故事，不僅掌握最新消息，更豐富您的閱讀旅程！</p>
+                    </div>                        
+                </div>
+
+                <section class="g-content">
+                    <div><h3>書旅小報</h3></div>
+            
+                    <div class="cards"  id="style-3">  
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news2.avif" alt="">
+                                </div>
+                                <img src="" alt="">
+                                <h4>深度報導｜探索「閱讀城市」計畫！<br>
+                                    迎接全新閱讀旅程，與我們一同探索書旅的無限魅力。</h4>
+                                <p>5 Jul 2023、書旅小報</p>
+                            </div>        
+                        </div> 
+                        
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news1.avif" alt="">
+                                </div>
+                                <img src="" alt="">
+                                <h4>書旅社區的夏日閱讀派對！<br>
+                                    加入我們，一同享受閱讀的熱情與樂趣。</h4>
+                                <p>15 Aug 2023、書旅小報</p>
+                            </div>        
+                        </div>
+
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news4.avif" alt="">
+                                </div>
+                                <h4>跨界合作｜藝術與閱讀的奇幻交流<br>
+                                    藝術家帶來驚喜，閱讀與藝術的結合。</h4>
+                                <p>25 Oct 2023、書旅小報</p>
+                            </div>        
+                        </div>
+                        
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news6.jpg" alt="">
+                                </div>
+                                
+                                <h4>獨家報導<br>
+                                    書旅小報躍升為閱讀推廣新焦點</h4>
+                                <p>15 June 2023、書旅小報</p>
+                            </div>        
+                        </div>                      
+
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news3.avif" alt="">
+                                </div>
+                                <img src="" alt="">
+                                <h4>名家座談｜開啟閱讀的無限視野！<br>
+                                    與知名作家分享閱讀心得，擴展您的視野。</h4>
+                                <p>10 Sep 2023、書旅小報</p>
+                            </div>        
+                        </div>             
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news5.jpg" alt="">
+                                </div>
+
+                                <h4>教育推廣｜探索閱讀新趨勢<br>
+                                    書旅與教育攜手，啟發閱讀的未來。</h4>
+                                <p>18 Nov 2023、書旅小報</p>
+                            </div>        
+                        </div>
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/allnewp1.jpg" alt="">
+                                </div>
+                                
+                                <h4>書旅小報創刊啟事！<br>
+                                    迎接全新閱讀旅程，與我們一同探索書旅的無限魅力。</h4>
+                                <p>21 May 2023、媒體報導</p>
+                            </div>        
+                        </div>
+                    </div>
+               
+                </section>              
+                
+            </section>
+            <section class="container-m content">
+                <div class="title">
+                    <h3>媒體報導</h3>
+                    <h3>Media Coverage</h3>
+                </div>
+                
+                <div class="hover">
+                    <div class="hovercontent">
+                        <div class="hover-title">
+                            <h3>媒體報導</h3>
+                            <h3>Media coverage</h3>
+                        </div>                   
+                        <p>一同探索書旅在媒體上的風采！瞭解知名媒體的深度報導、獨家專訪，
+                            揭示書旅在文化藝術、教育領域的影響。透過多元視角，
+                            揭示書旅在閱讀社群中的重要角色與價值，為您打開閱讀新視野！</p>
+                    </div>                        
+                </div>
+                
+                <section class="m-content">
+                    <div><h3>媒體報導</h3></div>
+            
+                    <div class="cards" id="style-3">  
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news5.avif" alt="">
+                                </div>
+                                
+                                <h4>媒體採訪專題<br>
+                                    書旅小報受矚目，深度報導書旅文化</h4>
+                                <p>21 May 2023、媒體報導</p>
+                            </div>        
+                        </div> 
+
+                        
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news8.avif" alt="">
+                                </div>
+                                
+                                <h4>書旅小報TED分享！<br>
+                                    閱讀旅程，悅讀啟程，探索閱讀的奇妙世界</h4>
+                                <p>21 May 2023、媒體報導</p>
+                            </div>        
+                        </div>
+
+
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news7.avif" alt="">
+                                </div>
+                                
+                                <h4>書旅影響力揭密! <br>
+                                    迎接全新閱讀旅程，與我們一同探索書旅的無限魅力。</h4>
+                                <p>28 October 2023、媒體報導</p>
+                            </div>        
+                        </div>
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news9.avif" alt="">
+                                </div>
+                                
+                                <h4>《ABC News》專訪：書旅故事感動人心！<br>
+                                    跟隨我們一同展開書旅探索之旅，感受閱讀的魅力。</h4>
+                                <p>15 April 2023、媒體報導</p>
+    
+                            </div>        
+                        </div>
+                        
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news10.avif" alt="">
+                                </div>
+                                
+                                <h4>深度專訪<br>
+                                    書旅小報揭露借書點魅力，媒體贊譽不斷</h4>
+                                <p> 28 October 2023、媒體報導</p>
+                         </div>        
+                        </div>
+                    </div>               
+                </section>
+
+            </section>
+            <section class="container-a content">
+                <div class="title">
+                    <h3>所有消息</h3>
+                    <h3>All News</h3>
+                </div>
+                
+                <div class="hover">
+                    <div class="hovercontent">
+                        <div class="hover-title">
+                            <h3>所有消息</h3>
+                            <h3>All News</h3>
+                        </div>                   
+                        <p>深入探索書旅的多元內容，包含借書點、書旅活動、閱讀推廣等，報導書旅對社區、教育、文化的積極影響。透過特寫故事、名家訪談、書評推介，感受閱讀的魅力與書旅的無限可能！</p>
+                    </div>                        
+                </div>
+                
+                <section class="a-content">
+                    <div><h3>所有消息</h3></div>
+            
+                    <div class="cards" id="style-3">  
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news5.avif" alt="">
+                                </div>
+                                
+                                <h4>媒體採訪專題<br>
+                                    書旅小報受矚目，深度報導書旅文化</h4>
+                                <p>21 May 2023、媒體報導</p>
+                            </div>        
+                        </div> 
+
+                        
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news8.avif" alt="">
+                                </div>
+                                
+                                <h4>書旅小報TED分享！<br>
+                                    閱讀旅程，悅讀啟程，探索閱讀的奇妙世界</h4>
+                                <p>21 May 2023、媒體報導</p>
+                            </div>        
+                        </div>
+
+
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news7.avif" alt="">
+                                </div>
+                                
+                                <h4>書旅影響力揭密! <br>
+                                    迎接全新閱讀旅程，與我們一同探索書旅的無限魅力。</h4>
+                                <p>28 October 2023、媒體報導</p>
+                            </div>        
+                        </div>
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news9.avif" alt="">
+                                </div>
+                                
+                                <h4>《ABC News》專訪：書旅故事感動人心！<br>
+                                    跟隨我們一同展開書旅探索之旅，感受閱讀的魅力。</h4>
+                                <p>15 April 2023、媒體報導</p>
+    
+                            </div>        
+                        </div>
+                        
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news10.avif" alt="">
+                                </div>
+                                
+                                <h4>深度專訪<br>
+                                    書旅小報揭露借書點魅力，媒體贊譽不斷</h4>
+                                <p> 28 October 2023、媒體報導</p>
+                            </div>        
+                        </div>
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news2.avif" alt="">
+                                </div>
+                                <img src="" alt="">
+                                <h4>深度報導｜探索「閱讀城市」計畫！<br>
+                                    迎接全新閱讀旅程，與我們一同探索書旅的無限魅力。</h4>
+                                <p>5 Jul 2023、書旅小報</p>
+                            </div>        
+                        </div> 
+                        
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news1.avif" alt="">
+                                </div>
+                                <img src="" alt="">
+                                <h4>書旅社區的夏日閱讀派對！<br>
+                                    加入我們，一同享受閱讀的熱情與樂趣。</h4>
+                                <p>15 Aug 2023、書旅小報</p>
+                            </div>        
+                        </div>
+
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news4.avif" alt="">
+                                </div>
+                                <h4>跨界合作｜藝術與閱讀的奇幻交流<br>
+                                    藝術家帶來驚喜，閱讀與藝術的結合。</h4>
+                                <p>25 Oct 2023、書旅小報</p>
+                            </div>        
+                        </div>
+                        
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news6.jpg" alt="">
+                                </div>
+                                
+                                <h4>獨家報導<br>
+                                    書旅小報躍升為閱讀推廣新焦點</h4>
+                                <p>15 June 2023、書旅小報</p>
+                            </div>        
+                        </div>                      
+
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news3.avif" alt="">
+                                </div>
+                                <img src="" alt="">
+                                <h4>名家座談｜開啟閱讀的無限視野！<br>
+                                    與知名作家分享閱讀心得，擴展您的視野。</h4>
+                                <p>10 Sep 2023、書旅小報</p>
+                            </div>        
+                        </div>             
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/news5.jpg" alt="">
+                                </div>
+
+                                <h4>教育推廣｜探索閱讀新趨勢<br>
+                                    書旅與教育攜手，啟發閱讀的未來。</h4>
+                                <p>18 Nov 2023、書旅小報</p>
+                            </div>        
+                        </div>
+                        <div class="report">
+                            <div class="report-content">
+                                <div>
+                                    <img src="imgs/allnewp1.jpg" alt="">
+                                </div>
+                                
+                                <h4>書旅小報創刊啟事！<br>
+                                    迎接全新閱讀旅程，與我們一同探索書旅的無限魅力。</h4>
+                                <p>21 May 2023、媒體報導</p>
+                            </div>        
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+               
+                </section>
+            </section>
+
+        </section>
+
+
+        
+        
+    </article>
+    
+    <footer>
+        <div class="footer-logo">
+
+            <div class="logo-img">
+                <a href="index.html">
+                    <img src="imgs/logo vertical.svg" alt="">
+                </a>
+            </div>          
+        </div>
+        <div class="main-footer">
+           <div>
+                <ul>
+                    <li> <a href="">關於書旅</a>
+                        <ul>
+                            <li>書旅介紹</li>
+                            <li>團隊成員</li>
+                        </ul>
+                    </li>
+                    <li> <a href="members.html">加入書旅</a>
+                        <ul>
+                            <li>會員登入</li>
+                            <li>會員註冊</li>
+                        </ul>
+                    </li>
+                    <li> <a href="allnews.html">書旅消息</a>
+                        <ul>
+                            <li>書旅小報</li>
+                            <li>媒體報導</li>
+                            <li>全部消息</li>
+                        </ul>
+                    </li>
+                    <li> <a href="faqs.html">常見問題</a> </li>
+                    <li> <a href="bookmap.html">書站地圖</a> </li>
+                    <li> <a href="contactUs.html">聯絡我們</a>
+                        <ul>
+                            <li>聯絡地址</li>
+                            <li>聯絡表單</li>
+                        </ul>
+                    </li>
+                </ul>
+           </div> 
+            <div>
+                <p>
+                    本網站為緯育TibaMe前端工程師專業技術養成班第75期學員專題作品，本平台僅供學習、展示之用。<br>
+                    ©2023 Book travel. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+        <div class="footer-media">
+            <div class="medialink-f medialink"> <a href=""><i class="fa-brands fa-square-facebook"></i></a></div>
+            <div class="medialink-t medialink"> <a href=""><i class="fa-brands fa-square-twitter"></i></a></div>
+            <div class="medialink-l medialink"> <a href=""><i class="fa-brands fa-line"></i></a></div>
+            <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.container-g').addEventListener('click', function() {
+        const gContent = this.querySelector('.g-content');
+        gContent.classList.toggle('show');
+        });
+        document.querySelector('.container-m').addEventListener('click', function() {
+        const mContent = this.querySelector('.m-content');
+        mContent.classList.toggle('show');
+        });
+        document.querySelector('.container-a').addEventListener('click', function() {
+        const aContent = this.querySelector('.a-content');
+        aContent.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
