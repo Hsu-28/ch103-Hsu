@@ -6,10 +6,13 @@
     <title>聯絡我們</title>
     <link rel="stylesheet" href="css/css.reset.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/font.css">
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
 
     <style>
-/* contace遮罩跟縮放 Textarea度定寬高，search變長*/
+/* Textarea度定寬高，search變長*/
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@600&display=swap');
         nav{
             position: fixed;
             display: flex;
@@ -75,10 +78,12 @@
             color: white;            
             position: fixed;
             left: 50%;
-            top: 160px;
+            top: 100px;
             transform: translateX(-50%);
-            text-shadow: 2px 2px 1px gray;
-            font-size: 150px;
+            text-shadow: 2px 2px 4px gray;
+            font-size: 220px;
+            font-family:  'Poppins', sans-serif;;
+            
         }
 
         article h2{
@@ -151,12 +156,17 @@
             caret-color: #1F4788;
             font-size: 22px;
             border: 2px;
-    
         }
+        .contact-form div input:focus {
+  outline: none;
+  caret-color: #1F4788;
+  font-size: 22px;
+  border-color: blue; /* 當input被focus時，父層div下面的框線顏色改為藍色 */
+}
 
         ::placeholder {
-        font-size: 14px; /* 设置占位符文本的字体大小 */
-        color: #999; /* 设置占位符文本的颜色 */
+        font-size: 14px; 
+        color: #999; 
     }
         .contact-form div input:focus{
             outline: none;
@@ -218,12 +228,17 @@
             border: 1px solid gray;
         }
         #content-input:focus{
-            outline-color: gray;
+            outline-color:rgba(31, 71, 136, 0.7) ;
         }
-        /* article:hover h1:first-of-type{
-            opacity: 0;
-            transition: all 1s;
-        } */
+        article .contact-form .submit-btn:hover {
+            border:2px solid rgba(31, 71, 136, 0.7) ;
+            color: rgba(31, 71, 136, 0.7); 
+            background-color: white;
+            }
+        .submit-btn{
+            cursor: pointer;
+        }
+
 </style>
 
     </style>
@@ -231,16 +246,15 @@
 <body>
     <header>
         <nav>
-            <span><a href=""><img src="/imgs/logo horizontal.svg" alt=""></a> </span>
-            <ul> 
-                <li><a href="">關於書旅</a></li>
-                <li><a href="">加入書旅</a></li>
-                <li><a href="">書站地圖</a></li>
-                <li><a href="">常見問題</a></li>
-                <li><a href="">最新消息</a></li>
-                <li><a href="">會員中心</a></li>
-                <li><a href="">聯絡我們</a></li>
-                <li><a href=""><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
+            <span><a href="index.html"><img src="imgs/logo horizontal.svg" alt=""></a> </span>
+            <ul>
+                <li><a href="">關於書旅</a></li> 
+                <li><a href="allnews.html">最新消息</a></li>
+                <li><a href="bookmap.html">書站地圖</a></li>
+                <li><a href="faqs.html">常見問題</a></li>
+                <li><a href="members.html">加入書旅</a></li>
+                <li><a href="contactUs.html">聯絡我們</a></li>
+                <li><a href="booksearch.html"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
             </ul>
         </nav>
 
@@ -268,12 +282,12 @@
 
             <form action="#" class="contact-form">                 
                 <h2>聯絡表單CONTACT FORM</h2>
-                <div> 
+                <div  class="changeColor"> 
                     <label for="name-input">姓名</label>
                     <input type="text" placeholder="請輸入您的姓名" id="name-input">
                 </div>
 
-                  <div class="sexdiv">
+                  <div class="sexdiv changeColor">
                     <span>性別</span>
                     <label for="male-input">男性</label>
                     <input type="radio" name="sex" id="male-input">
@@ -281,22 +295,22 @@
                     <input type="radio" name="sex" id="female-input">
                   </div>
 
-                  <div>
+                  <div class="changeColor">
                     <label for="phone-input">電話</label>
                     <input type="phone" id="phone-input" placeholder="請輸入市話或手機號碼">
                   </div>
                   
-                  <div>
+                  <div class="changeColor">
                     <label for="email-input">信箱</label>
                     <input type="email" id="email-input" placeholder="請輸入信箱">
                   </div>
                   
-                  <div>
+                  <div class="changeColor">
                     <label for="subject-input">主旨</label>
                     <input type="text" id="subject-input" placeholder="請輸入主旨">
                   </div>
                   
-                  <div class="content-div">
+                  <div class="content-div changeColor">
                     <label for="content-input">內容</label>
                     <textarea id="content-input"></textarea>
                   </div>
@@ -343,6 +357,9 @@
                             <li>聯絡表單</li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="booksearch.html">好書搜尋</a>
+                   </li>
                 </ul>
            </div> 
             <div>
@@ -364,19 +381,28 @@
         const h1Element = document.querySelector("h1");
 
         window.addEventListener("scroll", function() {
-            // 获取页面滚动的距离
             const scrollY = window.scrollY;
+            const fontSize = 220 - scrollY / 5;
+            const opacity = 1 - scrollY / 85;
 
-            // 计算 h3 元素的新的字体大小和透明度
-            const fontSize = 150 - scrollY / 10;
-            const opacity = 1 - scrollY / 40;
-
-
-
-            // 更新 h3 元素的样式
             h1Element.style.fontSize = `${fontSize}px`;
             h1Element.style.opacity = opacity;
         });
+
+    const divsWithChangeColor = document.querySelectorAll(".changeColor");
+    divsWithChangeColor.forEach((div) => {
+        const inputElement = div.querySelector("input");
+        inputElement.addEventListener("focus", function () {
+            div.style.borderBottomColor = "rgba(31, 71, 136, 0.7"
+            div.style.borderBottomWidth = "2px";
+        });
+        inputElement.addEventListener("blur", function () {
+            div.style.borderBottomWidth = "1px";
+            div.style.borderBottomColor = "black"
+        });
+    });
+
+
     </script>
 </body>
 </html>

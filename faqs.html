@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/css.reset.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/font.css">
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
     <style>
         header{
@@ -72,55 +74,43 @@
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
-            width: 70%;
+            width: 60%;
             left: 0;
             right: 0;
             margin: auto;
-            margin-top: 100px;
+            margin-top: 80px;
 
         }
         .question label{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            font-size: 26px;
+            font-size: 24px;
             width: 100%;
             border-top: 1px solid gray;
             height: 100px;
             align-items: center;
+            
         }
+
+
         .question-content{
             display: none;
-        } 
-        #q1:checked ~ .q1-content,
-        #q1:checked ~ .question1,
-        #q2:checked ~ .q2-content,
-        #q2:checked ~ .question2,
-        #q3:checked ~ .q3-content,
-        #q3:checked ~ .question3,
-        #q4:checked ~ .q4-content,
-        #q4:checked ~ .question4,
-        #q5:checked ~ .q5-content,
-        #q5:checked ~ .question5,
-        #q6:checked ~ .q6-content,
-        #q6:checked ~ .question6,
-        #q7:checked ~ .question7,
-        #q7:checked ~ .q7-content{
-            display: block;
             background-color: white;
-        }
+        } 
         
         input{
             display: none;
         }
         .question-content div{
-            width: 80%;
+            width: 70%;
             left: 0;
             right: 0;
             margin: auto;
             margin-bottom: 50px;
+            
         }
-        #q1:checked ~ .question div,
+        /* #q1:checked ~ .question div,
         #q2:checked ~ .question div,
         #q3:checked ~ .question div,
         #q4:checked ~ .question div,
@@ -129,7 +119,7 @@
         #q7:checked ~ .question div
         {
             padding:0 10%;
-        }
+        } */
         /* #q1:checked ~ .question label{
             padding:0 10%;
         } 為什麼不行*/
@@ -137,21 +127,31 @@
         .question img{
             width: 70%;
         }
+        .question-content.show{
+        display: block; 
+        }
+        .q1:checked label{
+            background-color: white;
+        }  
+        .question-content:target {
+            background-color: lightblue; /* 自行調整背景色 */
+        }
+
+
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <span><a href=""><img src="imgs/logo horizontal.svg" alt=""></a> </span>
-            <ul> 
-                <li><a href="">關於書旅</a></li>
-                <li><a href="">加入書旅</a></li>
-                <li><a href="">書站地圖</a></li>
-                <li><a href="">常見問題</a></li>
-                <li><a href="">最新消息</a></li>
-                <li><a href="">會員中心</a></li>
-                <li><a href="">聯絡我們</a></li>
-                <li><a href=""><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
+            <span class="logo-horizontal"><a href="index.html"><img src="imgs/logo horizontal.svg" alt=""></a> </span>
+            <ul>
+                <li><a href="">關於書旅</a></li> 
+                <li><a href="allnews.html">最新消息</a></li>
+                <li><a href="bookmap.html">書站地圖</a></li>
+                <li><a href="faqs.html">常見問題</a></li>
+                <li><a href="members.html">加入書旅</a></li>
+                <li><a href="contactUs.html">聯絡我們</a></li>
+                <li><a href="booksearch.html"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
             </ul>
         </nav>
         <div>
@@ -166,15 +166,13 @@
             <input type="checkbox" id="q1">
             <div class="question question1">
                 <label for="q1" >
-                <div>Q1: &nbsp; 這邊是第一題</div>
+                <div>Q1: &nbsp; 書旅是什麼？我該如何加入書旅？</div>
                 <div><img src="imgs/faqbtn.svg" alt=""></div>
                 </label>              
             </div>
             <div class="q1-content question-content">
                 <div >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
-                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
-                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+                    書旅是一個推廣閱讀的社群，您可以在我們的網站上進行註冊，即可加入書旅，並參與各種閱讀活動和書旅之旅。
                 </div>
             </div>
 
@@ -309,6 +307,9 @@
                             <li>聯絡表單</li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="booksearch.html">好書搜尋</a>
+                   </li>
                 </ul>
            </div> 
             <div>
@@ -325,5 +326,22 @@
             <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
         </div>
     </footer>
+
+    <script>
+
+
+        // 獲取所有具有.question類別的問題標題元素
+        const questionTitles = document.querySelectorAll(".question");
+
+        // 為每個問題標題元素設定點擊事件監聽器
+        questionTitles.forEach((e) => {
+            // 當點擊問題標題時，切換相應問題內文的顯示與隱藏
+            e.addEventListener("click", function () {
+                const content = this.nextElementSibling; // 取得問題內文元素
+                content.classList.toggle("show"); // 切換show類別，show類別控制內文的顯示與隱藏
+            });
+        });
+    
+    </script>
 </body>
 </html>

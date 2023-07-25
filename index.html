@@ -7,57 +7,21 @@
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/css.reset.css">
     <link rel="stylesheet" href="css/footer.css">
-
-  
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/header.css">
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
 
 <style>
     /* 字型、hav、css ，*/
     /* 左上logo、nav定位排版、banner效果、底色、卡牌翻頁、?部書站link、跑馬燈、遮罩跑出來、下方js
     } */
-
-    
-    
-
-    
-  @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
-
-
+    @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@600&family=Poppins:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@600&family=Poppins:wght@600&family=Zen+Maru+Gothic&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400&family=Kosugi+Maru&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@600&family=Poppins:wght@600&family=Zen+Maru+Gothic&display=swap');
     footer{
         margin-top: 800px;
         font-family: 'Kosugi Maru', sans-serif;
     }
-    body {
-  font-family: 'Kosugi Maru', sans-serif;
-}
-    nav{
-            position: fixed;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            padding: 0 5%;
-            backdrop-filter: blur(5px);
-            box-sizing: border-box;
-            height: 60px;
-            z-index: 10;
-        }
-
-        header ul{
-            display: flex;
-            align-items: center;
-        }
-        header ul li{
-            margin-left: 30px;
-        }
-        header ul li a{
-            text-decoration: none;
-            color: black;
-        }
-
-
-        header span img{           
-            margin-top: 15px;
-        }
 .banner{
     position: relative;
 }
@@ -75,12 +39,13 @@
     position: absolute;
     left: 24px;
     top: 190px;
-    color: #000;
+    color: #282828;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     z-index: 2;
+    font-family: 'Nunito', sans-serif;
 }
 .banner h2:first-of-type::before{
     content:"";
@@ -97,43 +62,54 @@
     position: absolute;
     left: 256px;
     top: 248px;
-    color: #000;
+    color: #282828;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     z-index: 2;
+    font-family: 'Nunito', sans-serif;
 }
 .banner h2:last-of-type::after{
     content:"";
-    width: 480px;
+    width: 520px;
     height: 23px;
     background-color: #fff;
     position: absolute;
-    top: 30px;
+    top: 33px;
     left: 30px;
     z-index: -1;
 }
 
+
+
+
+
+
+
+
 .banner h3:first-of-type{
     position: absolute;
     left: 280px;
-    top: 336px;
-    color: #000;
-    font-size: 32px;
+    top: 316px;
+    font-size: 38px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: normal;
     z-index: 3;
+    /* font-family: 'Zen Maru Gothic', sans-serif; */
+    font-family: 'Kiwi Maru', sans-serif;
+    
 }
 
 .banner h3:first-of-type::before{
     content:"";
-    width: 500px;
-    height: 23px;
+    width: 590px;
+    height: 25px;
+    color: black;
     background-color:white;
     position: absolute;
-    top: 25px;
+    top: 27px;
     left: 0px;
     z-index: -1;
 }
@@ -183,15 +159,6 @@
     top: 120px;
     left: 10px;
 }
-/* .about-bt-content > img:nth-child(3) img::after{
-    position: absolute;
-    content: "";
-    background-color: black;
-    width: 70px;
-    height: 1100px;
-    top: 30px;
-    left: 15px;
-} */
 
 .about-bt-content > div:last-of-type::after{
     position: absolute;
@@ -449,11 +416,6 @@
     transform: translate(-100%, -100%);
 }
 
-/* .draw-straws {
-    background-color: #F4F4EC;
-    z-index: -5;
-    會蓋掉偽元素 為什麼
-} */
 .draw-straws h2{
     margin-top: 100px;
     color: #FFF;
@@ -552,43 +514,45 @@
     line-height: 25px;
 }
 
-.north:hover {
-    color: #FCDC65;
+.east:hover:hover,
+.east:hover i,
+.east:hover h3,
+.middle:hover:hover,
+.middle:hover i,
+.middle:hover h3,
+.south:hover:hover,
+.south:hover i,
+.south:hover h3,
+.north:hover,
+.north:hover i,
+.north:hover h3
+{
+    color:#FCDC65;
 }
 
-.north:hover h3{
-    color:#FCDC65
+.swing,
+.site-loction-ul{
+    cursor: pointer;
 }
 
-.middle:hover {
-    color: #FCDC65;
+.media-coverage:hover  .all-newsBlock,
+.gazette:hover .all-newsBlock,
+.all-news:hover .all-newsBlock{
+    width: 100%;
+    transition: width .3s;
+    cursor: pointer;
 }
 
-.middle:hover h3{
-    color:#FCDC65
+.logo-vertical{
+    position: absolute;
+    left: 5%;
+    top: 35px;
+    z-index: 100;
 }
 
-.south:hover {
-    color: #FCDC65;
+.logo-horizontal{
+    opacity: 0;
 }
-
-.south:hover h3{
-    color:#FCDC65
-}
-
-.east:hover:hover {
-    color: #FCDC65;
-}
-
-.east:hover h3{
-    color:#FCDC65
-}
-
-
-
-
-
-   
 
 
 
@@ -598,16 +562,18 @@
 </head>
 <body>
     <header>
+        <div class="logo-vertical">
+            <img src="imgs/logo-vertical.svg" alt="">
+        </div>
         <nav>
-            <span><a href=""><img src="imgs/logo horizontal.svg" alt=""></a> </span>
-            <ul> 
-                <li><a href="">關於書旅</a></li>
-                <li><a href="">加入書旅</a></li>
-                <li><a href="">書站地圖</a></li>
-                <li><a href="">常見問題</a></li>
-                <li><a href="">最新消息</a></li>
-                <li><a href="">會員中心</a></li>
-                <li><a href="">聯絡我們</a></li>
+            <span class="logo-horizontal"><a href="index.html"><img src="imgs/logo horizontal.svg" alt=""></a> </span>
+            <ul>
+                <li><a href="">關於書旅</a></li> 
+                <li><a href="allnews.html">最新消息</a></li>
+                <li><a href="bookmap.html">書站地圖</a></li>
+                <li><a href="faqs.html">常見問題</a></li>
+                <li><a href="members.html">加入書旅</a></li>
+                <li><a href="contactUs.html">聯絡我們</a></li>
                 <li><a href=""><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
             </ul>
         </nav>
@@ -625,9 +591,9 @@
         
         <div class="about-bt">
             <h2>關於書旅</h2>
-            <p>我們希望透過閒置書籍的再流動，重新啟動書籍的旅程。讓每本書蘊藏的故事和智慧，透過書籍流動，讓知識不斷傳遞。將自己閱讀完的書交換給他人時，同時獲得他們珍藏的寶藏。</p>
+            <p>我們希望透過閒置書籍的再流動，重新開始書籍的旅程。讓每本書蘊藏的故事和智慧，透過書籍流動，讓知識不斷傳遞。將自己讀完的書籍交換給他人時，同時獲得他們珍藏的寶藏。</p>
             <p>透過書籍的分享和交換，我們打破了書籍的界限，將閱讀的樂趣帶到更遠的地方。每本書都像一張旅遊的門票，帶我們遨遊於不同的世界，探索無盡的可能性。</p>
-            <p>這種互助的分享方式，不僅讓我們擁有更多閱讀選擇，更與他人建立了深厚的連結。一本書，為彼此之間建立了一個書籍的旅遊網絡，並開啟無窮的書海探險，快加入我們，享受書籍分享的樂趣！</p>           
+            <p>這種互助的分享方式，不僅讓我們擁有更多閱讀選擇，更與他人建立了深厚的連結。一本書，為彼此之間建立了一個書籍的旅遊網絡，並開始無窮的書海探險，快加入我們，享受書籍分享的樂趣！</p>           
         </div> 
         <div>
             <img src="imgs/index-2.jpg" alt="">
@@ -678,28 +644,28 @@
             <h2>書站地點分布</h2>
             <h3>Book sites</h3>
             <ul class="site-loction-ul">
-                <li>
+                <li class="north">
                     <div class="north">
                         <h3><strong>北</strong>部書站</h3>
                         <span>知識的匯聚之地，書站數量居全台之冠，書香濃郁相伴</span>
                     </div>               
-                    <span><i class="fa-solid fa-chevron-right"></i></span>
+                    <span><i id="ii" class="fa-solid fa-chevron-right"></i></span>
                 </li>
-                <li>
+                <li class="middle">
                     <div class="middle">
                         <h3><strong>中</strong>部書站</h3>
-                        <span>翻開書籍，沏一壺好茶，茶香縈繞中，香茗共書韻入喉</span>
+                        <span>一捲書，一壺茶，茶香縈繞中，香茗共書韻入喉</span>
                     </div>               
                     <span><i class="fa-solid fa-chevron-right"></i></span>
                 </li>
-                <li>
+                <li class="south">
                     <div class="south">
                         <h3><strong>南</strong>部書站</h3>
                         <span>書香迴盪在熱情的南部，尋找知識的樂趣，與書友分享閱讀的喜悅</span>
                     </div>               
                     <span><i class="fa-solid fa-chevron-right"></i></span>
                 </li>
-                <li>
+                <li class="east">
                     <div class="east">
                         <h3><strong>東</strong>部書站</h3>
                         <span>以好書佐山川美景，海濱書屋，閱讀與海風同行</span>
@@ -716,7 +682,7 @@
         <div class="news-block">
             <div class="media-coverage">
                 <img src="imgs/Media Coverage.jpg" alt="">
-                <div>
+                <div class="all-newsBlock">
                     <div class="name">
                         <h3>媒體報導</h3>
                          <p>Media Coverage</p>
@@ -733,7 +699,7 @@
             </div>
             <div class="all-news">
                 <img src="imgs/Mask group.jpg" alt="">
-                <div>
+                <div class="all-newsBlock">
                     <div class="name">
                         <h3>所有消息</h3>
                     <p>All news</p>
@@ -749,7 +715,7 @@
             </div>
             <div class="gazette">
                 <img src="imgs/Gazette.jpg" alt="">
-                <div>
+                <div class="all-newsBlock">
                     <div class="name">
                        <h3>書旅小報</h3>
                        <p>Gazette</p> 
@@ -817,6 +783,9 @@
                             <li>聯絡表單</li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="booksearch.html">好書搜尋</a>
+                   </li>
                 </ul>
            </div> 
             <div>
@@ -833,5 +802,22 @@
             <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
         </div>
     </footer>
+
+    <script>
+
+        window.addEventListener('scroll', function() {
+            let logoV = document.querySelector('.logo-vertical');
+            let logoH = document.querySelector('.logo-horizontal');
+            if (window.scrollY >= 30) {
+                logoV.style.display = 'none';
+                logoH.style.opacity = 1;
+            } else {
+                logoV.style.display = 'block';
+                logoH.style.opacity = 0;
+            }
+        });
+
+
+    </script>
 </body>
 </html>

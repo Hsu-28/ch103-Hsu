@@ -6,8 +6,11 @@
     <title>最新消息</title>
     <link rel="stylesheet" href="css/css.reset.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/font.css">
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
     <style>
+
         /* footer{
             margin-top: -50px;
         } */
@@ -18,6 +21,8 @@
             width: 1280px;
             height: 450px;
             overflow: hidden;
+            background-image: url(imgs/allnewsbanner.jpg);
+            box-shadow: 0px 2px 4px black ;
         }
         nav{
             position: fixed;
@@ -42,11 +47,6 @@
             text-decoration: none;
             color: black;
             font-size: 18px;
-        }
-
-        header{
-            background-image: url(imgs/allnewsbanner.jpg);
-            box-shadow: 0px 2px 4px black ;
         }
 
         header span img{           
@@ -144,9 +144,6 @@
             top: 100%;
             left: -100%;
             background-color: rgba(255, 255, 255, .8);
-            /* transition: transform .4s,
-                        opacity .4s .2s;
-                        加這行打架 */
             opacity: 0;
             cursor: pointer;
             }
@@ -252,9 +249,6 @@
 .cards::-webkit-scrollbar {
   width: 6px;
   background-color: black;
-}/* 這邊沒效果 */
-.cards::-webkit-scrollbar-thumb {
-  background-color: #FCDC65; /* 這邊沒效果 */
 }
 
 .report{
@@ -315,12 +309,6 @@
     transition:  transform .4s;
 }
 
-/* .container-g:hover .g-content{
-    display: flex; 
-    opacity: 1;
-   
-    transform: translateX(-100%); 
-} */
 
 .g-content.show{
     transform: translateX(0);
@@ -342,18 +330,15 @@
 
     <header>
         <nav>
-            <span>
-                <img src="imgs/logo horizontal.svg" alt="">
-            </span>
+            <span><a href="index.html"><img src="imgs/logo horizontal.svg" alt=""></a> </span>
             <ul>
-                <li><a href="">關於書旅</a></li>
-                <li><a href="">加入書旅</a></li>
-                <li><a href="">書站地圖</a></li>
-                <li><a href="">常見問題</a></li>
-                <li><a href="">最新消息</a></li>
-                <li><a href="">會員中心</a></li>
-                <li><a href="">聯絡我們</a></li>
-                <li><a><i class="fa-solid fa-magnifying-glass fa-lg" style="color: black;"></i></a></li>
+                <li><a href="">關於書旅</a></li> 
+                <li><a href="allnews.html">最新消息</a></li>
+                <li><a href="bookmap.html">書站地圖</a></li>
+                <li><a href="faqs.html">常見問題</a></li>
+                <li><a href="members.html">加入書旅</a></li>
+                <li><a href="contactUs.html">聯絡我們</a></li>
+                <li><a href=""><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
             </ul>
         </nav>
         <h1>Lastest news</h1>
@@ -439,17 +424,7 @@
                                 <p>10 Sep 2023、書旅小報</p>
                             </div>        
                         </div>             
-                        <div class="report">
-                            <div class="report-content">
-                                <div>
-                                    <img src="imgs/news5.jpg" alt="">
-                                </div>
-
-                                <h4>教育推廣｜探索閱讀新趨勢<br>
-                                    書旅與教育攜手，啟發閱讀的未來。</h4>
-                                <p>18 Nov 2023、書旅小報</p>
-                            </div>        
-                        </div>
+                        
                         <div class="report">
                             <div class="report-content">
                                 <div>
@@ -538,17 +513,8 @@
                             </div>        
                         </div>
                         
-                        <div class="report">
-                            <div class="report-content">
-                                <div>
-                                    <img src="imgs/news10.avif" alt="">
-                                </div>
-                                
-                                <h4>深度專訪<br>
-                                    書旅小報揭露借書點魅力，媒體贊譽不斷</h4>
-                                <p> 28 October 2023、媒體報導</p>
-                         </div>        
-                        </div>
+                            
+                
                     </div>               
                 </section>
 
@@ -714,14 +680,6 @@
                                 <p>21 May 2023、媒體報導</p>
                             </div>        
                         </div>
-
-
-
-
-
-
-
-
                     </div>
                
                 </section>
@@ -773,6 +731,9 @@
                             <li>聯絡表單</li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="booksearch.html">好書搜尋</a>
+                   </li>
                 </ul>
            </div> 
             <div>

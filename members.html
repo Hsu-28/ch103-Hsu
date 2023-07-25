@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Members</title>
+    <title>加入書旅</title>
     <link rel="stylesheet" href="css/css.reset.css">
     <link rel="stylesheet" href="css/footer.css">>
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/font.css">
     <style>
 
 /* 細項必填 */
@@ -17,56 +18,30 @@
             height: 450px;
         }
 
-        nav{
-            position: absolute;
-            display: flex;
-            justify-content: space-between;
-            border: 1px solid yellow;
-            width: 100%;
-            padding: 0 5%;
-            background-color: #fff;
-            box-sizing: border-box;
-            height: 60px;
-        }
-
-        header ul{
-            /* border: 1px solid red; */
-            display: flex;
-            align-items: center;
-        }
-        header ul li{
-            margin-left: 30px;
-        }
-
-        header span{
-            border: 1px solid red;         
-        }
-        header span img{           
-            margin-top: 15px;
-            border: 1px solid blue;
-        }
-        header h1 {
-            position: absolute;
-            top: 170px;
-            left: 536px;
-            color: white;
+        header h1{
+            text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             font-size: 60px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            transform: rotate(-9.828deg);
-        }
-        header h2 {
+            left: 50%;
+            top: 145.68px;
+            transform: translateX(-50%) rotate(-9.828deg);
             position: absolute;
-            top: 288px;
-            left: 615px;
-            color: white;
-            font-size: 28px;
+            color: #fff;      
+        }
+        header h2{
+            text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            font-size: 32px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            left: 50%;
+            top: 250px;
+            transform: translateX(-50%); 
+            position: absolute;
+            color: #fff;
         }
-        /* article這邊不懂 為什麼寬度邊寬了!?  */
         article{
             height: 100vh;  
             margin: -3px 0;
@@ -246,16 +221,14 @@
 <body>
     <header>
         <nav>
-            <span><a href=""><img src="/imgs/logo horizontal.svg" alt=""></a> </span>
+            <span><a href="index.html"><img src="imgs/logo horizontal.svg" alt=""></a> </span>
             <ul>
-                <a href=""></a>
-                <li><a href="">關於書旅</a></li>
-                <li><a href="">加入書旅</a></li>
-                <li><a href="">書站地圖</a></li>
-                <li><a href="">常見問題</a></li>
-                <li><a href="">最新消息</a></li>
-                <li><a href="">會員中心</a></li>
-                <li><a href="">聯絡我們</a></li>
+                <li><a href="">關於書旅</a></li> 
+                <li><a href="allnews.html">最新消息</a></li>
+                <li><a href="bookmap.html">書站地圖</a></li>
+                <li><a href="faqs.html">常見問題</a></li>
+                <li><a href="members.html">加入書旅</a></li>
+                <li><a href="contactUs.html">聯絡我們</a></li>
                 <li><a href=""><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
             </ul>
         </nav>
@@ -339,6 +312,9 @@
                         <li>聯絡表單</li>
                     </ul>
                 </li>
+                <li>
+                    <a href="booksearch.html">好書搜尋</a>
+               </li>
             </ul>
        </div> 
         <div>

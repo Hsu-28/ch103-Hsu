@@ -6,39 +6,21 @@
     <title>Book map</title>
     <link rel="stylesheet" href="css/css.reset.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/font.css">
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
     <style>
         /* 排版設計、背景、卡片資料、按鈕連結 */
         footer{
             margin-top: 30vh;
         }
-        nav{
-            position: fixed;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            padding: 0 5%;
-            backdrop-filter: blur(5px);
-            box-sizing: border-box;
-            height: 60px;
-            z-index: 10;
-        }
 
-        header ul{
-            display: flex;
-            align-items: center;
-        }
-        header ul li{
-            margin-left: 30px;
-        }
-        header ul li a{
-            text-decoration: none;
-            color: black;
-        }
-
-
-        header span img{           
-            margin-top: 15px;
+        header{
+            background-image: url(imgs/bookmapbgi.jpg);
+            width: 1280px;
+            height: 440px;
+            overflow: hidden;
+            box-shadow: 0px 2px 4px black ;
         }
         header::before{
             content: "";
@@ -53,7 +35,6 @@
         }
         header h1{
             text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            font-family: Shanti;
             font-size: 60px;
             font-style: normal;
             font-weight: 400;
@@ -66,7 +47,6 @@
         }
         header h2{
             text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            font-family: Shanti;
             font-size: 32px;
             font-style: normal;
             font-weight: 400;
@@ -76,16 +56,6 @@
             transform: translateX(-50%); 
             position: absolute;
             color: #fff;
-        }
-
-
-        body{
-            background-color: #F4F4EC;
-            background-image: url(imgs/booksite-img.jpg);
-            background-size:  90%;
-            background-position: center;
-            background-repeat: repeat-y;
-
         }
 
       .btns{
@@ -148,20 +118,15 @@
         /* width: 60%; */
       }
 
-      .site:hover .img-content{
-        box-shadow: 3px 3px 3px rgb(86, 84, 84);
-        width: 50%;
-        transform: scaleX(1.2);
-        transform-origin: left;
-        transition: width .3s ,
-                    transform .3s ;
-      } 
 
       .site:hover .img-content img{
         box-shadow: 3px 3px 3px rgb(86, 84, 84);
-        transform: scale(120%);
-        transition: transform .4s;
+        transform: scale(110%);
+        transition: transform .2s;
         overflow: hidden;
+      }
+      .site:hover .books{
+        box-shadow: 1px 1px 1px rgb(86, 84, 84);
       }
 
 
@@ -197,6 +162,7 @@
       .site-info > div:first-of-type h3{
         font-size: 28px;
         margin-left: 20px;
+        margin-bottom: 10px;
       }
       .site-info > div:first-of-type p{
         margin-bottom: 15px;
@@ -229,7 +195,11 @@
         width: 5%;
         font-size: 18px;
         writing-mode: vertical-rl;
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
       }
+
       .books span{
         writing-mode: horizontal-tb;
       }
@@ -238,18 +208,17 @@
 <body>
     <header>
         <nav>
+            <span><a href="index.html"><img src="imgs/logo horizontal.svg" alt=""></a> </span>
             <ul>
-                <li>關於書旅</li>
-                <li>加入書旅</li>
-                <li>書站地圖</li>
-                <li>常見問題</li>
-                <li>最新消息</li>
-                <li>會員中心</li>
-                <li>聯絡我們</li>
+                <li><a href="">關於書旅</a></li> 
+                <li><a href="allnews.html">最新消息</a></li>
+                <li><a href="bookmap.html">書站地圖</a></li>
+                <li><a href="faqs.html">常見問題</a></li>
+                <li><a href="members.html">加入書旅</a></li>
+                <li><a href="contactUs.html">聯絡我們</a></li>
                 <li><a href=""><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
             </ul>
         </nav>
-        <img src="/imgs/book map.jpg" alt="">
         <h1>Book point map</h1>
         <h2>書站地圖</h2>
     </header>
@@ -445,6 +414,9 @@
                             <li>聯絡表單</li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="booksearch.html">好書搜尋</a>
+                   </li>
                 </ul>
            </div> 
             <div>

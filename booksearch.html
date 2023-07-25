@@ -6,10 +6,12 @@
     <title>好書查詢</title>
     <link rel="stylesheet" href="css/css.reset.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/font.css">
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
     <style>
             header{
-            background-image: url(imgs/booksearchbanner.jpg);
+            background-image: url(imgs/booksearch.jpg);
             width: 1280px;
             height: 450px;
             background-color: rgba(63, 93, 132, 0.50);
@@ -88,9 +90,10 @@
             }
 
             .cards{
-                box-shadow: 1px 1px 2px rgb(182, 181, 181);
+                box-shadow: 1px 1px 2px rgb(244, 243, 243);
                 position: relative;
                 cursor: pointer;
+                border: 1px solid rgb(236, 234, 234);
             }
             .cards:hover {
                 box-shadow: 1px 1px 4px rgb(116, 114, 114);
@@ -203,15 +206,14 @@
 <body>
     <header>
         <nav>
-            <span><a href=""><img src="imgs/logo horizontal.svg" alt=""></a> </span>
-            <ul> 
-                <li><a href="">關於書旅</a></li>
-                <li><a href="">加入書旅</a></li>
-                <li><a href="">書站地圖</a></li>
-                <li><a href="">常見問題</a></li>
-                <li><a href="">最新消息</a></li>
-                <li><a href="">會員中心</a></li>
-                <li><a href="">聯絡我們</a></li>
+            <span><a href="index.html"><img src="imgs/logo horizontal.svg" alt=""></a> </span>
+            <ul>
+                <li><a href="">關於書旅</a></li> 
+                <li><a href="allnews.html">最新消息</a></li>
+                <li><a href="bookmap.html">書站地圖</a></li>
+                <li><a href="faqs.html">常見問題</a></li>
+                <li><a href="members.html">加入書旅</a></li>
+                <li><a href="contactUs.html">聯絡我們</a></li>
                 <li><a href=""><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
             </ul>
         </nav>
@@ -268,7 +270,7 @@
         <div class="card4 cards">
             <div class="card-img">
                 <img src="imgs/book6.png" alt="here is logo" height="250" width="">
-                <!-- 尺寸沒作用 因為被複寫?-->
+                
             </div>
             <div class="card-title">無法抗拒的法式鐵盒餅乾</div>
             <div class="card-author">黛博拉．杜邦達蓋</div>
@@ -420,6 +422,9 @@
                             <li>聯絡地址</li>
                             <li>聯絡表單</li>
                         </ul>
+                    </li>
+                    <li>
+                         <a href="booksearch.html">好書搜尋</a>
                     </li>
                 </ul>
            </div> 

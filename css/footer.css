@@ -55,11 +55,6 @@ footer{
 .medialink{
     margin: auto;
 }
-/* .medialink a{
-    margin: auto;
-    border: 1px solid red;
-    這邊不懂  不是應該要 設在a 上面嗎
-} */
 
 .medialink a{
     color: white
