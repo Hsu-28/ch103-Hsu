@@ -613,7 +613,7 @@ section.marquee {
             <img src="imgs/logo-vertical.svg" alt="">
         </div>
         <nav>
-            <span class="logo-horizontal"><a href="index.html"><img src="imgs/logo horizontal.svg" alt=""></a> </span>
+            <span class="logo-horizontal"><a href="index.html"><img src="imgs/logo-horizontal.svg" alt=""></a> </span>
             <ul>
                 <li><a href="">關於書旅</a></li> 
                 <li><a href="allnews.html">最新消息</a></li>
@@ -893,20 +893,23 @@ section.marquee {
         </div>
     </footer>
 
-    <script src="js/member.js">
-        window.addEventListener('scroll', function() {
-            let logoV = document.querySelector('.logo-vertical');
-            let logoH = document.querySelector('.logo-horizontal');
-            if (window.scrollY >= 30) {
-                logoV.style.display = 'none';
-                logoH.style.opacity = 1;
-            } else {
-                logoV.style.display = 'block';
-                logoH.style.opacity = 0;
-            }
+    <script src="js/member.js"></script>
+    <script>        
+    window.addEventListener('scroll', function() {
+        let logoV = document.querySelector('.logo-vertical');
+        let logoH = document.querySelector('.logo-horizontal');
+        if (window.scrollY >= 30) {
+            logoV.style.display = 'none';
+            logoH.style.opacity = 1;
+        } else {
+            logoV.style.display = 'block';
+            logoH.style.opacity = 0;
+        }
         });
-        
-        
     </script>
+
+        
+        
+    
 </body>
 </html>
