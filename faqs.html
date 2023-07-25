@@ -77,9 +77,7 @@
             width: 60%;
             left: 0;
             right: 0;
-            margin: auto;
-            margin-top: 80px;
-
+            margin: 80px auto;
         }
         .question label{
             display: flex;
@@ -97,6 +95,7 @@
         .question-content{
             display: none;
             background-color: white;
+            
         } 
         
         input{
@@ -108,21 +107,13 @@
             right: 0;
             margin: auto;
             margin-bottom: 50px;
-            
+            line-height: 1.8;
+            padding-top: 20px;
         }
-        /* #q1:checked ~ .question div,
-        #q2:checked ~ .question div,
-        #q3:checked ~ .question div,
-        #q4:checked ~ .question div,
-        #q5:checked ~ .question div,
-        #q6:checked ~ .question div,
-        #q7:checked ~ .question div
-        {
-            padding:0 10%;
-        } */
-        /* #q1:checked ~ .question label{
-            padding:0 10%;
-        } 為什麼不行*/
+
+        .question-content:last-of-type {
+            margin-bottom: 50px;
+        }
 
         .question img{
             width: 70%;
@@ -133,11 +124,9 @@
         .q1:checked label{
             background-color: white;
         }  
-        .question-content:target {
-            background-color: lightblue; /* 自行調整背景色 */
+        #q1:checked + div{
+            background-color: white;
         }
-
-
     </style>
 </head>
 <body>
@@ -163,6 +152,10 @@
     
     <article>
         <div class="qs">
+            <div question-wrapper>
+                
+            </div>
+            
             <input type="checkbox" id="q1">
             <div class="question question1">
                 <label for="q1" >
@@ -179,92 +172,122 @@
             <input type="checkbox" id="q2">
             <div class="question question2">
                 <label for="q2" >
-                <div>Q2: &nbsp; 這邊是第二個問題</div>
+                <div>Q2: &nbsp; 書旅的借書點如何選址？有哪些地點可以借書？</div>
                 <div><img src="imgs/faqbtn.svg" alt=""></div>
                 </label>
             </div>
             <div class="q2-content question-content">
                 <div >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
-                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
-                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+                    您可以在我們的官網上點擊 標題列 > 書站地圖  找到所有借書點的地址和相關信息，輕鬆找到離您最近的借書點。
+                    <br>我們致力於在各個社區中建立借書點，讓更多人可以方便地借閱書籍。如果您附近沒有適合的借書點，也歡迎您慷慨提供!
                 </div>
             </div>
 
             <input type="checkbox" id="q3">
             <div class="question question3">
                 <label for="q3" >
-                <div>Q3: &nbsp; 這邊是第三個問題</div>
+                <div>Q3: &nbsp; 書旅活動有哪些？我可以參加嗎？</div>
                 <div><img src="imgs/faqbtn.svg" alt=""></div>
                 </label>
             </div>
             <div class="q3-content question-content">
                 <div >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
-                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
-                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+                    書旅活動非常多樣化，我們有 <b>會員活動</b> 和<b>一般活動</b> 兩種。
+                    <br>
+                    大多數的活動都是公開的，希望大家可以共襄盛舉，例如書展，公開讀書分享會...等等。不過會員仍有專屬的活動
+                    <br>
+                    <br>
+                    會員限定活動有：<br>
+                    1.講座與工作坊：專為會員打造的專業講座與工作坊，涵蓋文學、文化、教育等多元主題，拓展知識視野。
+                    <br>
+                    2.會員專屬旅遊：特別規劃的書旅之旅，帶領會員探索文學名城，感受閱讀的浪漫氛圍。
+                    <br>
+                    3.書旅讀書會：小型閱讀團體，定期聚會討論一本共同閱讀的書籍，增進書友間的交流與友誼。
+                    
+                    
+
                 </div>
             </div>
 
             <input type="checkbox" id="q4">
             <div class="question question4">
                 <label for="q4" >
-                <div>Q4: &nbsp; 這邊是第四個問題</div>
+                <div>Q4: &nbsp; 我借的書籍遺失了怎麼辦?</div>
                 <div><img src="imgs/faqbtn.svg" alt=""></div>
                 </label>
             </div>
             <div class="q4-content question-content">
                 <div >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
-                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
-                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+                    若借閱的書籍遺失，我們將非常感謝您的誠實和合作。
+                    <br>為了維護書旅社區的閱讀資源，我們鼓勵您以回饋的方式來補償遺失的書籍
+                    ------以捐獻 " 三本二手書籍 " 的方式彌補書籍遺失的遺憾。
+                    <br>這個小小的行動將有助於維持書旅社區的書櫃豐富多元，讓其他讀者也能繼續享受閱讀的樂趣。您的貢獻將不僅僅是補充書籍，更是營造一個共融共享的閱讀環境，讓我們共同感受閱讀的力量與美好。
                 </div>
             </div>
 
             <input type="checkbox" id="q5">
             <div class="question question5">
                 <label for="q5" >
-                <div>Q5: &nbsp; 這邊是第四個問題</div>
+                <div>Q5: &nbsp; 我可以在書旅小報上投稿嗎？</div>
                 <div><img src="imgs/faqbtn.svg" alt=""></div>
                 </label>
             </div>
             <div class="q5-content question-content">
                 <div >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
-                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
-                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+                    是的，我們非常歡迎您投稿！
+                    <br>
+                    書旅小報是一個開放的平台，您可以與我們分享您的閱讀心得、旅遊故事或者其他與閱讀相關的內容。
+                    <br>
+                    您的投稿將有機會被刊登在書旅小報上，讓更多人了解您的故事和見解，一同感受閱讀的魅力與書旅的無限可能。
                 </div>
             </div>
 
             <input type="checkbox" id="q6">
             <div class="question question6">
                 <label for="q6" >
-                <div>Q6: &nbsp; 這邊是第四個問題</div>
+                <div>Q6: &nbsp; 我想提供書站可以怎麼辦?  </div>
                 <div><img src="imgs/faqbtn.svg" alt=""></div>
                 </label>
             </div>
             <div class="q6-content question-content">
                 <div >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
-                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
-                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+                    非常感謝熱情的你提供書站!!
+                    <br>
+                    書站作為書旅的一部分，提供了社區閱讀環境的重要支持。書站需要提供管理人員、置書區、閱讀休憩區: 
+                    <br>
+                    <br>管理人員:
+                    <br>
+                    負責
+                    協助讀者尋找心儀的書籍
+                    提供閱讀建議和推薦
+                    組織各類閱讀活動
+                    促進讀者之間的交流與互動
+                    <br>
+                    <br>置書區:
+                    <br>整理和陳列書籍，確保有序排列和易於尋找
+                    根據不同讀者需求調整書櫃的書籍種類和主題
+                    <br>
+                    <br>閱讀休憩區:
+                    <br>提供舒適的閱讀環境，讓讀者可以在其中愜意地閱讀和放鬆。
+                    <br>
+                    <br>
+                    總的來說，書旅的管理人員在書站中扮演著閱讀導引者、文化傳播者和服務提供者的角色，因為您的努力讓書站成為社區的文化樞紐和閱讀的樂園。
                 </div>
             </div>
 
-            <input type="checkbox" id="q7">
+            <!-- <input type="checkbox" id="q7">
             <div class="question question7">
                 <label for="q7" >
-                <div>Q7: &nbsp; 這邊是第四個問題</div>
+                <div>Q7: &nbsp; </div>
                 <div><img src="imgs/faqbtn.svg" alt=""></div>
                 </label>
             </div>
             <div class="q7-content question-content">
                 <div >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque architecto nobis assumenda, repellat alias aliquam a ullam officia explicabo placeat blanditiis fugit non aperiam. Quo maiores laborum at quisquam ad.
-                Enim voluptate praesentium harum numquam quod distinctio eaque atque. Quod illum in accusantium dolorum, ad quasi quibusdam totam laudantium reiciendis ea est maiores optio dicta deserunt provident odit accusamus mollitia.
-                Amet tenetur nihil doloribus sit adipisci itaque deleniti rem eius ex error voluptatum tempore cum atque, suscipit labore molestias repellat corporis cupiditate velit quidem corrupti deserunt. Eveniet aspernatur rem dignissimos!
+
+
                 </div>
-            </div>
+            </div> -->
          
            
     </article>
@@ -330,18 +353,18 @@
     <script>
 
 
-        // 獲取所有具有.question類別的問題標題元素
-        const questionTitles = document.querySelectorAll(".question");
+       // 獲取所有具有.question類別的問題標題元素
+const questionTitles = document.querySelectorAll(".question");
 
-        // 為每個問題標題元素設定點擊事件監聽器
-        questionTitles.forEach((e) => {
-            // 當點擊問題標題時，切換相應問題內文的顯示與隱藏
-            e.addEventListener("click", function () {
-                const content = this.nextElementSibling; // 取得問題內文元素
-                content.classList.toggle("show"); // 切換show類別，show類別控制內文的顯示與隱藏
-            });
-        });
+// 為每個問題標題元素設定點擊事件監聽器
+questionTitles.forEach((e) => {
+    // 當點擊問題標題時，切換相應問題內文的顯示與隱藏
+    e.addEventListener("click", function () {
+        const content = this.nextElementSibling; // 取得問題內文元素
+        content.classList.toggle("show"); // 切換show類別，show類別控制內文的顯示與隱藏
+    });
+});
     
     </script>
 </body>
-</html>
+</html> widthChange.classList.toggle("width-70");

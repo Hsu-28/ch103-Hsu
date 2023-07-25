@@ -554,6 +554,79 @@
     opacity: 0;
 }
 
+section.marquee {
+  width: 100%;
+  overflow: hidden;
+  color: #FCDD65;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 100px;
+  margin-bottom: -50px;
+  padding: 0;
+}
+
+.scroll {
+  display: flex;
+  height: 40px;
+  .text {
+    white-space: nowrap;
+    text-transform: uppercase;
+    animation: scroll 40s linear infinite;
+    &:nth-child(2) {
+      animation: scroll2 40s linear infinite;
+      animation-delay: -20s;
+    }
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+.logo-wall {
+  display: flex;
+  .logo-wrapper {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    &:nth-child(2) {
+      animation: scroll2 40s linear infinite;
+      animation-delay: -20s;
+    }
+    &.first > .logo:first-child {
+      background: blue;
+    }
+    &.second > .logo:first-child {
+      background: red;
+    }
+    .logo {
+      width: 150px;
+      height: 150px;
+      margin: 0 10px;
+      border-radius: 50%;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
 
 
 
@@ -676,9 +749,18 @@
 
         </div>
     </article>
+    <section  class="marquee">
+        <div class="scroll">
+            <div class="text">
+                Breaking news Breaking news Breaking news Breaking news Breaking news Breaking news Breakin 
+              </div>
+              <div class="text">
+               Breaking news Breaking news Breaking news Breaking news Breaking news Breaking news Breakin 
+              </div>
+       </div>
+     </section>
+     
     <article class="news">
-        <div>Break NewsBreak NewsBreak NewsBreak NewsBreak News Break NewsBreak
-             NewsBreak </div>
         <div class="news-block">
             <div class="media-coverage">
                 <img src="imgs/Media Coverage.jpg" alt="">
