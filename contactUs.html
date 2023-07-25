@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>聯絡我們</title>
+    <link href="imgs/logo.ico" rel="shortcut icon"/>
     <link rel="stylesheet" href="css/css.reset.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/member.css">
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
 
     <style>
@@ -239,9 +241,10 @@
             cursor: pointer;
         }
 
+
+
 </style>
 
-    </style>
 </head>
 <body>
     <header>
@@ -252,13 +255,11 @@
                 <li><a href="allnews.html">最新消息</a></li>
                 <li><a href="bookmap.html">書站地圖</a></li>
                 <li><a href="faqs.html">常見問題</a></li>
-                <li><a href="members.html">加入書旅</a></li>
+                <li > <a id ="memberLog"> 登入/ 註冊</a></li>
                 <li><a href="contactUs.html">聯絡我們</a></li>
                 <li><a href="booksearch.html"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
             </ul>
         </nav>
-
-
     </header>
     <article>
         <h1> <b>CONTACT</b> </h1>
@@ -316,6 +317,39 @@
                   </div>
                     <button type="submit" class="submit-btn" >確認送出</button>                   
             </form>
+        </div>
+    </article>
+    <article class="memberOverflow">
+        <div class="container-member right-panel-active">
+            <div class="container-form container-signup">
+                <form action="" class="form" id="form1">
+                    <h3 class="form-title">旅友註冊</h3>
+                    <input type="text" placeholder="註冊信箱" class="input">
+                    <input type="email" placeholder="設定帳號" class="input">
+                    <input type="password " placeholder="設定密碼" class="input">
+                    <button class="btn">確認註冊</button>
+                </form>
+            </div>
+        
+            <div class="container-form container-signin">
+                <form action="" class="form" id="form2">
+                    <h3 class="form-title">旅友登入</h3>
+                    <input type="text" placeholder="帳號" class="input">
+                    <input type="password" placeholder="密碼" class="input">
+                    <button class="btn">確認登入</button>
+                </form>
+            </div>
+        
+            <div class="container-overlay">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <button class="btn signin-btn" id="signIn">旅友登入</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <button class="btn signup-btn" id="signUp">註冊</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </article>
     <footer>
@@ -376,7 +410,8 @@
             <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
         </div>
     </footer>
-
+   
+    <script src="js/member.js"></script>
     <script>
         const h1Element = document.querySelector("h1");
 

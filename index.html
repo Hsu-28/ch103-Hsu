@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>書旅首頁</title>
+    <link href="imgs/logo.ico" rel="shortcut icon"/>
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/css.reset.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/member.css">
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
 
 <style>
-    /* 字型、hav、css ，*/
-    /* 左上logo、nav定位排版、banner效果、底色、卡牌翻頁、?部書站link、跑馬燈、遮罩跑出來、下方js
-    } */
     @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@600&family=Poppins:wght@600&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@600&family=Poppins:wght@600&family=Zen+Maru+Gothic&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400&family=Kosugi+Maru&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@600&family=Poppins:wght@600&family=Zen+Maru+Gothic&display=swap');
+
+
     footer{
-        margin-top: 800px;
-        font-family: 'Kosugi Maru', sans-serif;
-    }
+    margin-top: 800px;
+    font-family: 'Kosugi Maru', sans-serif;
+}
 .banner{
     position: relative;
 }
@@ -600,33 +601,6 @@ section.marquee {
   }
 }
 
-.logo-wall {
-  display: flex;
-  .logo-wrapper {
-    display: flex;
-    animation: scroll 40s linear infinite;
-    &:nth-child(2) {
-      animation: scroll2 40s linear infinite;
-      animation-delay: -20s;
-    }
-    &.first > .logo:first-child {
-      background: blue;
-    }
-    &.second > .logo:first-child {
-      background: red;
-    }
-    .logo {
-      width: 150px;
-      height: 150px;
-      margin: 0 10px;
-      border-radius: 50%;
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-}
 
 
 
@@ -645,9 +619,9 @@ section.marquee {
                 <li><a href="allnews.html">最新消息</a></li>
                 <li><a href="bookmap.html">書站地圖</a></li>
                 <li><a href="faqs.html">常見問題</a></li>
-                <li><a href="members.html">加入書旅</a></li>
+                <li > <a id = "memberLog"> 登入/ 註冊</a></li>
                 <li><a href="contactUs.html">聯絡我們</a></li>
-                <li><a href=""><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
+                <li><a href="booksearch.html"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -727,7 +701,7 @@ section.marquee {
                 <li class="middle">
                     <div class="middle">
                         <h3><strong>中</strong>部書站</h3>
-                        <span>一捲書，一壺茶，茶香縈繞中，香茗共書韻入喉</span>
+                        <span>一卷書，一壺茶，茶香縈繞中，香茗共書韻入喉</span>
                     </div>               
                     <span><i class="fa-solid fa-chevron-right"></i></span>
                 </li>
@@ -826,6 +800,40 @@ section.marquee {
         <img  src="imgs/again.svg" alt="">
     </article>
 
+    <article class="memberOverflow">
+        <div class="container-member right-panel-active">
+            <div class="container-form container-signup">
+                <form action="" class="form" id="form1">
+                    <h3 class="form-title">旅友註冊</h3>
+                    <input type="text" placeholder="註冊信箱" class="input">
+                    <input type="email" placeholder="設定帳號" class="input">
+                    <input type="password " placeholder="設定密碼" class="input">
+                    <button class="btn">確認註冊</button>
+                </form>
+            </div>
+        
+            <div class="container-form container-signin">
+                <form action="" class="form" id="form2">
+                    <h3 class="form-title">旅友登入</h3>
+                    <input type="text" placeholder="帳號" class="input">
+                    <input type="password" placeholder="密碼" class="input">
+                    <button class="btn">確認登入</button>
+                </form>
+            </div>
+        
+            <div class="container-overlay">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <button class="btn signin-btn" id="signIn">旅友登入</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <button class="btn signup-btn" id="signUp">註冊</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
     <footer>
         <div class="footer-logo">
 
@@ -885,8 +893,7 @@ section.marquee {
         </div>
     </footer>
 
-    <script>
-
+    <script src="js/member.js">
         window.addEventListener('scroll', function() {
             let logoV = document.querySelector('.logo-vertical');
             let logoH = document.querySelector('.logo-horizontal');
@@ -898,8 +905,8 @@ section.marquee {
                 logoH.style.opacity = 0;
             }
         });
-
-
+        
+        
     </script>
 </body>
 </html>

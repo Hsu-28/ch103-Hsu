@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.reset.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
+    <style>
+        header{
+            background-image: url(imgs/fqs.jpg);
+            width: 1280px;
+            height: 450px;
+            background-color: rgba(63, 93, 132, 0.50);
+        }
+        
+        nav{
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 5%;
+            backdrop-filter: blur(5px);
+            box-sizing: border-box;
+            height: 60px;
+            z-index: 10;
+        }
+
+        header ul{
+            display: flex;
+            align-items: center;
+        }
+        header ul li{
+            margin-left: 30px;
+        }
+        header ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+
+        header span img{           
+            margin-top: 15px;
+        }
+        header h1 {
+            position: absolute;
+            top: 170px;
+            left: 536px;
+            color: white;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transform: rotate(-9.828deg);
+        }
+        header h2 {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        body{
+            background-color: #F4F4EC;
+        }
+        .qs{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 60%;
+            left: 0;
+            right: 0;
+            margin: 80px auto;
+        }
+        .question label{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 24px;
+            width: 100%;
+            border-top: 1px solid gray;
+            height: 100px;
+            align-items: center;
+            
+        }
+
+
+        .question-content{
+            display: none;
+            background-color: white;
+            
+        } 
+        
+        input{
+            display: none;
+        }
+        .question-content div{
+            width: 70%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-bottom: 50px;
+            line-height: 1.8;
+            padding-top: 20px;
+        }
+
+        .question-content:last-of-type {
+            margin-bottom: 50px;
+        }
+
+        .question img{
+            width: 70%;
+        }
+        .question-content.show{
+        display: block; 
+        }
+        .q1:checked label{
+            background-color: white;
+        }  
+        #q1:checked + div{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="logo-horizontal"><a href="index.html"><img src="imgs/logo horizontal.svg" alt=""></a> </span>
+            <ul>
+                <li><a href="">關於書旅</a></li> 
+                <li><a href="allnews.html">最新消息</a></li>
+                <li><a href="bookmap.html">書站地圖</a></li>
+                <li><a href="faqs.html">常見問題</a></li>
+                <li><a href="members.html">加入書旅</a></li>
+                <li><a href="contactUs.html">聯絡我們</a></li>
+                <li><a href="booksearch.html"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
+            </ul>
+        </nav>
+        <div>
+            <h1 class="title"><strong>F</strong> &  <strong>Q</strong>s</h1>
+            <h2>常見問題</h2>
+        </div>
+    </header>
+
+    
+    <article>
+        <div class="qs">
+            <div question-wrapper>
+                
+            </div>
+            
+            <input type="checkbox" id="q1">
+            <div class="question question1">
+                <label for="q1" >
+                <div>Q1: &nbsp; 書旅是什麼？我該如何加入書旅？</div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>              
+            </div>
+            <div class="q1-content question-content">
+                <div >
+                    書旅是一個推廣閱讀的社群，您可以在我們的網站上進行註冊，即可加入書旅，並參與各種閱讀活動和書旅之旅。
+                </div>
+            </div>
+
+            <input type="checkbox" id="q2">
+            <div class="question question2">
+                <label for="q2" >
+                <div>Q2: &nbsp; 書旅的借書點如何選址？有哪些地點可以借書？</div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>
+            </div>
+            <div class="q2-content question-content">
+                <div >
+                    您可以在我們的官網上點擊 標題列 > 書站地圖  找到所有借書點的地址和相關信息，輕鬆找到離您最近的借書點。
+                    <br>我們致力於在各個社區中建立借書點，讓更多人可以方便地借閱書籍。如果您附近沒有適合的借書點，也歡迎您慷慨提供!
+                </div>
+            </div>
+
+            <input type="checkbox" id="q3">
+            <div class="question question3">
+                <label for="q3" >
+                <div>Q3: &nbsp; 書旅活動有哪些？我可以參加嗎？</div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>
+            </div>
+            <div class="q3-content question-content">
+                <div >
+                    書旅活動非常多樣化，我們有 <b>會員活動</b> 和<b>一般活動</b> 兩種。
+                    <br>
+                    大多數的活動都是公開的，希望大家可以共襄盛舉，例如書展，公開讀書分享會...等等。不過會員仍有專屬的活動
+                    <br>
+                    <br>
+                    會員限定活動有：<br>
+                    1.講座與工作坊：專為會員打造的專業講座與工作坊，涵蓋文學、文化、教育等多元主題，拓展知識視野。
+                    <br>
+                    2.會員專屬旅遊：特別規劃的書旅之旅，帶領會員探索文學名城，感受閱讀的浪漫氛圍。
+                    <br>
+                    3.書旅讀書會：小型閱讀團體，定期聚會討論一本共同閱讀的書籍，增進書友間的交流與友誼。
+                    
+                    
+
+                </div>
+            </div>
+
+            <input type="checkbox" id="q4">
+            <div class="question question4">
+                <label for="q4" >
+                <div>Q4: &nbsp; 我借的書籍遺失了怎麼辦?</div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>
+            </div>
+            <div class="q4-content question-content">
+                <div >
+                    若借閱的書籍遺失，我們將非常感謝您的誠實和合作。
+                    <br>為了維護書旅社區的閱讀資源，我們鼓勵您以回饋的方式來補償遺失的書籍
+                    ------以捐獻 " 三本二手書籍 " 的方式彌補書籍遺失的遺憾。
+                    <br>這個小小的行動將有助於維持書旅社區的書櫃豐富多元，讓其他讀者也能繼續享受閱讀的樂趣。您的貢獻將不僅僅是補充書籍，更是營造一個共融共享的閱讀環境，讓我們共同感受閱讀的力量與美好。
+                </div>
+            </div>
+
+            <input type="checkbox" id="q5">
+            <div class="question question5">
+                <label for="q5" >
+                <div>Q5: &nbsp; 我可以在書旅小報上投稿嗎？</div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>
+            </div>
+            <div class="q5-content question-content">
+                <div >
+                    是的，我們非常歡迎您投稿！
+                    <br>
+                    書旅小報是一個開放的平台，您可以與我們分享您的閱讀心得、旅遊故事或者其他與閱讀相關的內容。
+                    <br>
+                    您的投稿將有機會被刊登在書旅小報上，讓更多人了解您的故事和見解，一同感受閱讀的魅力與書旅的無限可能。
+                </div>
+            </div>
+
+            <input type="checkbox" id="q6">
+            <div class="question question6">
+                <label for="q6" >
+                <div>Q6: &nbsp; 我想提供書站可以怎麼辦?  </div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>
+            </div>
+            <div class="q6-content question-content">
+                <div >
+                    非常感謝熱情的你提供書站!!
+                    <br>
+                    書站作為書旅的一部分，提供了社區閱讀環境的重要支持。書站需要提供管理人員、置書區、閱讀休憩區: 
+                    <br>
+                    <br>管理人員:
+                    <br>
+                    負責
+                    協助讀者尋找心儀的書籍
+                    提供閱讀建議和推薦
+                    組織各類閱讀活動
+                    促進讀者之間的交流與互動
+                    <br>
+                    <br>置書區:
+                    <br>整理和陳列書籍，確保有序排列和易於尋找
+                    根據不同讀者需求調整書櫃的書籍種類和主題
+                    <br>
+                    <br>閱讀休憩區:
+                    <br>提供舒適的閱讀環境，讓讀者可以在其中愜意地閱讀和放鬆。
+                    <br>
+                    <br>
+                    總的來說，書旅的管理人員在書站中扮演著閱讀導引者、文化傳播者和服務提供者的角色，因為您的努力讓書站成為社區的文化樞紐和閱讀的樂園。
+                </div>
+            </div>
+
+            <!-- <input type="checkbox" id="q7">
+            <div class="question question7">
+                <label for="q7" >
+                <div>Q7: &nbsp; </div>
+                <div><img src="imgs/faqbtn.svg" alt=""></div>
+                </label>
+            </div>
+            <div class="q7-content question-content">
+                <div >
+
+
+                </div>
+            </div> -->
+         
+           
+    </article>
+    <footer>
+        <div class="footer-logo">
+
+            <div class="logo-img">
+                <a href="index.html">
+                    <img src="imgs/logo vertical.svg" alt="">
+                </a>
+            </div>          
+        </div>
+        <div class="main-footer">
+           <div>
+                <ul>
+                    <li> <a href="">關於書旅</a>
+                        <ul>
+                            <li>書旅介紹</li>
+                            <li>團隊成員</li>
+                        </ul>
+                    </li>
+                    <li> <a href="members.html">加入書旅</a>
+                        <ul>
+                            <li>會員登入</li>
+                            <li>會員註冊</li>
+                        </ul>
+                    </li>
+                    <li> <a href="allnews.html">書旅消息</a>
+                        <ul>
+                            <li>書旅小報</li>
+                            <li>媒體報導</li>
+                            <li>全部消息</li>
+                        </ul>
+                    </li>
+                    <li> <a href="faqs.html">常見問題</a> </li>
+                    <li> <a href="bookmap.html">書站地圖</a> </li>
+                    <li> <a href="contactUs.html">聯絡我們</a>
+                        <ul>
+                            <li>聯絡地址</li>
+                            <li>聯絡表單</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="booksearch.html">好書搜尋</a>
+                   </li>
+                </ul>
+           </div> 
+            <div>
+                <p>
+                    本網站為緯育TibaMe前端工程師專業技術養成班第75期學員專題作品，本平台僅供學習、展示之用。<br>
+                    ©2023 Book travel. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+        <div class="footer-media">
+            <div class="medialink-f medialink"> <a href=""><i class="fa-brands fa-square-facebook"></i></a></div>
+            <div class="medialink-t medialink"> <a href=""><i class="fa-brands fa-square-twitter"></i></a></div>
+            <div class="medialink-l medialink"> <a href=""><i class="fa-brands fa-line"></i></a></div>
+            <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
+        </div>
+    </footer>
+
+    <script>
+
+
+       // 獲取所有具有.question類別的問題標題元素
+const questionTitles = document.querySelectorAll(".question");
+
+// 為每個問題標題元素設定點擊事件監聽器
+questionTitles.forEach((e) => {
+    // 當點擊問題標題時，切換相應問題內文的顯示與隱藏
+    e.addEventListener("click", function () {
+        const content = this.nextElementSibling; // 取得問題內文元素
+        content.classList.toggle("show"); // 切換show類別，show類別控制內文的顯示與隱藏
+    });
+});
+    
+    </script>
+</body>
+</html> widthChange.classList.toggle("width-70");
