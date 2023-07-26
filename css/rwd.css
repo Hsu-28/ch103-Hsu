@@ -1,0 +1,43 @@
+/* Styles for larger screen sizes (width >= 1280px) */
+@media (min-width: 1280px) {
+    body {
+      /* Set a maximum width for larger screens */
+      max-width: 1280px;
+      margin: 0 auto; /* This will center the content horizontally */
+    }
+  
+    /* Center the header content */
+    header {
+      margin: 0 auto;
+    }
+  
+    /* Adjust the header title position */
+    header h1 {
+      top: 20%; /* Adjust as needed */
+    }
+  
+    header h2 {
+      top: 35%; /* Adjust as needed */
+    }
+  
+    /* Center the search bar */
+    .search-bar {
+      justify-content: center;
+    }
+  
+    /* Center the section content */
+    .content {
+      margin: 0 auto;
+    }
+  
+    /* Center the pagination links */
+    .content-page {
+      justify-content: center;
+    }
+  
+    /* Center the footer content */
+    footer .main-footer {
+      justify-content: center;
+    }
+  }
+  

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>書站地圖p</title>
+    <title>書站地圖</title>
     <link href="imgs/logo.ico" rel="shortcut icon"/>
     <link rel="stylesheet" href="css/css.reset.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -17,43 +17,32 @@
         }
 
         header{
-            background-image: url(imgs/bookmapbgi.jpg);
-            width: 1280px;
-            height: 440px;
-            overflow: hidden;
-            box-shadow: 0px 2px 4px black ;
-        }
-        header::before{
-            content: "";
-            position: absolute;
+            background-image: url(imgs/mapbanner.jpg);
             width: 100%;
-            height: 442px;
-            background-color: rgba(63, 93, 132, 0.50);
+            height: 440px;
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% ;
         }
-        header h1, header h2{
-            position: absolute;
-            color: #fff;    
-        }
+
         header h1{
             text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             font-size: 60px;
-            font-style: normal;
             font-weight: 400;
-            line-height: normal;
             left: 50%;
-            top: 145.68px;
-            transform: translateX(-50%) rotate(-9.828deg);
+            top: 40%;
+            transform: translate(-50%, -50%)
+                        rotate(-9.828deg);
             position: absolute;
             color: #fff;      
         }
         header h2{
             text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             font-size: 32px;
-            font-style: normal;
             font-weight: 400;
-            line-height: normal;
             left: 50%;
-            top: 269px;
+            top: 50%;
             transform: translateX(-50%); 
             position: absolute;
             color: #fff;
@@ -71,7 +60,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        background-color: #fff;
+        background-color: #a7b7d4;
       }
       .btns button{
         width: 130px;
@@ -81,15 +70,21 @@
         background-color: #fff;
         color: rgb(7, 7, 7);
         font-size: 18px;
+        font-weight: 600;
       }
       .btns .all:hover,
       .btns .north:hover,
       .btns .middle:hover,
       .btns .south:hover,
       .btns .east:hover{
-        background-color: #FCDD65;
-        
+        background-color: #FCDD65;  
+        cursor: pointer;
+        color: white;
+
       }
+
+    
+
       .btns a{
         text-decoration: none;
         color: rgb(53, 52, 52);
@@ -133,19 +128,19 @@
 
       .img-content{
         width: 30%;
-        border-radius: 50px 0px 0px 50px; 
+        border-radius: 30px 0px 0px 30px; 
         overflow: hidden;
       }
       .site img{
-        height: 100%;
+        height:  100%;
         aspect-ratio:1.5 /1.2;
-        border-radius: 50px 0px 0px 50px;
+        border-radius: 30px 0px 0px 30px;
       }
 
     .site-info{
         width: 75%;
         height: 100%;
-        border-radius: 0px 50px 50px 0px;
+        border-radius: 0px 30px 30px 0px;
         background: rgb(255, 255, 255);
         display: flex;
         flex-flow: column nowrap;
@@ -184,7 +179,7 @@
         top: -20px;
         height: 1px;
         width: 80%;
-        background-color: rgb(87, 87, 87);
+        background-color: rgb(150, 148, 148);
       }
 
       .books{
@@ -204,12 +199,27 @@
       .books span{
         writing-mode: horizontal-tb;
       }
+    .site a{
+        text-decoration: none;
+        color: rgb(56, 55, 55);
+    }
+
+    .point-north,
+    .point-south,
+    .point-middle,
+    .point-east{
+        display: none;
+    }
+    .book-point a:hover i{
+        color:#1F4788;
+    }
+ 
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <span><a href="index.html"><img src="imgs/logo horizontal.svg" alt=""></a> </span>
+            <span><a href="index.html"><img src="imgs/logo-horizontal.svg" alt=""></a> </span>
             <ul>
                 <li><a href="">關於書旅</a></li> 
                 <li><a href="allnews.html">最新消息</a></li>
@@ -226,24 +236,132 @@
     
     <article class="main-contain">
         <div class="btns">
-            <a href=""><button class="all">全部 </button></a>  
-            <a href=""><button class="north"><a href="">北部</a></button></a>
-            <a href=""><button class="middle"><a href="">中部</a></button></a>
-            <a href=""><button class="south"><a href="">南部</a</button></a>
-            <a href=""><button class="east"><a href="">東部</a></button></a>                      
+           <button class="all">全部 </button> 
+            <button class="north">北部</button>
+            <button class="middle">中部</button>
+            <button class="south">南部</button>
+            <button class="east">東部</button>                    
         </div>
 
 
-        <div class="book-point" >
+        <div class="book-point point-all" >
             <div class="site">
-                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
+                <div class="img-content"> <a href="https://sharon23565421.github.io/Sweet-Dreams/"> <img src="imgs/dogcur.jpg" alt="we cat cafe書點"></a> </div>
+                <div class="site-info">
+                    <div>
+                        <h3> Sweet Dreams寵物行為矯正/美容 </h3>
+                        <p>營業時間: 一 〜 六   11:30〜22:00 / 日  11:30〜20:00</p>
+                        <p>電話: 02-5346-1235</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank">  <p>地址:台北市中山北路十六段93號 <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明: 你的寵物需要治療</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>33</span> </p> </div>
+            </div>
+            <div class="site">
+                <div class="img-content">
+                    <a href="https://shiu1008.github.io/linda_vs/index.html" target="_blank" rel="noopener noreferrer"><img src="imgs/1690336427398.jpg" alt="we cat cafe書點"></a>
+                </div>
+                <div class="site-info">
+                    <div>
+                        <h3>linda linda 咖啡</h3>
+                        <p>營業時間: 禮拜一公休，其他時間11至20點</p>
+                        <p>電話: 034251108</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址:臺南市安平區永華路二段6號 <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 南區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明:日式咖啡廳</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>43</span> </p> </div>
+            </div>
+
+            <div class="site">
+
+                <div class="img-content">
+                    <a href="https://a0956154555.github.io/CHD103/furniture/html/index.html" target="_blank" rel="noopener noreferrer"><img src="imgs/happy.jpg" alt="we cat cafe書點"></a>
+                </div>
+                <div class="site-info">
+                    <div>
+                        <h3>暉楽家居</h3>
+                        <p>營業時間:禮拜一公休，其他時間10:30至22點</p>
+                        <p>電話: 034251108</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 台東市博愛路365號  <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 東區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明: 你沒有密碼</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>50</span> </p> </div>
+            </div>
+
+            <div class="site">
+                
+                <div class="img-content"> <a href="https://imdaxiang.github.io/MIGOO/index.html" target="_blank" rel="noopener noreferrer"><img src="imgs/cat.jpg" alt="we cat cafe書點"></a></div>
+                <div class="site-info">
+                    <div>
+                        <h3> MIGOO </h3>
+                        <p>營業時間: 禮拜四公休，其他時間10:30至21點</p>
+                        <p>電話: 034251108</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址:320桃園市中壢區復興路46號9樓 <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明: 來買貓貓用品</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>29</span> </p> </div>
+            </div>
+
+            <div class="site">          
+                <div class="img-content">  <a href="https://yuni-liao.github.io/miu-beer/" target="_blank"> <img src="imgs/address_king.jpg" alt="we cat cafe書點"> </a></div>
+                <div class="site-info">
+                    <div>
+                        <h3> Miu Beer 貓皇店</h3>
+                        <p>營業時間: 週日至週四 11:30-22:00 週五與週六 11:30-22:30 </p>
+                        <p>電話: 03-6666-9466</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 貓咪市貓皇區喵喵路66號6樓 <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明:我想看貓咪喝酒</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>46</span> </p> </div>
+            </div>
+
+            <div class="site">
+                
+                <div class="img-content"> <a href="https://rou94980.github.io/langlangcafe/" target="_blank"> <img src="imgs/doggggg.jpg" alt="浪浪咖啡島"> </a></div>
+                <div class="site-info">
+                    <div>
+                        <h3>浪浪咖啡島</h3>
+                        <p>營業時間: 上午 10點 - 晚上 8點</p>
+                        <p>電話: 02-25711234</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 基隆市赤峰街908號 <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p> 其他說明: 歡迎常帶浪浪回家順便看書~ </p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>53</span> </p> </div>
+            </div>
+
+            <div class="site"> 
+                <div class="img-content">  <a href="https://w421848.github.io/we-cat-cafe/new-index" target="_blank"> <img src="imgs/booksite1.jpg" alt="we cat cafe書點">  </a></div>
                 <div class="site-info">
                     <div>
                         <h3>We Cat Cafe</h3>
                         <p>營業時間: 全年無休</p>
                         <p>電話: 034251108</p>
-                        <p>地址:320桃園市中壢區復興路46號9樓</p>
-                        <p>書站分區: 北區</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 地址台中市后里區月眉東路一段185號 <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 中區</p>
                     </div> 
                     <div> 
                         <p>其他說明:歡迎來嚕貓</p>
@@ -252,117 +370,15 @@
                 <div class="books"><p>書籍數 <span>23</span> </p> </div>
             </div>
 
-            <div class="site">
-                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
+            <div class="site"> 
+                <div class="img-content">  <a href="https://w421848.github.io/we-cat-cafe/new-index" target="_blank"> <img src="imgs/fire.jpg" alt="we cat cafe書點">  </a></div>
                 <div class="site-info">
                     <div>
-                        <h3>We Cat Cafe</h3>
-                        <p>營業時間: 全年無休</p>
-                        <p>電話: 034251108</p>
-                        <p>地址:320桃園市中壢區復興路46號9樓</p>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明:歡迎來嚕貓</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>23</span> </p> </div>
-            </div>
-
-            <div class="site">
-                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
-                <div class="site-info">
-                    <div>
-                        <h3>We Cat Cafe</h3>
-                        <p>營業時間: 全年無休</p>
-                        <p>電話: 034251108</p>
-                        <p>地址:320桃園市中壢區復興路46號9樓</p>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明:歡迎來嚕貓</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>23</span> </p> </div>
-            </div>
-
-            <div class="site">
-                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
-                <div class="site-info">
-                    <div>
-                        <h3>We Cat Cafe</h3>
-                        <p>營業時間: 全年無休</p>
-                        <p>電話: 034251108</p>
-                        <p>地址:320桃園市中壢區復興路46號9樓</p>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明:歡迎來嚕貓</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>23</span> </p> </div>
-            </div>
-
-            <div class="site">
-                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
-                <div class="site-info">
-                    <div>
-                        <h3>We Cat Cafe</h3>
-                        <p>營業時間: 全年無休</p>
-                        <p>電話: 034251108</p>
-                        <p>地址:320桃園市中壢區復興路46號9樓</p>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明:歡迎來嚕貓</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>23</span> </p> </div>
-            </div>
-
-            <div class="site">
-                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
-                <div class="site-info">
-                    <div>
-                        <h3>We Cat Cafe</h3>
-                        <p>營業時間: 全年無休</p>
-                        <p>電話: 034251108</p>
-                        <p>地址:320桃園市中壢區復興路46號9樓</p>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明:歡迎來嚕貓</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>23</span> </p> </div>
-            </div>
-
-            <div class="site">
-                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
-                <div class="site-info">
-                    <div>
-                        <h3>We Cat Cafe</h3>
-                        <p>營業時間: 全年無休</p>
-                        <p>電話: 034251108</p>
-                        <p>地址:320桃園市中壢區復興路46號9樓</p>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明:歡迎來嚕貓</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>23</span> </p> </div>
-            </div>
-
-            <div class="site">
-                <div class="img-content"><img src="imgs/booksite1.jpg" alt="we cat cafe書點"></div>
-                <div class="site-info">
-                    <div>
-                        <h3>We Cat Cafe</h3>
-                        <p>營業時間: 全年無休</p>
-                        <p>電話: 034251108</p>
-                        <p>地址:320桃園市中壢區復興路46號9樓</p>
-                        <p>書站分區: 北區</p>
+                        <h3>玩夥</h3>
+                        <p>營業時間:  09：00～22：30 (每周二公休)</p>
+                        <p>電話: 03-4258183</p>
+                        <a href="https://karta1020146.github.io/chd103/index.html" target="_blank"><p>地址: 320桃園市中壢區復興路46號9樓 <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 中區</p>
                     </div> 
                     <div> 
                         <p>其他說明:歡迎來嚕貓</p>
@@ -371,6 +387,139 @@
                 <div class="books"><p>書籍數 <span>23</span> </p> </div>
             </div>
         </div>
+
+
+        <div class="book-point point-north">
+            
+            <div class="site">          
+                <div class="img-content">  <a href="https://yuni-liao.github.io/miu-beer/" target="_blank"> <img src="imgs/address_king.jpg" alt="we cat cafe書點"> </a></div>
+                <div class="site-info">
+                    <div>
+                        <h3> Miu Beer 貓皇店</h3>
+                        <p>營業時間: 週日至週四 11:30-22:00 週五與週六 11:30-22:30 </p>
+                        <p>電話: 03-6666-9466</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 貓咪市貓皇區喵喵路66號6樓 <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明:我想看貓咪喝酒</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>46</span> </p> </div>
+            </div>
+
+            <div class="site">
+                
+                <div class="img-content"> <a href="https://rou94980.github.io/langlangcafe/" target="_blank"> <img src="imgs/doggggg.jpg" alt="we cat cafe書點"><img src="imgs/booksite1.jpg" alt="we cat cafe書點">  </a></div>
+                <div class="site-info">
+                    <div>
+                        <h3>浪浪咖啡島</h3>
+                        <p>營業時間: 上午 10點 - 晚上 8點</p>
+                        <p>電話: 02-25711234</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 基隆市赤峰街908號 <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p> 其他說明: 歡迎常帶浪浪回家順便看書~ </p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>53</span> </p> </div>
+            </div>
+            <div class="site">
+                <div class="img-content"> <a href="https://sharon23565421.github.io/Sweet-Dreams/"> <img src="imgs/dogcur.jpg" alt="we cat cafe書點"></a> </div>
+                <div class="site-info">
+                    <div>
+                        <h3> Sweet Dreams寵物行為矯正/美容 </h3>
+                        <p>營業時間: 一 〜 六   11:30〜22:00 / 日  11:30〜20:00</p>
+                        <p>電話: 02-5346-1235</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank">  <p>地址:台北市中山北路十六段93號 <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明: 你的寵物需要治療</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>33</span> </p> </div>
+            </div>
+        </div>
+        <div class="book-point point-south">
+            <div class="site">
+                <div class="img-content">
+                    <a href="https://shiu1008.github.io/linda_vs/index.html" target="_blank" rel="noopener noreferrer"><img src="imgs/1690336427398.jpg" alt="we cat cafe書點"></a>
+                </div>
+                <div class="site-info">
+                    <div>
+                        <h3>linda linda 咖啡</h3>
+                        <p>營業時間: 禮拜一公休，其他時間11至20點</p>
+                        <p>電話: 034251108</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址:臺南市安平區永華路二段6號 <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 南區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明:日式咖啡廳</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>43</span> </p> </div>
+            </div>
+            <div class="site">
+                
+                <div class="img-content"> <a href="https://imdaxiang.github.io/MIGOO/index.html" target="_blank" rel="noopener noreferrer"><img src="imgs/cat.jpg" alt="we cat cafe書點"></a></div>
+                <div class="site-info">
+                    <div>
+                        <h3> MIGOO </h3>
+                        <p>營業時間: 禮拜四公休，其他時間10:30至21點</p>
+                        <p>電話: 034251108</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址:320桃園市中壢區復興路46號9樓 <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 北區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明: 來買貓貓用品</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>29</span> </p> </div>
+            </div>
+        </div>
+        <div class="book-point point-east">
+            <div class="site">
+
+                <div class="img-content">
+                    <a href="https://a0956154555.github.io/CHD103/furniture/html/index.html" target="_blank" rel="noopener noreferrer"><img src="imgs/happy.jpg" alt="we cat cafe書點"></a>
+                </div>
+                <div class="site-info">
+                    <div>
+                        <h3>暉楽家居</h3>
+                        <p>營業時間:禮拜一公休，其他時間10:30至22點</p>
+                        <p>電話: 034251108</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 台東市博愛路365號  <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 東區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明: 你沒有密碼</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>50</span> </p> </div>
+            </div>
+        </div>
+        <div class="book-point point-middle">
+            <div class="site"> 
+                <div class="img-content">  <a href="https://w421848.github.io/we-cat-cafe/new-index" target="_blank"> <img src="imgs/booksite1.jpg" alt="we cat cafe書點">  </a></div>
+                <div class="site-info">
+                    <div>
+                        <h3>We Cat Cafe</h3>
+                        <p>營業時間: 全年無休</p>
+                        <p>電話: 034251108</p>
+                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 地址台中市后里區月眉東路一段185號 <i class="fa-solid fa-location-dot"></i></p> </a>
+                        <p>書站分區: 中區</p>
+                    </div> 
+                    <div> 
+                        <p>其他說明:歡迎來嚕貓</p>
+                    </div>
+                </div>
+                <div class="books"><p>書籍數 <span>23</span> </p> </div>
+            </div>
+        </div>
+                
+        
 
 
     </article>

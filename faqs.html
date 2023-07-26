@@ -10,29 +10,35 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/member.css">
+
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
     <style>
         header{
-            background-image: url(imgs/fqs.jpg);
-            width: 1280px;
+            background-image: url(imgs/306.jpg);
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% ;
             height: 450px;
             background-color: rgba(63, 93, 132, 0.50);
+            position: relative;
         }
 
         header h1 {
             position: absolute;
-            top: 170px;
-            left: 536px;
+            top: 40%;
+            left: 50%;
             color: white;
             font-size: 60px;
-            font-style: normal;
             font-weight: 400;
             line-height: normal;
-            transform: rotate(-9.828deg);
+            transform: translate(-50%, -50%)
+                        rotate(-9.828deg);
+            
         }
         header h2 {
             position: absolute;
-            top: 45%;
+            top: 48%;
             left: 50%;
             transform: translateX(-50%);
             color: white;
@@ -73,11 +79,11 @@
         @keyframes slideDown {
             0% {
                 opacity: 0;
-                transform: translateY(-100%); /* 將元素向上平移 100% */
+                transform: translateY(-100%); 
             }
             100% {
                 opacity: 1;
-                transform: translateY(0); /* 將元素恢復到原本位置 */
+                transform: translateY(0); 
             }
         }
         .question-content div{
@@ -127,7 +133,7 @@
 <body>
     <header>
         <nav>
-            <span><a href="index.html"><img src="imgs/logo horizontal.svg" alt=""></a> </span>
+            <span><a href="index.html"><img src="imgs/logo-horizontal.svg" alt=""></a> </span>
             <ul>
                 <li><a href="">關於書旅</a></li> 
                 <li><a href="allnews.html">最新消息</a></li>
