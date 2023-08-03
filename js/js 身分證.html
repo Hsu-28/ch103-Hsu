@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div>
+        <label for="idNum">
+            身分證檢查: 
+            <input type="text" id="idNum">
+        </label>
+         <button onclick="checkIdNum()">檢查</button>
+    </div>
+
+    <script>
+        function checkIdNum () {
+            let inputId = document.getElementById("idNum").value
+            console.log(inputId)
+
+            if (inputId.length < 10) {
+                alert("長度不足")
+            }
+
+            
+        }
+      
+
+
+
+    </script>
+</body>
+</html>

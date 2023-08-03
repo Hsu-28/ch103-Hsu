@@ -21,16 +21,16 @@
         background-repeat: no-repeat;
         background-image: url(imgs/contact-us-bgi.jpg);
         /* border: 1px solid red;   */
-        padding-top: 240px;
-        padding-bottom: 100px;
+        /* 超級厲害的雷點紀錄 */
+        /* 第一個子元素的margin-top bottm會變成父元素的 */
         }
-
+        
         .main-content{
             width: 64.218%;
             height: 1400px;
-            position: relative;
             z-index: 5;
-            margin: auto;
+            left: 50%;
+            margin: 280px auto;
             background-color: #fff;
             display: flex;
             flex-wrap: nowrap;
@@ -60,7 +60,7 @@
             background: rgba(31, 71, 136, 0.30);
             text-align: center;
             line-height: 54px;
-            z-index: 1;
+            z-index: -1;
         }
         .information,
         .contact-form{
@@ -203,16 +203,14 @@
             cursor: pointer;
         }
 
-        /* article::after{
+        article::before{
             content: "";
-            background-image: linear-gradient(rgba(255, 255, 255, 0.5), transparent);
+            background-image: linear-gradient(rgba(255, 255, 255, 0.6), transparent);
             width: 100%;
             height: auto;
             position: absolute;
-            left: -100%;
-            top: 0;
-            z-index: 1000;
-        } */
+            z-index: 0;
+        }
     </style>
 </head>
 
@@ -382,14 +380,14 @@
         </div>
     </footer>
    
-    <script src="js/member.js"></script>
+    <!-- <script src="js/member.js"></script> -->
     <script>
         const h1Element = document.querySelector("h1");
 
         window.addEventListener("scroll", function() {
             const scrollY = window.scrollY;
             const fontSize = 220 - scrollY / 5;
-            const opacity = 1 - scrollY / 120;
+            const opacity = 1 - scrollY / 85;
 
             h1Element.style.fontSize = `${fontSize}px`;
             h1Element.style.opacity = opacity;
@@ -399,7 +397,7 @@
     divsWithChangeColor.forEach((div) => {
         const inputElement = div.querySelector("input");
         inputElement.addEventListener("focus", function () {
-            div.style.borderBottomColor = "rgba(31, 71, 136, 0.7)"
+            div.style.borderBottomColor = "rgba(31, 71, 136, 0.7"
             div.style.borderBottomWidth = "2px";
         });
         inputElement.addEventListener("blur", function () {

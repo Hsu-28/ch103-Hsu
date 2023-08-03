@@ -40,7 +40,7 @@ article.memberOverflow .container-form{
     height: 100%;
     position: absolute;
     top: 0;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 article.memberOverflow .container-signin{
@@ -108,7 +108,7 @@ article.memberOverflow .overlay-panel{
     position: absolute;
     top: 0;
     transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     width: 50%;
 } 
 article.memberOverflow .overlay-left{

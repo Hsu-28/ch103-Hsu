@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Object 簡介</title>
+<style>
+  h2 { color:deepPink}
+</style>
+</head>
+
+<body>	  			 
+<h2> new Object()</h2>
+<script>  
+// function apply(money){  
+//     if( money <= 10000){
+// 		document.write("申請費用", money , ", 通過<br>") ;
+//     }else{
+//     	document.write("申請費用", money , ", 超過10000元，不通過<br>") ;
+//     }
+// }
+
+var emp = new Object(); //{}
+emp.empno = "7111";
+emp.ename = "Adam";
+emp.apply = function(money){ 
+							document.write(`${this.ename}申請費用${money}元<br>`) ;
+						}
+document.write("代號 : " , emp.empno , "<br>");
+document.write("姓名 : " , emp.ename , "<br>");
+emp.apply(6000);
+</script>
+
+<h2>Object literals</h2>
+<script> 	
+var arr = new Array(11, 22);
+var arr = [11, 22];
+
+var arr = new Array();
+var arr = [];
+
+var obj = new Object();
+var obj = {};
+//-----------有較多屬性(資料)的物件
+var emp = {
+				empno: "7112",
+	      ename: "Ann",
+				apply: function(money){ 
+					document.write(`申請費用${money}元<br>`) ;
+				}
+			}
+emp.apply(7000);
+/**/
+</script>
+
+<h2>Object literals------2</h2>
+<script> 
+//let empno = document.getElementById("empno").value
+//let ename = document.getElementById("ename").value;
+
+//從前。	
+var empno = "7118"; //假設日後可以前別的地方動態的取得empno的值
+var ename = "Adam";		
+var emp = {
+				empno: empno,
+	      ename: ename,
+				apply: function(money){ 
+					document.write(`申請費用${money}元<br>`) ;
+				}				
+			}
+emp.apply(6700);
+
+</script>
+
+
+<h2>Object literals------3</h2>
+<script> 
+//ES6提供簡化的字面值撰寫方法(short notation)。	
+var empno = "7118";
+var ename = "Adam";		
+var emp = {
+				empno,
+	      ename,
+				apply(money){ 
+					document.write(`申請費用${money}元<br>`) ;
+				}				
+			}
+emp.apply(7700);
+</script>
+
+<h2>------------------------------</h2>
+<script>
+
+var emp = {
+				empno: "7112",
+	      ename: "Ann",
+				apply: function(money){ 
+					document.write(`申請費用${money}元<br>`) ;
+				}
+			}
+emp.apply(7000);	
+
+var emp2 = {
+				empno:"7113",
+				ename:"Alice"
+}
+//emp2.apply(10000); //此行會error------------
+</script>
+
+<h2> 建構函式名稱() ------當做一般函式來呼叫</h2>
+<script> 	
+function Employee(empno, ename){//當做一般函式來呼叫時, 函式中的this指向window物件 ,
+	this.empno = empno;
+	this.ename = ename;
+}
+document.write("window.empno : ", window.empno, "<br>");
+document.write("window.ename : ", window.ename, "<br>");
+
+Employee("7111", "Ken");
+document.write("window.empno : ", window.empno, "<br>");
+document.write("window.ename : ", window.ename, "<br>");
+
+//----------------校犬
+var dog = {}
+
+Employee.call(dog, "9999", "Snoopy"); //使用call時(dog, "9999", "Snoopy")
+//call()的第一個引數可以將一個物件轉入函式, 讓函式中的this指向此物件
+document.write("dog.empno : ", dog.empno, "<br>");
+document.write("dog.ename : ", dog.ename, "<br>");
+
+document.write("this.empno : ", this.empno, "<br>");//window
+document.write("this.ename : ", this.ename, "<br>");
+</script>  
+
+
+
+<h2> new 建構函式名稱()</h2>
+<script> 	
+function Employee(empno, ename){
+	this.empno = empno;
+	this.ename = ename;
+}
+//--------------------------------------------------------------------------------------
+Employee.prototype.toString = function(){  //以new Employee產生的物件會擁有prototype中的功能
+	return `[empno : ${this.empno}, ename : ${this.ename}]`;
+}
+
+Employee.prototype.apply = function(money){
+		document.write(`申請費用${money}元<br>`) ;
+}
+//--------------------------------------------------------------------------------------
+var emp = new Employee("7001", "Tom");
+//形同做了下列
+//1. var emp = new Object(); //{}
+//2. Employee.call(emp, "7001", "Tom");
+document.write("emp.empno : ", emp.empno, "<br>");
+document.write("emp.ename : ", emp.ename, "<br>");
+emp.apply(100000);
+document.write( emp.toString(), "<hr>");
+
+var emp2 = new Employee("7002", "Henry");
+document.write("emp2.empno : ", emp2.empno, "<br>");
+document.write("emp2.ename : ", emp2.ename, "<br>");
+emp2.apply(100);
+document.write( emp2.toString(), "<hr>");
+
+</script>  
+<!---->
+
+
+</body>
+</html>

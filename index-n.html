@@ -28,10 +28,11 @@
 }
 .banner{
     position: relative;
-    max-width: 100%;
+    width: 100%;
     margin-left: 0;
     margin-right: 0;
     margin: 0 auto;
+    /* height: 100vh; */
 }
 nav{
     max-width: 1400px;
@@ -526,7 +527,7 @@ li.north{
 
   .draw-straws {
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
   }
   .draw-straws .books{
     position: absolute;
@@ -676,9 +677,6 @@ section.marquee {
   }
 }
 
-/* .draw-straws{
-    display: none;
-} */
 
 
 </style>
@@ -883,16 +881,24 @@ section.marquee {
         </div>
     </article>
     <article class="draw-straws">
-        <h2 id="last">好書抽籤</h2>
+        <h2 >好書抽籤</h2>
         <img  src="imgs/spots.svg" alt="">
-        <img class="books" src="imgs/book1.png" alt="">
-        <img class="books" src="imgs/book2.png" alt="">
-        <img class="books" src="imgs/book3.png" alt="">
-        <img class="books" src="imgs/book4.png" alt="">
-        <img class="books" src="imgs/book5.png" alt="">
-        <img class="books" src="imgs/book6.png" alt="">
-        <img class="books" src="imgs/book7.png" alt="">
-        <img  src="imgs/again.svg" alt="">
+
+        <div class="draw-straws-content">
+            <div class="books-img">
+                <img class="books" src="imgs/book1.png" alt="">
+            </div>
+            <div class="">
+
+            </div>
+            
+
+
+        </div>
+        
+        
+       
+        <img class="again" src="imgs/again.svg" alt="">
     </article>
 
     <article class="memberOverflow">
@@ -1032,33 +1038,6 @@ section.marquee {
             logoH.style.opacity = 0;
         }
         });
-
-
-
-// 獲取 h2 元素和 .books 元素
-const h2Element = document.getElementById('last');
-const booksElement = document.querySelector('.books');
-
-// 監聽滾動事件
-window.addEventListener('scroll', () => {
-  // 獲取 h2 元素的位置和視窗高度
-  const h2Rect = h2Element.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
-
-  // 計算目標位置
-  const targetLeft = '0%';
-  const targetTop = `calc(40vh - 50px)`; // 向上偏移 50px
-
-  // 判斷滑鼠是否在 h2 區域內
-  if (h2Rect.top <= windowHeight && h2Rect.bottom >= 0) {
-    // 移動 .books 元素到目標位置
-    booksElement.style.transform = `translate(${targetLeft}, ${targetTop})`;
-  } else {
-    // 滑鼠不在 h2 區域內，還原 .books 元素位置
-    booksElement.style.transform = 'none';
-  }
-});
-
 
     </script>
 

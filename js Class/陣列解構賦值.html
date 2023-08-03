@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+</head>
+
+<body>
+<script type="text/javascript">
+//陣列解構賦值
+var arr = [11, 22, 33];
+var [a, b] = arr;
+document.write("a : ", a, "<br>");
+document.write("b : ", b, "<br>");
+
+
+//對應不到會得到undefined
+var arr = [11, 22, 33];
+var [aa, bb, cc, dd] = arr;
+document.write("aa : ", aa, "<br>");
+document.write("bb : ", bb, "<br>");
+document.write("cc : ", cc, "<br>");
+document.write("dd : ", dd, "<br>");
+
+//對應不到, 可以給預設值
+var arr = [11, 22, 33];
+var [aaa, bbb, ccc, ddd=100] = arr;
+document.write("aaa : ", aaa, "<br>");
+document.write("bbb : ", bbb, "<br>");
+document.write("ccc : ", ccc, "<br>");
+document.write("ddd : ", ddd, "<br>");
+
+//可以跳過某些值不要
+var [x, , y] = arr;
+document.write("x : ", x, "<br>");
+document.write("y : ", y, "<br>");
+
+//可以利用陣列解構來做變數交換
+var a = 10;
+var b = 20;
+var [a, b] = [b, a];
+document.write("a : ", a, "<br>");
+document.write("b : ", b, "<br>");
+
+var arr = [11, 22, 33];
+[arr[1], arr[0]] = [arr[0], arr[1]];
+// arr[1] = arr[0];
+// arr[0] =  arr[1];
+
+document.write("--------arr: " , arr , "<br>");// 22, 11 ,33
+
+//...在=號左側(rest, 將解構剩餘元素給另一陣列)
+var arr = [11, 22, 33, 44, 55, 66, 77];
+var [xx, yy, ...arr2] = arr;
+document.write("xx : ", xx, "<br>");
+document.write("yy : ", yy, "<br>");
+document.write( arr2, "<br>");
+
+//...在=號右側(spread, 將陣列解構展開)
+var arr = [11, 22];
+var x = 10;
+var arr2 = [...arr, x];
+document.write( arr2, "<br>");
+
+//------------將陣列解構展開後傳給參數
+function sum( a, b, c){
+	return a+b+c;
+}
+var numbers = [11,22,33];
+document.write("total : ", sum(...numbers),"<br>");
+
+//------------陣列展開後傳給函式的參數(spread)
+function sum( a, b, c){
+	return a+b+c;
+}
+
+//-------------從前
+var numbers = [11,22,33];
+    document.write("1---total = ", sum( numbers[0], numbers[1], numbers[2]) , "<br>");
+var numbers = [11,22,33];
+document.write("2---total = ", sum(...numbers),"<br>");
+/*
+*/
+
+
+
+</script>    
+</body>
+</html>

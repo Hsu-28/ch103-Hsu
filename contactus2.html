@@ -15,52 +15,54 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@600&display=swap');
         
-        article{
-        background-position: center;
-        background-size: cover; 
-        background-repeat: no-repeat;
-        background-image: url(imgs/contact-us-bgi.jpg);
-        /* border: 1px solid red;   */
-        padding-top: 240px;
-        padding-bottom: 100px;
+            article{
+            position: relative;
+            background-position: center;
+            background-size: 100%; 
+            background-repeat: no-repeat;
+            background-image: url(imgs/contact-us-bgi.jpg);
+            height: 320vh;  
+            /* width: 1280px;
+            height: 320vh; */
         }
 
         .main-content{
             width: 64.218%;
-            height: 1400px;
-            position: relative;
+            height: 1441px;
             z-index: 5;
-            margin: auto;
+            position: absolute;
+            left: 50%;
+            top: 270px;
+            transform: translateX(-50%);
+            /* backdrop-filter: blur(40px); */
             background-color: #fff;
             display: flex;
             flex-wrap: nowrap;
             flex-direction: column;
             align-items: center;
-
         }
         h1{
             color: white;            
             position: fixed;
             left: 50%;
-            top: 70px;
+            top: 100px;
             transform: translateX(-50%);
-            text-shadow: 3px 3px 6px gray;
+            text-shadow: 2px 2px 4px gray;
             font-size: 220px;
             font-family:  'Poppins', sans-serif;;
-            z-index: 0;
             
         }
 
         article h2{
             font-size: 22px;
-            margin-top: 20px;
+            margin-top: 30px;
             width: 404px;
             height: 54px;
             border-radius: 10px;
             background: rgba(31, 71, 136, 0.30);
             text-align: center;
             line-height: 54px;
-            z-index: 1;
+            z-index: 2;
         }
         .information,
         .contact-form{
@@ -88,6 +90,7 @@
             margin: 20px 0;
             left: 0;
             line-height: 30px;
+            
         }
 
         .information div:first-of-type::before{
@@ -176,7 +179,7 @@
             width: 194px;
             height: 43px;
             border-radius: 10px;
-            background: #234986;
+            background: rgba(31, 71, 136, 0.7);
             font-family: Inter;
             font-size: 22px;
             font-style: normal;
@@ -198,21 +201,19 @@
             border:2px solid rgba(31, 71, 136, 0.7) ;
             color: rgba(31, 71, 136, 0.7); 
             background-color: white;
-            font-weight: 800;}
+            }
         .submit-btn{
             cursor: pointer;
         }
 
-        /* article::after{
+        article::before{
             content: "";
-            background-image: linear-gradient(rgba(255, 255, 255, 0.5), transparent);
+            background-image: linear-gradient(rgba(255, 255, 255, 0.6), transparent);
             width: 100%;
-            height: auto;
+            height: 300vh;
             position: absolute;
-            left: -100%;
-            top: 0;
-            z-index: 1000;
-        } */
+            z-index: 0;
+        }
     </style>
 </head>
 
@@ -231,7 +232,6 @@
             </ul>
         </nav>
     </header>
-    
     <article>
         <h1> <b>CONTACT</b> </h1>
         <div class="main-content">
@@ -389,7 +389,7 @@
         window.addEventListener("scroll", function() {
             const scrollY = window.scrollY;
             const fontSize = 220 - scrollY / 5;
-            const opacity = 1 - scrollY / 120;
+            const opacity = 1 - scrollY / 85;
 
             h1Element.style.fontSize = `${fontSize}px`;
             h1Element.style.opacity = opacity;
@@ -399,7 +399,7 @@
     divsWithChangeColor.forEach((div) => {
         const inputElement = div.querySelector("input");
         inputElement.addEventListener("focus", function () {
-            div.style.borderBottomColor = "rgba(31, 71, 136, 0.7)"
+            div.style.borderBottomColor = "rgba(31, 71, 136, 0.7"
             div.style.borderBottomWidth = "2px";
         });
         inputElement.addEventListener("blur", function () {

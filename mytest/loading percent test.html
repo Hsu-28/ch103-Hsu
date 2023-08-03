@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+        #loading {
+position: fixed;
+z-index: 1000;
+}
+article.loading-container{
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loading-line {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-items: center;
+    align-content: center;
+    margin-top: 20px;
+}
+.loading-line .login-box{
+    padding: 2px;
+    width: 40%;
+    height: 20px;
+    border:2px  solid #084A8E;
+    border-radius: 20px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+.loading-line .login-box p{
+    position: absolute;
+    left: 50%;
+    /* top: 50%;  */
+    transform: translate(-50%, -80%); 
+    color: white;
+}
+
+.loading-line .login-box .line{
+    height: 20px;
+    border-radius: 20px;
+    background-color: #FCDD65;
+    transition: width 0.2s;
+    /* animation: loading  .8s  forwards cubic-bezier(0,0,0,0); */
+    
+
+}
+/* @keyframes loading{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+} */
+.loading-text,
+.loading-line{
+    transform: translateY(-10vh);
+}
+    </style>
+</head>
+<body>
+    
+
+
+
+    <article class="loading-container" id="loading">
+        <div class="loading-text">
+            <img src="../imgs/logo-vertical-sv.svg" alt="">
+        </div>
+        <div class="loading-line">
+            <div class="login-box">
+                
+                <p>loading</p>
+                <div class="line">
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+            document.addEventListener("readystatechange", function() {
+            const loadingBar = document.querySelector(".line");
+
+            function updateLoadingProgress() {
+                const total = document.getElementsByTagName("*").length;
+                const loaded = document.querySelectorAll(":not(script):not(link)").length;
+                const progress = Math.round((loaded / total) * 100);
+                loadingBar.style.width = progress + "%";
+            }
+
+                document.onreadystatechange = completeLoading;
+                function completeLoading() {
+                    if (document.readyState === "interactive") {
+                                updateLoadingProgress();
+                            }
+
+                if (document.readyState == "complete") {
+                    setTimeout(function() {
+                        $("#loading").animate({
+                            "opacity": "0"
+                        }, 500).hide(1000);
+                    }, 1000);
+                }
+            }
+
+            });
+</script>
+
+
+
+
+</body>
+</html>
+

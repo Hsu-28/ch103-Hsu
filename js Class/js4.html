@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+      document.write("-作業9-<br>")
+      let count = 0;
+      let gold = 0;
+      for (let i = 0; i < 10; i++) {
+        let test = 0;
+        test = parseInt(Math.random() * 11);
+        count++;
+        gold += test;
+        if (test == 0) {
+          break;
+        }
+      }
+      document.write(`抽了${count}次， 總金額為${gold}<br>`);
+
+      document.write("<br>-作業10-<br>")
+      let pyramid = 8;
+      for (let i = 1; i < pyramid; i++) {
+        console.log(i);
+        for (let j = 1; j < i; j++) {
+          document.write(`*`);
+        }
+        document.write(`<br>`);
+      }
+
+      document.write("<br>-作業11-<br>")
+      let pyramid2 = 8;
+      for (let i = 1; i < pyramid2; i++) {
+        console.log(i);
+        for (let j = 1; j < i; j++) {
+          document.write(`*`);
+        }
+        document.write(`<br>`);
+      }
+      for (let i = pyramid2 - 1; i >= 1; i--) {
+        console.log(i);
+        for (let j = i; j >= 1; j--) {
+          document.write(`*`);
+        }
+        document.write(`<br>`);
+      }
+
+
+      document.write("<br>-作業12-<br>")
+      let Num = 6;
+      let questionStr = "";
+
+      for (let i = 1; i <= Num; i++) {
+        for (let j = 1; j <= 1; j++) {
+          questionStr += i;
+          document.write(questionStr);
+        }
+        document.write(`<br>`);
+      }
+      document.write(`<br>`);
+
+
+
+
+      document.write("<br>-作業13-<br>")
+      let num2 = 10;
+      let str2 = "";
+      let count2 = 0;
+
+      for (let i = 1; i <= num2; i++) {
+        for (let j = 1; j <= 1; j++) {
+            str2 += i;
+            count2 += i;
+        }
+        document.write(`${str2}=${count2}`);
+        str2 += "+";
+        document.write(`<br>`);
+      }
+      document.write(`<br>`);
+
+
+
+
+
+      document.write("<br>-作業14-<br>")
+      let arr2 = [];
+      let sum = 0;
+      let qMin = 0;
+      let qMax= 0;
+
+      for (let i = 0; i < 10; i++) {
+        let ans = Math.ceil(Math.random() * 100);
+        arr2.push(ans);
+        sum += ans;
+      }
+      qMin = arr2[0];
+      qMaX = arr2[0];
+      for (let i = 0; i < arr2.length; i++) {
+        if (arr2[i] < qMin) {
+            qMin = arr2[i];
+        }
+      }
+      for (let i = 0; i < arr2.length; i++) {
+        arr2[i] > qMaX
+          ? (qMaX = arr2[i])
+          : qMaX;
+      }
+      document.write(arr2);
+      document.write(`<br>`);
+      document.write(`總和${sum}`);
+      document.write(`最小${qMin}`);
+      document.write(`最大${qMax}`);
+
+
+
+
+      document.write("<br>-作業15-<br>")
+      let lotterArr = [];
+      while (lotterArr.length < 7) {
+        let ans7 = Math.ceil(Math.random() * 49);
+        if (lotterArr.indexOf(ans7) == -1) {
+            lotterArr.push(ans7);
+        }
+      }
+      
+      document.write(`${lotterArr}`);
+      document.write(`<br>`);
+
+
+
+        document.write("<br>-作業16-<br>")
+        let dataArr = [
+            { studyId: '學號', name: "名字", phone: "電話", address: "地址" },
+            { studyId: '94951001', name: "黃一丁", phone: "0911000333", address: "中壢市中大路一號" },
+            { studyId: '94951002', name: "劉二毛", phone: "0922997788", address: "高雄市中山路二號"},
+            { studyId: '94951003', name: "張大化", phone: "0933555779", address: "台北市師大路三號"},
+        ]
+
+        let table = document.createElement("div")
+        let tableHtml = `<table border="1">`
+ 
+        for(let i = 0; i < dataArr.length; i++) {
+            tableHtml +=` 
+            <tr>
+                <td>${dataArr[i].studyId}</td> 
+                <td>${dataArr[i].name}</td> 
+                <td>${dataArr[i].phone}</td> 
+                <td>${dataArr[i].address}</td> 
+            </tr>` 
+        }
+        tableHtml += `</table>`
+        table.innerHTML = tableHtml
+        document.body.appendChild(table ,"<br>");
+
+
+
+
+
+
+
+        document.write("<br>-作業17-<br>")
+        let min = 5;
+        let max = 10;
+        function rand(min, max){
+            let a = min + 1;
+            let b = max -min;
+            num = Math.floor(Math.random() * a) + b;
+
+        return num;
+        }
+        let result = rand(min, max);
+        document.write(result, "<br><br>");
+
+        document.write("<br>-作業18-<br>")
+        let totle =  Math.floor((Math.random()*4)+4)
+        for(let i = 1; i< totle; i++){
+            let num = Math.floor(Math.random()*10)
+            let r =  Math.floor(Math.random()*256)
+            let g =  Math.floor(Math.random()*256)
+            let b =  Math.floor(Math.random()*256)
+            document.write( `<span style="color:rgb(${r}, ${g}, ${b})">${num}</span>`, "<br>");
+        } 
+
+        
+
+        document.write("-作業19-<br>")
+        let bmiDiv = document.createElement("div");
+        let BMI = `
+            <label for="h">身高 <input type="number" id="h"> cm</label>
+            <label for="w">體重 <input type="number" id="w"> kg</label>
+            <button onclick="calculateBMI()">計算</button>
+            <div>結果<span id="result"></span></div>
+        `;
+        bmiDiv.innerHTML = BMI;
+        document.body.appendChild(bmiDiv);
+
+        function calculateBMI() {
+            let height = parseFloat(document.getElementById("h").value);
+            let weight = parseFloat(document.getElementById("w").value);
+            let bmi = weight / ((height / 100) * (height / 100));
+            document.getElementById("result").innerText = bmi.toFixed(2);
+        }
+
+
+
+    </script>
+</body>
+</html>

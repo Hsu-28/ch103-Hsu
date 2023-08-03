@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div > 現在時刻: <span id="timePanel"> </span> </div>
+    <script>
+
+        let now = new Date();
+        if (now.getHours < 12){
+            document.write("上午好<br>")
+        }else{
+            document.write("下午好<br>")
+        }
+        let birthday = new Date(1994,6,28)
+        document.write(birthday,"<br> <br>")
+
+
+        document.write("-date- <br>")
+        let born = new Date();
+        let weekday = "日一二三四五六"
+        let weekdayArr = ["日","一","二","三","四","五","六"]
+        document.write(`出生那天是星期${weekday.charAt(born.getDay())}<br><br>`)
+        // document.write(`出生那天是星期${weekdayArr[born.getDay()]}<br><br>`)
+        // document.write(`出生那天是星期${born.getDay()}<br><br>`)
+
+        function showTime(){
+            let now = new Date();
+            document.getElementById("timePanel").innerText = `${now.getHours()}: ${now.getMinutes()}: ${now.getSeconds()}`
+        }
+        window.addEventListener("load",function(){
+            showTime();
+            setInterval(showTime, 1000);
+        } )
+
+
+
+    </script>
+
+    入會月份
+    <select name="" id="mm"></select>
+    <script>
+        window.addEventListener("load", function(){
+            let mm = document.getElementById("mm");
+            let option;
+
+            for(let i = 1; i<=12; i++) {
+                option = new Option(i + "月",i)
+                mm.add(option);
+
+            }
+            mm.selectedIndex = new Date().getMonth();
+            
+        })
+    </script>
+</body>
+</html>
+

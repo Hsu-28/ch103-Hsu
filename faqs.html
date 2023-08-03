@@ -68,31 +68,51 @@
             height: 120px;
             align-items: center;
             transition: width 1s;  
+            margin: auto;
+        }
+
+        .question-title.change{
+            margin: auto;
+            width: 80%;
+            transition: width 1s;
         }
 
 
-        .question-content{
+        /* .question-content{ 
             display: none;
-            background-color: white;
-        } 
+            /* height: 0;
+            transform: scaleY(0);;
+            overflow: hidden;
+            transition: transform 10s;
+            animation:slideback 2s; 
 
-        @keyframes slideDown {
-            0% {
-                opacity: 0;
-                transform: translateY(-100%); 
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0); 
-            }
         }
+        .question-content.show{
+         display: block; 
+         animation:slideDown 2s; 
+         background-color: white;
+         height: auto;
+        }*/
+
+         .question-content {
+display: none;
+    background-color: white;
+    
+}
+
+.question-content.show {
+    display: block;
+    padding: 10px 0;
+    animation:slideDown 1.8s; 
+} 
+
         .question-content div{
-            width: 70%;
+            width: 80%;
             left: 0;
             right: 0;
             margin: auto;
             line-height: 1.8;
-            padding:20px 0 60px 0;
+            padding:10px 0 60px 0;
             
         }  
         .question img{
@@ -101,30 +121,33 @@
         .question-wrapper{
             border-top: 1px solid rgb(206, 201, 201);
         }
+        
 
-        .question-content.show{
-         display: block; 
-         animation:slideDown 1s; 
-        }
         .question.change {
             background-color: white;
         }
-        .question-title.change{
-            margin: auto;
-            width: 70%;
-            transition: width .3s;
-        }
+        
 
         @keyframes slideDown {
             0% {
-                opacity: .3; 
+                opacity: .5; 
                 max-height: 0; 
             }
             100% {
                 opacity: 1; 
-                max-height: 800px; 
+                max-height: 1600px; 
             }
         }
+        @keyframes slideback {
+            0% {
+        opacity: 1;
+        transform: scaleY(1); /* 從原本的高度開始收合 */
+    }
+    100% {
+        opacity: 0;
+        transform: scaleY(0); /* 收合到高度為 0 */
+    }
+}
 
 
  
@@ -156,7 +179,7 @@
             <div class="question-wrapper">
                 <div class="question">
                     <div class="question-title" >
-                    <div>Q1: &nbsp; 書旅是什麼？我該如何加入書旅？</div>
+                    <div>Q1:&nbsp;我該如何加入書旅？</div>
                     <img src="imgs/faqbtn.svg" alt="">
                     </div>              
                 </div>
@@ -169,7 +192,7 @@
             <div class="question-wrapper">
                 <div class="question">
                     <div class="question-title" >
-                        <div>Q2: &nbsp; 書旅有哪些位置可以借書？</div>
+                        <div>Q2&nbsp;書旅有哪些位置可以借書？</div>
                     <img src="imgs/faqbtn.svg" alt="">
                     </div>              
                 </div>
@@ -183,7 +206,7 @@
             <div class="question-wrapper">
                 <div class="question">
                     <div class="question-title" >
-                        <div>Q3: &nbsp; 書旅活動有哪些？我可以參加嗎？</div>
+                        <div>Q3:&nbsp;書旅有什麼活動？</div>
                     <img src="imgs/faqbtn.svg" alt="">
                     </div>              
                 </div>
@@ -209,7 +232,7 @@
             <div class="question-wrapper">
                 <div class="question">
                     <div class="question-title" >
-                        <div>Q4: &nbsp; 我借的書籍遺失了怎麼辦?</div>
+                        <div>Q4:&nbsp;我借的書籍遺失了怎麼辦?</div>
                     <img src="imgs/faqbtn.svg" alt="">
                     </div>              
                 </div>
@@ -225,7 +248,7 @@
             <div class="question-wrapper">
                 <div class="question">
                     <div class="question-title" >
-                        <div>Q5: &nbsp; 我可以在書旅小報上投稿嗎？</div>
+                        <div>Q5:&nbsp;我可以在書旅小報投稿嗎？</div>
                     <img src="imgs/faqbtn.svg" alt="">
                     </div>              
                 </div>
@@ -336,14 +359,27 @@
 
     <script>
         const questionAll = document.querySelectorAll(".question");
+        let orginImg = "imgs/faqbtn.svg";
+        let changeImg = "imgs/faqbtn-s.svg";
+        let ImgChange = false;
 
         questionAll.forEach((e) => {
             e.addEventListener("click", function () {
                 const content = this.nextElementSibling; 
                 const questionTitle = this.querySelector(".question-title")
+                const questionTitleBtn = this.querySelector("img") 
                 content.classList.toggle("show");
                 this.classList.toggle("change"); 
-                questionTitle.classList.toggle("change");           
+                questionTitle.classList.toggle("change");
+                questionTitleBtn.src = "imgs/faqbtn-s.svg"
+
+                 ImgChange = !ImgChange;
+
+                if (ImgChange) {
+                questionTitleBtn.src = changeImg;
+                } else {
+                questionTitleBtn.src = orginImg;
+                }
             });
         });
 
