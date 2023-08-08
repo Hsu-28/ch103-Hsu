@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/member.css">
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <style>
         footer{
             margin-top: 30vh;
@@ -47,482 +49,437 @@
             position: absolute;
             color: #fff;
         }
+        .items-container{
+            margin: 100px 0 60px 0;
+        }
+        .items-container ul{
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .items-container ul li {
+            margin: 10px 0;
+            border-left: 1px solid black;
+            text-align: center;
+            width: 140px;
+            position: relative;
+        }
 
-      .btns{
-        width: 70%;
-        height: 96px;
-        border: 1.5px solid #b1bed4;
-        border-radius: 25px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        margin-top: 87px;
+
+        .items-container ul li::after {
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 14px;
+            border-radius: 4px;
+            background-color: #6390da; 
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+
+        .items-container ul li:hover::after {
+        width: 80%; 
+        }
+
+
+        .items-container ul li:first-of-type{
+            border: none;
+        }
+
+        .main-container{
+            margin: auto;
+        }
+        .site-container{
+            position: relative;
+            margin: 0 auto;
+            width: 80%;
+            padding: 20px;
+            background-color: #F4F4EC;
+            display: flex;
+            color: #313131;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+        .site-img{
+            width: 40%;
+        }
+        .site-img img{
+            height: 360px;
+            width: 100%;
+        }
+        .site-content{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            width: 60%;
+            padding: 1%;
+        }
+        .site-content iframe{
+            height: 50%;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .site-container h3{
+            font-size: 32px;
+            
+        }
+        .site-container p:first-of-type{
+            font-size: 20px;
+        }
+        .site-container p:first-of-type{
+            font-size: 20px;
+        }
+        .site-container p:last-of-type{
+            font-size: 14px;
+            color: rgb(128, 128, 128);
+        }
+
+        .book-num{
+            position: absolute;
+            right: 10%;
+            top: 0;
+            height: 30%;
+            width: 60px;
+            font-size: 24px;
+            background-color: #FCDD65;
+            writing-mode: vertical-rl;
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .book-num::after { 
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            transform: translateX(-50%);
+            border-style: solid;
+            border-width: 16px 30px 0 30px;
+            border-color: #FCDD65 transparent transparent transparent;
+        }
+
+        .book-num span{
+            writing-mode: horizontal-tb;
+        }
+
+
+
+
+                /* 輪播 */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        article.carousel-container {
         display: flex;
-        justify-content: space-evenly;
+        padding: 0 35px;
         align-items: center;
-        background-color: #1F4788;
-      }
-      .btns button{
-        width: 130px;
-        height: 46px;
-        border-radius: 15px;
-        border:1.4px solid #566c92;
-        background-color: #fff;
-        color: rgb(7, 7, 7);
-        font-size: 18px;
-        font-weight: 600;
-      }
-      .btns .all:hover,
-      .btns .north:hover,
-      .btns .middle:hover,
-      .btns .south:hover,
-      .btns .east:hover{
-        background-color: #FCDD65;  
+        justify-content: center;
+        background: white;
+        }
+        .wrapper {
+        max-width: 1100px;
+        width: 100%;
+        position: relative;
+        }
+        .wrapper i {
+        top: 50%;
+        height: 50px;
+        width: 50px;
         cursor: pointer;
-        color: white;
-
-      }
-
-    
-
-      .btns a{
-        text-decoration: none;
-        color: rgb(53, 52, 52);
-      }
-      
-
-      .site{
+        font-size: 1.25rem;
+        position: absolute;
+        text-align: center;
+        line-height: 50px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+        transform: translateY(-50%);
+        transition: transform 0.1s linear;
+        }
+        .wrapper i:active{
+        transform: translateY(-50%) scale(0.85);
+        }
+        .wrapper i:first-child{
+        left: -22px;
+        }
+        .wrapper i:last-child{
+        right: -22px;
+        }
+        .wrapper .carousel{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 3) - 12px);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        border-radius: 8px;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        }
+        .carousel::-webkit-scrollbar {
+        display: none;
+        }
+        .carousel.no-transition {
+        scroll-behavior: auto;
+        }
+        .carousel.dragging {
+        scroll-snap-type: none;
+        scroll-behavior: auto;
+        }
+        .carousel.dragging .card {
+        cursor: grab;
+        user-select: none;
+        }
+        .carousel :where(.card, .img) {
         display: flex;
         justify-content: center;
-        width: 80%;
-        height: 250px;
-        inset: 50px 0 0 0;
-        margin: 40px auto;
-        position: relative;
-        
-      }
-      .img-content,
-      .site-info{
-        box-shadow: 1px 1px 2px gray;
-      }
-
-      .site:hover .site-info{
-        box-shadow: 3px 3px 3px rgb(86, 84, 84);
-      }
-      .site:hover .img-content{
-        box-shadow: 3px 3px 3px rgb(86, 84, 84);
-        /* width: 60%; */
-      }
-
-
-      .site:hover .img-content img{
-        box-shadow: 3px 3px 3px rgb(86, 84, 84);
-        transform: scale(110%);
-        transition: transform .2s;
-        overflow: hidden;
-      }
-      .site:hover .books{
-        box-shadow: 1px 1px 1px rgb(86, 84, 84);
-      }
-
-
-      .img-content{
-        width: 30%;
-        border-radius: 30px 0px 0px 30px; 
-        overflow: hidden;
-      }
-      .site img{
-        height:  100%;
-        aspect-ratio:1.5 /1.2;
-        border-radius: 30px 0px 0px 30px;
-      }
-
-    .site-info{
-        width: 75%;
-        height: 100%;
-        border-radius: 0px 30px 30px 0px;
-        background: rgb(255, 255, 255);
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-around;
-        position: relative;
-        
-    }
-      .site-info > div:first-of-type{
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-evenly;
-        font-size: 16px;
-        line-height: normal;
-      }
-      .site-info > div:first-of-type h3{
-        font-size: 28px;
-        margin-left: 20px;
-        margin-bottom: 10px;
-      }
-      .site-info > div:first-of-type p{
-        margin-bottom: 15px;
-        margin-left: 20px;
-      }
-
-      .site-info > div:first-of-type + div {
-        margin-top: -10px;
-        margin-left: 20px;
-        color: gray;
-        position: relative;
-      }
-
-      .site-info > div:first-of-type + div::before{
-        content: "";
-        position: absolute;
-        left: 0;
-        top: -20px;
-        height: 1px;
-        width: 80%;
-        background-color: rgb(150, 148, 148);
-      }
-
-      .books{
-        position: absolute;
-        background-color: #FCDD65;
-        left: 90%;
-        top: 0;
-        height: 65%;
-        width: 5%;
-        font-size: 18px;
-        writing-mode: vertical-rl;
-        display: flex;
         align-items: center;
-        padding-top: 20px;
-      }
+        }
+        .carousel .card {
+        scroll-snap-align: start;
+        height: 342px;
+        list-style: none;
+        background: #fff;
+        cursor: pointer;
+        padding-bottom: 15px;
+        flex-direction: column;
+        border-radius: 8px;
+        }
+        .carousel .card .img {
+        background:#FCDD65;
+        height: 152px;
+        width: 152px;
+        border-radius: 50%;
+        }
+        .card .img img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid white;
+        }
+        .carousel .card h2 {
+        font-weight: 500;
+        font-size: 1.56rem;
+        margin: 30px 0 5px;
+        }
+        .carousel .card span {
+        color: #6A6D78;
+        font-size: 1.31rem;
+        }
 
-      .books span{
-        writing-mode: horizontal-tb;
-      }
-    .site a{
-        text-decoration: none;
-        color: rgb(56, 55, 55);
-    }
+        @media screen and (max-width: 900px) {
+        .wrapper .carousel {
+            grid-auto-columns: calc((100% / 2) - 9px);
+        }
+        }
 
-    .point-north,
-    .point-south,
-    .point-middle,
-    .point-east{
-        display: none;
-    }
-    .book-point a:hover i{
-        color:#1F4788;
-    }
- 
+        @media screen and (max-width: 600px) {
+        .wrapper .carousel {
+            grid-auto-columns: 100%;
+        }
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <span><a href="index.html"><img src="imgs/logo-horizontal.svg" alt=""></a> </span>
+            <div class="logo-vertical">
+                <a href="index.html"><img src="imgs/logo-vertical.svg" alt=""></a> 
+            </div>
+            <span class="logo-horizontal"><a href="index.html"><img src="imgs/logo-horizontal.svg" alt=""></a> </span>
             <ul>
                 <li><a href="">關於書旅</a></li> 
                 <li><a href="allnews.html">最新消息</a></li>
                 <li><a href="bookmap.html">書站地圖</a></li>
                 <li><a href="faqs.html">常見問題</a></li>
-                <li > <a id = "memberLog"> 登入/ 註冊</a></li>
+                <li > <a id = "memberLog"> 登入 / 註冊</a></li>
                 <li><a href="contactUs.html">聯絡我們</a></li>
-                <li><a href="booksearch.html"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
+                <li><a href="booksearch.html">好書搜詢</a></li>
             </ul>
         </nav>
         <h1>Book point map</h1>
         <h2>書站地圖</h2>
     </header>
+
+       
+
+             
+        
+    <article class="carousel-container">
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+  
+  
+        <ul class="carousel">
+          <li class="card">
+            <div class="img"><img src="imgs/kam-idris-_HqHX3LBN18-unsplash.jpg" draggable="false"></div>
+            <h2>暉楽家居</h2>
+            <span>2023/08/01北部書點成立!</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="imgs/1690336427398.jpg" alt="img" draggable="false"></div>
+            <h2>linda linda咖啡廳</h2>
+            <span>2023/08/01北部書點成立!</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="imgs/DSC01316.jpg.webp" alt="img" draggable="false"></div>
+            <h2>We Cat Cafe</h2>
+            <span>2023/08/03北部書點成立!</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="imgs/fire.jpg" alt="img" draggable="false"></div>
+            <h2>玩夥</h2>
+            <span>2023/ 07/ 14 南部書點成立!</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="imgs/doggggg.jpg" alt="img" draggable="false"></div>
+            <h2>浪浪咖啡島</h2>
+            <span>2023/ 07/ 26 北部書點成立!</span>
+          </li>
+          <!-- <li class="card">
+            <div class="img"><img src="images/img-6.jpg" alt="img" draggable="false"></div>
+            <h2>Donald Horton</h2>
+            <span>App Designer</span>
+          </li> -->
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </article>
     
-    <article class="main-contain">
-        <div class="btns">
-           <button class="all">全部 </button> 
-            <button class="north">北部</button>
-            <button class="middle">中部</button>
-            <button class="south">南部</button>
-            <button class="east">東部</button>                    
-        </div>
+    <div class="items-container">
+        <ul>
+            <li>全部</li>
+            <li>北部</li>
+            <li>中部</li>
+            <li>南部</li>
+            <li>東部</li>
+        </ul>
+    </div>
 
-
-        <div class="book-point point-all" >
-            <div class="site">
-                <div class="img-content"> <a href="https://sharon23565421.github.io/Sweet-Dreams/"> <img src="imgs/dogcur.jpg" alt="we cat cafe書點"></a> </div>
-                <div class="site-info">
-                    <div>
-                        <h3> Sweet Dreams寵物行為矯正/美容 </h3>
-                        <p>營業時間: 一 〜 六   11:30〜22:00 / 日  11:30〜20:00</p>
-                        <p>電話: 02-5346-1235</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank">  <p>地址:台北市中山北路十六段93號 <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明: 你的寵物需要治療</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>33</span> </p> </div>
+    <article class="main-container">
+        <div class="site-container">
+            <div class="site-img"> <img src="imgs/kam-idris-_HqHX3LBN18-unsplash.jpg" alt=""></div>
+            <div class="site-content">
+                <h3>暉楽家居</h3>
+                <p>營業時間:禮拜一公休，其他時間10:30至22點</p>
+                <p>電話: 034251108</p>
+                <p>地址: 台東市博愛路365號</p>
+                <p>書點公告: 閱讀累了可以挑張舒服的椅子坐坐</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.290801814085!2d121.5227773!3d25.058131000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f94468bad%3A0x48a01b9542949d54!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrU!5e0!3m2!1szh-TW!2stw!4v1691210882425!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="site">
-                <div class="img-content">
-                    <a href="https://shiu1008.github.io/linda_vs/index.html" target="_blank" rel="noopener noreferrer"><img src="imgs/1690336427398.jpg" alt="we cat cafe書點"></a>
-                </div>
-                <div class="site-info">
-                    <div>
-                        <h3>linda linda 咖啡</h3>
-                        <p>營業時間: 禮拜一公休，其他時間11至20點</p>
-                        <p>電話: 034251108</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址:臺南市安平區永華路二段6號 <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 南區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明:日式咖啡廳</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>43</span> </p> </div>
-            </div>
-
-            <div class="site">
-
-                <div class="img-content">
-                    <a href="https://a0956154555.github.io/CHD103/furniture/html/index.html" target="_blank" rel="noopener noreferrer"><img src="imgs/happy.jpg" alt="we cat cafe書點"></a>
-                </div>
-                <div class="site-info">
-                    <div>
-                        <h3>暉楽家居</h3>
-                        <p>營業時間:禮拜一公休，其他時間10:30至22點</p>
-                        <p>電話: 034251108</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 台東市博愛路365號  <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 東區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明: 你沒有密碼</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>50</span> </p> </div>
-            </div>
-
-            <div class="site">
-                
-                <div class="img-content"> <a href="https://imdaxiang.github.io/MIGOO/index.html" target="_blank" rel="noopener noreferrer"><img src="imgs/cat.jpg" alt="we cat cafe書點"></a></div>
-                <div class="site-info">
-                    <div>
-                        <h3> MIGOO </h3>
-                        <p>營業時間: 禮拜四公休，其他時間10:30至21點</p>
-                        <p>電話: 034251108</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址:320桃園市中壢區復興路46號9樓 <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明: 來買貓貓用品</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>29</span> </p> </div>
-            </div>
-
-            <div class="site">          
-                <div class="img-content">  <a href="https://yuni-liao.github.io/miu-beer/" target="_blank"> <img src="imgs/address_king.jpg" alt="we cat cafe書點"> </a></div>
-                <div class="site-info">
-                    <div>
-                        <h3> Miu Beer 貓皇店</h3>
-                        <p>營業時間: 週日至週四 11:30-22:00 週五與週六 11:30-22:30 </p>
-                        <p>電話: 03-6666-9466</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 貓咪市貓皇區喵喵路66號6樓 <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明:我想看貓咪喝酒</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>46</span> </p> </div>
-            </div>
-
-            <div class="site">
-                
-                <div class="img-content"> <a href="https://rou94980.github.io/langlangcafe/" target="_blank"> <img src="imgs/doggggg.jpg" alt="浪浪咖啡島"> </a></div>
-                <div class="site-info">
-                    <div>
-                        <h3>浪浪咖啡島</h3>
-                        <p>營業時間: 上午 10點 - 晚上 8點</p>
-                        <p>電話: 02-25711234</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 基隆市赤峰街908號 <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p> 其他說明: 歡迎常帶浪浪回家順便看書~ </p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>53</span> </p> </div>
-            </div>
-
-            <div class="site"> 
-                <div class="img-content">  <a href="https://w421848.github.io/we-cat-cafe/new-index" target="_blank"> <img src="imgs/booksite1.jpg" alt="we cat cafe書點">  </a></div>
-                <div class="site-info">
-                    <div>
-                        <h3>We Cat Cafe</h3>
-                        <p>營業時間: 全年無休</p>
-                        <p>電話: 034251108</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 地址台中市后里區月眉東路一段185號 <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 中區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明:歡迎來嚕貓</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>23</span> </p> </div>
-            </div>
-
-            <div class="site"> 
-                <div class="img-content">  <a href="https://w421848.github.io/we-cat-cafe/new-index" target="_blank"> <img src="imgs/fire.jpg" alt="we cat cafe書點">  </a></div>
-                <div class="site-info">
-                    <div>
-                        <h3>玩夥</h3>
-                        <p>營業時間:  09：00～22：30 (每周二公休)</p>
-                        <p>電話: 03-4258183</p>
-                        <a href="https://karta1020146.github.io/chd103/index.html" target="_blank"><p>地址: 320桃園市中壢區復興路46號9樓 <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 中區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明:歡迎來嚕貓</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>23</span> </p> </div>
-            </div>
-        </div>
-
-
-        <div class="book-point point-north">
             
-            <div class="site">          
-                <div class="img-content">  <a href="https://yuni-liao.github.io/miu-beer/" target="_blank"> <img src="imgs/address_king.jpg" alt="we cat cafe書點"> </a></div>
-                <div class="site-info">
-                    <div>
-                        <h3> Miu Beer 貓皇店</h3>
-                        <p>營業時間: 週日至週四 11:30-22:00 週五與週六 11:30-22:30 </p>
-                        <p>電話: 03-6666-9466</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 貓咪市貓皇區喵喵路66號6樓 <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明:我想看貓咪喝酒</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>46</span> </p> </div>
-            </div>
+            <div class="book-num">書籍數 <span>23</span> </div>
+        </div>
 
-            <div class="site">
-                
-                <div class="img-content"> <a href="https://rou94980.github.io/langlangcafe/" target="_blank"> <img src="imgs/doggggg.jpg" alt="we cat cafe書點"><img src="imgs/booksite1.jpg" alt="we cat cafe書點">  </a></div>
-                <div class="site-info">
-                    <div>
-                        <h3>浪浪咖啡島</h3>
-                        <p>營業時間: 上午 10點 - 晚上 8點</p>
-                        <p>電話: 02-25711234</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 基隆市赤峰街908號 <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p> 其他說明: 歡迎常帶浪浪回家順便看書~ </p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>53</span> </p> </div>
+        <div class="site-container">
+            <div class="site-img">
+                <img src="imgs/ffdda4605f54d02fe12a8606ad10bed3_1.jpg" alt="we cat cafe書點">
             </div>
-            <div class="site">
-                <div class="img-content"> <a href="https://sharon23565421.github.io/Sweet-Dreams/"> <img src="imgs/dogcur.jpg" alt="we cat cafe書點"></a> </div>
-                <div class="site-info">
-                    <div>
-                        <h3> Sweet Dreams寵物行為矯正/美容 </h3>
-                        <p>營業時間: 一 〜 六   11:30〜22:00 / 日  11:30〜20:00</p>
-                        <p>電話: 02-5346-1235</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank">  <p>地址:台北市中山北路十六段93號 <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明: 你的寵物需要治療</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>33</span> </p> </div>
+            <div class="site-content">
+                <h3>MIGOO</h3>
+                <p>營業時間: 禮拜四公休，其他時間10:30至21點</p>
+                <p>電話: 03-6666-9466</p>
+                <p>地址: 貓咪市貓皇區喵喵路66號6樓 </p>
+                <p>書點公告: 看過貓咪喝酒嗎? </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.290801814085!2d121.5227773!3d25.058131000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f94468bad%3A0x48a01b9542949d54!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrU!5e0!3m2!1szh-TW!2stw!4v1691210882425!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+            <div class="book-num">書籍數 <span>46</span> </div>
         </div>
-        <div class="book-point point-south">
-            <div class="site">
-                <div class="img-content">
-                    <a href="https://shiu1008.github.io/linda_vs/index.html" target="_blank" rel="noopener noreferrer"><img src="imgs/1690336427398.jpg" alt="we cat cafe書點"></a>
-                </div>
-                <div class="site-info">
-                    <div>
-                        <h3>linda linda 咖啡</h3>
-                        <p>營業時間: 禮拜一公休，其他時間11至20點</p>
-                        <p>電話: 034251108</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址:臺南市安平區永華路二段6號 <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 南區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明:日式咖啡廳</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>43</span> </p> </div>
+        
+        <div class="site-container">
+            <div class="site-img">
+                <img src="imgs/address_king.jpg" alt="we cat cafe書點">
             </div>
-            <div class="site">
-                
-                <div class="img-content"> <a href="https://imdaxiang.github.io/MIGOO/index.html" target="_blank" rel="noopener noreferrer"><img src="imgs/cat.jpg" alt="we cat cafe書點"></a></div>
-                <div class="site-info">
-                    <div>
-                        <h3> MIGOO </h3>
-                        <p>營業時間: 禮拜四公休，其他時間10:30至21點</p>
-                        <p>電話: 034251108</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址:320桃園市中壢區復興路46號9樓 <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 北區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明: 來買貓貓用品</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>29</span> </p> </div>
+            <div class="site-content">
+                <h3>Miu Beer 貓皇店</h3>
+                <p>營業時間: 週日至週四 11:30-22:00 週五與週六 11:30-22:30</p>
+                <p>電話: 03-6666-9466</p>
+                <p>地址: 貓咪市貓皇區喵喵路66號6樓 </p>
+                <p>書點公告: 看過貓咪喝酒嗎? </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.290801814085!2d121.5227773!3d25.058131000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f94468bad%3A0x48a01b9542949d54!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrU!5e0!3m2!1szh-TW!2stw!4v1691210882425!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+            <div class="book-num">書籍數 <span>46</span> </div>
         </div>
-        <div class="book-point point-east">
-            <div class="site">
-
-                <div class="img-content">
-                    <a href="https://a0956154555.github.io/CHD103/furniture/html/index.html" target="_blank" rel="noopener noreferrer"><img src="imgs/happy.jpg" alt="we cat cafe書點"></a>
-                </div>
-                <div class="site-info">
-                    <div>
-                        <h3>暉楽家居</h3>
-                        <p>營業時間:禮拜一公休，其他時間10:30至22點</p>
-                        <p>電話: 034251108</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 台東市博愛路365號  <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 東區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明: 你沒有密碼</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>50</span> </p> </div>
-            </div>
-        </div>
-        <div class="book-point point-middle">
-            <div class="site"> 
-                <div class="img-content">  <a href="https://w421848.github.io/we-cat-cafe/new-index" target="_blank"> <img src="imgs/booksite1.jpg" alt="we cat cafe書點">  </a></div>
-                <div class="site-info">
-                    <div>
-                        <h3>We Cat Cafe</h3>
-                        <p>營業時間: 全年無休</p>
-                        <p>電話: 034251108</p>
-                        <a href="https://goo.gl/maps/GpqBBfyR4AqiTpzi8" target="_blank"><p>地址: 地址台中市后里區月眉東路一段185號 <i class="fa-solid fa-location-dot"></i></p> </a>
-                        <p>書站分區: 中區</p>
-                    </div> 
-                    <div> 
-                        <p>其他說明:歡迎來嚕貓</p>
-                    </div>
-                </div>
-                <div class="books"><p>書籍數 <span>23</span> </p> </div>
-            </div>
-        </div>
-                
         
 
 
+
+        <div class="site-container">
+            <div class="site-img"> 
+                <img src="imgs/doggggg.jpg" alt=""></div>
+            <div class="site-content">
+                <h3>浪浪咖啡島</h3>
+                <p>營業時間: 上午 10點 - 晚上 8點</p>
+                <p>電話: 02-25711234</p>
+                <p>書點公告: 歡迎常帶浪浪回家順便看書~ </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.290801814085!2d121.5227773!3d25.058131000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f94468bad%3A0x48a01b9542949d54!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrU!5e0!3m2!1szh-TW!2stw!4v1691210882425!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <div class="book-num">書籍數 <span>43</span> </div>
+        </div>
+
+        <div class="site-container">
+            <div class="site-img">
+                <img src="imgs/fire.jpg" alt="we cat cafe書點">
+            </div>
+            <div class="site-content">
+                <h3>玩夥</h3>
+                <p>營業時間: 09：00～22：30 (每周二公休)</p>
+                <p>電話: 03-4258183</p>
+                <p>地址: 320桃園市中壢區復興路46號9樓</p>
+                <p>書點公告: 歡迎來嚕貓</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.290801814085!2d121.5227773!3d25.058131000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f94468bad%3A0x48a01b9542949d54!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrU!5e0!3m2!1szh-TW!2stw!4v1691210882425!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        
+            <div class="book-num">書籍數 <span>23</span> </div>
+        </div>
+
+        <div class="site-container">
+            <div class="site-img">
+                <img src="imgs/booksite1.jpg" alt="we cat cafe書點">
+            </div>
+            <div class="site-content">
+                <h3>We Cat Cafe</h3>
+                <p>營業時間: 09：00～22：30 (每周二公休)</p>
+                <p>電話: 03-4258183</p>
+                <p>地址: 320桃園市中壢區復興路46號9樓</p>
+                <p>書點公告: 歡迎來嚕貓</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.290801814085!2d121.5227773!3d25.058131000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f94468bad%3A0x48a01b9542949d54!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrU!5e0!3m2!1szh-TW!2stw!4v1691210882425!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        
+            <div class="book-num">書籍數 <span>23</span> </div>
+        </div>
+
+        <div class="site-container">
+            <div class="site-img">
+                <img src="imgs/1690336427398.jpg" alt="we cat cafe書點">
+            </div>
+            <div class="site-content">
+                <h3>linda linda 咖啡</h3>
+                <p>營業時間: 禮拜一公休，其他時間11至20點</p>
+                <p>電話: 034251108</p>
+                <p>書點公告: 歡迎來日式咖啡館</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.290801814085!2d121.5227773!3d25.058131000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f94468bad%3A0x48a01b9542949d54!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrU!5e0!3m2!1szh-TW!2stw!4v1691210882425!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        
+            <div class="book-num">書籍數 <span>23</span> </div>
+        </div>
+
+        
+        
+
     </article>
+
+
     <article class="memberOverflow">
         <div class="container-member right-panel-active">
             <div class="container-form container-signup">
@@ -615,7 +572,95 @@
             <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
         </div>
     </footer>
-
+</script>
     <script src="js/member.js"></script>
+    </script>
+
+    <script>
+        const wrapper = document.querySelector(".wrapper");
+const carousel = document.querySelector(".carousel");
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+const arrowBtns = document.querySelectorAll(".wrapper i");
+const carouselChildrens = [...carousel.children];
+
+let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+
+// Get the number of cards that can fit in the carousel at once
+let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+// Insert copies of the last few cards to beginning of carousel for infinite scrolling
+carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+});
+
+// Insert copies of the first few cards to end of carousel for infinite scrolling
+carouselChildrens.slice(0, cardPerView).forEach(card => {
+    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+});
+
+// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+carousel.classList.add("no-transition");
+carousel.scrollLeft = carousel.offsetWidth;
+carousel.classList.remove("no-transition");
+
+// Add event listeners for the arrow buttons to scroll the carousel left and right
+arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+    });
+});
+
+const dragStart = (e) => {
+    isDragging = true;
+    carousel.classList.add("dragging");
+    // Records the initial cursor and scroll position of the carousel
+    startX = e.pageX;
+    startScrollLeft = carousel.scrollLeft;
+}
+
+const dragging = (e) => {
+    if(!isDragging) return; // if isDragging is false return from here
+    // Updates the scroll position of the carousel based on the cursor movement
+    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+}
+
+const dragStop = () => {
+    isDragging = false;
+    carousel.classList.remove("dragging");
+}
+
+const infiniteScroll = () => {
+    // If the carousel is at the beginning, scroll to the end
+    if(carousel.scrollLeft === 0) {
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+        carousel.classList.remove("no-transition");
+    }
+    // If the carousel is at the end, scroll to the beginning
+    else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
+    }
+
+    // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+    clearTimeout(timeoutId);
+    if(!wrapper.matches(":hover")) autoPlay();
+}
+
+const autoPlay = () => {
+    if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+    // Autoplay the carousel after every 2500 ms
+    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+}
+autoPlay();
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("scroll", infiniteScroll);
+wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);
+    </script>
 </body>
 </html>
