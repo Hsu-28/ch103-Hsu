@@ -33,7 +33,7 @@
 
         .main-content{
             width: 80%;
-            height: auto;
+            height: 1400px;
             position: relative;
             z-index: 5;
             margin: auto;
@@ -57,9 +57,9 @@
             display: none;
             
         }
-
+/* 
         h2{
-            font-size: 18px;
+            font-size: 20px;
             margin-top: -30px;
             width: 70%;
             height: 60px;
@@ -70,18 +70,14 @@
             z-index: 1;
             margin-bottom: 30px;
         }
-        .h22{
+        h2:last-of-type{
             word-wrap: break-all;
-            width: 94%;
-            line-height: 46px;
-            height: 46px;
-            margin-bottom: -10px;
-            margin-top: 10px;
-        } 
-        div,
-        label{
-            font-size: 12px;
+            width: 90%;
+
+        h2:last-of-type{
+            
         }
+        } */
         .information,
         .contact-form{
             display: flex;
@@ -126,6 +122,7 @@
         }
 
         .contact-form div{
+            margin:10px 0;
             width: 100%;
             padding: 10px;
             border-bottom: 1px solid black;
@@ -135,31 +132,22 @@
         } 
         .contact-form div input{
             border: none;
-            height: 20px;
+            height: 100%;
             width: 90%;
             padding: 5px 0;
-            text-align: left;
+            vertical-align: center;
             align-items: center;
             display: inline-block;
             caret-color: #1F4788;
-            font-size: 12px;
+            font-size: 22px;
             border: 2px;
-            line-height: 20px;
-        }
-        .contact-form input::placeholder {
-            font-size: 10px; 
-            color:  rgb(113, 113, 113); 
-            vertical-align: bottom;
-            padding: 5px 5px;
-            line-height: 20px;
-            height: 20px;
         }
         .contact-form div input:focus {
             outline: none;
             caret-color: #1F4788;
-            font-size: 12px;
+            font-size: 22px;
             }
-        
+
         ::placeholder {
         font-size: 14px; 
         color: #999; 
@@ -179,13 +167,13 @@
         }
 
         article .contact-form .sexdiv input{
-            width: 12px; 
+            width: 20px; 
             border-color: black;
         }
         article .contact-form .sexdiv label{
             width: 30px;
             margin-left: 25px;
-            font-size: 12px;
+            font-size: 14px;
             padding-top: 2px;  
         }
 
@@ -206,23 +194,23 @@
         
         article .contact-form .submit-btn{
             color: white;
-            width: 150px;
-            height: 28px;
+            width: 194px;
+            height: 43px;
             border-radius: 10px;
             background: #234986;
             font-family: Inter;
-            font-size: 14px;
+            font-size: 22px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
             border: 1px solid white;
-            margin: 24px;
+            margin-top: 20px;
         }
         #content-input{
             width: 100%;
             height: 200px;
             border: 1px solid gray;
-            margin-top: 6px;
+            margin-top: 15px;
         }
         #content-input:focus{
             outline-color:rgba(31, 71, 136, 0.7) ;
@@ -232,43 +220,34 @@
             color: rgba(31, 71, 136, 0.7); 
             background-color: white;
             font-weight: 800;}
-
         .submit-btn{
             cursor: pointer;
         }
 
-        @media screen and (min-width: 400px) {
-            h2{
-                line-height: 60px;
-                width: 80%;
-                
-            }
-            .h22{
-                line-height: 60px;
-                height: 60px;
-                width: 70%;
-            }
-            
-        }
-
-
-  
-
         @media screen and (min-width: 768px) {
-            h1{
-                display: block;
-            }
             article.content{
-            padding-top: 240px;
-            padding-bottom: 100px;
-            }
+        background-position: center;
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-image: url(imgs/contact-us-bgi.jpg);
+        /* border: 1px solid red;   */
+        padding-top: 240px;
+        padding-bottom: 100px;
+        }
 
         .main-content{
             width: 64.218%;
             height: 1400px;
             position: relative;
-        }
+            z-index: 5;
+            margin: auto;
+            background-color: #fff;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
 
+        }
         h1{
             color: white;            
             position: fixed;
@@ -279,7 +258,7 @@
             font-size: 220px;
             font-family:  'Poppins', sans-serif;;
             z-index: 0;
-            display: none;
+            
         }
 
         article h2{
@@ -287,18 +266,31 @@
             margin-top: 20px;
             width: 404px;
             height: 54px;
+            border-radius: 10px;
+            background: rgba(31, 71, 136, 0.30);
             text-align: center;
             line-height: 54px;
+            z-index: 1;
         }
         .information,
         .contact-form{
+            display: flex;
+            flex-wrap: nowrap;
             flex-direction: column;
-            font-size: 22px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+            width: 80%;
+            font-size: 16px;
+            position: relative;
         }
 
         .information div{
+            display: flex;
+            width: 100%;
+            justify-content: start;
+            margin: 10px;
             border-bottom: 1px solid black;
-            flex-direction: row;
         }
         .information p{
             display: inline-block;
@@ -306,21 +298,26 @@
             margin: 20px 0;
             left: 0;
             line-height: 30px;
-            font-size: 18px;
         }
 
         .information div:first-of-type::before{
-            display: block;
+            content: "";
+            background-color: #000000;
+            width: 1px;
+            top:120px;
+            left: 49%;
+            height: 50px;
+            position: absolute;
         }
 
         .contact-form div{
-            margin:14px 0;
-            /* width: 100%;
+            margin:10px 0;
+            width: 100%;
             padding: 10px;
             border-bottom: 1px solid black;
             display: flex;
             justify-content: space-between;
-            align-items:  center;   */
+            align-items:  center;  
         } 
         .contact-form div input{
             border: none;
@@ -331,24 +328,59 @@
             align-items: center;
             display: inline-block;
             caret-color: #1F4788;
-            font-size: 16px;
+            font-size: 22px;
             border: 2px;
         }
         .contact-form div input:focus {
             outline: none;
             caret-color: #1F4788;
-            font-size: 16px;
+            font-size: 22px;
             }
 
         ::placeholder {
         font-size: 14px; 
         color: #999; 
-        }
-        div, 
-        label{
-            font-size: 14px;
+    }
+        .contact-form div input:focus{
+            outline: none;
+            caret-color: #1F4788;
+            font-size: 22px;
+      
         }
 
+
+
+        article .main-content .contact-form .sexdiv {
+            display: flex;
+            justify-content: left;
+        }
+
+        article .contact-form .sexdiv input{
+            width: 20px; 
+            border-color: black;
+        }
+        article .contact-form .sexdiv label{
+            width: 30px;
+            margin-left: 25px;
+            font-size: 14px;
+            padding-top: 2px;  
+        }
+
+        article .contact-form .sexdiv label:first-of-type{
+            margin-left: 35px;
+        }
+
+
+        .contact-form  h2 + div{
+            margin-top: 35px;
+        }
+        article .contact-form .content-div{
+            display: flex;
+            align-items: start;
+            flex-direction: column ;
+            border: none;
+        }
+        
         article .contact-form .submit-btn{
             color: white;
             width: 194px;
@@ -363,8 +395,15 @@
             border: 1px solid white;
             margin-top: 20px;
         }
-        
- 
+        #content-input{
+            width: 100%;
+            height: 200px;
+            border: 1px solid gray;
+            margin-top: 15px;
+        }
+        #content-input:focus{
+            outline-color:rgba(31, 71, 136, 0.7) ;
+        }
         article .contact-form .submit-btn:hover {
             border:2px solid rgba(31, 71, 136, 0.7) ;
             color: rgba(31, 71, 136, 0.7); 
@@ -372,18 +411,8 @@
             font-weight: 800;}
         .submit-btn{
             cursor: pointer;
-        } 
-#content-input{
-            width: 100%;
-            height: 200px;
-            border: 1px solid gray;
-            margin-top: 15px;
         }
-        }
-        @media screen and (min-width: 900px) {
-            h1{
-                display: block;
-            }
+
         }
 
     </style>
@@ -432,7 +461,7 @@
             </div>
 
             <form action="#" class="contact-form">                 
-                <h2 class="h22">聯絡表單CONTACT FORM</h2>
+                <h2>聯絡表單CONTACT FORM</h2>
                 <div  class="changeColor"> 
                     <label for="name-input">姓名</label>
                     <input type="text" placeholder="請輸入您的姓名" id="name-input">
