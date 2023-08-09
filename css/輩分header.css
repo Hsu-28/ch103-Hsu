@@ -1,0 +1,257 @@
+ /* nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 3%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.05);
+    box-sizing: border-box;
+    height: 50px;
+    z-index: 10;
+    font-size: 18px;
+    top: 0;
+}
+
+header ul{ 
+    display: flex;
+    align-items: center;
+
+}
+header ul li{
+    width: 100px;
+    padding: auto;
+    text-align: center;
+} 
+header ul li:last-of-type{
+    width: 50px;
+}
+header ul li a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+header span img{           
+    margin-top: 10px;
+}
+
+.fa-lg{
+font-size: 16px;
+}
+
+::selection {
+    background-color: #ffdd63; 
+    color: #FFFFFF; 
+  }
+
+ */
+
+
+
+
+
+    
+
+
+
+ @media screen and (min-width: 375px) {
+            
+    nav{
+        position: fixed;
+        justify-content: center;
+        width: 343px;
+        backdrop-filter: blur(5px);
+        box-sizing: border-box;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        height: 100%;
+        font-size: 16px;
+        background-color: #FCDD65;
+        z-index: 100;
+    } 
+     
+    .logo-horizontal{   
+        display: none;
+    }
+
+    header ul{ 
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+        text-decoration: none;
+        background-color: white;
+        width: 60%;
+        margin: 140px auto 0 auto;
+        padding: 20px;
+    }
+   
+    header ul li{
+        margin: 14px;
+    }
+
+
+    header ul li::before{
+        content: "";
+        background: linear-gradient(to left, transparent, #3a64a6, transparent);;
+        position: absolute;
+        left: -20px;
+        bottom: -14px;
+        height: 1px;
+        width: 150%;
+    }
+
+
+    header ul li a{
+        text-decoration: none;
+        color: black;
+        
+    }
+    .logo-vertical{
+        position: absolute;
+        margin-top: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 78px;
+    }
+    .logo-vertical img{
+        width: 100%;
+    }
+
+
+
+    nav ul li {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+    }
+    
+    nav ul li::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 10px;
+        border-radius: 2px;
+        background-color: #3a64a6;
+        /* background-color: #FCDD65;  */
+        transition: width 0.3s ease; 
+        z-index: -1;
+    }
+    
+    nav ul li:hover:after {
+        width: 80%; 
+    } 
+    
+    
+    header ul li{
+        width: 100px;
+        padding: auto;
+        text-align: center;
+    } 
+    
+    header ul li a{
+        text-decoration: none;
+        color: black;
+    }
+
+
+
+
+  }
+
+
+
+
+  @media screen and (min-width: 768px) {
+  
+    nav{
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 30px;
+        background-color: rgba(255, 255, 255, 0.05);
+        height: 46px;
+        top: 0;
+    }
+    
+    header ul{ 
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        flex-direction: row;
+        border-radius: 0;
+        text-decoration: none;
+        margin: 0 ;
+        padding: 0;
+        background-color: transparent;
+        font-size: 16px;
+        width: 100%;
+    
+    }
+    header ul li{
+        width: 80px;
+        padding: 0;
+        text-align: center;
+        width: auto;
+        position: relative;
+        display: inline-block;
+        width: auto;
+        padding: auto;
+        text-align: center;
+        margin: 9px;
+    } 
+    header ul li:last-of-type{
+        width: auto;
+    }
+    header ul li a{
+        text-decoration: none;
+        color: black;
+        
+    }
+    
+    header span img{           
+        margin-top: 8px;
+    }
+    
+    .logo-vertical{
+        display: none;
+    }
+    /* ::selection {
+        background-color: #ffdd63; 
+        color: #FFFFFF; 
+      } */
+    
+    nav ul li::after {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 10px;
+        border-radius: 2px;
+        background-color: #FCDD65; 
+        transition: width 0.3s ease; 
+        z-index: -1;
+    }
+    .logo-horizontal{   
+        display: block;
+    }
+    
+    nav ul li:hover:after {
+        width: 80%; 
+    } 
+    
+    header ul li::before{
+        display: none;
+    }
+}
+
+
+

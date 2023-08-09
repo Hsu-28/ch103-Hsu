@@ -15,41 +15,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@600&display=swap');
         
-        article.content{
-        background-position: center;
-        background-size: cover; 
-        background-repeat: no-repeat;
-        background-image: url(imgs/contact-us-bgi.jpg);
-        /* border: 1px solid red;   */
-        padding-top: 240px;
-        padding-bottom: 100px;
-        }
 
-        .main-content{
-            width: 64.218%;
-            height: 1400px;
-            position: relative;
-            z-index: 5;
-            margin: auto;
-            background-color: #fff;
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: column;
-            align-items: center;
 
-        }
-        h1{
-            color: white;            
-            position: fixed;
-            left: 50%;
-            top: 70px;
-            transform: translateX(-50%);
-            text-shadow: 3px 3px 6px gray;
-            font-size: 220px;
-            font-family:  'Poppins', sans-serif;;
-            z-index: 0;
-            
-        }
 
         article h2{
             font-size: 22px;
@@ -227,65 +194,7 @@
             </ul>
         </nav>
     </header>
-    
-    <article class="content">
-        <h1> <b>CONTACT</b> </h1>
-        <div class="main-content">
-            <div class="information">
-                <h2>聯絡資訊 INFORMATION</h2>
-                <div>   
-                    <p>電話<br>
-                        03-4251108</p>
-                    <p>信箱<br>
-                        booktrave@gmail.com
-                    </p>
-                </div>  
-                <div>
-                    <p>地址
-                        <br>203桃園市中壢區復興路46號9樓
-                    </p>
-                </div> 
 
-            </div>
-
-            <form action="#" class="contact-form">                 
-                <h2>聯絡表單CONTACT FORM</h2>
-                <div  class="changeColor"> 
-                    <label for="name-input">姓名</label>
-                    <input type="text" placeholder="請輸入您的姓名" id="name-input">
-                </div>
-
-                  <div class="sexdiv changeColor">
-                    <span>性別</span>
-                    <label for="male-input">男性</label>
-                    <input type="radio" name="sex" id="male-input">
-                    <label for="female-input">女性</label>
-                    <input type="radio" name="sex" id="female-input">
-                  </div>
-
-                  <div class="changeColor">
-                    <label for="phone-input">電話</label>
-                    <input type="phone" id="phone-input" placeholder="請輸入市話或手機號碼">
-                  </div>
-                  
-                  <div class="changeColor">
-                    <label for="email-input">信箱</label>
-                    <input type="email" id="email-input" placeholder="請輸入信箱">
-                  </div>
-                  
-                  <div class="changeColor">
-                    <label for="subject-input">主旨</label>
-                    <input type="text" id="subject-input" placeholder="請輸入主旨">
-                  </div>
-                  
-                  <div class="content-div changeColor">
-                    <label for="content-input">內容</label>
-                    <textarea id="content-input"></textarea>
-                  </div>
-                    <button type="submit" class="submit-btn" >確認送出</button>                   
-            </form>
-        </div>
-    </article>
 
 
 
@@ -324,6 +233,7 @@
     </article>
 
 
+    
     <footer>
         <div class="footer-logo">
 
@@ -336,19 +246,19 @@
         <div class="main-footer">
            <div>
                 <ul>
-                    <li id="memA"> <a href="">關於書旅</a>
+                    <li> <a href="">關於書旅</a>
                         <ul>
                             <li>書旅介紹</li>
                             <li>團隊成員</li>
                         </ul>
                     </li>
-                    <li id="memR"> <a href="members.html">加入書旅</a>
+                    <li> <a href="members.html">加入書旅</a>
                         <ul>
                             <li>會員登入</li>
                             <li>會員註冊</li>
                         </ul>
                     </li>
-                    <li id="memN"> <a href="allnews.html">書旅消息</a>
+                    <li> <a href="allnews.html">書旅消息</a>
                         <ul>
                             <li>書旅小報</li>
                             <li>媒體報導</li>
@@ -357,7 +267,7 @@
                     </li>
                     <li> <a href="faqs.html">常見問題</a> </li>
                     <li> <a href="bookmap.html">書站地圖</a> </li>
-                    <li id="memC"> <a href="contactUs.html">聯絡我們</a>
+                    <li> <a href="contactUs.html">聯絡我們</a>
                         <ul>
                             <li>聯絡地址</li>
                             <li>聯絡表單</li>
@@ -382,49 +292,6 @@
             <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
         </div>
     </footer>
-
-<article class="rwd" id="rwdmember">
-    <div class="container-memberRWD">
-        <div class="close"><i class="fa-regular fa-circle-xmark" id="close"></i></div>
-        <div class="changepanel">
-            
-            <h4 id="loginTab" class="active">旅友登入</h4>
-            <h4 id="signupTab">旅友註冊</h4>
-        </div>
-        <form id="loginPanel" class="panelRWD">
-            <div class="input-group">
-                <input type="text" class="input inputF" placeholder="請輸入帳號">
-                <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8" id="passwordInput">
-            </div>
-            <div class="password-input">
-                <span class="password-toggle" id="passwordToggle"><i class="fa-solid rwd fa-eye-slash"></i></span>
-            </div>
-            <div class="forgot-password">
-                <a href="#">忘記密碼?</a>
-            </div>
-            <button class="btnRWD">確認登入</button>
-        </form>
-
-
-        <form id="signupPanel" class="panelRWD hidden">
-            <div class="input-group">
-                <input type="email" class="input finput" placeholder="請輸入信箱">
-                <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8">
-                <input type="password" class="input" placeholder="再次輸入密碼">
-            </div>
-            <div class="checkbox-group">
-                <input type="checkbox" class="checkbox-input" id="newsletterCheckbox">
-                <label for="newsletterCheckbox">我願意接收書旅的最新消息</label>
-            </div>
-            <div class="checkbox-group">
-                <input type="checkbox" class="checkbox-input chi2" id="termsCheckbox">
-                <label for="termsCheckbox">我同意書旅服務條款及隱私權政策</label>
-            </div>
-            <button class="btnRWD"  type="submit" value="Submit">確認註冊</button>
-        </form>
-    </div>
-  
-</article>
    
     <script src="js/member.js"></script>
     <script>
@@ -458,130 +325,6 @@
     
     </script>
 
-    <script>
-        
-        // 寫得很亂，簡化
-        // 拖曳  會失誤
-        $(function(){
-
-            $('.nav-bar').click(function(){
-                $('nav').animate({ left: '0' }, 300);
-                $(this).hide();
-                $('.nav-barX').show()
-                $('.nav-bgc').show()
-            });
-
-            $('.nav-bgc').click(function() {
-                $('nav').animate({ left: '-100%' }, 200);
-                $(this).hide();
-                $('.nav-barX').hide();
-                $('.nav-bar').show()
-            });
-
-            $('.nav-barX').click(function() {
-                $('nav').animate({ left: '-100%' }, 200);
-                $(this).hide();
-                $('.nav-bar').show();
-                $('.nav-bgc').hide()
-            });
-            
-        });
-
-    </script>
-
-<script>
-    const passwordInput = document.getElementById("passwordInput");
-    const passwordToggle = document.getElementById("passwordToggle");
-    const loginTab = document.getElementById("loginTab");
-    const signupTab = document.getElementById("signupTab");
-    const loginPanel = document.getElementById("loginPanel");
-    const signupPanel = document.getElementById("signupPanel");
-    const close = document.getElementById('close')
-    const rwdmember = document.getElementById('rwdmember')
-    
-    passwordToggle.addEventListener("click", function () {
-        if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            passwordToggle.innerHTML =   `<i class="fa-solid rwd fa-eye"></i>`;
-        } else {
-            passwordInput.type = "password";
-            passwordToggle.innerHTML = `<i class="fa-solid  rwd fa-eye-slash"></i>`;
-        }
-    });
-    
-    loginTab.addEventListener("click", function () {
-        loginPanel.classList.remove("hidden");
-        signupPanel.classList.add("hidden");
-        loginTab.classList.add("active");
-        signupTab.classList.remove("active");
-    });
-    
-    signupTab.addEventListener("click", function () {
-        loginPanel.classList.add("hidden");
-        signupPanel.classList.remove("hidden");
-        loginTab.classList.remove("active");
-        signupTab.classList.add("active");
-    });
-
-    close.addEventListener("click", function(){
-        rwdmember.style.display = "none";
-    });
-    
-        memberLog.addEventListener("click", function(){
-        rwdmember.style.display = "grid"; 
-    });
-
-
-
-
-
-
-let maxWidthThreshold = 768; 
-let liElement1 = document.getElementById("memA"); 
-    let liElement2 = document.getElementById("memR");
-    let liElement3 = document.getElementById("memN");
-    let liElement4 = document.getElementById("memC");
-
-
-function updateLiContent() {
-    let currentWidth = window.innerWidth;
-    
-    
-    if (currentWidth < maxWidthThreshold) {
-        liElement1.innerHTML = `<a>關於書旅</a>`;
-        liElement2.innerHTML = `<a href="allnews.html">書旅消息</a>`; 
-        liElement3.innerHTML = `<a href="allnews.html">書旅消息</a>`;
-        liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>`;
-    } else {
-        liElement1.innerHTML = `<a>關於書旅</a>`;
-        liElement2.innerHTML = ` <a href="allnews.html">書旅消息</a>
-                        <ul>
-                            <li>書旅小報</li>
-                            <li>媒體報導</li>
-                            <li>全部消息</li>
-                        </ul>`; 
-        liElement3.innerHTML =` <a href="allnews.html">書旅消息</a>
-                        <ul>
-                            <li>書旅小報</li>
-                            <li>媒體報導</li>
-                            <li>全部消息</li>
-                        </ul>`;
-
-        liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>
-                        <ul>
-                            <li>聯絡地址</li>
-                            <li>聯絡表單</li>
-                        </ul>`
-    }
-}
-
-// 监听窗口调整大小事件
-window.addEventListener("resize", updateLiContent);
-
-// 初始时执行一次监听
-updateLiContent();
-
-
-      </script>
+   
 </body>
 </html>

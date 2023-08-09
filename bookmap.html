@@ -15,14 +15,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <style>
         footer{
-            margin-top: 30vh;
+             margin-top: 8vh;
         }
 
         header{
             background-image: url(imgs/mapbanner.jpg);
             width: 100%;
-            height: 440px;
-            position: relative;
+            height: 200px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: 100% ;
@@ -30,27 +29,187 @@
 
         header h1{
             text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            font-size: 60px;
+            font-size: 34px;
             font-weight: 400;
             left: 50%;
-            top: 40%;
+            top: 50px;
             transform: translate(-50%, -50%)
-                        rotate(-9.828deg);
+                        rotate(-6deg); 
             position: absolute;
-            color: #fff;      
+            color: #fff;     
+            width: auto; 
+            white-space:nowrap;
         }
         header h2{
             text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            font-size: 32px;
+            font-size: 26px;
             font-weight: 400;
             left: 50%;
-            top: 50%;
+            top: 90px;
             transform: translateX(-50%); 
             position: absolute;
             color: #fff;
         }
         .items-container{
-            margin: 100px 0 60px 0;
+            margin: 0px 0 40px 0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 560px;
+            z-index: 50;
+            height: 44px;
+            background-color: white;
+            width: 100%;
+        }
+        .items-container ul{
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .items-container ul li {
+            margin: 6px 0;
+            border-left: 1px solid black;
+            text-align: center;
+            width: 60px;
+            position: relative;
+        }
+
+
+        .items-container ul li::after {
+            content: "";
+            position: absolute;
+            bottom:2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 14px;
+            border-radius: 4px;
+            background-color: #6390da; 
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+
+        .items-container ul li:hover::after {
+        width: 80%; 
+        }
+
+
+        .items-container ul li:first-of-type{
+            border: none;
+        }
+
+        .main-container{
+            margin: auto;
+        }
+        .site-container{
+            position: relative;
+            margin: 0 auto;
+            width: 80%;
+            padding: 10px;
+            background-color: #F4F4EC;
+            display: flex;
+            color: #313131;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            flex-direction: column;
+        }
+        .site-img{
+            width: 100%;
+        }
+        .site-img img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .site-content{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1%;
+            font-size: 12px;
+        }
+        .site-content iframe{
+            height: 40%;
+            width: 100%;
+            margin: 10px auto;
+            margin-top: 20px;
+        }
+
+        .site-container h3{
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .site-container p{
+            margin: 4px 0;
+        }
+        .site-container p:first-of-type{
+            font-size: 14px;
+            margin: 4px 0;
+        }
+        .site-container p:last-of-type{
+            font-size: 12px;
+            color: rgb(128, 128, 128);
+        }
+
+        .book-num{
+            position: absolute;
+            right: 8%;
+            top: 0;
+            height: 20%;
+            width: 50px;
+            font-size: 18px;
+            background-color: #FCDD65;
+            writing-mode: vertical-rl;
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .book-num::after { 
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            transform: translateX(-50%);
+            border-style: solid;
+            border-width: 14px 24px 0 24px;
+            border-color: #FCDD65 transparent transparent transparent;
+        }
+
+        .book-num span{
+            writing-mode: horizontal-tb;
+        }
+
+        @media screen and (min-width: 768px) {
+            footer{
+                    margin-top: 10vh;
+                }
+
+        header{
+            height: 440px;
+        }
+
+        header h1{
+            font-size: 60px;
+            top: 30%;
+            transform: translate(-50%, -50%)
+                        rotate(-9.828deg);
+        }
+        header h2{
+            font-size: 32px;
+            left: 50%;
+            top: 40%;
+        }
+        .items-container{
+            margin: 60px 0 60px 0;
+            position: static;
+            transform: translateX(0%);
         }
         .items-container ul{
             display: flex;
@@ -86,7 +245,6 @@
         width: 80%; 
         }
 
-
         .items-container ul li:first-of-type{
             border: none;
         }
@@ -101,6 +259,7 @@
             padding: 20px;
             background-color: #F4F4EC;
             display: flex;
+            flex-flow: row nowrap;
             color: #313131;
             margin-bottom: 20px;
             border-radius: 6px;
@@ -134,7 +293,7 @@
             font-size: 20px;
         }
         .site-container p:first-of-type{
-            font-size: 20px;
+            font-size: 14px;
         }
         .site-container p:last-of-type{
             font-size: 14px;
@@ -143,7 +302,7 @@
 
         .book-num{
             position: absolute;
-            right: 10%;
+            right: 5%;
             top: 0;
             height: 30%;
             width: 60px;
@@ -170,11 +329,16 @@
         .book-num span{
             writing-mode: horizontal-tb;
         }
+        p{
+            line-height: 1.5;
+        }
+
+         }
+    
 
 
 
-
-                /* 輪播 */
+        /* 輪播 */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
         article.carousel-container {
@@ -183,6 +347,7 @@
         align-items: center;
         justify-content: center;
         background: white;
+        margin-bottom: 60px;
         }
         .wrapper {
         max-width: 1100px;
@@ -287,10 +452,15 @@
             grid-auto-columns: 100%;
         }
         }
+
+
     </style>
 </head>
 <body>
     <header>
+        <div class="nav-bgc"></div>
+        <div class="nav-bar"><i class="fa-solid fa-bars"></i></div>
+        <div class="nav-barX"><i class="fa-solid fa-xmark"></i></div>
         <nav>
             <div class="logo-vertical">
                 <a href="index.html"><img src="imgs/logo-vertical.svg" alt=""></a> 
@@ -355,7 +525,7 @@
       </div>
     </article>
     
-    <div class="items-container">
+    <div class="items-container" id="site-items">
         <ul>
             <li>全部</li>
             <li>北部</li>
@@ -386,7 +556,7 @@
             </div>
             <div class="site-content">
                 <h3>MIGOO</h3>
-                <p>營業時間: 禮拜四公休，其他時間10:30至21點</p>
+                <p>營業時間: 禮拜四公休其他時間10:30至21點</p>
                 <p>電話: 03-6666-9466</p>
                 <p>地址: 貓咪市貓皇區喵喵路66號6樓 </p>
                 <p>書點公告: 看過貓咪喝酒嗎? </p>
@@ -401,7 +571,7 @@
             </div>
             <div class="site-content">
                 <h3>Miu Beer 貓皇店</h3>
-                <p>營業時間: 週日至週四 11:30-22:00 週五與週六 11:30-22:30</p>
+                <p>營業時間: 週日至週四 11:30-22:00 <br>週五與週六 11:30-22:30</p>
                 <p>電話: 03-6666-9466</p>
                 <p>地址: 貓咪市貓皇區喵喵路66號6樓 </p>
                 <p>書點公告: 看過貓咪喝酒嗎? </p>
@@ -526,19 +696,19 @@
         <div class="main-footer">
            <div>
                 <ul>
-                    <li> <a href="">關於書旅</a>
+                    <li id="memA"> <a href="">關於書旅</a>
                         <ul>
                             <li>書旅介紹</li>
                             <li>團隊成員</li>
                         </ul>
                     </li>
-                    <li> <a href="members.html">加入書旅</a>
+                    <li id="memR"> <a href="members.html">加入書旅</a>
                         <ul>
                             <li>會員登入</li>
                             <li>會員註冊</li>
                         </ul>
                     </li>
-                    <li> <a href="allnews.html">書旅消息</a>
+                    <li id="memN"> <a href="allnews.html">書旅消息</a>
                         <ul>
                             <li>書旅小報</li>
                             <li>媒體報導</li>
@@ -547,7 +717,7 @@
                     </li>
                     <li> <a href="faqs.html">常見問題</a> </li>
                     <li> <a href="bookmap.html">書站地圖</a> </li>
-                    <li> <a href="contactUs.html">聯絡我們</a>
+                    <li id="memC"> <a href="contactUs.html">聯絡我們</a>
                         <ul>
                             <li>聯絡地址</li>
                             <li>聯絡表單</li>
@@ -572,6 +742,49 @@
             <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
         </div>
     </footer>
+
+    <article class="rwd" id="rwdmember">
+        <div class="container-memberRWD">
+            <div class="close"><i class="fa-regular fa-circle-xmark" id="close"></i></div>
+            <div class="changepanel">
+                
+                <h4 id="loginTab" class="active">旅友登入</h4>
+                <h4 id="signupTab">旅友註冊</h4>
+            </div>
+            <form id="loginPanel" class="panelRWD">
+                <div class="input-group">
+                    <input type="text" class="input inputF" placeholder="請輸入帳號">
+                    <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8" id="passwordInput">
+                </div>
+                <div class="password-input">
+                    <span class="password-toggle" id="passwordToggle"><i class="fa-solid rwd fa-eye-slash"></i></span>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">忘記密碼?</a>
+                </div>
+                <button class="btnRWD">確認登入</button>
+            </form>
+    
+    
+            <form id="signupPanel" class="panelRWD hidden">
+                <div class="input-group">
+                    <input type="email" class="input finput" placeholder="請輸入信箱">
+                    <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8">
+                    <input type="password" class="input" placeholder="再次輸入密碼">
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" class="checkbox-input" id="newsletterCheckbox">
+                    <label for="newsletterCheckbox">我願意接收書旅的最新消息</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" class="checkbox-input chi2" id="termsCheckbox">
+                    <label for="termsCheckbox">我同意書旅服務條款及隱私權政策</label>
+                </div>
+                <button class="btnRWD"  type="submit" value="Submit">確認註冊</button>
+            </form>
+        </div>
+      
+    </article>
 </script>
     <script src="js/member.js"></script>
     </script>
@@ -649,8 +862,7 @@ const infiniteScroll = () => {
 }
 
 const autoPlay = () => {
-    if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
-    // Autoplay the carousel after every 2500 ms
+    if(window.innerWidth < 800 || !isAutoPlay) return; 
     timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
 }
 autoPlay();
@@ -662,5 +874,141 @@ carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
     </script>
+
+    <script>
+            $(function(){
+
+$('.nav-bar').click(function(){
+    $('nav').animate({ left: '0' }, 300);
+    $(this).hide();
+    $('.nav-barX').show()
+    $('.nav-bgc').show()
+});
+
+$('.nav-bgc').click(function() {
+    $('nav').animate({ left: '-100%' }, 200);
+    $(this).hide();
+    $('.nav-barX').hide();
+    $('.nav-bar').show()
+});
+
+$('.nav-barX').click(function() {
+    $('nav').animate({ left: '-100%' }, 200);
+    $(this).hide();
+    $('.nav-bar').show();
+    $('.nav-bgc').hide()
+});
+    
+});
+    </script>
+    <script>
+        const passwordInput = document.getElementById("passwordInput");
+        const passwordToggle = document.getElementById("passwordToggle");
+        const loginTab = document.getElementById("loginTab");
+        const signupTab = document.getElementById("signupTab");
+        const loginPanel = document.getElementById("loginPanel");
+        const signupPanel = document.getElementById("signupPanel");
+        const close = document.getElementById('close')
+        const rwdmember = document.getElementById('rwdmember')
+        
+        passwordToggle.addEventListener("click", function () {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordToggle.innerHTML =   `<i class="fa-solid rwd fa-eye"></i>`;
+            } else {
+                passwordInput.type = "password";
+                passwordToggle.innerHTML = `<i class="fa-solid  rwd fa-eye-slash"></i>`;
+            }
+        });
+        
+        loginTab.addEventListener("click", function () {
+            loginPanel.classList.remove("hidden");
+            signupPanel.classList.add("hidden");
+            loginTab.classList.add("active");
+            signupTab.classList.remove("active");
+        });
+        
+        signupTab.addEventListener("click", function () {
+            loginPanel.classList.add("hidden");
+            signupPanel.classList.remove("hidden");
+            loginTab.classList.remove("active");
+            signupTab.classList.add("active");
+        });
+        
+        close.addEventListener("click", function(){
+            rwdmember.style.display = "none";
+        });
+        
+            memberLog.addEventListener("click", function(){
+            rwdmember.style.display = "grid"; 
+        });
+        
+        
+        
+        
+        
+        
+        let maxWidthThreshold = 768; 
+        let liElement1 = document.getElementById("memA"); 
+        let liElement2 = document.getElementById("memR");
+        let liElement3 = document.getElementById("memN");
+        let liElement4 = document.getElementById("memC");
+        
+        
+        function updateLiContent() {
+        let currentWidth = window.innerWidth;
+        
+        if (currentWidth < maxWidthThreshold) {
+            liElement1.innerHTML = `<a>關於書旅</a>`;
+            liElement2.innerHTML = `<a href="allnews.html">書旅消息</a>`; 
+            liElement3.innerHTML = `<a href="allnews.html">書旅消息</a>`;
+            liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>`;
+        } else {
+            liElement1.innerHTML = `<a>關於書旅</a>`;
+            liElement2.innerHTML = ` <a href="allnews.html">書旅消息</a>
+                            <ul>
+                                <li>書旅小報</li>
+                                <li>媒體報導</li>
+                                <li>全部消息</li>
+                            </ul>`; 
+            liElement3.innerHTML =` <a href="allnews.html">書旅消息</a>
+                            <ul>
+                                <li>書旅小報</li>
+                                <li>媒體報導</li>
+                                <li>全部消息</li>
+                            </ul>`;
+        
+            liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>
+                            <ul>
+                                <li>聯絡地址</li>
+                                <li>聯絡表單</li>
+                            </ul>`
+        }
+        }
+        
+        
+        window.addEventListener("resize", updateLiContent);
+updateLiContent();
+let siteitems = document.getElementById('site-items');
+const offset = 560;
+
+window.addEventListener("scroll", function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const screenWidth = window.innerWidth || document.documentElement.clientWidth;
+
+    if (screenWidth < 768) {
+        if (scrollTop >= offset) {
+            siteitems.style.position = "fixed";
+            siteitems.style.top = "0";
+        } else {
+            siteitems.style.position = "absolute";
+            siteitems.style.top = "560px";
+        }
+    } else {
+        siteitems.style.position = "static";
+    }
+});
+        
+        </script>
 </body>
 </html>

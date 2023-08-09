@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員登入</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4ec;
+        }
+
+        .container {
+            width: 340px;
+            height: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .password-input {
+            position: relative;
+            width: 100%;
+        }
+
+        .password-toggle {
+            position: absolute;
+            top: -28px;
+            right: 30px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            text-align: center;
+            font-size: 12px;
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 5px 20px 20px auto;
+        }
+        .forgot-password a{
+            color: rgb(112, 112, 112);
+        }
+
+        .btn {
+            width: 60%;
+            background-color: #D0BCA3;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: #B39A82;
+        }
+        .changepanel{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin: 0px 0 40px 0;
+            height: 40px;
+            position: relative;
+        }
+        .changepanel h4:first-of-type::after{
+            content: "";
+            width: 100px;
+            height: 3px;
+            position: absolute;
+            top: 100%;
+            left: 34px;
+            background-color: rgb(147, 144, 144);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="changepanel">
+            <h4>旅友登入</h4>
+            <h4>旅友註冊</h4>
+        </div>
+        <div class="input-group">
+            <input type="text" class="input" placeholder="請輸入帳號">
+            <input type="password" class="input" placeholder="請輸入密碼" id="passwordInput">
+        </div>
+        <div class="password-input">
+            <span class="password-toggle" id="passwordToggle">顯示</span>
+        </div>
+        <div class="forgot-password">
+            <a href="#">忘記密碼?</a>
+        </div>
+        <button class="btn">確認登入</button>
+    </div>
+    <script>
+        const passwordInput = document.getElementById("passwordInput");
+        const passwordToggle = document.getElementById("passwordToggle");
+
+        passwordToggle.addEventListener("click", function () {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordToggle.textContent = "關閉";
+            } else {
+                passwordInput.type = "password";
+                passwordToggle.textContent = "顯示";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -14,6 +14,7 @@ signUpBtn.addEventListener("click", ()=>{
 })
 document.getElementById("memberLog").addEventListener("click", function() {
 article.style.display = "grid";
+
 });
 
 document.addEventListener("click", (event) => {

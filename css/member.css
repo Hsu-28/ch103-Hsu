@@ -1,4 +1,197 @@
 article.memberOverflow{
+    display: none;
+}
+
+article.rwd {
+    background-color: rgba(0, 0 , 0, 0.7);
+    position: absolute;
+    z-index: 1000;
+    display: grid; 
+    place-items: center;
+    align-items: center;
+    overflow: auto; 
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container-memberRWD {
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.inputF{
+    margin-top: 40px;
+}
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.panelRWD{
+width: 80%;
+}
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.password-input {
+    position: relative;
+    width: 100%;
+}
+
+.password-toggle {
+    position: absolute;
+    top: -28px;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.fa-solid.rwd{
+    font-size: 12px;
+    color: #6d6c6c;
+
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #4d4c4c;
+}
+
+.checkbox-input {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: right;
+}
+.forgot-password a{
+    color: rgb(112, 112, 112);
+}
+
+.btnRWD{
+    width: 60%;
+    background-color: #3a64a6;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    margin:40px auto;
+    display:block;
+}
+
+.changepanel{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0px 0 40px 0;
+    height: 40px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+
+}
+/* .changepanel h4:first-of-type::after{
+    content: "";
+    width: 100px;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 42px;
+    background-color: #3a64a6;
+} */
+
+.active{
+    border-bottom: 3px solid #3a64a6;
+    font-size: 16px;
+
+}
+/* .active-panel::after {
+    content: "";
+    width: 24%;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    right: 48px;
+    background-color: #3a64a6;
+} */
+
+.hidden {
+    display: none;
+}
+
+.changepanel h4:first-of-type {
+    cursor: pointer;
+    position: absolute;
+    left: 80px;
+}
+
+.changepanel h4:last-of-type {
+    cursor: pointer;
+    position: absolute;
+    right: 80px;
+}
+
+
+.finput{
+    margin-top: 60px;
+}
+
+.close{
+    position: absolute;
+    right: -14px;
+    top: -14px;
+    color: rgb(194, 194, 194);
+}
+
+input:focus {
+    border: 2px solid #fcdd65; 
+    outline: none; 
+  }
+
+
+
+
+@media screen and (min-width: 994px) {
+    article.rwd{
+        display: none;
+    }
+    
+article.memberOverflow{
     height: 100vh;  
     margin: -3px 0;
     width: 100%;  
@@ -183,3 +376,6 @@ article.memberOverflow{
 #memberLog{
     cursor: pointer;
 }
+
+}
+

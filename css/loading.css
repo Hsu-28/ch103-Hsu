@@ -33,6 +33,7 @@
     .loading-line .login-box p{
         position: absolute;
         left: 50%;
+        top: 50%; 
         transform: translate(-50%, -50%); 
         color: white;
     }
@@ -41,19 +42,24 @@
         height: 20px;
         border-radius: 20px;
         background-color: #FCDD65;
-        animation: loading  .8s  forwards cubic-bezier(0,0,0,0);
-        
-    
     }
-    @keyframes loading{
+
+    .loading-text,
+    .loading-line{
+        transform: translateY(-10vh);
+    }
+
+ 
+    .loading-line .login-box .line{
+         animation: loading  .8s  forwards cubic-bezier(0,0,0,0); 
+        
+    }
+
+        @keyframes loading{
         0%{
             width: 0;
         }
         100%{
             width: 100%;
         }
-    }
-    .loading-text,
-    .loading-line{
-        transform: translateY(-10vh);
     }

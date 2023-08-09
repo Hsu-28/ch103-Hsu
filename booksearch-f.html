@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/member.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/grid.css">
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
     <style>
             header{
@@ -60,10 +60,11 @@
                 width: 100%;
                 max-width: 1400px;
                 margin: 0 auto;
-                display: grid;
-                grid-template-columns:  21.9% 21.9% 21.9% 21.9%;
-                grid-template-rows:  412px 412px 412px ;
-                grid-gap:  50px 4.1%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+                /* padding: 20px; */
             }
 
             .cards{
@@ -71,6 +72,7 @@
                 position: relative;
                 cursor: pointer;
                 border: 1px solid rgb(236, 234, 234);
+                margin: 20px;
             }
             .cards:hover {
                 box-shadow: 1px 1px 4px rgb(116, 114, 114);
@@ -79,29 +81,7 @@
                 transform: scale(120%);
                 transition: transform 0.3s;
             }
-            .card1{
-                grid-column: 1/2;
-                grid-row: 1/2;
-                
-            }
-            .card2{
-                grid-column: 2/3;
-                grid-row: 1/2;
-            }
-            .card3{
-                grid-column: 3/4;
-                grid-row: 1/2;
 
-            }
-            .card4{
-                grid-column: 4/5;
-                grid-row: 1/2;
-
-            }
-            .card5{
-                grid-column: 1/2;
-                grid-row: 2/3;
-            }
 
             .cards:nth-child(2n+1)::after{
                 content:"";
@@ -190,27 +170,24 @@
                 border: 2px solid #3e6cb6;
                 outline: none;
             }
+            .col-xl-3{
+                width: calc(25%-10px);
+            }
     </style>
     
 </head>
 <body>
     <header>
-        <div class="nav-bgc"></div>
-        <div class="nav-bar"><i class="fa-solid fa-bars"></i></div>
-        <div class="nav-barX"><i class="fa-solid fa-xmark"></i></div>
         <nav>
-            <div class="logo-vertical">
-                <a href="index.html"><img src="imgs/logo-vertical.svg" alt=""></a> 
-            </div>
-            <span class="logo-horizontal"><a href="index.html"><img src="imgs/logo-horizontal.svg" alt=""></a> </span>
+            <span><a href="index.html"><img src="imgs/logo-horizontal.svg" alt=""></a> </span>
             <ul>
                 <li><a href="">關於書旅</a></li> 
                 <li><a href="allnews.html">最新消息</a></li>
                 <li><a href="bookmap.html">書站地圖</a></li>
                 <li><a href="faqs.html">常見問題</a></li>
-                <li > <a id = "memberLog"> 登入 / 註冊</a></li>
+                <li > <a id = "memberLog"> 登入/ 註冊</a></li>
                 <li><a href="contactUs.html">聯絡我們</a></li>
-                <li><a href="booksearch.html">好書搜詢</a></li>
+                <li><a href="booksearch.html"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></a></li>
             </ul>
         </nav>
         <div>
@@ -238,7 +215,7 @@
       </div>
 
     <section class="content">
-        <div class="card1 cards">
+        <div class="col-xl-3 cards">
             <div class="card-img">
                 <img src="imgs/book1.png" alt="here is logo">
             </div>
@@ -251,7 +228,7 @@
             
         </div>
 
-        <div class="card2 cards">
+        <div class="col-xl-3 cards">
             <div class="card-img">
                 <img src="imgs/book4.png" alt="here is logo">
             </div>
@@ -263,7 +240,7 @@
             </div>
         </div>
 
-        <div class="card3 cards">
+        <div class="col-xl-3 cards">
             <div class="card-img">
                 <img src="imgs/book5.png" alt="here is logo">
             </div>
@@ -275,7 +252,7 @@
             </div>
         </div>
 
-        <div class="card4 cards">
+        <div class="col-xl-3 cards">
             <div class="card-img">
                 <img src="imgs/book6.png" alt="here is logo" height="250" width="">
                 
@@ -287,7 +264,7 @@
                 <div>書站點:we cat cafe</div>
             </div>
         </div>
-        <div class="card5 cards">
+        <div class="col-xl-3 cards">
             <div class="card-img">
                 <img src="imgs/book1.png" alt="here is logo">
             </div>
@@ -298,7 +275,7 @@
                 <div>書站點:we cat cafe</div>
             </div>
         </div>
-        <div class="card6 cards">
+        <div class="col-xl-3 cards">
             <div class="card-img">
                 <img src="imgs/book4.png" alt="here is logo">
             </div>
@@ -310,7 +287,7 @@
             </div>
         </div>
 
-        <div class="card7 cards">
+        <div class="col-xl-3 cards">
             <div class="card-img">
                 <img src="imgs/book5.png" alt="here is logo">
             </div>
@@ -322,10 +299,10 @@
             </div>
         </div>
 
-        <div class="card8 cards">
+        <div class="col-xl-3 cards">
             <div class="card-img">
                 <img src="imgs/book6.png" alt="here is logo" height="250" width="">
-                
+                <!-- 尺寸沒作用 因為被複寫?-->
             </div>
             <div class="card-title">無法抗拒的法式鐵盒餅乾</div>
             <div class="card-author">黛博拉．杜邦達蓋</div>
@@ -334,7 +311,7 @@
                 <div>書站點:we cat cafe</div>
             </div>
         </div>
-        <div class="card9 cards">
+        <div class="col-xl-3 cards">
             <div class="card-img">
                 <img src="imgs/book1.png" alt="here is logo">
             </div>
@@ -347,7 +324,7 @@
             
         </div>
 
-        <div class="card10 cards">
+        <div class="col-xl-3 cards">
             <div class="card-img">
                 <img src="imgs/book4.png" alt="here is logo">
             </div>
@@ -359,7 +336,7 @@
             </div>
         </div>
 
-        <div class="card11 cards">
+        <div class="col-xl-3 cards">
             <div class="card-img">
                 <img src="imgs/book5.png" alt="here is logo">
             </div>
@@ -371,7 +348,7 @@
             </div>
         </div>
 
-        <div class="card12 cards">
+        <div class="col-xl-3 cards">
             <div class="card-img">
                 <img src="imgs/book6.png" alt="here is logo" height="250" width="">
             </div>
@@ -484,32 +461,6 @@
         </div>
     </article>
     <script src="js/member.js"></script>
-    <script>
-            $(function(){
-
-$('.nav-bar').click(function(){
-    $('nav').animate({ left: '0' }, 300);
-    $(this).hide();
-    $('.nav-barX').show()
-    $('.nav-bgc').show()
-});
-
-$('.nav-bgc').click(function() {
-    $('nav').animate({ left: '-100%' }, 200);
-    $(this).hide();
-    $('.nav-barX').hide();
-    $('.nav-bar').show()
-});
-
-$('.nav-barX').click(function() {
-    $('nav').animate({ left: '-100%' }, 200);
-    $(this).hide();
-    $('.nav-bar').show();
-    $('.nav-bgc').hide()
-});
-    
-});
-    </script>
    
 </body>
 </html>
