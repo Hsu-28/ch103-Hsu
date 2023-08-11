@@ -1024,20 +1024,28 @@
     </article>
 
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-<script src="js/loading-percent.js"></script>
-    <!-- <script>
-        let loginBox = $('.login-box').width()
-        $('.line').width(0)
-
-        timer = 0
-        setInterval(function(){            
-            if(timer <= loginBox - 100){
-                timer += 100
-
-                $('.line').width(timer)
-            }
-        }, 200)
-    </script> -->
+    <!-- <script src="js/loading-percent.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let loginBox = $('.login-box').width();
+            $('.line').width(0);
+    
+            let timer = 0;
+            let interval = setInterval(function() {            
+                if (timer <= loginBox - 100) {
+                    timer += 100;
+                    $('.line').width(timer);
+                } else {
+                    clearInterval(interval); // 清除定時器
+                    setTimeout(function() {
+                        $('#loading').fadeOut(); // 讓 .line 消失
+                    }, 2000); // 2 秒後觸發
+                }
+            }, 200);
+        });
+    </script>
+    
 
 <!-- 
 <script>
