@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            background-color: purple;
+            margin: 2px;
+            width: 300px;
+            height: 40px;
+        }
+        section:last-of-type{
+        background-color: gray;
+        }
+
+        section:nth-of-type(2){
+            background-color: orange;
+        }
+        section:first-of-type{
+            background-color: blue;
+        }
+        /* div{
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <section class="all">btn0</section>
+    <section class="north">btn1</section>
+    <section class="middle">btn2</section>
+    <section class="south">btn3</section>
+    <section class="east">btn4</section>
+    <hr>
+    <div class="north-items all">item1</div>
+    <div class="north-items all">item1</div>
+    <div class="north-items all">item1</div>
+    <div class="north-items all">item1</div>
+    <div class="north-items all">item1</div>
+
+    <div class="middle-items all">item2</div>
+    <div class="middle-items all">item2</div>
+    <div class="middle-items all">item2</div>
+    <div class="middle-items all">item2</div>
+    <div class="middle-items all">item2</div>
+
+    <div class="south-items all">item3</div>
+    <div class="south-items all">item3</div>
+    <div class="south-items all">item3</div>
+    <div class="south-items all">item3</div>
+    <div class="south-items all">item3</div>
+
+    <div class="east-items all">item4</div>
+    <div class="east-items all">item4</div>
+    <div class="east-items all">item4</div>
+    <div class="east-items all">item4</div>
+    <div class="east-items all">item4</div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(function(){
+            $('#allSite').on('click',function(){
+                $('site-container ').slideDown(300)
+                if($('site-container ').slideDown()){
+                    $('.south').hide()
+                    $('.east').hide()
+                    $('.middle').hide()
+                }
+            })
+
+            $('#northSite').on('click',function(){
+                $('.north').slideDown(300)
+                if($('.north').slideDown()){
+                    $('.south').hide()
+                    $('.east').hide()
+                    $('.middle').hide()
+                }
+                
+            })
+            $('#southSite').on('click',function(){
+                $('.south').slideDown(300)
+                if( $('.south').slideDown()){
+                    $('.north').hide()
+                    $('.east').hide()
+                    $('.middle').hide()
+                }
+                    
+            })
+            $('#eastSite').on('click',function(){
+                $('.east').slideDown(300)
+                if( $('.east').slideDown()){
+                    $('.north').hide()
+                    $('.south').hide()
+                    $('.middle').hide()
+                }
+            })
+            $('.middle').on('click',function(){
+                $('#middleSite').slideDown(300)
+                if( $('.middle').slideDown()){
+                    $('.north').hide()
+                    $('.south').hide()
+                    $('.east').hide()
+                }
+            })
+        })
+
+        
+    </script>
+    
+
+
+
+
+
+
+</body>
+</html>

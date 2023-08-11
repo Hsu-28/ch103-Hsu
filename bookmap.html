@@ -286,8 +286,10 @@
         }
 
         .site-container h3{
-            font-size: 32px;
-            
+            font-size: 32px;  
+        }
+        .site-container p{
+            font-size: 14px;
         }
         .site-container p:first-of-type{
             font-size: 20px;
@@ -527,16 +529,16 @@
     
     <div class="items-container" id="site-items">
         <ul>
-            <li>全部</li>
-            <li>北部</li>
-            <li>中部</li>
-            <li>南部</li>
-            <li>東部</li>
+            <li id="allSite" >全部</li>
+            <li id="northSite">北部</li>
+            <li id="middleSite">中部</li>
+            <li id="southSite">南部</li>
+            <li id="eastSite">東部</li>
         </ul>
     </div>
 
     <article class="main-container">
-        <div class="site-container">
+        <div class="site-container east">
             <div class="site-img"> <img src="imgs/kam-idris-_HqHX3LBN18-unsplash.jpg" alt=""></div>
             <div class="site-content">
                 <h3>暉楽家居</h3>
@@ -546,26 +548,25 @@
                 <p>書點公告: 閱讀累了可以挑張舒服的椅子坐坐</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.290801814085!2d121.5227773!3d25.058131000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f94468bad%3A0x48a01b9542949d54!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrU!5e0!3m2!1szh-TW!2stw!4v1691210882425!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            
             <div class="book-num">書籍數 <span>23</span> </div>
         </div>
 
-        <div class="site-container">
+        <div class="site-container north">
             <div class="site-img">
                 <img src="imgs/ffdda4605f54d02fe12a8606ad10bed3_1.jpg" alt="we cat cafe書點">
             </div>
-            <div class="site-content">
+            <div class="site-content ">
                 <h3>MIGOO</h3>
-                <p>營業時間: 禮拜四公休其他時間10:30至21點</p>
+                <p>營業時間: 禮拜三公休其他時間10:30至22點</p>
                 <p>電話: 03-6666-9466</p>
-                <p>地址: 貓咪市貓皇區喵喵路66號6樓 </p>
-                <p>書點公告: 看過貓咪喝酒嗎? </p>
+                <p>地址: 320桃園市中壢區復興路46號9樓 </p>
+                <p>書點公告: 書旅會員有優惠喔? </p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.290801814085!2d121.5227773!3d25.058131000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f94468bad%3A0x48a01b9542949d54!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrU!5e0!3m2!1szh-TW!2stw!4v1691210882425!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="book-num">書籍數 <span>46</span> </div>
         </div>
         
-        <div class="site-container">
+        <div class="site-container middle">
             <div class="site-img">
                 <img src="imgs/address_king.jpg" alt="we cat cafe書點">
             </div>
@@ -580,16 +581,14 @@
             <div class="book-num">書籍數 <span>46</span> </div>
         </div>
         
-
-
-
-        <div class="site-container">
+        <div class="site-container north">
             <div class="site-img"> 
                 <img src="imgs/doggggg.jpg" alt=""></div>
             <div class="site-content">
                 <h3>浪浪咖啡島</h3>
                 <p>營業時間: 上午 10點 - 晚上 8點</p>
                 <p>電話: 02-25711234</p>
+                <p>地址：基隆市赤峰街908號 </p>
                 <p>書點公告: 歡迎常帶浪浪回家順便看書~ </p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.290801814085!2d121.5227773!3d25.058131000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f94468bad%3A0x48a01b9542949d54!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrU!5e0!3m2!1szh-TW!2stw!4v1691210882425!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -597,15 +596,15 @@
             <div class="book-num">書籍數 <span>43</span> </div>
         </div>
 
-        <div class="site-container">
+        <div class="site-container middle">
             <div class="site-img">
                 <img src="imgs/fire.jpg" alt="we cat cafe書點">
             </div>
-            <div class="site-content">
+            <div class="site-content ">
                 <h3>玩夥</h3>
                 <p>營業時間: 09：00～22：30 (每周二公休)</p>
                 <p>電話: 03-4258183</p>
-                <p>地址: 320桃園市中壢區復興路46號9樓</p>
+                <p>地址: 437台中市大雅區復興路46號9樓</p>
                 <p>書點公告: 歡迎來嚕貓</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.290801814085!2d121.5227773!3d25.058131000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f94468bad%3A0x48a01b9542949d54!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrU!5e0!3m2!1szh-TW!2stw!4v1691210882425!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -613,11 +612,11 @@
             <div class="book-num">書籍數 <span>23</span> </div>
         </div>
 
-        <div class="site-container">
+        <div class="site-container north">
             <div class="site-img">
                 <img src="imgs/booksite1.jpg" alt="we cat cafe書點">
             </div>
-            <div class="site-content">
+            <div class="site-content north">
                 <h3>We Cat Cafe</h3>
                 <p>營業時間: 09：00～22：30 (每周二公休)</p>
                 <p>電話: 03-4258183</p>
@@ -629,7 +628,7 @@
             <div class="book-num">書籍數 <span>23</span> </div>
         </div>
 
-        <div class="site-container">
+        <div class="site-container south">
             <div class="site-img">
                 <img src="imgs/1690336427398.jpg" alt="we cat cafe書點">
             </div>
@@ -637,16 +636,13 @@
                 <h3>linda linda 咖啡</h3>
                 <p>營業時間: 禮拜一公休，其他時間11至20點</p>
                 <p>電話: 034251108</p>
+                <p>地址: 456台南市永康區琳達路6號9樓</p>
                 <p>書點公告: 歡迎來日式咖啡館</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.290801814085!2d121.5227773!3d25.058131000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f94468bad%3A0x48a01b9542949d54!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrU!5e0!3m2!1szh-TW!2stw!4v1691210882425!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         
             <div class="book-num">書籍數 <span>23</span> </div>
         </div>
-
-        
-        
-
     </article>
 
 
@@ -789,6 +785,8 @@
     <script src="js/member.js"></script>
     </script>
 
+
+    <!-- carousel -->
     <script>
         const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
@@ -875,32 +873,31 @@ wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
     </script>
 
+    <!-- rwd導覽  進入/退出  -->
     <script>
-            $(function(){
-
-$('.nav-bar').click(function(){
-    $('nav').animate({ left: '0' }, 300);
-    $(this).hide();
-    $('.nav-barX').show()
-    $('.nav-bgc').show()
-});
-
-$('.nav-bgc').click(function() {
-    $('nav').animate({ left: '-100%' }, 200);
-    $(this).hide();
-    $('.nav-barX').hide();
-    $('.nav-bar').show()
-});
-
-$('.nav-barX').click(function() {
-    $('nav').animate({ left: '-100%' }, 200);
-    $(this).hide();
-    $('.nav-bar').show();
-    $('.nav-bgc').hide()
-});
-    
-});
+        $(function(){
+            $('.nav-bar').click(function(){
+                $('nav').animate({ left: '0' }, 300);
+                $(this).hide();
+                $('.nav-barX').show()
+                $('.nav-bgc').show()
+            });
+            $('.nav-bgc').click(function() {
+                $('nav').animate({ left: '-100%' }, 200);
+                $(this).hide();
+                $('.nav-barX').hide();
+                $('.nav-bar').show()
+            });
+            $('.nav-barX').click(function() {
+                $('nav').animate({ left: '-100%' }, 200);
+                $(this).hide();
+                $('.nav-bar').show();
+                $('.nav-bgc').hide()
+            });
+        });
     </script>
+
+    <!-- rwd會員登入註冊介面  and  下方footerrwd and 地點選單定位-->
     <script>
         const passwordInput = document.getElementById("passwordInput");
         const passwordToggle = document.getElementById("passwordToggle");
@@ -1009,6 +1006,53 @@ window.addEventListener("scroll", function () {
     }
 });
         
+    </script>
+
+        <!-- 點選出現書站地點 -->
+        <script> 
+
+            $(function(){
+                $('#allSite').on('click',function(){
+                    $('.site-container').fadeIn()
+                })
+    
+                $('#northSite').on('click',function(){
+                    $('.north').fadeIn()
+                    if($('.north').show()){
+                        $('.south').hide()
+                        $('.east').hide()
+                        $('.middle').hide()
+                    }
+                    
+                })
+                $('#southSite').on('click',function(){
+                    $('.south').fadeIn()
+                    if( $('.south').show()){
+                        $('.north').hide()
+                        $('.east').hide()
+                        $('.middle').hide()
+                    }
+                        
+                })
+                $('#eastSite').on('click',function(){
+                    $('.east').fadeIn()
+                    if( $('.east').show()){
+                        $('.north').hide()
+                        $('.south').hide()
+                        $('.middle').hide()
+                    }
+                })
+                $('#middleSite').on('click',function(){
+                    $('.middle').fadeIn()
+                    if( $('.middle').show()){
+                        $('.north').hide()
+                        $('.south').hide()
+                        $('.east').hide()
+                    }
+                })
+            })
+    
+            
         </script>
 </body>
 </html>

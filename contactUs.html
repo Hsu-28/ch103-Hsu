@@ -21,7 +21,13 @@
                 }
         }
         
-
+        #textarea-Count{
+            /* position: absolute; */
+            /* top: 12px;
+            left: 50px; */
+            font-size: 8px;
+            color: #adadad;
+        }
         article.content{
         background-position: center;
         background-size: cover; 
@@ -202,6 +208,7 @@
             align-items: start;
             flex-direction: column ;
             border: none;
+            position: relative;
         }
         
         article .contact-form .submit-btn{
@@ -219,7 +226,7 @@
             margin: 24px;
         }
         #content-input{
-            width: 100%;
+            width: 99.5%;
             height: 200px;
             border: 1px solid gray;
             margin-top: 6px;
@@ -279,7 +286,7 @@
             font-size: 220px;
             font-family:  'Poppins', sans-serif;;
             z-index: 0;
-            display: none;
+            display: n;
         }
 
         article h2{
@@ -462,8 +469,9 @@
                   </div>
                   
                   <div class="content-div changeColor">
-                    <label for="content-input">內容</label>
-                    <textarea id="content-input"></textarea>
+                    <label for="content-input">內容&nbsp;&nbsp; <span id="textarea-Count">小提醒，字數上限200字，現在剩下200字喔!</span></label>
+                    <textarea id="content-input" maxlength="200"></textarea>
+                    
                   </div>
                     <button type="submit" class="submit-btn" >確認送出</button>                   
             </form>
@@ -577,10 +585,10 @@
         <form id="loginPanel" class="panelRWD">
             <div class="input-group">
                 <input type="text" class="input inputF" placeholder="請輸入帳號">
-                <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8" id="passwordInput">
+                <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字) &nbsp; &nbsp;" maxlength="16"  minlength="8" id="passwordInput">
             </div>
             <div class="password-input">
-                <span class="password-toggle" id="passwordToggle"><i class="fa-solid rwd fa-eye-slash"></i></span>
+                <span class="password-toggle" id="passwordToggle"> &nbsp; <i class="fa-solid rwd fa-eye-slash"></i></span>
             </div>
             <div class="forgot-password">
                 <a href="#">忘記密碼?</a>
@@ -714,8 +722,8 @@
 
 
 
-let maxWidthThreshold = 768; 
-let liElement1 = document.getElementById("memA"); 
+    let maxWidthThreshold = 768; 
+    let liElement1 = document.getElementById("memA"); 
     let liElement2 = document.getElementById("memR");
     let liElement3 = document.getElementById("memN");
     let liElement4 = document.getElementById("memC");
@@ -728,7 +736,7 @@ function updateLiContent() {
     if (currentWidth < maxWidthThreshold) {
         liElement1.innerHTML = `<a>關於書旅</a>`;
         liElement2.innerHTML = `<a href="allnews.html">書旅消息</a>`; 
-        liElement3.innerHTML = `<a href="allnews.html">書旅消息</a>`;
+        liElement3.innerHTML = `<a href="bookmap.html">書站地圖</a>`;
         liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>`;
     } else {
         liElement1.innerHTML = `<a>關於書旅</a>`;
@@ -738,12 +746,8 @@ function updateLiContent() {
                             <li>媒體報導</li>
                             <li>全部消息</li>
                         </ul>`; 
-        liElement3.innerHTML =` <a href="allnews.html">書旅消息</a>
-                        <ul>
-                            <li>書旅小報</li>
-                            <li>媒體報導</li>
-                            <li>全部消息</li>
-                        </ul>`;
+        liElement3.innerHTML =` <a href="bookmap.html">書站地圖</a>
+                        `;
 
         liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>
                         <ul>
@@ -753,12 +757,23 @@ function updateLiContent() {
     }
 }
 
-// 监听窗口调整大小事件
 window.addEventListener("resize", updateLiContent);
 
-// 初始时执行一次监听
 updateLiContent();
 
+
+
+
+$(function(){
+    let allength = $('#content-input').attr('maxlength');
+    $('#textarea-Count').html(`小提醒，字數上限${allength}字，現在剩下${allength}字喔!`);
+
+    $('#content-input').keyup(function() {
+        let textLength = $(this).val().length;
+
+        $('#textarea-Count').html(`小提醒，字數上限${allength}字，現在剩下${allength - textLength}字喔!`);
+    });
+});
 
     </script>
 </body>

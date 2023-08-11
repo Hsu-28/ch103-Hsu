@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+     .draw-straws{
+            position: relative;
+            margin-top: 160px;
+        }
+        .draw-straws h2{
+            margin-top: 100px;
+            color: #FFF;
+            font-size: 52px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-align: center;
+            position: relative;
+        }
+
+        .draw-straws h2::after{
+            content: "";
+            position: absolute;
+            width: 320px;
+            height: 80px;
+            background: #084A8E;
+            left:39.6%;
+            /* left:460px; */
+            top: -25px;
+            z-index: -1;
+            }
+
+        .draw-straws h2::before{
+            content: "";
+            position: absolute;
+            width: 230px;
+            height: 40px;
+            background: #FCDD65;
+            left: 35%;
+            top: 40px;
+            z-index: -2;
+            }
+            .draw-straws h2 + img{
+            position: absolute;
+            left: 61.5%;
+            top: 30px;
+        } 
+
+        .draw-straws-container{
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+        }
+        .draw-straws-bookimg{
+            width: 24%;
+            padding: 30px;
+        }
+        .draw-straws-bookimg img{
+            width: 100%;
+        }
+        .draw-straws-content{
+            width: 36%;
+            padding: 30px;
+            line-height: 1.6;
+        }
+        .draw-straws-content p{
+            margin: 10px 0;
+        }
+        .draw-straws-content h4{
+            font-size: 20px;
+        }
+        .draw-straws-content .run{
+            display: block;
+            margin-left: auto;
+            margin-top: 30px;
+            cursor: pointer;
+            animation: spin 3.5s infinite linear; /* 使用spin動畫，1秒一次無限循環，線性運動方式 */
+        }
+        @keyframes spin {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+</style>
+
+</head>
+<body>
+    <article class="draw-straws">
+        <h2>好書抽籤</h2>
+        <img  src="imgs/spots.svg" alt="">
+        <section class="draw-straws-container">
+            <div class="draw-straws-bookimg" >
+                <img src="imgs/book3.png" alt="" id="myimg">
+            </div>
+            <div class="draw-straws-content">
+                <h4 id="bookname">書名: 快思慢想</h4>
+                <p id="thismybook">作者: Daniel Kahneman</p>
+                <p>出版社: 天下文化</p>
+                <p>書籍簡介:</p>
+                <p>作者介紹了很多有趣的經典行為實驗，披露思考的捷徑、替代、偏好、框架、錨點等效應。不僅讓我們對大腦的複雜與非理性恍然大悟，也指出我們在什麼情況下該相信靈光乍現，什麼時候該三思而行，該運用哪些技巧來避免常常使我們陷入麻煩的思考偏誤，以及如何在商場、職場和個人生活中做出更好的選擇。</p>
+                <img  src="imgs/again.svg" alt="抽籤" class="run" id="changeBook">
+            </div>
+        </section>
+    </article>
+    <script>
+        const books = [{
+            title : '書名這邊是測試',
+            author: '作者: 許石玉',
+            img: 'imgs/kam-idris-_HqHX3LBN18-unsplash.jpg'
+        
+        } , 
+        {
+            title : '書名這邊是測試2222',
+            author: '作者: 許石玉22222',
+            img: 'imgs/kam-idris-_HqHX3LBN18-unsplash.jpg'
+        
+        },
+        {
+            title : '書名這邊是測試3333',
+            author: '作者: 許石玉333',
+            img: 'imgs/kam-idris-_HqHX3LBN18-unsplash.jpg'
+        
+        },
+        {
+            title : '書名這邊是測試333',
+            author: '作者: 許石玉333',
+            img: 'imgs/kam-idris-_HqHX3LBN18-unsplash.jpg'
+        
+        },
+        {
+            title : '書名這邊是測試444',
+            author: '作者: 許石玉4442',
+            img: 'imgs/kam-idris-_HqHX3LBN18-unsplash.jpg'
+        
+        }
+    ]
+
+    function changeBooks (){
+        let i = Math.floor(Math.random()*books.length)
+
+
+
+        let apple = document.getElementById('bookname')
+        apple.innerHTML = books[i].title
+
+        let toople = document.getElementById('thismybook')
+        toople.innerHTML =  books[i].author
+
+        let myimg = document.getElementById('myimg')
+        myimg.src = books[i].img
+
+    }
+
+    let changeBook = document.getElementById('changeBook')
+    changeBook.addEventListener('click',changeBooks)
+
+
+
+    </script>
+</body>
+</html>
+
+

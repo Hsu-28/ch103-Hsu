@@ -13,10 +13,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
     <style>
+        @media screen and (max-width: 994px) {
+            .memberOverflow{
+                    display: none!important;
+                }
+        }
             header{
             background-image: url(imgs/search.jpg);
             width: 100%;
-            height: 450px;
+            height: 200px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: 100% ;
@@ -25,83 +30,84 @@
 
             header h1 {
                 position: absolute;
-                top: 20%;
+                top: 60px;
                 left: 50%;
-                color: white;
-                font-size: 60px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                transform: rotate(-9.828deg)
-                           translateX(-50%);
-            }
-            header h2 {
-                position: absolute;
-                top: 40%;
-                left: 50%;
-                transform: translateX(-50%);
                 color: white;
                 font-size: 28px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
+                transform: rotate(-6deg)
+                           translateX(-50%);
+                white-space: nowrap;
+            }
+            header h2 {
+                position: absolute;
+                top: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
             }
             .search-bar{
-                margin-right: 5%;
+                /* margin-right: 5%; */
                 display: flex;
                 justify-content: right;
                 align-items: center;
-                height: 100px;
+                height: 80px;
             }
-            .search-bar div{
+            /* .search-bar div{
                 margin: 10px;
+            } */
+            label{
+                font-size: 12px;
+                margin: 0 4px;
+            }
+            .fa-magnifying-glass:before, .fa-search:before{
+                font-size: 10px;
+            }
+            input.searchbook{
+                height: 10px;
+            }
+            input::placeholder{
+                font-size: 10px;
             }
             .content{
-                width: 100%;
+                width: 90%;
                 max-width: 1400px;
-                margin: 0 auto;
-                display: grid;
-                grid-template-columns:  21.9% 21.9% 21.9% 21.9%;
-                grid-template-rows:  412px 412px 412px ;
-                grid-gap:  50px 4.1%;
+                margin: 10px auto;
+                display: flex;
+                flex-flow: row wrap;
+                box-sizing: content-box;
             }
+            .col{
+                width: 50%;
+                padding: 0 10px;
+                box-sizing: border-box;
+            }
+
+           
+
 
             .cards{
                 box-shadow: 1px 1px 2px rgb(244, 243, 243);
                 position: relative;
                 cursor: pointer;
                 border: 1px solid rgb(236, 234, 234);
+                margin: 10px 0;
+                color: #363636;
             }
             .cards:hover {
                 box-shadow: 1px 1px 4px rgb(116, 114, 114);
             }
             .cards:hover img{
-                transform: scale(120%);
+                transform: scale(110%);
                 transition: transform 0.3s;
             }
-            .card1{
-                grid-column: 1/2;
-                grid-row: 1/2;
-                
-            }
-            .card2{
-                grid-column: 2/3;
-                grid-row: 1/2;
-            }
-            .card3{
-                grid-column: 3/4;
-                grid-row: 1/2;
 
-            }
-            .card4{
-                grid-column: 4/5;
-                grid-row: 1/2;
-
-            }
-            .card5{
-                grid-column: 1/2;
-                grid-row: 2/3;
-            }
 
             .cards:nth-child(2n+1)::after{
                 content:"";
@@ -113,24 +119,14 @@
                 background-color: #FCDD65;
                 z-index: -1;
             }
-            .cards:nth-child(2n)::after{
-                content:"";
-                width: 100%;
-                height: 40%;
-                position: absolute;
-                left: 0;
-                top: 0;
-                background-color: #5EB4E7;
-                z-index: -1;
-            }
+            
             .card-img{
-                width: 174px;
-                height: 174px;
-                margin: 50px auto;
+                width: 80%;
+                margin: 20px auto;
                 z-index: 3;
             }
             .card-img img{
-                height: 100%;
+                width: 100%;
                 
             }
             .card-title{
@@ -139,17 +135,19 @@
                 display: inline-block;
                 padding:  0 auto;
                 text-align: center;
+                font-size: 12px;
             }
             .card-author{
                 width: 100%;
-                /* margin: 10px 0 10px 0; */
                 display: inline-block;
                 text-align: center;
-                margin-bottom: 20px
+                margin-bottom: 10px;
+                font-size: 12px;
             }
             .card-information{
+                font-size: 10px;
                 margin: 5px 10px;
-                padding: 0 10px;
+                padding: 0;
             }
             .content-page{
                 width: 100%;
@@ -171,25 +169,113 @@
             .author{
                 margin-right: 40px;
             }
-            button {
+            button.search  {
                 background-color: #90a4b8; 
                 color: #fff; 
                 border: none; 
-                padding: 4px 16px; 
-                border-radius: 8px; 
+                border-radius: 3px; 
                 cursor: pointer; 
+                height: 20px;
+                line-height: 20px;
+                font-size: 10px;
+                margin-right: 10px;
                 }
-            button:hover{
+            button.search :hover{
                 cursor: pointer;
                 background-color: #3a64a6;
             }
             label:hover{
                 cursor: pointer;
             }
-            input:focus{
+            input.searchbook:focus{
                 border: 2px solid #3e6cb6;
                 outline: none;
             }
+            .card-information div:last-of-type{
+                margin-bottom: 20px;
+            }
+
+            @media screen and (min-width: 480px) {
+                .col{
+                width: 33.333333%;
+            }
+            }
+            @media screen and (min-width: 768px) {
+                .col{
+                   width: 25%;
+                }
+            }
+
+            @media screen and (min-width: 980px) {
+                header{
+            height: 450px;
+            }
+
+            header h1 {
+                
+                top: 100px;
+              
+                font-size: 62px;
+     
+                transform: rotate(-9deg)
+                           translateX(-50%);
+               
+            }
+            header h2 {
+                top: 210px;
+                font-size: 36px;
+            }
+                .cards div{
+                    font-size: 16px;
+                }
+                .card-author{
+                    width: 100%;
+                    display: inline-block;
+                    text-align: center;
+                    margin-bottom: 20px
+                }
+                 .card-information{
+                    margin: 5px 10px;
+                    padding: 0 10px;
+                } 
+                .cards .card-title{
+                    font-size: 18px;
+                }
+                .card-img{
+                    margin: 40px auto;
+                }
+
+                label{
+                    font-size: 16px; 
+                    margin: 13px;   
+                }
+                input.searchbook{
+                    height: 24px;
+                }
+                button.search {
+                    border-radius: 3px;
+                    height: 26px;
+                    line-height: 26px;
+                    font-size: 12px;
+                    margin-right: 16px;
+                }
+
+                /* .cards:nth-child(2n)::after{
+                content:"";
+                width: 100%;
+                height: 40%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: #5EB4E7;
+                z-index: 2;
+            } */
+            
+            }
+
+                
+
+            
     </style>
     
 </head>
@@ -231,157 +317,176 @@
         <div>
           <label for="searchInput">
             <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i>
-            <input type="text" id="searchInput" placeholder="請輸入關鍵字">
+            <input type="text" id="searchInput" class="searchbook" placeholder="請輸入關鍵字">
           </label>
-          <button type="submit">送出</button>
+          <button type="submit" class="search">送出</button>
         </div>
       </div>
 
     <section class="content">
-        <div class="card1 cards">
-            <div class="card-img">
-                <img src="imgs/book1.png" alt="here is logo">
-            </div>
-            <div class="card-title">金魚都能懂的CSS必學屬性<br>網頁設計必備寶典</div>
-            <div class="card-author">Amos</div>
-            <div class="card-information">
-                <div>書籍位置：桃園市</div>
-                <div>書站點:we cat cafe</div>
-            </div>
-            
-        </div>
-
-        <div class="card2 cards">
-            <div class="card-img">
-                <img src="imgs/book4.png" alt="here is logo">
-            </div>
-            <div class="card-title">給和平一個機會</div>
-            <div class="card-author">約翰·列儂</div>
-            <div class="card-information">
-                <div>書籍位置：台北市</div>
-                <div>書站點: TAIPEI 101</div>
-            </div>
-        </div>
-
-        <div class="card3 cards">
-            <div class="card-img">
-                <img src="imgs/book5.png" alt="here is logo">
-            </div>
-            <div class="card-title">哈利波特 <br>被詛咒的孩子 </div>
-            <div class="card-author">JK 羅琳</div>
-            <div class="card-information">
-                <div>書籍位置：桃園市</div>
-                <div>書站點:we cat cafe</div>
-            </div>
-        </div>
-
-        <div class="card4 cards">
-            <div class="card-img">
-                <img src="imgs/book6.png" alt="here is logo" height="250" width="">
+        <div class="col">
+            <div class="cards">
+                <div class="card-img">
+                    <img src="imgs/book1.png" alt="here is logo">
+                </div>
+                <div class="card-title">金魚都能懂的CSS必學屬性<br>網頁設計必備寶典</div>
+                <div class="card-author">Amos</div>
+                <div class="card-information">
+                    <div>書籍位置：桃園市</div>
+                    <div>書站點:we cat cafe</div>
+                </div>
                 
             </div>
-            <div class="card-title">無法抗拒的法式鐵盒餅乾</div>
-            <div class="card-author">黛博拉．杜邦達蓋</div>
-            <div class="card-information">
-                <div>書籍位置：桃園市</div>
-                <div>書站點:we cat cafe</div>
+        </div>
+        <div class="col">
+            <div class="cards">
+                <div class="card-img">
+                    <img src="imgs/book1.png" alt="here is logo">
+                </div>
+                <div class="card-title">金魚都能懂的CSS必學屬性<br>網頁設計必備寶典</div>
+                <div class="card-author">Amos</div>
+                <div class="card-information">
+                    <div>書籍位置：桃園市</div>
+                    <div>書站點:we cat cafe</div>
+                </div>
             </div>
         </div>
-        <div class="card5 cards">
-            <div class="card-img">
-                <img src="imgs/book1.png" alt="here is logo">
-            </div>
-            <div class="card-title">金魚都能懂的CSS必學屬性<br>網頁設計必備寶典</div>
-            <div class="card-author">Amos</div>
-            <div class="card-information">
-                <div>書籍位置：桃園市</div>
-                <div>書站點:we cat cafe</div>
+        <div class="col">
+            <div class="cards">
+                <div class="card-img">
+                    <img src="imgs/book4.png" alt="here is logo">
+                </div>
+                <div class="card-title">給和平一個機會</div>
+                <div class="card-author">約翰·列儂</div>
+                <div class="card-information">
+                    <div>書籍位置：台北市</div>
+                    <div>書站點: TAIPEI 101</div>
+                </div>
             </div>
         </div>
-        <div class="card6 cards">
-            <div class="card-img">
-                <img src="imgs/book4.png" alt="here is logo">
+        <div class="col">
+            <div class="cards">
+                <div class="card-img">
+                    <img src="imgs/book5.png" alt="here is logo">
+                </div>
+                <div class="card-title">哈利波特 被詛咒的孩子 </div>
+                <div class="card-author">JK 羅琳</div>
+                <div class="card-information">
+                    <div>書籍位置：桃園市</div>
+                    <div>書站點:we cat cafe</div>
+                </div>
             </div>
-            <div class="card-title">給和平一個機會</div>
-            <div class="card-author">約翰·列儂</div>
-            <div class="card-information">
-                <div>書籍位置：台北市</div>
-                <div>書站點: TAIPEI 101</div>
+        </div>
+        
+        <div class="col">
+            <div class="cards">
+                <div class="card-img">
+                    <img src="imgs/book1.png" alt="here is logo">
+                </div>
+                <div class="card-title">金魚都能懂的CSS必學屬性<br>網頁設計必備寶典</div>
+                <div class="card-author">Amos</div>
+                <div class="card-information">
+                    <div>書籍位置：桃園市</div>
+                    <div>書站點:we cat cafe</div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="cards">
+                <div class="card-img">
+                    <img src="imgs/book1.png" alt="here is logo">
+                </div>
+                <div class="card-title">金魚都能懂的CSS必學屬性<br>網頁設計必備寶典</div>
+                <div class="card-author">Amos</div>
+                <div class="card-information">
+                    <div>書籍位置：桃園市</div>
+                    <div>書站點:we cat cafe</div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="cards">
+                <div class="card-img">
+                    <img src="imgs/book4.png" alt="here is logo">
+                </div>
+                <div class="card-title">給和平一個機會</div>
+                <div class="card-author">約翰·列儂</div>
+                <div class="card-information">
+                    <div>書籍位置：台北市</div>
+                    <div>書站點: TAIPEI 101</div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="cards">
+                <div class="card-img">
+                    <img src="imgs/book5.png" alt="here is logo">
+                </div>
+                <div class="card-title">哈利波特 被詛咒的孩子 </div>
+                <div class="card-author">JK 羅琳</div>
+                <div class="card-information">
+                    <div>書籍位置：桃園市</div>
+                    <div>書站點:we cat cafe</div>
+                </div>
             </div>
         </div>
 
-        <div class="card7 cards">
-            <div class="card-img">
-                <img src="imgs/book5.png" alt="here is logo">
-            </div>
-            <div class="card-title">哈利波特 <br>被詛咒的孩子 </div>
-            <div class="card-author">JK 羅琳</div>
-            <div class="card-information">
-                <div>書籍位置：桃園市</div>
-                <div>書站點:we cat cafe</div>
-            </div>
-        </div>
-
-        <div class="card8 cards">
-            <div class="card-img">
-                <img src="imgs/book6.png" alt="here is logo" height="250" width="">
+        <div class="col">
+            <div class="cards">
+                <div class="card-img">
+                    <img src="imgs/book1.png" alt="here is logo">
+                </div>
+                <div class="card-title">金魚都能懂的CSS必學屬性<br>網頁設計必備寶典</div>
+                <div class="card-author">Amos</div>
+                <div class="card-information">
+                    <div>書籍位置：桃園市</div>
+                    <div>書站點:we cat cafe</div>
+                </div>
                 
             </div>
-            <div class="card-title">無法抗拒的法式鐵盒餅乾</div>
-            <div class="card-author">黛博拉．杜邦達蓋</div>
-            <div class="card-information">
-                <div>書籍位置：桃園市</div>
-                <div>書站點:we cat cafe</div>
+        </div>
+        <div class="col">
+            <div class="cards">
+                <div class="card-img">
+                    <img src="imgs/book1.png" alt="here is logo">
+                </div>
+                <div class="card-title">金魚都能懂的CSS必學屬性<br>網頁設計必備寶典</div>
+                <div class="card-author">Amos</div>
+                <div class="card-information">
+                    <div>書籍位置：桃園市</div>
+                    <div>書站點:we cat cafe</div>
+                </div>
             </div>
         </div>
-        <div class="card9 cards">
-            <div class="card-img">
-                <img src="imgs/book1.png" alt="here is logo">
-            </div>
-            <div class="card-title">金魚都能懂的CSS必學屬性<br>網頁設計必備寶典</div>
-            <div class="card-author">Amos</div>
-            <div class="card-information">
-                <div>書籍位置：桃園市</div>
-                <div>書站點:we cat cafe</div>
-            </div>
-            
-        </div>
-
-        <div class="card10 cards">
-            <div class="card-img">
-                <img src="imgs/book4.png" alt="here is logo">
-            </div>
-            <div class="card-title">給和平一個機會</div>
-            <div class="card-author">約翰·列儂</div>
-            <div class="card-information">
-                <div>書籍位置：台北市</div>
-                <div>書站點: TAIPEI 101</div>
+        <div class="col">
+            <div class="cards">
+                <div class="card-img">
+                    <img src="imgs/book4.png" alt="">
+                </div>
+                <div class="card-title">給和平一個機會</div>
+                <div class="card-author">約翰·列儂</div>
+                <div class="card-information">
+                    <div>書籍位置：台北市</div>
+                    <div>書站點: TAIPEI 101</div>
+                </div>
             </div>
         </div>
-
-        <div class="card11 cards">
-            <div class="card-img">
-                <img src="imgs/book5.png" alt="here is logo">
-            </div>
-            <div class="card-title">哈利波特 <br>被詛咒的孩子 </div>
-            <div class="card-author">JK 羅琳</div>
-            <div class="card-information">
-                <div>書籍位置：桃園市</div>
-                <div>書站點:we cat cafe</div>
+        <div class="col">
+            <div class="cards">
+                <div class="card-img">
+                    <img src="imgs/book5.png" alt="">
+                </div>
+                <div class="card-title">哈利波特 被詛咒的孩子 </div>
+                <div class="card-author">JK 羅琳</div>
+                <div class="card-information">
+                    <div>書籍位置：桃園市</div>
+                    <div>書站點:we cat cafe</div>
+                </div>
             </div>
         </div>
 
-        <div class="card12 cards">
-            <div class="card-img">
-                <img src="imgs/book6.png" alt="here is logo" height="250" width="">
-            </div>
-            <div class="card-title">無法抗拒的法式鐵盒餅乾</div>
-            <div class="card-author">黛博拉．杜邦達蓋</div>
-            <div class="card-information">
-                <div>書籍位置：桃園市</div>
-                <div>書站點:we cat cafe</div>
-            </div>
-        </div>
+        
+       
     </section>
 
 
@@ -403,19 +508,19 @@
         <div class="main-footer">
            <div>
                 <ul>
-                    <li> <a href="">關於書旅</a>
+                    <li id="memA"> <a href="">關於書旅</a>
                         <ul>
                             <li>書旅介紹</li>
                             <li>團隊成員</li>
                         </ul>
                     </li>
-                    <li> <a href="members.html">加入書旅</a>
+                    <li id="memR"> <a href="members.html">加入書旅</a>
                         <ul>
                             <li>會員登入</li>
                             <li>會員註冊</li>
                         </ul>
                     </li>
-                    <li> <a href="allnews.html">書旅消息</a>
+                    <li id="memN"> <a href="allnews.html">書旅消息</a>
                         <ul>
                             <li>書旅小報</li>
                             <li>媒體報導</li>
@@ -424,15 +529,15 @@
                     </li>
                     <li> <a href="faqs.html">常見問題</a> </li>
                     <li> <a href="bookmap.html">書站地圖</a> </li>
-                    <li> <a href="contactUs.html">聯絡我們</a>
+                    <li id="memC"> <a href="contactUs.html">聯絡我們</a>
                         <ul>
                             <li>聯絡地址</li>
                             <li>聯絡表單</li>
                         </ul>
                     </li>
                     <li>
-                         <a href="booksearch.html">好書搜尋</a>
-                    </li>
+                        <a href="booksearch.html">好書搜尋</a>
+                   </li>
                 </ul>
            </div> 
             <div>
@@ -483,6 +588,48 @@
             </div>
         </div>
     </article>
+    <article class="rwd" id="rwdmember">
+        <div class="container-memberRWD">
+            <div class="close"><i class="fa-regular fa-circle-xmark" id="close"></i></div>
+            <div class="changepanel">
+                
+                <h4 id="loginTab" class="active">旅友登入</h4>
+                <h4 id="signupTab">旅友註冊</h4>
+            </div>
+            <form id="loginPanel" class="panelRWD">
+                <div class="input-group">
+                    <input type="text" class="input inputF" placeholder="請輸入帳號">
+                    <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8" id="passwordInput">
+                </div>
+                <div class="password-input">
+                    <span class="password-toggle" id="passwordToggle"><i class="fa-solid rwd fa-eye-slash"></i></span>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">忘記密碼?</a>
+                </div>
+                <button class="btnRWD">確認登入</button>
+            </form>
+    
+    
+            <form id="signupPanel" class="panelRWD hidden">
+                <div class="input-group">
+                    <input type="email" class="input finput" placeholder="請輸入信箱">
+                    <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8">
+                    <input type="password" class="input" placeholder="再次輸入密碼">
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" class="checkbox-input" id="newsletterCheckbox">
+                    <label for="newsletterCheckbox">我願意接收書旅的最新消息</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" class="checkbox-input chi2" id="termsCheckbox">
+                    <label for="termsCheckbox">我同意書旅服務條款及隱私權政策</label>
+                </div>
+                <button class="btnRWD"  type="submit" value="Submit">確認註冊</button>
+            </form>
+        </div>
+      
+    </article>
     <script src="js/member.js"></script>
     <script>
             $(function(){
@@ -509,6 +656,96 @@ $('.nav-barX').click(function() {
 });
     
 });
+    </script>
+
+    <script>
+        const passwordInput = document.getElementById("passwordInput");
+        const passwordToggle = document.getElementById("passwordToggle");
+        const loginTab = document.getElementById("loginTab");
+        const signupTab = document.getElementById("signupTab");
+        const loginPanel = document.getElementById("loginPanel");
+        const signupPanel = document.getElementById("signupPanel");
+        const close = document.getElementById('close')
+        const rwdmember = document.getElementById('rwdmember')
+    
+    passwordToggle.addEventListener("click", function () {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            passwordToggle.innerHTML =   `<i class="fa-solid rwd fa-eye"></i>`;
+        } else {
+            passwordInput.type = "password";
+            passwordToggle.innerHTML = `<i class="fa-solid  rwd fa-eye-slash"></i>`;
+        }
+    });
+    
+    loginTab.addEventListener("click", function () {
+        loginPanel.classList.remove("hidden");
+        signupPanel.classList.add("hidden");
+        loginTab.classList.add("active");
+        signupTab.classList.remove("active");
+    });
+    
+    signupTab.addEventListener("click", function () {
+        loginPanel.classList.add("hidden");
+        signupPanel.classList.remove("hidden");
+        loginTab.classList.remove("active");
+        signupTab.classList.add("active");
+    });
+
+    close.addEventListener("click", function(){
+        rwdmember.style.display = "none";
+    });
+    
+        memberLog.addEventListener("click", function(){
+        rwdmember.style.display = "grid"; 
+    });
+
+
+
+
+
+
+    let maxWidthThreshold = 768; 
+    let liElement1 = document.getElementById("memA"); 
+    let liElement2 = document.getElementById("memR");
+    let liElement3 = document.getElementById("memN");
+    let liElement4 = document.getElementById("memC");
+
+
+function updateLiContent() {
+    let currentWidth = window.innerWidth;
+    
+    
+    if (currentWidth < maxWidthThreshold) {
+        liElement1.innerHTML = `<a>關於書旅</a>`;
+        liElement2.innerHTML = `<a href="allnews.html">書旅消息</a>`; 
+        liElement3.innerHTML = `<a href="bookmap.html">書站地圖</a>`;
+        liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>`;
+    } else {
+        liElement1.innerHTML = `<a>關於書旅</a>`;
+        liElement2.innerHTML = ` <a href="allnews.html">書旅消息</a>
+                        <ul>
+                            <li>書旅小報</li>
+                            <li>媒體報導</li>
+                            <li>全部消息</li>
+                        </ul>`; 
+        liElement3.innerHTML =` <a href="bookmap.html">書站地圖</a>
+                        `;
+
+        liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>
+                        <ul>
+                            <li>聯絡地址</li>
+                            <li>聯絡表單</li>
+                        </ul>`
+    }
+}
+
+window.addEventListener("resize", updateLiContent);
+
+updateLiContent();
+
+
+
     </script>
    
 </body>
