@@ -119,8 +119,8 @@
 
         .information div:first-of-type::before{
             content: "";
-            background-color: #000000;
-            width: 1px;
+            background-color: #838383;
+            width: 1.5px;
             top:120px;
             left: 49%;
             height: 50px;
@@ -131,7 +131,8 @@
         .contact-form div{
             width: 100%;
             padding: 10px;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid #838383;
+
             display: flex;
             justify-content: space-between;
             align-items:  center;  
@@ -170,7 +171,7 @@
         .contact-form div input:focus{
             outline: none;
             caret-color: #1F4788;
-            font-size: 22px;
+            font-size: 12px;
       
         }
 
@@ -316,9 +317,7 @@
             font-size: 18px;
         }
 
-        .information div:first-of-type::before{
-            display: block;
-        }
+        
 
         .contact-form div{
             margin:14px 0;
@@ -391,6 +390,9 @@
             h1{
                 display: block;
             }
+            .information div:first-of-type::before{
+            display: block;
+        }
         }
 
     </style>
@@ -479,40 +481,6 @@
     </article>
 
 
-
-    <!-- <article class="memberOverflow">
-        <div class="container-member right-panel-active">
-            <div class="container-form container-signup">
-                <form action="" class="form" id="form1">
-                    <h3 class="form-title">旅友註冊</h3>
-                    <input type="text" placeholder="註冊信箱" class="input">
-                    <input type="email" placeholder="設定帳號" class="input">
-                    <input type="password " placeholder="設定密碼" class="input">
-                    <button class="btn">確認註冊</button>
-                </form>
-            </div>
-        
-            <div class="container-form container-signin">
-                <form action="" class="form" id="form2">
-                    <h3 class="form-title">旅友登入</h3>
-                    <input type="text" placeholder="帳號" class="input">
-                    <input type="password" placeholder="密碼" class="input">
-                    <button class="btn">確認登入</button>
-                </form>
-            </div>
-        
-            <div class="container-overlay">
-                <div class="overlay">
-                    <div class="overlay-panel overlay-left">
-                        <button class="btn signin-btn" id="signIn">旅友登入</button>
-                    </div>
-                    <div class="overlay-panel overlay-right">
-                        <button class="btn signup-btn" id="signUp">註冊</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </article> -->
 
 
     <footer>

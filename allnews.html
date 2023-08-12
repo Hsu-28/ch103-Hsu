@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/member.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
+    <script src="js/alluse.js"></script>
     <style>
 
 
@@ -120,7 +121,7 @@
             transform: translateX(-50%);
             z-index: 50;
             color: white;
-            font-size: 14px;
+            font-size: 16px;
             white-space: nowrap;
         }
         .all-block h3:last-of-type{
@@ -273,7 +274,7 @@
 
 
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 618px) {
         header{
             height: 450px;
         }
@@ -889,6 +890,7 @@
 
   
     
+
 <footer>
     <div class="footer-logo">
 
@@ -907,12 +909,7 @@
                         <li>團隊成員</li>
                     </ul>
                 </li>
-                <li id="memR"> <a href="members.html">加入書旅</a>
-                    <ul>
-                        <li>會員登入</li>
-                        <li>會員註冊</li>
-                    </ul>
-                </li>
+
                 <li id="memN"> <a href="allnews.html">書旅消息</a>
                     <ul>
                         <li>書旅小報</li>
@@ -997,28 +994,29 @@
   
 </article>
 
+
    
-   <script>
+    <script>
 
     const allBlocks = document.querySelectorAll(".all-block");
 
 
-    allBlocks.forEach((block) => {
-        block.addEventListener("click", function () {
+    // allBlocks.forEach((block) => {
+    //     block.addEventListener("click", function () {
 
-            const border = this.querySelector(".border");
+    //         const border = this.querySelector(".border");
 
-            const allBorders = document.querySelectorAll(".border");
-            allBorders.forEach((border) => {
-                border.style.display = "none";
-            });
+    //         const allBorders = document.querySelectorAll(".border");
+    //         allBorders.forEach((border) => {
+    //             border.style.display = "none";
+    //         });
 
-            if (border) {
-                border.style.display = "block";
-            }
+    //         if (border) {
+    //             border.style.display = "block";
+    //         }
 
-        });
-    });
+    //     });
+    // });
     
  
     allBlocks.forEach((block) => {
@@ -1051,60 +1049,36 @@
     });
 
 
-    $(function(){
-
-$('.nav-bar').click(function(){
-    $('nav').animate({ left: '0' }, 300);
-    $(this).hide();
-    $('.nav-barX').show()
-    $('.nav-bgc').show()
-});
-
-$('.nav-bgc').click(function() {
-    $('nav').animate({ left: '-100%' }, 200);
-    $(this).hide();
-    $('.nav-barX').hide();
-    $('.nav-bar').show()
-});
-
-$('.nav-barX').click(function() {
-    $('nav').animate({ left: '-100%' }, 200);
-    $(this).hide();
-    $('.nav-bar').show();
-    $('.nav-bgc').hide()
-});
-    
-});
 </script>
-<!-- index連結過來 -->
-    <script>
-const anchor = window.location.hash;
-
-const elementId = anchor.substring(1);
-
-const gazettecontent = document.getElementById('gazette-content');
-const allnewscontent = document.getElementById('all-news-content');
-const mediacontent = document.getElementById('media-content');
 
 
-if (elementId === 'gazette-content') {
-    gazettecontent.style.display = 'block';
-    allnewscontent.style.display = 'none';
-    mediacontent.style.display = 'none';
-} else if (elementId === 'all-news-content') {
-    gazettecontent.style.display = 'none';
-    allnewscontent.style.display = 'block';
-    mediacontent.style.display = 'none';
-} else if (elementId === 'media-content') {
-    gazettecontent.style.display = 'none';
-    allnewscontent.style.display = 'none';
-    mediacontent.style.display = 'block';
-}
+ <!-- index連結過來 -->
+     <script>
+        const anchor = window.location.hash;
+        const elementId = anchor.substring(1);
+        const gazettecontent = document.getElementById('gazette-content');
+        const allnewscontent = document.getElementById('all-news-content');
+        const mediacontent = document.getElementById('media-content');
+        if (elementId === 'gazette-content') {
+            gazettecontent.style.display = 'block';
+            allnewscontent.style.display = 'none';
+            mediacontent.style.display = 'none';
+        } else if (elementId === 'all-news-content') {
+            gazettecontent.style.display = 'none';
+            allnewscontent.style.display = 'block';
+            mediacontent.style.display = 'none';
+        } else if (elementId === 'media-content') {
+            gazettecontent.style.display = 'none';
+            allnewscontent.style.display = 'none';
+            mediacontent.style.display = 'block';
+        }
+    </script>  
+    <script src="js/alluse.js"></script>
 
-    </script>
+  
     
 
-    <script src="js/alluse.js"></script>
+   
 
 
 

@@ -26,7 +26,6 @@ document.addEventListener("click", (event) => {
 
 document.addEventListener("click", (event) => {
     const rwdmemberElement = document.getElementById("rwdmember");
-    const articleElement = document.querySelector(".rwd"); // 請確保這是正確的article元素選擇器
     
     if (event.target === articleElement) {
         rwdmemberElement.style.display = "none";

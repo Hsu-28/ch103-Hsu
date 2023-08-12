@@ -32,7 +32,7 @@
         });
     });
 
-    // <!-- 註冊登入密碼 、縮小時footer內容改變 -->
+    // <!-- 註冊登入密碼 、縮小時footer內容改變 -->r
 
         const passwordInput = document.getElementById("passwordInput");
         const passwordInput2 = document.getElementById("passwordInput2");
@@ -52,7 +52,7 @@
                 passwordInput.type = "text";
                 passwordToggle.innerHTML =   `<i class="fa-solid rwd fa-eye"></i>`;
             } else {
-                passwordInput.type = "password";
+                passwordInput.type === "password";
                 passwordToggle.innerHTML = `<i class="fa-solid  rwd fa-eye-slash"></i>`;
             }
         });
@@ -98,17 +98,12 @@
             memberLog.addEventListener("click", function(){
             rwdmember.style.display = "grid"; 
         });
-            firstN.addEventListener("click", function(){
-            rwdmember.style.display = "grid"; 
-            signupPanel.classList.remove("hidden");
-            loginPanel.classList.add("hidden");
-            signupTab.classList.add("active");
-            loginTab.classList.remove("active")
-        });
+
+
+
         
         let maxWidthThreshold = 768; 
         let liElement1 = document.getElementById("memA"); 
-        let liElement2 = document.getElementById("memR");
         let liElement3 = document.getElementById("memN");
         let liElement4 = document.getElementById("memC");
         
@@ -118,17 +113,10 @@
         
         if (currentWidth < maxWidthThreshold) {
             liElement1.innerHTML = `<a>關於書旅</a>`;
-            liElement2.innerHTML = `<a href="allnews.html">書旅消息</a>`; 
             liElement3.innerHTML = `<a href="allnews.html">書旅消息</a>`;
             liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>`;
         } else {
             liElement1.innerHTML = `<a>關於書旅</a>`;
-            liElement2.innerHTML = ` <a href="allnews.html">書旅消息</a>
-                            <ul>
-                                <li>書旅小報</li>
-                                <li>媒體報導</li>
-                                <li>全部消息</li>
-                            </ul>`; 
             liElement3.innerHTML =` <a href="allnews.html">書旅消息</a>
                             <ul>
                                 <li>書旅小報</li>
@@ -145,12 +133,82 @@
         }
         
         
-        window.addEventListener("resize", updateLiContent);
-        
-        
+        window.addEventListener("resize", updateLiContent);     
         updateLiContent();
 
-        
-        
-        
+    
 
+        // const allBlocks = document.querySelectorAll(".all-block");
+
+        // allBlocks.forEach((block) => {
+        //     block.addEventListener("click", function () {
+    
+        //         const border = this.querySelector(".border");
+    
+        //         const allBorders = document.querySelectorAll(".border");
+        //         allBorders.forEach((border) => {
+        //             border.style.display = "none";
+        //         });
+    
+        //         if (border) {
+        //             border.style.display = "block";
+        //         }
+    
+        //     });
+        // });
+        
+     
+        // allBlocks.forEach((block) => {
+        //     block.addEventListener("click", function () {
+        //         const targetId = this.getAttribute("data-target");
+    
+             
+        //         const allContents = document.querySelectorAll(".all-content");
+        //         allContents.forEach((content) => {
+        //             content.style.display = "none";
+        //         });
+    
+    
+        //         const targetContent = document.getElementById(targetId);
+        //         if (targetContent) {
+        //             targetContent.style.display = "block";
+    
+        //             const targetTitle = targetContent.querySelector("h3");
+        //             if (targetTitle) {
+        //                 const rect = targetTitle.getBoundingClientRect();
+        //                 const offset = window.scrollY + rect.top - 80;
+    
+        //                 window.scrollTo({
+        //                     top: offset,
+        //                     behavior: "smooth",
+        //                 });
+        //             }
+        //         }
+        //     });
+        // });
+    
+    
+  
+    
+    
+    // <!-- index連結過來 -->
+       
+            // const anchor = window.location.hash;
+            // const elementId = anchor.substring(1);
+            // const gazettecontent = document.getElementById('gazette-content');
+            // const allnewscontent = document.getElementById('all-news-content');
+            // const mediacontent = document.getElementById('media-content');
+            // if (elementId === 'gazette-content') {
+            //     gazettecontent.style.display = 'block';
+            //     allnewscontent.style.display = 'none';
+            //     mediacontent.style.display = 'none';
+            // } else if (elementId === 'all-news-content') {
+            //     gazettecontent.style.display = 'none';
+            //     allnewscontent.style.display = 'block';
+            //     mediacontent.style.display = 'none';
+            // } else if (elementId === 'media-content') {
+            //     gazettecontent.style.display = 'none';
+            //     allnewscontent.style.display = 'none';
+            //     mediacontent.style.display = 'block';
+            // }
+       

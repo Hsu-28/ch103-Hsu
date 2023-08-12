@@ -114,9 +114,8 @@
             display: flex;
             justify-content: center;
             flex-flow: column nowrap;
-            margin-top: 46px;
-            margin-bottom: 46px;
             padding: 4px;
+            margin: 46px 5%; 
         }
 
         .about-bt-content > :nth-child(1){
@@ -1629,39 +1628,6 @@
         </section>
     </article>
 
-    <!-- <article class="memberOverflow">
-        <div class="container-member right-panel-active">
-            <div class="container-form container-signup">
-                <form action="" class="form" id="form1">
-                    <h3 class="form-title">旅友註冊</h3>
-                    <input type="text" placeholder="註冊信箱" class="input">
-                    <input type="email" placeholder="設定帳號" class="input">
-                    <input type="password " placeholder="設定密碼" class="input">
-                    <button class="btn">確認註冊</button>
-                </form>
-            </div>
-        
-            <div class="container-form container-signin">
-                <form action="" class="form" id="form2">
-                    <h3 class="form-title">旅友登入</h3>
-                    <input type="text" placeholder="帳號" class="input">
-                    <input type="password" placeholder="密碼" class="input">
-                    <button class="btn">確認登入</button>
-                </form>
-            </div>
-        
-            <div class="container-overlay">
-                <div class="overlay">
-                    <div class="overlay-panel overlay-left">
-                        <button class="btn signin-btn" id="signIn">旅友登入</button>
-                    </div>
-                    <div class="overlay-panel overlay-right">
-                        <button class="btn signup-btn" id="signUp">註冊</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </article> -->
     <footer>
         <div class="footer-logo">
 
@@ -1680,12 +1646,7 @@
                             <li>團隊成員</li>
                         </ul>
                     </li>
-                    <li id="memR"> <a href="members.html">加入書旅</a>
-                        <ul>
-                            <li>會員登入</li>
-                            <li>會員註冊</li>
-                        </ul>
-                    </li>
+
                     <li id="memN"> <a href="allnews.html">書旅消息</a>
                         <ul>
                             <li>書旅小報</li>
@@ -1812,6 +1773,16 @@
         });
 
 
+    </script>
+    <!-- 註冊跳轉 -->
+    <script>
+            firstN.addEventListener("click", function(){
+            rwdmember.style.display = "grid"; 
+            signupPanel.classList.remove("hidden");
+            loginPanel.classList.add("hidden");
+            signupTab.classList.add("active");
+            loginTab.classList.remove("active")
+        });
     </script>
     <script src="js/booklist.js"></script>
 
