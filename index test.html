@@ -95,64 +95,213 @@
         <img  src="imgs/spots.svg" alt="">
         <section class="draw-straws-container">
             <div class="draw-straws-bookimg" >
-                <img src="imgs/book3.png" alt="" id="myimg">
+                <img src="imgs/booklist4.jpg" alt="" id="myimg">
             </div>
             <div class="draw-straws-content">
-                <h4 id="bookname">書名: 快思慢想</h4>
-                <p id="thismybook">作者: Daniel Kahneman</p>
-                <p>出版社: 天下文化</p>
+                <h4 id="bookname">中央站：失去過往與未來，拋棄時間與空間的無家者</h4>
+                <p id="author">作者: Daniel Kahneman</p>
+                <p id="publish">出版社: 天下文化</p>
                 <p>書籍簡介:</p>
-                <p>作者介紹了很多有趣的經典行為實驗，披露思考的捷徑、替代、偏好、框架、錨點等效應。不僅讓我們對大腦的複雜與非理性恍然大悟，也指出我們在什麼情況下該相信靈光乍現，什麼時候該三思而行，該運用哪些技巧來避免常常使我們陷入麻煩的思考偏誤，以及如何在商場、職場和個人生活中做出更好的選擇。</p>
+                <p id="book-introduce">作者介紹了很多有趣的經典行為實驗，披露思考的捷徑、替代、偏好、框架、錨點等效應。不僅讓我們對大腦的複雜與非理性恍然大悟，也指出我們在什麼情況下該相信靈光乍現，什麼時候該三思而行，該運用哪些技巧來避免常常使我們陷入麻煩的思考偏誤，以及如何在商場、職場和個人生活中做出更好的選擇。</p>
                 <img  src="imgs/again.svg" alt="抽籤" class="run" id="changeBook">
             </div>
         </section>
     </article>
     <script>
         const books = [{
-            title : '書名這邊是測試',
-            author: '作者: 許石玉',
-            img: 'imgs/kam-idris-_HqHX3LBN18-unsplash.jpg'
+            title : '書名: 快思慢想',
+            author: '作者: Daniel Kahneman',
+            img: 'imgs/book3.png',
+            publish: '出版社: 天下文化',
+            content:'作者介紹了很多有趣的經典行為實驗，披露思考的捷徑、替代、偏好、框架、錨點等效應。不僅讓我們對大腦的複雜與非理性恍然大悟，也指出我們在什麼情況下該相信靈光乍現，什麼時候該三思而行，該運用哪些技巧來避免常常使我們陷入麻煩的思考偏誤，以及如何在商場、職場和個人生活中做出更好的選擇。'
+        } , 
+            {
+            title : '金魚都能懂的CSS必學屬性網頁設計必備寶典',
+            author: '作者: Amos',
+            img: 'imgs/book1.png',
+            publish: '出版社: 博碩文化',
+            content: '本書內容改編自第12屆iT邦幫忙鐵人賽Modern Web組優選系列文章《金魚都能懂的CSS必學屬性》，本書內容針對網頁切版最常見的CSS屬性來詳細介紹，不管是剛接觸網頁的新手，或者是已接觸過一段時間的開發老手，對於該學習哪些什麼CSS屬性總是會有些混亂，因此本書針對「網頁切版」所需要的CSS屬性做完整詳細的說明，由淺入深，讓你可以理解哪些CSS屬性是一定要學習的。'
         
         } , 
         {
-            title : '書名這邊是測試2222',
-            author: '作者: 許石玉22222',
-            img: 'imgs/kam-idris-_HqHX3LBN18-unsplash.jpg'
+            title : '不要做自己了，你做個人吧',
+            author: '作者: MUMU',
+            img: 'imgs/booklist3.jpg',
+            publish: '時報出版',
+            content: '被討厭沒關係，被欺負不可以有些話該說就說，有些臉該翻就翻。全方位無保留分享舒坦人生觀：接納自己的平凡並不是看輕自己，而是有了自覺更不容易自卑。因為知道自己的斤兩，所以敢愛敢恨敢上秤。'
         
         },
         {
-            title : '書名這邊是測試3333',
-            author: '作者: 許石玉333',
-            img: 'imgs/kam-idris-_HqHX3LBN18-unsplash.jpg'
+            title : '冰與火之歌前傳：血火同源(下)',
+            author: '作者: 喬治馬汀',
+            publish: '出版社:高寶國際',
+            img: 'imgs/booklist1.jpg',
+            content: '龍族，坦格利安家族的興起與滅亡，滿布火與血的龍族王國史。龍王伊耿與黑死神貝勒里恩征服整片大陸的壯闊征戰，仲裁者傑赫里斯一世的太平時期，竟也是埋下「血龍狂舞」的禍根之時——血龍狂舞，這是坦格利安家族兩個分支，為了維斯特洛的鐵王座鬥爭個你死我活的慘劇。'
         
         },
         {
-            title : '書名這邊是測試333',
-            author: '作者: 許石玉333',
-            img: 'imgs/kam-idris-_HqHX3LBN18-unsplash.jpg'
+            title : '哈利波特被詛咒的孩子',
+            author: '作者: J.K.羅琳',
+            img: 'imgs/book5.png',
+            publish: '出版社:人民文學出版社',
+            content:'十九年後。身為「大難不死的男孩」，哈利·波特一直生活得很艱難。如今他是一個超負荷工作的魔法部僱員，一個已婚男人，三個學齡孩子的父親，日子過得並不輕鬆，與小兒子阿不思之間緊張的父子關係尤其令他頭痛...'
         
         },
         {
-            title : '書名這邊是測試444',
-            author: '作者: 許石玉4442',
-            img: 'imgs/kam-idris-_HqHX3LBN18-unsplash.jpg'
+            title : '人間孤獨，卻與你一見如故：一見如故，卻與你人間孤獨',
+            author: '作者: 黃山料、王昊齊',
+            publish: '出版社: 三采文化',
+            img: 'imgs/booklist4.jpg',
+            content: '改編自真實故事 ———「我有一個總是獨來獨往的同學，自殺了。留下一份書稿，兩萬字，記述他最眷戀的青春冒險、最遺憾的情感羈絆。而我，受他所託，改編出版。」<br>原來，後來的你，一直是一個人仍看不清未來，也回不到過去。還沒準備好，就到了該懂事的年紀。'
         
-        }
+        },
+        {
+            title : '唐詩寒武紀',
+            author: '作者: 王曉磊',
+            publish: '出版社: 新經典文化',
+            img: 'imgs/booklist5.jpg',
+            content: '繼好評暢銷作《翻牆讀唐詩》後，最會說唐詩故事的六神磊磊回來了。這一次他擴大唐詩寫作計畫，續寫唐詩故事為「唐詩三部曲」，計畫推出：寒武紀、光明頂、笑忘書，書寫大唐盛世300年詩歌史，還有詩壇江湖裡詩人墨客精彩的人生故事。'
+            
+        },
+        {
+            title : '茶金帝國與海上絲路(Ⅱ)',
+            author: '作者: 羅三洋',
+            publish: '出版社: 大旗出版',
+            img: 'imgs/booklist6.jpg',
+            content: '是貿易先驅？或亡國禍根?當絲茶之路不再輝煌，失去貿易優勢的新時代，十三洋行將何去何從？從茶絲到鴉片煙絲，十三洋行遊走於灰色地帶，黑與白；殘存或是末路， 歷史的軸仍在流轉……。紅茶換罌粟，崩國成禍根東方茶葉失去貿易優勢，為了搶佔西方市場利益，十三洋行默許鴉片之風，不敗的清朝軍隊竟敗於罌粟菸槍……。'
+        
+        },
+        {
+            title : '全魚解構與料理',
+            author: '作者: 喬許尼蘭德Josh Niland',
+            publish: '出版社: 積木文化',
+            img: 'imgs/booklist7.jpg',
+            content: '徹底改變你對魚的看法和想像讓一條魚發揮到極致，是料理者最虔敬的心意！這是一本有知識、有技巧，更有創意的食譜鉅著，從魚肉到魚眼、魚鰾、魚鱗甚至魚血，徹底解構，物盡其用，無論你是烹飪專業人士、美食研究家甚至家庭料理者，作者的精湛廚藝與無窮靈感，將讓你驚嘆連連，啟發無限。'
+        
+        },
+        {
+            title : '與你相鬱的日子',
+            author: '作者: 點點心理學Winnie',
+            publish: '出版社: 商鼎文化出版公司',
+            img: 'imgs/booklist8.jpg',
+            content: '從今天起，我開始學會與憂鬱症相處──寫給憂鬱症患者與陪伴者之書「我有穩定的工作，也有愛我的家人跟朋友，為什麼我還是會時常感到痛苦？」從正確認識憂鬱症開始，找到心中的刺在哪裡，才可以治療傷口，讓自己有復原的機會。'
+        
+        },
+        {
+            title : '矽島的危與機：半導體與地緣政治',
+            author: '作者: 黃欽勇.黃逸平',
+            publish: '出版社: 陽明交通大學出版社',
+            img: 'imgs/booklist9.jpg',
+            content: '面對地緣政治帶來的風險，台灣半導體產業如何再創奇蹟？半導體與供應鏈為台灣與國際接軌最重要的戰略武器，而在COVID-19 疫情期間，半導體供需失衡受到前所未有的關注，聚焦台灣的樞紐角色更甚以往。然而，台灣的半導體產業到底是懷璧其罪，還是護國神山？'
+        
+        },
+        {
+            title : '十種人性',
+            author: '作者: 狄諤斯',
+            publish: '出版社: 天下文化',
+            img: 'imgs/booklist10.jpg',
+            content: '人性很複雜，你是你想像中的樣子嗎？你是別人眼中的樣子嗎？你知道自己帶有幾種人性？<br>我們想要相信，世上有些壞事是自己永遠不會做、不屑做的。<br>我們想要相信，世上有些好事是自己當然會去做、樂於做的。'
+        
+        },
+        {
+            title : '中央站：失去過往與未來，拋棄時間與空間的無家者',
+            author: '作者: 金惠珍',
+            publish: '出版社: 時報出版社',
+            img: 'imgs/booklist11.jpg',
+            content: '你曾在街上向人伸手嗎？或必須付出自尊，才能換來某樣東西？倘若人生就是不斷的失去，直到一無所有，還有可能，再擁有愛嗎?'
+        },
+        {
+            title : '生命與味覺',
+            author: '作者: 辰巳芳子',
+            publish: '出版社: 積木文化',
+            img: 'imgs/booklist12.jpg',
+            content: '日本國寶級料理家辰巳芳子發人深省的飲食散文作品，讀者將在本書中看到她在悠長人生歲月裡以料理體悟生命的獨特觀點。糙米湯、小魚乾高湯、香菇湯、油菜花蓋飯、根莖蔬菜湯、牛筋鍋、蛤蜊法式清湯、大蒜湯、粥茶碗蒸……她的每一道料理背後，都蘊藏著對生命與自然的體悟與愛。'
+        
+        },
+         {
+            title : '回家',
+            author: '作者: 賴佩霞.郭貞伶',
+            publish: '出版社: 早安財經文化',
+            img: 'imgs/booklist13.jpg',
+            content: '像個勇士般的，進入自己不敢面對的傷痛吧……親愛的，放下輸贏跟所有的計較吧，這條路上，你唯一的關係，一直就只是你與自己的關係。以前如此，現在如此，未來也會是如此。如果你的人生至今充滿傷痛與種種不堪，你是半個勇敢的靈魂，因為你選擇體驗荊棘般的經歷……'
+        
+        },
+         {
+            title : '月亮是夜晚唯一的光芒',
+            author: '作者: 不朽',
+            publish: '出版社: 悅知文化',
+            img: 'imgs/booklist14.jpg',
+            content: '「生命有接受缺憾存在的必要。可能是日落，可能是雨落，可能是深深地墜落。」那些你曾認為的不完美、破碎、失缺、迷茫，都將在寂靜的夜裡緩緩釋放。而我們也都將在愛與不愛裡，悄悄成為自己。'
+        
+        },
+         {
+            title : '我只能為你畫一張小卡片',
+            author: '作者: 幾米',
+            publish: '出版社: 大塊文化',
+            img: 'imgs/booklist15.jpg',
+            content: '幾米畫的卡片伴著文字，可愛又俏皮，帶著詼諧嘲諷也帶著感傷喟嘆，不管時代如何變化，永遠充滿人的溫度和對世界的好奇，總是引人會心微笑。縱使我們現在難得畫卡片寫卡片，但幾米所畫所寫的這些卡片卻讓人愛不釋手，有種將疏離世界拉近的魔力。'
+        
+        },
+         {
+            title : '你今天笑了幾次',
+            author: '作者: 神岡學',
+            publish: '出版社: 大田出版社',
+            img: 'imgs/booklist16.jpg',
+            content: '創造好心情 解憂圖文書<br>小魚兒說：自己一個真不賴，呼朋引伴也很不錯喔。<br>野狼說：雖然形單影隻，但一定會有誰注意我。凹嗚……<br>企鵝說：不是不能飛，只是不飛而已……<br>螃蟹說：人生，如果一個勁向前會很累吧，不過，也不能掉頭向後走的。<br>大象說：心和心如果不能夠相聯繫，很容易距離愈來愈遠了。<br>白兔說：仔細聆聽，世界變得愈來愈寬廣。'
+        
+        },
+         {
+            title : '歌劇魅影：一生必讀的經典故事',
+            author: '作者:卡斯頓．勒胡',
+            publish: '出版社:好讀出版',
+            img: 'imgs/booklist17.jpg',
+            content: '不朽經典名劇──【歌劇魅影】原著小說★二十世紀大仲馬──卡斯頓．勒胡最膾炙人口的作品★四大音樂劇之首，有史以來百老匯公演最多場次，至今票房長期不墜，被譽為二十世紀最成功的戲劇'
+        
+        },
+         {
+            title : '百年孤寂',
+            author: '作者: 加布列.賈西亞.馬奎斯',
+            publish: '出版社: 皇冠叢書',
+            img: 'imgs/booklist18.jpg',
+            content: '荷西‧阿爾卡迪歐‧波恩地亞與烏蘇拉的婚姻早已命中註定，不過在他們決定結婚時，還是遭到雙方家族的反對，因為他們不只是戀人，更是有血緣關係的表兄妹。據說亂倫會生出長豬尾巴的後代，憂心悲劇降臨的烏蘇拉，婚後始終戴著貞操帶，不肯跟荷西行房。左鄰右舍流言四起，在鬥雞比賽輸給荷西的阿奇勒譏諷荷西沒有生育能力，他一怒之下拿起長矛...'
+        
+        },
+    
+    {
+            title : '張曼娟讀芥川龍之介',
+            author: '作者: 芥川龍之介Akutagawa Ryunosuke.張曼娟',
+            publish: '出版社: 麥田出版有限公司',
+            img: 'imgs/booklist19.jpg',
+            content: '《張曼娟讀芥川龍之介》精選五篇芥川龍之介具代表性的短篇傑作——〈安心的鼻子〉是一篇幽默而令人過目難忘的小說。禪智和尚有一個長如木條的鼻子，他常受長鼻子困擾，吃飯需要弟子隨侍在旁，將鼻子用棍子撐起才能進食。但當他得到消除長鼻祕方而如願後，卻又懷念起原來的長鼻，最終，他會如何自處以對鼻子？'
+        },
+        {
+           title : '小王子',
+           author: '作者: 安東尼.聖修伯里',
+           publish: '出版社: 愛米粒',
+           img: 'imgs/booklist20.jpg',
+           content: '★與小王子的對話<br><br>‧她讓我的生活充滿芬芳和光彩，我卻離開了她！我應該猜到在她驕傲的外表下隱藏的深刻情感。只怪我當時太年輕，不了解什麼是愛。<br>.你為你的玫瑰付出的時光，讓你的玫瑰變得如此重要。<br>‧沙漠如此美麗，是因為在某個角落裡藏著一口水井......'
+       },
     ]
 
     function changeBooks (){
         let i = Math.floor(Math.random()*books.length)
 
+        // $('#apple').html(書名).fadeIn(1500)
 
+        let bookname = document.getElementById('bookname')
+        bookname.innerHTML = books[i].title
 
-        let apple = document.getElementById('bookname')
-        apple.innerHTML = books[i].title
-
-        let toople = document.getElementById('thismybook')
-        toople.innerHTML =  books[i].author
+        let author= document.getElementById('author')
+        author.innerHTML =  books[i].author
 
         let myimg = document.getElementById('myimg')
         myimg.src = books[i].img
+
+        let publish= document.getElementById('publish')
+        publish.innerText = books[i].publish
+
+        let bookIntroduce= document.getElementById('book-introduce')
+        bookIntroduce.innerHTML = books[i].content
 
     }
 

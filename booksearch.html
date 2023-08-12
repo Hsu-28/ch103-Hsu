@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>好書查詢</title>
+    <title>好書搜尋</title>
     <link href="imgs/logo.ico" rel="shortcut icon"/>
     <link rel="stylesheet" href="css/css.reset.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -13,6 +13,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
     <style>
+           .logo-vertical img{
+                display: block;
+            }
+            
         @media screen and (max-width: 994px) {
             .memberOverflow{
                     display: none!important;
@@ -66,11 +70,19 @@
                 font-size: 12px;
                 margin: 0 4px;
             }
+
+            @media screen and (min-width: 400px) {
+                label{
+                    margin: 0 4px;
+                        }
+            }
+
             .fa-magnifying-glass:before, .fa-search:before{
                 font-size: 10px;
             }
             input.searchbook{
                 height: 10px;
+                width: 120px;
             }
             input::placeholder{
                 font-size: 10px;
@@ -89,7 +101,9 @@
                 box-sizing: border-box;
             }
 
-           
+            .col div{
+                margin-top: 6px;
+            }
 
 
             .cards{
@@ -204,16 +218,10 @@
                 .col{
                    width: 25%;
                 }
-            }
 
-            @media screen and (min-width: 980px) {
-                header{
-            height: 450px;
-            }
-
-            header h1 {
+                header h1 {
                 
-                top: 100px;
+                top: 124px;
               
                 font-size: 62px;
      
@@ -222,7 +230,7 @@
                
             }
             header h2 {
-                top: 210px;
+                top: 230px;
                 font-size: 36px;
             }
                 .cards div{
@@ -250,7 +258,8 @@
                     margin: 13px;   
                 }
                 input.searchbook{
-                    height: 24px;
+                    height: 22px;
+                    width: 180px;
                 }
                 button.search {
                     border-radius: 3px;
@@ -259,18 +268,21 @@
                     font-size: 12px;
                     margin-right: 16px;
                 }
+                    header{
+                height: 450px;
+                }
 
-                /* .cards:nth-child(2n)::after{
-                content:"";
-                width: 100%;
-                height: 40%;
-                position: absolute;
-                left: 0;
-                top: 0;
-                background-color: #5EB4E7;
-                z-index: 2;
-            } */
-            
+
+               
+                .logo-vertical img{
+                display: none;
+            }
+           
+
+            }
+           
+            @media screen and (min-width: 980px) {
+           
             }
 
                 
@@ -296,7 +308,7 @@
                 <li><a href="faqs.html">常見問題</a></li>
                 <li > <a id = "memberLog"> 登入 / 註冊</a></li>
                 <li><a href="contactUs.html">聯絡我們</a></li>
-                <li><a href="booksearch.html">好書搜詢</a></li>
+                <li><a href="booksearch.html">好書搜尋</a></li>
             </ul>
         </nav>
         <div>
@@ -555,7 +567,7 @@
         </div>
     </footer>
     
-    <article class="memberOverflow">
+    <!-- <article class="memberOverflow">
         <div class="container-member right-panel-active">
             <div class="container-form container-signup">
                 <form action="" class="form" id="form1">
@@ -587,7 +599,7 @@
                 </div>
             </div>
         </div>
-    </article>
+    </article> -->
     <article class="rwd" id="rwdmember">
         <div class="container-memberRWD">
             <div class="close"><i class="fa-regular fa-circle-xmark" id="close"></i></div>
@@ -746,6 +758,17 @@ updateLiContent();
 
 
 
+    </script>
+    <!-- 點擊黑色區塊關閉rwd -->
+    <script>
+        document.addEventListener("click", (event) => {
+const rwdmemberElement = document.getElementById("rwdmember");
+const articleElement = document.querySelector(".rwd"); // 請確保這是正確的article元素選擇器
+
+if (event.target === articleElement) {
+   rwdmemberElement.style.display = "none";
+}
+});
     </script>
    
 </body>

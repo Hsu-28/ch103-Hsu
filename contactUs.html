@@ -22,9 +22,6 @@
         }
         
         #textarea-Count{
-            /* position: absolute; */
-            /* top: 12px;
-            left: 50px; */
             font-size: 8px;
             color: #adadad;
         }
@@ -265,6 +262,9 @@
             h1{
                 display: block;
             }
+            .logo-vertical img{
+            display: none;
+        }
             article.content{
             padding-top: 240px;
             padding-bottom: 100px;
@@ -448,7 +448,7 @@
                   <div class="sexdiv changeColor">
                     <span>性別</span>
                     <label for="male-input">男性</label>
-                    <input type="radio" name="sex" id="male-input">
+                    <input type="radio" name="sex" id="male-input" background-color="red">
                     <label for="female-input">女性</label>
                     <input type="radio" name="sex" id="female-input">
                   </div>
@@ -480,7 +480,7 @@
 
 
 
-    <article class="memberOverflow">
+    <!-- <article class="memberOverflow">
         <div class="container-member right-panel-active">
             <div class="container-form container-signup">
                 <form action="" class="form" id="form1">
@@ -512,7 +512,7 @@
                 </div>
             </div>
         </div>
-    </article>
+    </article> -->
 
 
     <footer>
@@ -574,48 +574,54 @@
         </div>
     </footer>
 
-<article class="rwd" id="rwdmember">
-    <div class="container-memberRWD">
-        <div class="close"><i class="fa-regular fa-circle-xmark" id="close"></i></div>
-        <div class="changepanel">
-            
-            <h4 id="loginTab" class="active">旅友登入</h4>
-            <h4 id="signupTab">旅友註冊</h4>
+    <article class="rwd" id="rwdmember">
+        <div class="container-memberRWD">
+            <div class="close"><i class="fa-regular fa-circle-xmark" id="close"></i></div>
+            <div class="changepanel">
+                
+                <h4 id="loginTab" class="active">旅友登入</h4>
+                <h4 id="signupTab">旅友註冊</h4>
+            </div>
+            <form id="loginPanel" class="panelRWD">
+                <div class="input-group">
+                    <input type="text" class="input inputF" placeholder="請輸入帳號">
+                    <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8" id="passwordInput">
+                </div>
+                <div class="password-input">
+                    <span class="password-toggle" id="passwordToggle"><i class="fa-solid rwd fa-eye-slash"></i></span>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">忘記密碼?</a>
+                </div>
+                <button class="btnRWD">確認登入</button>
+            </form>
+    
+    
+            <form id="signupPanel" class="panelRWD hidden">
+                <div class="input-group">
+                    <input type="email" class="input finput" placeholder="請輸入信箱">
+                    <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8" id="passwordInput2">
+                    <div class="password-input">
+                        <span class="password-toggle" id="passwordToggle2"><i class="fa-solid rwd fa-eye-slash"></i></span>
+                    </div>
+                    <input type="password" class="input" placeholder="再次輸入密碼" maxlength="16"  minlength="8" id="passwordInput3">
+                    <div class="password-input">
+                        <span class="password-toggle" id="passwordToggle3"><i class="fa-solid rwd fa-eye-slash"></i></span>
+                    </div>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" class="checkbox-input" id="newsletterCheckbox">
+                    <label for="newsletterCheckbox">我願意接收書旅的最新消息</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" class="checkbox-input chi2" id="termsCheckbox">
+                    <label for="termsCheckbox">我同意書旅服務條款及隱私權政策</label>
+                </div>
+                <button class="btnRWD"  type="submit" value="Submit">確認註冊</button>
+            </form>
         </div>
-        <form id="loginPanel" class="panelRWD">
-            <div class="input-group">
-                <input type="text" class="input inputF" placeholder="請輸入帳號">
-                <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字) &nbsp; &nbsp;" maxlength="16"  minlength="8" id="passwordInput">
-            </div>
-            <div class="password-input">
-                <span class="password-toggle" id="passwordToggle"> &nbsp; <i class="fa-solid rwd fa-eye-slash"></i></span>
-            </div>
-            <div class="forgot-password">
-                <a href="#">忘記密碼?</a>
-            </div>
-            <button class="btnRWD">確認登入</button>
-        </form>
-
-
-        <form id="signupPanel" class="panelRWD hidden">
-            <div class="input-group">
-                <input type="email" class="input finput" placeholder="請輸入信箱">
-                <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8">
-                <input type="password" class="input" placeholder="再次輸入密碼">
-            </div>
-            <div class="checkbox-group">
-                <input type="checkbox" class="checkbox-input" id="newsletterCheckbox">
-                <label for="newsletterCheckbox">我願意接收書旅的最新消息</label>
-            </div>
-            <div class="checkbox-group">
-                <input type="checkbox" class="checkbox-input chi2" id="termsCheckbox">
-                <label for="termsCheckbox">我同意書旅服務條款及隱私權政策</label>
-            </div>
-            <button class="btnRWD"  type="submit" value="Submit">確認註冊</button>
-        </form>
-    </div>
-  
-</article>
+      
+    </article>
    
     <script src="js/member.js"></script>
     <script>
@@ -675,106 +681,133 @@
 
     </script>
 
-    <script>
-    const passwordInput = document.getElementById("passwordInput");
-    const passwordToggle = document.getElementById("passwordToggle");
-    const loginTab = document.getElementById("loginTab");
-    const signupTab = document.getElementById("signupTab");
-    const loginPanel = document.getElementById("loginPanel");
-    const signupPanel = document.getElementById("signupPanel");
-    const close = document.getElementById('close')
-    const rwdmember = document.getElementById('rwdmember')
-    
-    passwordToggle.addEventListener("click", function () {
-        if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            passwordToggle.innerHTML =   `<i class="fa-solid rwd fa-eye"></i>`;
+    <script> 
+        const passwordInput = document.getElementById("passwordInput");
+        const passwordInput2 = document.getElementById("passwordInput2");
+        const passwordToggle = document.getElementById("passwordToggle");
+        const passwordToggle2 = document.getElementById("passwordToggle2");
+        const passwordInput3 = document.getElementById("passwordInput3");
+        const passwordToggle3 = document.getElementById("passwordToggle3");
+        const loginTab = document.getElementById("loginTab");
+        const signupTab = document.getElementById("signupTab");
+        const loginPanel = document.getElementById("loginPanel");
+        const signupPanel = document.getElementById("signupPanel");
+        const close = document.getElementById('close')
+        const rwdmember = document.getElementById('rwdmember')
+        
+        passwordToggle.addEventListener("click", function () {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordToggle.innerHTML =   `<i class="fa-solid rwd fa-eye"></i>`;
+            } else {
+                passwordInput.type = "password";
+                passwordToggle.innerHTML = `<i class="fa-solid  rwd fa-eye-slash"></i>`;
+            }
+        });
+
+        passwordToggle2.addEventListener("click", function () {
+            if (passwordInput2.type === "password") {
+                passwordInput2.type = "text";
+                passwordToggle2.innerHTML =   `<i class="fa-solid rwd fa-eye"></i>`;
+            } else {
+                passwordInput2.type = "password";
+                passwordToggle2.innerHTML = `<i class="fa-solid  rwd fa-eye-slash"></i>`;
+            }
+        });
+        passwordToggle3.addEventListener("click", function () {
+            if (passwordInput3.type === "password") {
+                passwordInput3.type = "text";
+                passwordToggle3.innerHTML =   `<i class="fa-solid rwd fa-eye"></i>`;
+            } else {
+                passwordInput3.type = "password";
+                passwordToggle2.innerHTML = `<i class="fa-solid  rwd fa-eye-slash"></i>`;
+            }
+        });
+
+        
+        loginTab.addEventListener("click", function () {
+            loginPanel.classList.remove("hidden");
+            signupPanel.classList.add("hidden");
+            loginTab.classList.add("active");
+            signupTab.classList.remove("active");
+        });
+        
+        signupTab.addEventListener("click", function () {
+            loginPanel.classList.add("hidden");
+            signupPanel.classList.remove("hidden");
+            loginTab.classList.remove("active");
+            signupTab.classList.add("active");
+        });
+        
+        close.addEventListener("click", function(){
+            rwdmember.style.display = "none";
+        });
+        
+            memberLog.addEventListener("click", function(){
+            rwdmember.style.display = "grid"; 
+        });
+        
+        
+        
+        
+        
+        
+        let maxWidthThreshold = 768; 
+        let liElement1 = document.getElementById("memA"); 
+        let liElement2 = document.getElementById("memR");
+        let liElement3 = document.getElementById("memN");
+        let liElement4 = document.getElementById("memC");
+        
+        
+        function updateLiContent() {
+        let currentWidth = window.innerWidth;
+        
+        if (currentWidth < maxWidthThreshold) {
+            liElement1.innerHTML = `<a>關於書旅</a>`;
+            liElement2.innerHTML = `<a href="allnews.html">書旅消息</a>`; 
+            liElement3.innerHTML = `<a href="allnews.html">書旅消息</a>`;
+            liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>`;
         } else {
-            passwordInput.type = "password";
-            passwordToggle.innerHTML = `<i class="fa-solid  rwd fa-eye-slash"></i>`;
+            liElement1.innerHTML = `<a>關於書旅</a>`;
+            liElement2.innerHTML = ` <a href="allnews.html">書旅消息</a>
+                            <ul>
+                                <li>書旅小報</li>
+                                <li>媒體報導</li>
+                                <li>全部消息</li>
+                            </ul>`; 
+            liElement3.innerHTML =` <a href="allnews.html">書旅消息</a>
+                            <ul>
+                                <li>書旅小報</li>
+                                <li>媒體報導</li>
+                                <li>全部消息</li>
+                            </ul>`;
+        
+            liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>
+                            <ul>
+                                <li>聯絡地址</li>
+                                <li>聯絡表單</li>
+                            </ul>`
         }
-    });
-    
-    loginTab.addEventListener("click", function () {
-        loginPanel.classList.remove("hidden");
-        signupPanel.classList.add("hidden");
-        loginTab.classList.add("active");
-        signupTab.classList.remove("active");
-    });
-    
-    signupTab.addEventListener("click", function () {
-        loginPanel.classList.add("hidden");
-        signupPanel.classList.remove("hidden");
-        loginTab.classList.remove("active");
-        signupTab.classList.add("active");
-    });
-
-    close.addEventListener("click", function(){
-        rwdmember.style.display = "none";
-    });
-    
-        memberLog.addEventListener("click", function(){
-        rwdmember.style.display = "grid"; 
-    });
-
-
-
-
-
-
-    let maxWidthThreshold = 768; 
-    let liElement1 = document.getElementById("memA"); 
-    let liElement2 = document.getElementById("memR");
-    let liElement3 = document.getElementById("memN");
-    let liElement4 = document.getElementById("memC");
-
-
-function updateLiContent() {
-    let currentWidth = window.innerWidth;
-    
-    
-    if (currentWidth < maxWidthThreshold) {
-        liElement1.innerHTML = `<a>關於書旅</a>`;
-        liElement2.innerHTML = `<a href="allnews.html">書旅消息</a>`; 
-        liElement3.innerHTML = `<a href="bookmap.html">書站地圖</a>`;
-        liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>`;
-    } else {
-        liElement1.innerHTML = `<a>關於書旅</a>`;
-        liElement2.innerHTML = ` <a href="allnews.html">書旅消息</a>
-                        <ul>
-                            <li>書旅小報</li>
-                            <li>媒體報導</li>
-                            <li>全部消息</li>
-                        </ul>`; 
-        liElement3.innerHTML =` <a href="bookmap.html">書站地圖</a>
-                        `;
-
-        liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>
-                        <ul>
-                            <li>聯絡地址</li>
-                            <li>聯絡表單</li>
-                        </ul>`
-    }
-}
-
-window.addEventListener("resize", updateLiContent);
-
-updateLiContent();
-
-
-
-
-$(function(){
-    let allength = $('#content-input').attr('maxlength');
-    $('#textarea-Count').html(`小提醒，字數上限${allength}字，現在剩下${allength}字喔!`);
-
-    $('#content-input').keyup(function() {
-        let textLength = $(this).val().length;
-
-        $('#textarea-Count').html(`小提醒，字數上限${allength}字，現在剩下${allength - textLength}字喔!`);
-    });
-});
-
+        }
+        
+        
+        window.addEventListener("resize", updateLiContent);
+        
+        
+        updateLiContent();
+        
+        
     </script>
+    <!-- 點擊黑色區塊關閉rwd -->
+    <script>
+        document.addEventListener("click", (event) => {
+const rwdmemberElement = document.getElementById("rwdmember");
+const articleElement = document.querySelector(".rwd"); // 請確保這是正確的article元素選擇器
+
+if (event.target === articleElement) {
+   rwdmemberElement.style.display = "none";
+}
+});
+</script>
 </body>
 </html>

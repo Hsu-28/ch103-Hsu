@@ -1,4 +1,5 @@
 const article = document.querySelector(".memberOverflow");
+const articleNew = document.getElementById("rwdmember");
 const signInBtn = document.getElementById("signIn");
 const signUpBtn = document.getElementById("signUp");
 const firtform = document.getElementById("form1");
@@ -20,5 +21,14 @@ article.style.display = "grid";
 document.addEventListener("click", (event) => {
     if (!event.target.closest(".container-member") && event.target == article) {
         article.style.display = "none";
+    }
+});
+
+document.addEventListener("click", (event) => {
+    const rwdmemberElement = document.getElementById("rwdmember");
+    const articleElement = document.querySelector(".rwd"); // 請確保這是正確的article元素選擇器
+    
+    if (event.target === articleElement) {
+        rwdmemberElement.style.display = "none";
     }
 });

@@ -192,9 +192,9 @@
                 margin-top: 8px;
             }
             
-            .logo-vertical{
+            /* .logo-vertical{
                 display: none;
-            }
+            } */
 
             nav ul li::after {
                 content: "";

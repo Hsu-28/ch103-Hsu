@@ -204,7 +204,7 @@
             line-height: 1.5;
             width: 90%;
             margin: 10px auto;
-            font-size: 12px;
+            font-size: 14px;
         }
         .report p {
             font-size: 12px;
@@ -223,7 +223,9 @@
         .report:hover {
             color: white;
             background-color: #1F4788; 
-
+        }
+        .report:hover .report-content p{
+            color: rgb(209, 209, 209);
         }
 
         .report:hover img{
@@ -264,7 +266,7 @@
         }
 
         .introduce p{
-            font-size: 14px;
+            font-size: 16px;
         }
 
         }
@@ -273,10 +275,12 @@
 
 
         @media screen and (min-width: 768px) {
-            header{
+        header{
             height: 450px;
         }
-
+        .logo-vertical img{
+            display: none;
+        }
         header h1 {
             top: 18%;
             font-size: 60px;
@@ -506,7 +510,7 @@
                 <li><a href="faqs.html">常見問題</a></li>
                 <li > <a id = "memberLog"> 登入 / 註冊</a></li>
                 <li><a href="contactUs.html">聯絡我們</a></li>
-                <li><a href="booksearch.html">好書搜詢</a></li>
+                <li><a href="booksearch.html">好書搜尋</a></li>
             </ul>
         </nav>
         <h1>Lastest news</h1>
@@ -564,7 +568,7 @@
         <article class="all-news-content  all-content" id="all-news-content">
             <h3 id="all-news-title">所有消息</h3>
             <section class="a-content all-content-inside">  
-                    <div class="report">
+                    <!-- <div class="report">
                         <div class="report-content">
                             <div >
                                 <img src="imgs/news5.jpg" alt="">
@@ -574,7 +578,7 @@
                                 書旅小報受矚目，深度報導書旅文化</h4>
                             <p>21 May 2023、媒體報導</p>
                         </div>        
-                    </div> 
+                    </div>  -->
                     
                     <div class="report">
                         <div class="report-content">
@@ -687,7 +691,7 @@
                             <p>10 Sep 2023、書旅小報</p>
                         </div>        
                     </div>             
-                    <div class="report">
+                    <!-- <div class="report">
                         <div class="report-content">
                             <div>
                                 <img src="imgs/news5.jpg" alt="">
@@ -697,7 +701,7 @@
                                 書旅與教育攜手，推廣閱讀的未來。</h4>
                             <p>18 Nov 2023、書旅小報</p>
                         </div>        
-                    </div>
+                    </div> -->
                     <div class="report">
                         <div class="report-content">
                             <div>
@@ -787,7 +791,7 @@
         <article class="media-content all-content" id="media-content">
             <h3 media-title>媒體消息</h3>
             <section class="m-content all-content-inside">  
-                    <div class="report">
+                    <!-- <div class="report">
                         <div class="report-content">
                             <div >
                                 <img src="imgs/news5.jpg" alt="">
@@ -798,7 +802,7 @@
                             <p>21 May 2023、媒體報導</p>
                         </div>        
                     </div> 
-                    
+                     -->
                     
 
                    
@@ -849,7 +853,7 @@
                         </div>        
                     </div>
                     
-                    <div class="report">
+                    <!-- <div class="report">
                         <div class="report-content">
                             <div>
                                 <img src="imgs/news6.jpg" alt="">
@@ -859,9 +863,9 @@
                                 書旅小報躍升為閱讀推廣新焦點</h4>
                             <p>15 June 2023、書旅小報</p>
                         </div>        
-                    </div>                      
+                    </div>                       -->
 
-          
+<!--           
                     <div class="report">
                         <div class="report-content">
                             <div>
@@ -872,7 +876,7 @@
                                 書旅與教育攜手，開展閱讀的未來。</h4>
                             <p>18 Nov 2023、書旅小報</p>
                         </div>        
-                    </div>
+                    </div> -->
 
             </section>
         </article>
@@ -973,8 +977,14 @@
         <form id="signupPanel" class="panelRWD hidden">
             <div class="input-group">
                 <input type="email" class="input finput" placeholder="請輸入信箱">
-                <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8">
-                <input type="password" class="input" placeholder="再次輸入密碼">
+                <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8" id="passwordInput2">
+                <div class="password-input">
+                    <span class="password-toggle" id="passwordToggle2"><i class="fa-solid rwd fa-eye-slash"></i></span>
+                </div>
+                <input type="password" class="input" placeholder="再次輸入密碼" maxlength="16"  minlength="8" id="passwordInput3">
+                <div class="password-input">
+                    <span class="password-toggle" id="passwordToggle3"><i class="fa-solid rwd fa-eye-slash"></i></span>
+                </div>
             </div>
             <div class="checkbox-group">
                 <input type="checkbox" class="checkbox-input" id="newsletterCheckbox">
@@ -990,40 +1000,7 @@
   
 </article>
 
-    <article class="memberOverflow">
-        <div class="container-member right-panel-active">
-            <div class="container-form container-signup">
-                <form action="" class="form" id="form1">
-                    <h3 class="form-title">旅友註冊</h3>
-                    <input type="text" placeholder="註冊信箱" class="input">
-                    <input type="email" placeholder="設定帳號" class="input">
-                    <input type="password " placeholder="設定密碼" class="input">
-                    <button class="btn">確認註冊</button>
-                </form>
-            </div>
-        
-            <div class="container-form container-signin">
-                <form action="" class="form" id="form2">
-                    <h3 class="form-title">旅友登入</h3>
-                    <input type="text" placeholder="帳號" class="input">
-                    <input type="password" placeholder="密碼" class="input">
-                    <button class="btn">確認登入</button>
-                </form>
-            </div>
-        
-            <div class="container-overlay">
-                <div class="overlay">
-                    <div class="overlay-panel overlay-left">
-                        <button class="btn signin-btn" id="signIn">旅友登入</button>
-                    </div>
-                    <div class="overlay-panel overlay-right">
-                        <button class="btn signup-btn" id="signUp">註冊</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </article>
-    <script src="js/member.js"></script>
+   
    <script>
 
     const allBlocks = document.querySelectorAll(".all-block");
@@ -1102,99 +1079,38 @@ $('.nav-barX').click(function() {
     
 });
 </script>
-<script>
-    const passwordInput = document.getElementById("passwordInput");
-    const passwordToggle = document.getElementById("passwordToggle");
-    const loginTab = document.getElementById("loginTab");
-    const signupTab = document.getElementById("signupTab");
-    const loginPanel = document.getElementById("loginPanel");
-    const signupPanel = document.getElementById("signupPanel");
-    const close = document.getElementById('close')
-    const rwdmember = document.getElementById('rwdmember')
+<!-- index連結過來 -->
+    <script>
+const anchor = window.location.hash;
+
+const elementId = anchor.substring(1);
+
+const gazettecontent = document.getElementById('gazette-content');
+const allnewscontent = document.getElementById('all-news-content');
+const mediacontent = document.getElementById('media-content');
+
+
+if (elementId === 'gazette-content') {
+    gazettecontent.style.display = 'block';
+    allnewscontent.style.display = 'none';
+    mediacontent.style.display = 'none';
+} else if (elementId === 'all-news-content') {
+    gazettecontent.style.display = 'none';
+    allnewscontent.style.display = 'block';
+    mediacontent.style.display = 'none';
+} else if (elementId === 'media-content') {
+    gazettecontent.style.display = 'none';
+    allnewscontent.style.display = 'none';
+    mediacontent.style.display = 'block';
+}
+
+    </script>
     
-    passwordToggle.addEventListener("click", function () {
-        if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            passwordToggle.innerHTML =   `<i class="fa-solid rwd fa-eye"></i>`;
-        } else {
-            passwordInput.type = "password";
-            passwordToggle.innerHTML = `<i class="fa-solid  rwd fa-eye-slash"></i>`;
-        }
-    });
-    
-    loginTab.addEventListener("click", function () {
-        loginPanel.classList.remove("hidden");
-        signupPanel.classList.add("hidden");
-        loginTab.classList.add("active");
-        signupTab.classList.remove("active");
-    });
-    
-    signupTab.addEventListener("click", function () {
-        loginPanel.classList.add("hidden");
-        signupPanel.classList.remove("hidden");
-        loginTab.classList.remove("active");
-        signupTab.classList.add("active");
-    });
-    
-    close.addEventListener("click", function(){
-        rwdmember.style.display = "none";
-    });
-    
-        memberLog.addEventListener("click", function(){
-        rwdmember.style.display = "grid"; 
-    });
-    
-    
-    
-    
-    
-    
-    let maxWidthThreshold = 768; 
-    let liElement1 = document.getElementById("memA"); 
-    let liElement2 = document.getElementById("memR");
-    let liElement3 = document.getElementById("memN");
-    let liElement4 = document.getElementById("memC");
-    
-    
-    function updateLiContent() {
-    let currentWidth = window.innerWidth;
-    
-    if (currentWidth < maxWidthThreshold) {
-        liElement1.innerHTML = `<a>關於書旅</a>`;
-        liElement2.innerHTML = `<a href="allnews.html">書旅消息</a>`; 
-        liElement3.innerHTML = `<a href="allnews.html">書旅消息</a>`;
-        liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>`;
-    } else {
-        liElement1.innerHTML = `<a>關於書旅</a>`;
-        liElement2.innerHTML = ` <a href="allnews.html">書旅消息</a>
-                        <ul>
-                            <li>書旅小報</li>
-                            <li>媒體報導</li>
-                            <li>全部消息</li>
-                        </ul>`; 
-        liElement3.innerHTML =` <a href="allnews.html">書旅消息</a>
-                        <ul>
-                            <li>書旅小報</li>
-                            <li>媒體報導</li>
-                            <li>全部消息</li>
-                        </ul>`;
-    
-        liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>
-                        <ul>
-                            <li>聯絡地址</li>
-                            <li>聯絡表單</li>
-                        </ul>`
-    }
-    }
-    
-    
-    window.addEventListener("resize", updateLiContent);
-    
-    
-    updateLiContent();
-    
-    
-        </script>
+
+    <script src="js/alluse.js"></script>
+
+
+
 
 
 </body>

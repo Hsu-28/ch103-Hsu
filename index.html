@@ -19,26 +19,16 @@
     @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@600&family=Poppins:wght@600&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@600&family=Poppins:wght@600&family=Zen+Maru+Gothic&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400&family=Kosugi+Maru&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@600&family=Poppins:wght@600&family=Zen+Maru+Gothic&display=swap');
-
+        .logo-vertical img{
+            display: block;
+        }
         .banner{
             position: relative;
             max-width: 100%;
             margin-left: 0;
             margin-right: 0;
             margin: 0 auto;
-        }
-        nav{
-            max-width: 1400px;
-            margin-left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .logo-vertical{
-            position: absolute;
-            left: 9%;
-            top: 35px;
-            z-index: 100;
-            transform: translateX(-50%);
+            
         }
 
         .banner div{
@@ -46,134 +36,118 @@
             width: 80%;
             margin-right: 0;
             margin-left: auto;
+            height: 200px;
             
         }
         .banner img{
             right: 0px;
-            border-radius: 0 0 0 100px;
+            border-radius: 0 0 0 60px;
             width: 100%;
+            height: 100%;
         }
 
 
-        .banner h2:first-of-type{
+        .banner h2{
             position: absolute;
-            left: 0.0187%;
-            top: 190px;
-            color: #282828;
-            font-size: 44px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            z-index: 2;
+            font-size: 20px;
+            left: 2%;
+            top: 100px;
+            z-index: 1 ;
             font-family: 'Nunito', sans-serif;
-        }
-        .banner h2:first-of-type::before{
-            content:"";
-            width: 600px;
-            height: 23px;
-            background-color: white;
-            position: absolute;
-            top: 30px;
-            right: -10px;
-            z-index: -1;
         }
 
         .banner h2:last-of-type{
-            position: absolute;
-            left: 18%;
-            top: 246px;
-            color: #282828;
-            font-size: 44px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            z-index: 2;
-            font-family: 'Nunito', sans-serif;
+            top: 120px;
+         
         }
+
+        .banner h3{
+            position: absolute;
+            left: 2%;
+            top: 150px;
+            font-size: 14px;
+            z-index: 1 ;
+            font-family: 'Kiwi Maru', sans-serif;
+         }
+        
+        .banner h2:first-of-type::before{
+            content:"";
+            width: 103%;
+            height: 12px;
+            background-color: white;
+            position: absolute;
+            top: 8px;
+            left: 0;
+            z-index: -1;
+            border-radius: 0 0 2px 0;
+        }
+
+       
         .banner h2:last-of-type::after{
             content:"";
-            width: 515px;
-            height: 23px;
-            background-color: #fff;
+            width: 103%;
+            height: 12px;
+            background-color: white;
             position: absolute;
-            top: 33px;
-            left: -10px;
+            top: 8px;
+            left: 0;
             z-index: -1;
+            border-radius: 2px;
+            border-radius: 0 0 2px 0;
         }
 
-
-        .banner h3:first-of-type{
-            position: absolute;
-            left: 19%;
-            top: 330px;
-            font-size: 30px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            z-index: 3;
-            /* font-family: 'Zen Maru Gothic', sans-serif; */
-            font-family: 'Kiwi Maru', sans-serif;
-            
-        }
+        
 
         .banner h3:first-of-type::before{
             content:"";
-            width: 480px;
-            height: 25px;
-            color: black;
-            background-color:white;
+            width: 103%;
+            height: 10px;
+            background-color: white;
             position: absolute;
-            top: 27px;
-            left: 0px;
-            z-index: -1;
-        }
+            top: 6px;
+            left: 0;
+            z-index: -1; 
+            border-radius: 0 0 2px 0; 
+        }  
 
         .about-bt-content{
-            height: 882px;
             display: flex;
             justify-content: center;
-            flex-wrap: nowrap;
+            flex-flow: column nowrap;
+            margin-top: 46px;
+            margin-bottom: 46px;
+            padding: 4px;
         }
-        .about-bt-content div{
-            width: 40%;
-        }
+
         .about-bt-content > :nth-child(1){
-            position: relative;
-            width: 30%;
-            margin-left: 0;
+            width: 100%; 
+            box-sizing: border-box;
+            display: none;
         }
 
         .about-bt-content > :nth-child(3){
-            width: 30%;
+            width: 40%;
         }
-
+   
         .about-bt-content > :nth-child(1) img{
-            position: absolute;
-            top: 300px;
-            left: 5%;
-            width: 70%;
-            max-height: 500px;
-            
+            width: 100%;
+            display: block;
+            margin-top: auto;
+            margin-bottom: 0; 
         }
-        /* 這邊不知道怎麼辦會 放大時 會蓋到下面
-        */
-
-
 
         .about-bt-content > :nth-child(2) h2{
-            font-size: 48px;
-            margin-top: 115px;
+            font-size: 20px;
             text-align: center;
-            margin-bottom: 45px;
-
+            color: #2b2b2b;
         }
 
         .about-bt-content > :nth-child(2) p{
-            font-size: 16px;
-            margin-top: 26px;
+            font-size: 14px;
+            margin-top: 20px;
             text-align: left;
-            padding: 0px 15px;
-            color: #000;
+            padding: 0px 8px;
+            color: #2f2f2f;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -182,24 +156,19 @@
 
         .about-bt-content > :nth-child(3){
             position: relative;
+            display: flex;
+            padding: 10px;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
         }
         .about-bt-content > :nth-child(3) img{
-            position: absolute;
-            top: 120px;
-            right: 0px;
-            width: 100%;
+            margin-left: auto;
+            
+            margin-right: 4px; 
+            width: 40%;
         }
 
-        .about-bt-content > div:last-of-type::before{
-            position: absolute;
-            content: "";
-            border: 10px solid rgba(252, 220, 101, 0.17);;
-            width: 274px;
-            height: 395px;
-            top: 280px;
-            left: -70px;
-            z-index: -1;
-        }
 
         .about-bt p{
             padding: 500px 5%;
@@ -213,17 +182,16 @@
 
         .steps{
             display: flex;
+            flex-flow: column nowrap;
             justify-content: space-evenly;
             align-items: center;
-            height: 600px;
             max-width: 1400px;
             margin-left: 0;
             margin-right: 0;
             margin: 0 auto;
         }
         .steps > div {
-            width: 26.87%;
-        
+            width: 70%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -232,14 +200,20 @@
             border: 1px solid black;
             /* border-top: 1px solid #FCDC65;  */
             position: relative; 
+            margin: 30px 0;
         }
 
         .steps > div p:first-child{
             font-size: 50px;
             position: absolute;
-            top: -30px;
+            top: -15px;
             z-index: 10;
         }
+
+            /* top: -30px;
+        }.steps > div .firstN{
+         */
+
         .swing:after{
             position: absolute;
             content: "";
@@ -249,7 +223,11 @@
             left: 50%;
             transform: translateX(-50%);
             background-color: white;
-
+        }
+        .swing a{
+            text-decoration: none;
+            text-align: center;
+            margin: 0  auto;
 
         }
 
@@ -270,27 +248,10 @@
             font-size: 16px;
             margin-top: 18px;
             width: 80%;
+            margin: 18px auto 0 auto;
+            color: #282828;
         }
 
-        /* .steps > div p:first-child::before{
-            position: absolute;
-            content: "";
-            background-color: black;
-            width: 100%;
-            height: 1px;
-            top: 30px;
-            left: 127px;
-
-
-        .steps > div p:first-child::after{
-            position: absolute;
-            content: "";
-            background-color: black;
-            width: 70px;
-            height: 1px;
-            top: 30px;
-            left: -148px;
-        } */
 
 
         .site{
@@ -298,10 +259,11 @@
             margin-top: 119px;
             margin-left: 0px;
             margin-right: 0;
-            margin: 119px auto 0 auto;
+            margin: 50px auto 0 auto;
             justify-content: space-between;
             max-width: 920px;
             padding: 0 20px;
+            flex-flow: column nowrap;
         }
         .site-content :nth-child(1){
             color: #084A8E;
@@ -311,9 +273,11 @@
             line-height: 53px;
             letter-spacing: 4px;
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .site-content :nth-child(2){
+            text-align: center;
             color: #000;
             font-size: 16px;
             font-style: normal;
@@ -328,27 +292,33 @@
             line-height: 53px;
             letter-spacing: 4px;
             margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         .site-location{
-            width: 50%;
-            margin-top: auto;
+            width: 100%;
+            margin-top: 30px;
             margin-right: 0px;
         }
         .site-location h2{
             color: #000;
-            font-size: 48px;
+            font-size: 30px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            text-align: center;
         }
 
         .site-location h3{
             color: #000;
-            font-size: 32px;
+            font-size: 26px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+        }
+        .site-location > h3:first-of-type{
+            text-align: center;
         }
         .site-location ul h3{
             color: #000;
@@ -356,14 +326,15 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            margin-bottom: 6px;
         }
 
         .site-location ul h3 strong{
-            font-size: 32px;
+            font-size: 26px;
         }
 
+
         .site-location ul li{
-            
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -383,22 +354,23 @@
         }
 
         .news{
-            margin: 125px 0px;
+            margin: 85px auto;
+            width: 90%;
         }
 
         .news div:first-of-type{
             color: #FCDD65;
-            font-size: 32px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 400;
-            line-height: 38px; /* 118.75% */
+            line-height: 24px; 
         }
         .news-block{
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 50px;
-            width: 70%;
+            width: 94%;
             margin-left: 0;
             margin-right: 0;
             margin:auto;  
@@ -450,7 +422,7 @@
             color: white;
         }
         .name p{
-            font-size: 20px;
+            font-size: 12px;
             margin-top: -10px;
             color: white;
         }
@@ -464,28 +436,36 @@
         .direction img:nth-child(1) {
             position: absolute;
             top: 100%;
+            width: 14px;
             transform: translateY(-100%);
         }
         .direction img:nth-child(2) {
             position: absolute;
             left: 100%;
+            width: 14px;
             transform: translateX(-100%);
+        }
+        .direction img:nth-child(3) {
+            position: absolute;
+            top: 0%;
+            width: 14px;
         }
         .direction img:nth-child(4) {
             position: absolute;
             top: 100%;
             left: 100%;
+            width: 14px;
             transform: translate(-100%, -100%);
         }
 
         .draw-straws{
             position: relative;
-            margin-top: 160px;
+            margin-top: 40px;
         }
         .draw-straws h2{
             margin-top: 100px;
-            color: #FFF;
-            font-size: 52px;
+            color: #1c1b1b;
+            font-size: 20px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -493,48 +473,46 @@
             position: relative;
         }
 
-        .draw-straws h2::after{
-            content: "";
-            position: absolute;
-            width: 320px;
-            height: 80px;
-            background: #084A8E;
-            left:39.6%;
-            /* left:460px; */
-            top: -25px;
-            z-index: -1;
-            }
-
         .draw-straws h2::before{
             content: "";
             position: absolute;
-            width: 230px;
-            height: 40px;
+            width: 40%;
+            height: 20px;
             background: #FCDD65;
-            left: 35%;
-            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 10px;
             z-index: -2;
             }
+
             .draw-straws h2 + img{
             position: absolute;
-            left: 61.5%;
-            top: 30px;
+            left: 55%;
+            top: 19px;
+            width: 4%;
         } 
 
         .draw-straws-container{
             margin-top: 60px;
             display: flex;
+            position: relative;
             justify-content: center;
+            flex-flow: column nowrap;
+            align-items: center;
         }
         .draw-straws-bookimg{
-            width: 24%;
-            padding: 30px;
+            display: flex;
+           justify-content: center;
+            width: 50%;
+            /* left: 50%;
+            transform: translateX(-50%); */
         }
         .draw-straws-bookimg img{
-            width: 100%;
+            width: 70%;
+            text-align: left;
         }
         .draw-straws-content{
-            width: 36%;
+            width: 80%;
             padding: 30px;
             line-height: 1.6;
         }
@@ -542,14 +520,16 @@
             margin: 10px 0;
         }
         .draw-straws-content h4{
-            font-size: 20px;
+            font-size: 18px;
         }
         .draw-straws-content .run{
             display: block;
             margin-left: auto;
             margin-top: 30px;
             cursor: pointer;
-            animation: spin 3.5s infinite linear; /* 使用spin動畫，1秒一次無限循環，線性運動方式 */
+            animation: spin 3.5s infinite linear; 
+            width: 16%;
+            margin-top: 16px;
         }
         @keyframes spin {
             from{
@@ -666,13 +646,759 @@
             margin-top: 50px;
         }
 
+
+        @media screen and (min-width: 486px) {
+            .banner{
+                height: 280px;
+            }
+            .banner img{
+                height: 280px;
+            }
+            .banner h2{
+                font-size: 28px;
+                top: 130px;
+            }
+            .banner h2:last-of-type{
+                font-size: 28px;
+                top: 160px;
+                
+            }
+
+            .banner h3{
+                font-size: 24px;
+                top: 200px;
+            }
+
+            .banner h2:first-of-type::before{
+                top: 14px;
+                height: 16px;
+            }
+            .banner h2:last-of-type::after{
+                top: 14px;
+                height: 16px;
+            }
+            .banner h3:first-of-type::before{
+                top: 14px;
+                height: 14px;
+            }
+            .about-bt{
+                margin-top: 50px;
+            }
+            
+            .direction img:nth-child(4) {
+            width: 26px;
+            }
+            .direction img:nth-child(3) {
+            width: 26px;
+            }
+            .direction img:nth-child(2) {
+            width: 26px;
+            }
+            .direction img:nth-child(1) {
+            width: 26px;
+            }
+    }
+
+
+    @media screen and (min-width: 512px) {
+        .steps > div {
+            width: 56%;
+        }
+    }
+    
+
+
+
+
+        @media screen and (min-width: 768px) {
+            .logo-vertical img{
+        display: block;
+    }
+        .banner{
+            position: relative;
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            margin: 0 auto;
+            height: 300px;
+            max-width: 1400px;
+        }
+        .banner img{
+            height: auto;
+        }
+
+        nav{
+            max-width: 1400px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .logo-vertical{
+            position: absolute;
+            left: 9%;
+            top: 35px;
+            z-index: 100;
+            transform: translateX(-50%);
+        }
+
+        .banner div{
+            display: block;
+            width: 80%;
+            margin-right: 0;
+            margin-left: auto;
+            
+        }
+        .banner img{
+            right: 0px;
+            border-radius: 0 0 0 100px;
+            width: 100%;
+            
+        }
+
+
+        .banner h2:first-of-type{
+            position: absolute;
+            left: 0.0187%;
+            top: 190px;
+            color: #282828;
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            z-index: 2;
+            font-family: 'Nunito', sans-serif;
+        }
+        .banner h2:first-of-type::before{
+            content:"";
+            width: 102%;
+            height: 23px;
+            background-color: white;
+            position: absolute;
+            top: 30px;
+            right: -10px;
+            z-index: -1;
+        }
+
+        .banner h2:last-of-type{
+            position: absolute;
+            left: 18%;
+            top: 246px;
+            color: #282828;
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            z-index: 2;
+            font-family: 'Nunito', sans-serif;
+        }
+        .banner h2:last-of-type::after{
+            content:"";
+            width: 515px;
+            height: 23px;
+            background-color: #fff;
+            position: absolute;
+            top: 33px;
+            left: -10px;
+            z-index: -1;
+        }
+
+
+        .banner h3:first-of-type{
+            position: absolute;
+            left: 19%;
+            top: 330px;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            z-index: 3;
+            font-family: 'Kiwi Maru', sans-serif;
+            
+        }
+
+        .banner h3:first-of-type::before{
+            content:"";
+            width: 480px;
+            height: 25px;
+            color: black;
+            background-color:white;
+            position: absolute;
+            top: 18px;
+            left: 0px;
+            z-index: -1;
+        }
+.about-bt{
+    margin-top: 20px;   
+}
+        .about-bt-content{
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            flex-flow: row nowrap;
+            margin: 50px auto 80px auto; 
+            max-width: 1400px;
+        }
+        .about-bt-content div{
+            width: 90%;
+        }
+        .about-bt-content > :nth-child(1){
+            position: relative;
+            width: 30%;
+            margin-left: 0;
+            display: block;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .about-bt-content > :nth-child(3){
+            width: 30%;
+        }
+
+        .about-bt-content > :nth-child(1) img{
+            position: absolute;
+            top: 300px;
+            left: 5%;
+            width: 70%;
+            max-height: 500px;
+            bottom: 0px;
+        }
+        /* 這邊不知道怎麼辦會 放大時 會蓋到下面
+        */
+
+
+
+        .about-bt-content > :nth-child(2) h2{
+            font-size: 48px;
+            margin-top: 115px;
+            text-align: center;
+            margin-bottom: 45px;
+
+        }
+
+        .about-bt-content > :nth-child(2) p{
+            font-size: 16px;
+            margin-top: 26px;
+            text-align: left;
+            padding: 0px 15px;
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.8;
+        }
+
+        .about-bt-content > :nth-child(3){
+            position: relative;
+        }
+        .about-bt-content > :nth-child(3) img{
+            position: absolute;
+            top: 120px;
+            right: -50px;
+            width: 100%;
+
+        }
+
+        .about-bt-content > div:last-of-type::before{
+            position: absolute;
+            content: "";
+            border: 10px solid rgba(252, 220, 101, 0.17);;
+            width: 274px;
+            height: 395px;
+            top: 280px;
+            left: -70px;
+            z-index: -1;
+        }
+
+        .about-bt p{
+            padding: 500px 5%;
+        }
+
+        .steps-container {
+            width: 100%;
+            background-color: #FCDC65;
+
+        }
+
+        .steps{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 600px;
+            max-width: 1400px;
+            margin-left: 0;
+            margin-right: 0;
+            margin: 0 auto;
+        }
+        .steps > div {
+            width: 26.87%;
+        
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            height: 402px;
+            border: 1px solid black;
+            /* border-top: 1px solid #FCDC65;  */
+            position: relative; 
+        }
+
+        .steps > div p:first-child{
+            font-size: 50px;
+            position: absolute;
+            top: -15px;
+            z-index: 10;
+        }
+        /* .swing:after{
+            position: absolute;
+            content: "";
+            width: 40%;
+            height: 2px;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+
+
+        } */
+
+        .steps img {
+            width: 35%;
+            display: block;
+            margin: 0 auto; 
+            margin: 52px auto 17px auto;
+        }
+        .steps h2{
+            color: #1F4788;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        .steps > div p:last-child{
+            font-size: 16px;
+            margin-top: 18px;
+            width: 80%;
+        }
+
+        /* .steps > div p:first-child::before{
+            position: absolute;
+            content: "";
+            background-color: black;
+            width: 100%;
+            height: 1px;
+            top: 30px;
+            left: 127px;
+
+
+        .steps > div p:first-child::after{
+            position: absolute;
+            content: "";
+            background-color: black;
+            width: 70px;
+            height: 1px;
+            top: 30px;
+            left: -148px;
+        } */
+
+       
+
+        .site{
+            display: flex;
+            margin-top: 80px;
+            flex-flow: row nowrap;
+        }
+        .site-content :nth-child(1){
+            color: #084A8E;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 53px;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .site-content :nth-child(2){
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 33px;  
+            text-align: left;
+        }
+        .site-content :nth-child(3){
+            color: #084A8E;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 53px;
+            letter-spacing: 4px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .site-location{
+            width: 50%;
+            margin-top: auto;
+            margin-right: 0px;
+        }
+        .site-location h2{
+            color: #151515;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-align: left;
+        }
+
+        .site-location h3{
+            color: #282828;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-align: left;
+        }
+        .site-location > h3:first-of-type{
+            text-align: left;
+        }
+        .site-location ul h3{
+            color: #1f1f1f;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .site-location ul h3 strong{
+            font-size: 32px;
+        }
+
+        .site-location ul li{
+            
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            border-bottom: 1px dashed black ;
+        }
+
+        .site-location ul li i{
+            color: #084A8E;
+        }
+
+        li.north{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .news{
+            margin: 125px 0px;
+        }
+
+        .news div:first-of-type{
+            color: #FCDD65;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 38px; /* 118.75% */
+        }
+        .news-block{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            width: 70%;
+            margin-left: 0;
+            margin-right: 0;
+            margin:auto;  
+        }
+        .news-block .common-block{
+            width: 100%;
+        }
+        .media-coverage , .all-news , .gazette {
+            position: relative;
+        }
+        .media-coverage img:first-of-type , 
+        .all-news img:first-of-type , 
+        .gazette img:first-of-type {
+            vertical-align: top;
+        }
+
+
+        .media-coverage > div, 
+        .all-news > div, 
+        .gazette > div{
+            position: absolute;
+            z-index: 2;
+            left: 100%;
+            transform: translate(-100%, -100%);
+            background: rgba(0, 0, 0, 0.75);
+            height: 100%;
+            width: 33.3%;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        .all-news > div {
+            transform: translate(0%, 0%);
+            top: 0px; 
+            left: 0px;
+        }
+        .name{
+            width: 200px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .name h3{
+            color: white;
+        }
+        .name p{
+            font-size: 20px;
+            margin-top: -10px;
+            color: white;
+        }
+        .direction{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+       
+        /* .direction img:nth-child(1) {
+            width: 16%;
+        }
+        .direction img:nth-child(2) {
+            width: 16%;
+        }
+        .direction img:nth-child(3) {
+            width: 16%;
+        }
+        .direction img:nth-child(4) {
+            width: 16%;
+        } */
+
+        .draw-straws{
+            position: relative;
+            margin-top: 160px;
+        }
+        .draw-straws h2{
+            margin-top: 100px;
+            color: #161616;
+            font-size: 52px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-align: center;
+            position: relative;
+        }
+
+        /* .draw-straws h2::after{
+            content: "";
+            position: absolute;
+            width: 320px;
+            height: 80px;
+            background: #084A8E;
+            left:39.6%;
+             left:460px; 
+            top: -25px;
+            z-index: -1;
+            } */
+
+        .draw-straws h2::before{
+            height: 38px;
+            top: 34px;
+            z-index: -2;
+            }
+            .draw-straws h2 + img{
+            position: absolute;
+            left: 61.5%;
+            top: 30px;
+        } 
+
+        .draw-straws-container{
+            flex-flow: row nowrap;
+        }
+        .draw-straws-bookimg{
+            width: 36%;
+        }
+        .draw-straws-bookimg img{       
+            margin-bottom: 170px;
+        }
+        .draw-straws-content{
+            width: 36%;
+            padding: 30px;
+            line-height: 1.6;
+        }
+        .draw-straws-content p{
+            margin: 10px 0;
+        }
+        .draw-straws-content h4{
+            font-size: 20px;
+        }
+        .draw-straws-content .run{
+            display: block;
+            margin-left: auto;
+            margin-top: 30px;
+            cursor: pointer;
+            animation: spin 3.5s infinite linear; /* 使用spin動畫，1秒一次無限循環，線性運動方式 */
+            width: 100px;
+        }
+        @keyframes spin {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+
+        
+
+
+        .swing:hover img {
+        animation: custom-swing 1.5s;
+        -webkit-animation: custom-swing 3s;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+        }
+        @keyframes custom-swing {
+        8% { transform: rotate3d(0, 0, 1, 20deg); }
+        16% { transform: rotate3d(0, 0, 1, -15deg); }
+        24% { transform: rotate3d(0, 0, 1, 10deg); }
+        32% { transform: rotate3d(0, 0, 1, -5deg); }
+        40% { transform: rotate3d(0, 0, 1, 0deg); }
+        }
+        .swing p:last-of-type{
+            line-height: 25px;
+        }
+
+        .east:hover:hover,
+        .east:hover i,
+        .east:hover h3,
+        .middle:hover:hover,
+        .middle:hover i,
+        .middle:hover h3,
+        .south:hover:hover,
+        .south:hover i,
+        .south:hover h3,
+        .north:hover,
+        .north:hover i,
+        .north:hover h3
+        {
+            color:#ffc800;
+        }
+
+        .swing,
+        .site-loction-ul{
+            cursor: pointer;
+            margin-right: 0;
+        }
+
+        .media-coverage:hover  .all-newsBlock,
+        .gazette:hover .all-newsBlock,
+        .all-news:hover .all-newsBlock{
+            width: 100%;
+            transition: width .2s;
+            cursor: pointer;
+        }
+
+
+
+        .logo-horizontal{
+            opacity: 0;
+        }
+
+        section.marquee {
+        width: 100%;
+        overflow: hidden;
+        color: #FCDD65;
+        margin: 0;
+        padding: 0;
+        font-family: "Raleway", sans-serif;
+        font-size: 36px;
+        font-weight: 400;
+        margin-top: 100px;
+        margin-bottom: -50px;
+        padding: 0;
+        }
+
+        .scroll {
+        display: flex;
+        height: 40px;
+        .text {
+            white-space: nowrap;
+            text-transform: uppercase;
+            animation: scroll 40s linear infinite;
+            &:nth-child(2) {
+            animation: scroll2 40s linear infinite;
+            animation-delay: -20s;
+            }
+        }
+        }
+
+        @keyframes scroll {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+        }
+
+        @keyframes scroll2 {
+        from {
+            transform: translateX(0%);
+        }
+        to {
+            transform: translateX(-200%);
+        }
+        }
+        footer{
+            margin-top: 50px;
+        }
+
+        }
+
+        @media screen and (min-width: 986px) {
+            .banner{
+            height: 400px;
+        }
+        .draw-straws h2::before{
+            width: 26%;
+            height: 38px;
+            top: 34px;
+            z-index: -2;
+            }
+            .draw-straws h2 + img{
+                display: none;
+            }
+            
+        }
+        @media screen and (min-width: 1200px) {
+            .banner{
+            height: 450px;
+        }
+        /* .about-bt-content{
+            margin-top: 100px;
+        } */
+            
+        }
+
         
 
     </style>
 
 </head>
 <body>
-    <article class="loading-container" id="loading">
+    <!-- <article class="loading-container" id="loading">
         <div class="loading-text">
             <img src="imgs/logo-vertical-sv.svg" alt="">
         </div>
@@ -685,21 +1411,24 @@
                 </div>
             </div>
         </div>
-    </article>
+    </article> -->
 
 
     <header>
-        <div class="logo-vertical">
-            <img src="imgs/logo-vertical.svg" alt="">
-        </div>
+        <div class="nav-bgc"></div>
+        <div class="nav-bar"><i class="fa-solid fa-bars"></i></div>
+        <div class="nav-barX"><i class="fa-solid fa-xmark"></i></div>
         <nav>
+            <div class="logo-vertical">
+                <a href="index.html"><img src="imgs/logo-vertical.svg" alt=""></a> 
+            </div>
             <span class="logo-horizontal"><a href="index.html"><img src="imgs/logo-horizontal.svg" alt=""></a> </span>
             <ul>
                 <li><a href="">關於書旅</a></li> 
                 <li><a href="allnews.html">最新消息</a></li>
                 <li><a href="bookmap.html">書站地圖</a></li>
                 <li><a href="faqs.html">常見問題</a></li>
-                <li > <a id = "memberLog"> 登入/註冊</a></li>
+                <li > <a id = "memberLog"> 登入 / 註冊</a></li>
                 <li><a href="contactUs.html">聯絡我們</a></li>
                 <li><a href="booksearch.html">好書搜尋</a></li>
             </ul>
@@ -713,8 +1442,9 @@
         <h3>書能保持我們的青春 和我們的童心</h3>
     </article>
     <article class="about-bt-content">
-        <div> <img src="imgs/index-1.jpg" alt="">
-        </div>
+        <div> 
+            <img src="imgs/index-1.jpg" alt="">
+        </div> 
         
         <div class="about-bt">
             <h2>關於書旅</h2>
@@ -727,32 +1457,33 @@
         </div>
         
     </article>
-    <article class="steps-container">
+    <article class="steps-container" >
         <div class="steps">
-            <div class="join-member swing">
-                <p>01</p>
-                <div ><img src="imgs/order1.svg" alt="join member"></div>
-                <h2>加入書旅會員</h2>
-                <p>不論是熱愛分享書籍、現場閱讀、又或是想借書回府，愛閱讀的你都能在這裡找到一群志同道合的朋友。
-                </p>
+            <div class="join-member swing" id="firstN">
+                <p >01</p>
+                <a href="#rwdmember">
+                    <div ><img src="imgs/order1.svg" alt="join member"></div>
+                    <h2>加入書旅會員</h2>
+                    <p>不論是熱愛分享書籍、現場閱讀、又或是想借書回府，愛閱讀的你都能在這裡找到一群志同道合的朋友。
+                    </p>
+                </a> 
             </div>
             <div class="search-site swing">
-                <p>02</p>
-                <div><img src="imgs/order2.svg" alt="search book site"></div>
-                <h2>探索鄰近借書點</h2>
-                <p>
-                    探索生活中的借書點，這些寶藏地點藏滿了各種書籍，等待著你前去發掘。</p>
+                    <p>02</p>
+                <a href="bookmap.html">
+                    <div><img src="imgs/order2.svg" alt="search book site"></div>
+                    <h2>探索鄰近借書點</h2>
+                    <p>探索生活中的借書點，這些寶藏地點藏滿了各種書籍，等待著你前去發掘。</p>
+                </a>
             </div>
-            <div class="engoy-read swing">
-                <p>03</p>
-                <div > <img src="imgs/order3.svg" alt="enjoy reading"></div>
-                <h2>享受閱讀樂趣</h2>
-                <p>
-                    確定借書點後，趁著閒暇時光，走出家門，與書籍共度美好時光。讓借書成為你的生活習慣，開始每天的冒險之旅！</p>
+            <div class="engoy-read swing"><p>03</p>
+                <a href="booksearch.html">
+                    <div > <img src="imgs/order3.svg" alt="enjoy reading"></div>
+                    <h2>享受閱讀樂趣</h2>
+                    <p>確定借書點後，趁著閒暇時光，走出家門，與書籍共度美好時光。讓借書成為你的生活習慣，開始每天的冒險之旅！</p>
+                </a>
             </div>
         </div>
-
-
     </article>
     <article class="site">
         <div class="site-content">
@@ -819,47 +1550,55 @@
      
     <article class="news">
         <div class="news-block">
-            <div class="media-coverage common-block">
-                <img src="imgs/Media Coverage.jpg" alt="">
-                <div class="all-newsBlock">
-                    <div class="name">
-                        <h3>媒體報導</h3>
-                         <p>Media Coverage</p>
-                    </div>
+            <a href="allnews.html#media-content">
+                <div class="media-coverage common-block">
                     
-                    <div class="direction ">
-                        <img src="imgs/spots.svg" alt="">
-                        <img src="imgs/spots.svg" alt="">
-                        <img src="imgs/spots.svg" alt="">
-                        <img src="imgs/spots.svg" alt="">
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="all-news common-block">
-                <img src="imgs/Mask group.jpg" alt="">
-                <div class="all-newsBlock">
-                    <div class="name">
-                        <h3>所有消息</h3>
-                    <p>All news</p>
-                    </div>
-                    <div class="direction">
-                        <img src="imgs/spots.svg" alt="">
-                        <img src="imgs/spots.svg" alt="">
-                        <img src="imgs/spots.svg" alt="">
-                        <img src="imgs/spots.svg" alt="">
+                    <img src="imgs/Media Coverage.jpg" alt="">
+                    <div class="all-newsBlock">
+                        <div class="name">
+                            <h3>媒體報導</h3>
+                            <p>Media Coverage</p>
+                        </div>
+                        
+                        <div class="direction ">
+                            <img src="imgs/spots.svg" alt="">
+                            <img src="imgs/spots.svg" alt="">
+                            <img src="imgs/spots.svg" alt="">
+                            <img src="imgs/spots.svg" alt="">
+                        </div>
+                        
                     </div>
                     
                 </div>
-            </div>
-            <div class="gazette common-block">
+             </a>
+
+             <a href="allnews.html">
+                <div class="all-news common-block">
+                    <img src="imgs/Mask group.jpg" alt="">
+                    <div class="all-newsBlock">
+                        <div class="name">
+                            <h3>所有消息</h3>
+                        <p>All news</p>
+                        </div>
+                        <div class="direction">
+                            <img src="imgs/spots.svg" alt="">
+                            <img src="imgs/spots.svg" alt="">
+                            <img src="imgs/spots.svg" alt="">
+                            <img src="imgs/spots.svg" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+             </a>
+            
+            <a href="allnews.html#gazette-content">
+                <div class="gazette common-block">
                 <img src="imgs/Gazette.jpg" alt="">
                 <div class="all-newsBlock">
                     <div class="name">
-                       <h3>書旅小報</h3>
-                       <p>Gazette</p> 
+                    <h3>書旅小報</h3>
+                    <p>Gazette</p> 
                     </div>
-                    
                     <div class="direction">
                         <img src="imgs/spots.svg" alt="">
                         <img src="imgs/spots.svg" alt="">
@@ -867,7 +1606,9 @@
                         <img src="imgs/spots.svg" alt="">
                     </div>
                 </div>
-            </div>
+                </div>
+            </a>
+            
         </div>
     </article>
     <article class="draw-straws">
@@ -875,20 +1616,20 @@
         <img  src="imgs/spots.svg" alt="">
         <section class="draw-straws-container">
             <div class="draw-straws-bookimg" >
-                <img src="imgs/book3.png" alt="">
+                <img src="imgs/book1.png" alt="" id="myimg">
             </div>
             <div class="draw-straws-content">
-                <h4>書名: 快思慢想</h4>
-                <p>作者: Daniel Kahneman</p>
-                <p>出版社: 天下文化</p>
+                <h4 id="bookname">金魚都能懂的CSS必學屬性網頁設計必備寶典</h4>
+                <p id="author">作者: Amos</p>
+                <p id="publish">出版社: 博碩文化</p>
                 <p>書籍簡介:</p>
-                <p>作者介紹了很多有趣的經典行為實驗，披露思考的捷徑、替代、偏好、框架、錨點等效應。不僅讓我們對大腦的複雜與非理性恍然大悟，也指出我們在什麼情況下該相信靈光乍現，什麼時候該三思而行，該運用哪些技巧來避免常常使我們陷入麻煩的思考偏誤，以及如何在商場、職場和個人生活中做出更好的選擇。</p>
-                <img  src="imgs/again.svg" alt="抽籤" class="run">
+                <p id="book-introduce">本書內容改編自第12屆iT邦幫忙鐵人賽Modern Web組優選系列文章《金魚都能懂的CSS必學屬性》，本書內容針對網頁切版最常見的CSS屬性來詳細介紹，不管是剛接觸網頁的新手，或者是已接觸過一段時間的開發老手，對於該學習哪些什麼CSS屬性總是會有些混亂，因此本書針對「網頁切版」所需要的CSS屬性做完整詳細的說明，由淺入深，讓你可以理解哪些CSS屬性是一定要學習的。</p>
+                <img  src="imgs/again.svg" alt="抽籤" class="run" id="changeBook">
             </div>
         </section>
     </article>
 
-    <article class="memberOverflow">
+    <!-- <article class="memberOverflow">
         <div class="container-member right-panel-active">
             <div class="container-form container-signup">
                 <form action="" class="form" id="form1">
@@ -920,7 +1661,7 @@
                 </div>
             </div>
         </div>
-    </article>
+    </article> -->
     <footer>
         <div class="footer-logo">
 
@@ -979,107 +1720,84 @@
             <div class="medialink-g medialink"> <a href=""><i class="fa-brands fa-google"></i></a></div>
         </div>
     </footer>
-
-    <article class="rwd" id="rwdmember">
-        <div class="container-memberRWD">
-            <div class="close"><i class="fa-regular fa-circle-xmark" id="close"></i></div>
-            <div class="changepanel">
-                
-                <h4 id="loginTab" class="active">旅友登入</h4>
-                <h4 id="signupTab">旅友註冊</h4>
-            </div>
-            <form id="loginPanel" class="panelRWD">
-                <div class="input-group">
-                    <input type="text" class="input inputF" placeholder="請輸入帳號">
-                    <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8" id="passwordInput">
-                </div>
-                <div class="password-input">
-                    <span class="password-toggle" id="passwordToggle"><i class="fa-solid rwd fa-eye-slash"></i></span>
-                </div>
-                <div class="forgot-password">
-                    <a href="#">忘記密碼?</a>
-                </div>
-                <button class="btnRWD">確認登入</button>
-            </form>
-    
-    
-            <form id="signupPanel" class="panelRWD hidden">
-                <div class="input-group">
-                    <input type="email" class="input finput" placeholder="請輸入信箱">
-                    <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8">
-                    <input type="password" class="input" placeholder="再次輸入密碼">
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" class="checkbox-input" id="newsletterCheckbox">
-                    <label for="newsletterCheckbox">我願意接收書旅的最新消息</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" class="checkbox-input chi2" id="termsCheckbox">
-                    <label for="termsCheckbox">我同意書旅服務條款及隱私權政策</label>
-                </div>
-                <button class="btnRWD"  type="submit" value="Submit">確認註冊</button>
-            </form>
+<!-- 登入彈窗     -->
+<article class="rwd" id="rwdmember">
+    <div class="container-memberRWD">
+        <div class="close"><i class="fa-regular fa-circle-xmark" id="close"></i></div>
+        <div class="changepanel">
+            
+            <h4 id="loginTab" class="active">旅友登入</h4>
+            <h4 id="signupTab">旅友註冊</h4>
         </div>
-      
-    </article>
+        <form id="loginPanel" class="panelRWD">
+            <div class="input-group">
+                <input type="text" class="input inputF" placeholder="請輸入帳號">
+                <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8" id="passwordInput">
+            </div>
+            <div class="password-input">
+                <span class="password-toggle" id="passwordToggle"><i class="fa-solid rwd fa-eye-slash"></i></span>
+            </div>
+            <div class="forgot-password">
+                <a href="#">忘記密碼?</a>
+            </div>
+            <button class="btnRWD">確認登入</button>
+        </form>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <!-- <script src="js/loading-percent.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            let loginBox = $('.login-box').width();
-            $('.line').width(0);
-    
-            let timer = 0;
-            let interval = setInterval(function() {            
-                if (timer <= loginBox - 100) {
-                    timer += 100;
-                    $('.line').width(timer);
-                } else {
-                    clearInterval(interval); // 清除定時器
-                    setTimeout(function() {
-                        $('#loading').fadeOut(); // 讓 .line 消失
-                    }, 2000); // 2 秒後觸發
-                }
-            }, 200);
-        });
-    </script>
-    
 
-<!-- 
-<script>
-    document.addEventListener("readystatechange", function() {
-    const loadingBar = document.querySelector(".line");
+        <form id="signupPanel" class="panelRWD hidden">
+            <div class="input-group">
+                <input type="email" class="input finput" placeholder="請輸入信箱">
+                <input type="password" class="input" placeholder="密碼(請輸入8到16位的字母、數字)" maxlength="16"  minlength="8" id="passwordInput2">
+                <div class="password-input">
+                    <span class="password-toggle" id="passwordToggle2"><i class="fa-solid rwd fa-eye-slash"></i></span>
+                </div>
+                <input type="password" class="input" placeholder="再次輸入密碼" maxlength="16"  minlength="8" id="passwordInput3">
+                <div class="password-input">
+                    <span class="password-toggle" id="passwordToggle3"><i class="fa-solid rwd fa-eye-slash"></i></span>
+                </div>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" class="checkbox-input" id="newsletterCheckbox">
+                <label for="newsletterCheckbox">我願意接收書旅的最新消息</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" class="checkbox-input chi2" id="termsCheckbox">
+                <label for="termsCheckbox">我同意書旅服務條款及隱私權政策</label>
+            </div>
+            <button class="btnRWD"  type="submit" value="Submit">確認註冊</button>
+        </form>
+    </div>
+  
+</article>
 
-    function updateLoadingProgress() {
-        const total = document.getElementsByTagName("*").length;
-        const loaded = document.querySelectorAll(":not(script):not(link)").length;
-        const progress = Math.round((loaded / total) * 100);
-        loadingBar.style.width = progress + "%";
-    }
 
-        document.onreadystatechange = completeLoading;
-        function completeLoading() {
-            if (document.readyState === "interactive") {
-                        updateLoadingProgress();
-                    }
 
-        if (document.readyState == "complete") {
-            setTimeout(function() {
-                $("#loading").animate({
-                    "opacity": "0"
-                }, 500).hide(1000);
-            }, 1000);
-        }
-    }
 
+
+
+
+   <!-- loading進度條 -->
+   <script>
+    $(document).ready(function() {
+        let loginBox = $('.login-box').width();
+        $('.line').width(0);
+
+        let timer = 0;
+        let interval = setInterval(function() {            
+            if (timer <= loginBox - 100) {
+                timer += 100;
+                $('.line').width(timer);
+            } else {
+                clearInterval(interval); // 清除定時器
+                setTimeout(function() {
+                    $('#loading').fadeOut(); //  消失
+                }, 2000); // 2 秒後觸發
+            }
+        }, 200);
     });
-
-</script>
-    -->
-
-    <script src="js/member.js"></script>
+    </script>
+    <script src="js/alluse.js"></script>
+    <!-- 視窗下拉logo變換 -->
     <script>        
     window.addEventListener('scroll', function() {
         let logoV = document.querySelector('.logo-vertical');
@@ -1095,99 +1813,12 @@
 
 
     </script>
-    <script>
-        const passwordInput = document.getElementById("passwordInput");
-        const passwordToggle = document.getElementById("passwordToggle");
-        const loginTab = document.getElementById("loginTab");
-        const signupTab = document.getElementById("signupTab");
-        const loginPanel = document.getElementById("loginPanel");
-        const signupPanel = document.getElementById("signupPanel");
-        const close = document.getElementById('close')
-        const rwdmember = document.getElementById('rwdmember')
-        
-        passwordToggle.addEventListener("click", function () {
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                passwordToggle.innerHTML =   `<i class="fa-solid rwd fa-eye"></i>`;
-            } else {
-                passwordInput.type = "password";
-                passwordToggle.innerHTML = `<i class="fa-solid  rwd fa-eye-slash"></i>`;
-            }
-        });
-        
-        loginTab.addEventListener("click", function () {
-            loginPanel.classList.remove("hidden");
-            signupPanel.classList.add("hidden");
-            loginTab.classList.add("active");
-            signupTab.classList.remove("active");
-        });
-        
-        signupTab.addEventListener("click", function () {
-            loginPanel.classList.add("hidden");
-            signupPanel.classList.remove("hidden");
-            loginTab.classList.remove("active");
-            signupTab.classList.add("active");
-        });
-        
-        close.addEventListener("click", function(){
-            rwdmember.style.display = "none";
-        });
-        
-            memberLog.addEventListener("click", function(){
-            rwdmember.style.display = "grid"; 
-        });
-        
-        
-        
-        
-        
-        
-        let maxWidthThreshold = 768; 
-        let liElement1 = document.getElementById("memA"); 
-        let liElement2 = document.getElementById("memR");
-        let liElement3 = document.getElementById("memN");
-        let liElement4 = document.getElementById("memC");
-        
-        
-        function updateLiContent() {
-        let currentWidth = window.innerWidth;
-        
-        if (currentWidth < maxWidthThreshold) {
-            liElement1.innerHTML = `<a>關於書旅</a>`;
-            liElement2.innerHTML = `<a href="allnews.html">書旅消息</a>`; 
-            liElement3.innerHTML = `<a href="allnews.html">書旅消息</a>`;
-            liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>`;
-        } else {
-            liElement1.innerHTML = `<a>關於書旅</a>`;
-            liElement2.innerHTML = ` <a href="allnews.html">書旅消息</a>
-                            <ul>
-                                <li>書旅小報</li>
-                                <li>媒體報導</li>
-                                <li>全部消息</li>
-                            </ul>`; 
-            liElement3.innerHTML =` <a href="allnews.html">書旅消息</a>
-                            <ul>
-                                <li>書旅小報</li>
-                                <li>媒體報導</li>
-                                <li>全部消息</li>
-                            </ul>`;
-        
-            liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>
-                            <ul>
-                                <li>聯絡地址</li>
-                                <li>聯絡表單</li>
-                            </ul>`
-        }
-        }
-        
-        
-        window.addEventListener("resize", updateLiContent);
-        
-        
-        updateLiContent();
-        
-        
-            </script>
+    <script src="js/booklist.js"></script>
+
+
+
+
+
 
     
         

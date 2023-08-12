@@ -145,6 +145,10 @@
             .nav-bar{
                 display: none;
             } 
+            
+            .logo-vertical img{
+            display: none;
+        }
             nav{
                 position: fixed;
                 display: flex;
@@ -331,7 +335,7 @@
                      
         </div>    
     </article>
-    <article class="memberOverflow">
+    <!-- <article class="memberOverflow">
         <div class="container-member right-panel-active">
             <div class="container-form container-signup">
                 <form action="" class="form" id="form1">
@@ -363,7 +367,7 @@
                 </div>
             </div>
         </div>
-    </article>
+    </article> -->
     <footer>
         <div class="footer-logo">
 
@@ -637,5 +641,16 @@ updateLiContent();
 
 
     </script>
+    <!-- 點擊黑色區塊關閉rwd -->
+    <script>
+        document.addEventListener("click", (event) => {
+const rwdmemberElement = document.getElementById("rwdmember");
+const articleElement = document.querySelector(".rwd"); // 請確保這是正確的article元素選擇器
+
+if (event.target === articleElement) {
+   rwdmemberElement.style.display = "none";
+}
+});
+</script>
 </body>
 </html> 
