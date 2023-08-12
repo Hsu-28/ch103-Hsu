@@ -564,7 +564,7 @@
             <img src="imgs/kam-idris-_HqHX3LBN18-unsplash.jpg" alt="">
             </a>
             </div>
-            <div class="site-content">
+            <div class="site-content ">
                 <h3>暉楽家居</h3>
                 <p>營業時間:禮拜一公休，其他時間10:30至22點</p>
                 <p>電話: 034251108</p>
@@ -580,7 +580,6 @@
                 <a href=" https://imdaxiang.github.io/MIGOO/
                 " target="_blank">
                 <img src="imgs/ffdda4605f54d02fe12a8606ad10bed3_1.jpg" alt="we cat cafe書點"></a>
-                
             </div>
             <div class="site-content ">
                 <h3>MIGOO</h3>
@@ -616,7 +615,6 @@
                     <img src="imgs/doggggg.jpg" alt=""></div>
 
                 </a>
-                
             <div class="site-content">
                 <h3>浪浪咖啡島</h3>
                 <p>營業時間: 上午 10點 - 晚上 8點</p>
@@ -650,10 +648,9 @@
         <div class="site-container north">
             <div class="site-img"> <a href="https://w421848.github.io/we-cat-cafe-two/index1" target="_blank">
                 <img src="imgs/booksite1.jpg" alt="we cat cafe書點">
-            </a>
-                
+            </a>             
             </div>
-            <div class="site-content north">
+            <div class="site-content ">
                 <h3>We Cat Cafe</h3>
                 <p>營業時間: 09：00～22：30 (每周二公休)</p>
                 <p>電話: 03-4258183</p>
@@ -793,7 +790,7 @@
     </script>
 
         <!-- 點選出現書站地點 -->
-        <!-- <script> 
+         <!-- <script> 
 
             $(function(){
                 $('#allSite').on('click',function(){
@@ -845,9 +842,9 @@
             })
     
          
-        </script> -->
+        </script>  -->
 
-        <script> 
+         <script> 
             $(function(){
                 $('#allSite').on('click', function() {
                     $('.site-container').fadeIn();
@@ -893,7 +890,7 @@
                     });
                 });
             });
-        </script>
+        </script> -->
         
     <!-- carousel -->
     <script>
@@ -1016,6 +1013,56 @@ window.addEventListener("scroll", () => {
 </script>
 
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<!-- <script>
+$(document).ready(function() {
+    $('a[href^="#"]').on('click', function(event) {
+        event.preventDefault(); // 阻止默認的錨點跳轉行為
+        
+        var targetId = $(this).attr('href'); // 取得目標的 ID
+        
+        if ($(targetId).length > 0) {
+            // 根據目標的 ID 顯示相應的內容
+            $('.site-container').hide(); // 隱藏所有內容
+            $(targetId).fadeIn(); // 顯示目標內容
+            
+            // 捲動到指定位置
+            let scrollToPosition = 800; // 捲動的位置
+            $('html, body').animate({
+                scrollTop: scrollToPosition
+            }, 800); // 使用動畫效果捲動
+        }
+    });
+    // 頁面載入時的預設處理
+    // var anchor = window.location.hash;
+    // if (anchor === '#northSite') {
+    //     $('.east').hide();
+    //     $('.south').hide();
+    //     $('.middle').hide();
+    //     $('.north').show();
+    // } else if (anchor === '#middleSite') {
+    //     $('.east').hide();
+    //     $('.south').hide();
+    //     $('.middle').show();
+    //     $('.north').hide();
+    // } else if (anchor === '#southSite') {
+    //     $('.east').hide();
+    //     $('.south').show();
+    //     $('.middle').hide();
+    //     $('.north').hide();
+    // } else if (anchor === '#eastSite') {
+    //     $('.east').show();
+    //     $('.south').hide();
+    //     $('.middle').hide();
+    //     $('.north').hide();
+    // }
+
+
+
+
+</script>   -->
 
 </body>
 </html>
