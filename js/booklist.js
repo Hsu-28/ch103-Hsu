@@ -7,7 +7,7 @@ const books = [{
     content:'作者介紹了很多有趣的經典行為實驗，披露思考的捷徑、替代、偏好、框架、錨點等效應。不僅讓我們對大腦的複雜與非理性恍然大悟，也指出我們在什麼情況下該相信靈光乍現，什麼時候該三思而行，該運用哪些技巧來避免常常使我們陷入麻煩的思考偏誤，以及如何在商場、職場和個人生活中做出更好的選擇。'
 } , 
     {
-    title : '金魚都能懂的CSS必學屬性網頁設計必備寶典',
+    title : '書名: 金魚都能懂的CSS必學屬性網頁設計必備寶典',
     author: '作者: Amos',
     img: 'imgs/book1.png',
     publish: '出版社: 博碩文化',
@@ -15,7 +15,7 @@ const books = [{
 
 } , 
 {
-    title : '不要做自己了，你做個人吧',
+    title : '書名: 不要做自己了，你做個人吧',
     author: '作者: MUMU',
     img: 'imgs/booklist3.jpg',
     publish: '時報出版',
@@ -23,7 +23,7 @@ const books = [{
 
 },
 {
-    title : '冰與火之歌前傳：血火同源(下)',
+    title : '書名: 冰與火之歌前傳：血火同源(下)',
     author: '作者: 喬治馬汀',
     publish: '出版社:高寶國際',
     img: 'imgs/booklist1.jpg',
@@ -31,7 +31,7 @@ const books = [{
 
 },
 {
-    title : '哈利波特被詛咒的孩子',
+    title : '書名: 哈利波特被詛咒的孩子',
     author: '作者: J.K.羅琳',
     img: 'imgs/book5.png',
     publish: '出版社:人民文學出版社',
@@ -39,7 +39,7 @@ const books = [{
 
 },
 {
-    title : '人間孤獨，卻與你一見如故：一見如故，卻與你人間孤獨',
+    title : '書名: 人間孤獨，卻與你一見如故：一見如故，卻與你人間孤獨',
     author: '作者: 黃山料、王昊齊',
     publish: '出版社: 三采文化',
     img: 'imgs/booklist4.jpg',
@@ -47,7 +47,7 @@ const books = [{
 
 },
 {
-    title : '唐詩寒武紀',
+    title : '書名: 唐詩寒武紀',
     author: '作者: 王曉磊',
     publish: '出版社: 新經典文化',
     img: 'imgs/booklist5.jpg',
@@ -55,7 +55,7 @@ const books = [{
     
 },
 {
-    title : '茶金帝國與海上絲路(Ⅱ)',
+    title : '書名: 茶金帝國與海上絲路(Ⅱ)',
     author: '作者: 羅三洋',
     publish: '出版社: 大旗出版',
     img: 'imgs/booklist6.jpg',
@@ -63,7 +63,7 @@ const books = [{
 
 },
 {
-    title : '全魚解構與料理',
+    title : '書名: 全魚解構與料理',
     author: '作者: 喬許尼蘭德Josh Niland',
     publish: '出版社: 積木文化',
     img: 'imgs/booklist7.jpg',
@@ -71,7 +71,7 @@ const books = [{
 
 },
 {
-    title : '與你相鬱的日子',
+    title : '書名: 與你相鬱的日子',
     author: '作者: 點點心理學Winnie',
     publish: '出版社: 商鼎文化出版公司',
     img: 'imgs/booklist8.jpg',
@@ -79,7 +79,7 @@ const books = [{
 
 },
 {
-    title : '矽島的危與機：半導體與地緣政治',
+    title : '書名: 矽島的危與機：半導體與地緣政治',
     author: '作者: 黃欽勇.黃逸平',
     publish: '出版社: 陽明交通大學出版社',
     img: 'imgs/booklist9.jpg',
@@ -87,7 +87,7 @@ const books = [{
 
 },
 {
-    title : '十種人性',
+    title : '書名: 十種人性',
     author: '作者: 狄諤斯',
     publish: '出版社: 天下文化',
     img: 'imgs/booklist10.jpg',
@@ -95,14 +95,14 @@ const books = [{
 
 },
 {
-    title : '中央站：失去過往與未來，放棄時間與空間的無家者',
+    title : '書名: 中央站：失去過往與未來，放棄時間與空間的無家者',
     author: '作者: 金惠珍',
     publish: '出版社: 時報出版社',
     img: 'imgs/booklist11.jpg',
     content: '你曾在街上向人伸手嗎？或必須付出自尊，才能換來某樣東西？倘若人生就是不斷的失去，直到一無所有，還有可能，再擁有愛嗎?'
 },
 {
-    title : '生命與味覺',
+    title : '書名: 生命與味覺',
     author: '作者: 辰巳芳子',
     publish: '出版社: 積木文化',
     img: 'imgs/booklist12.jpg',
@@ -110,7 +110,7 @@ const books = [{
 
 },
  {
-    title : '回家',
+    title : '書名: 回家',
     author: '作者: 賴佩霞.郭貞伶',
     publish: '出版社: 早安財經文化',
     img: 'imgs/booklist13.jpg',
@@ -126,7 +126,7 @@ const books = [{
 
 },
  {
-    title : '我只能為你畫一張小卡片',
+    title : '書名: 我只能為你畫一張小卡片',
     author: '作者: 幾米',
     publish: '出版社: 大塊文化',
     img: 'imgs/booklist15.jpg',
@@ -134,7 +134,7 @@ const books = [{
 
 },
  {
-    title : '你今天笑了幾次',
+    title : '書名: 你今天笑了幾次',
     author: '作者: 神岡學',
     publish: '出版社: 大田出版社',
     img: 'imgs/booklist16.jpg',
@@ -150,7 +150,7 @@ const books = [{
 
 },
  {
-    title : '百年孤寂',
+    title : '書名: 百年孤寂',
     author: '作者: 加布列.賈西亞.馬奎斯',
     publish: '出版社: 皇冠叢書',
     img: 'imgs/booklist18.jpg',
@@ -159,14 +159,14 @@ const books = [{
 },
 
 {
-    title : '張曼娟讀芥川龍之介',
+    title : '書名: 張曼娟讀芥川龍之介',
     author: '作者: 芥川龍之介Akutagawa Ryunosuke.張曼娟',
     publish: '出版社: 麥田出版有限公司',
     img: 'imgs/booklist19.jpg',
     content: '《張曼娟讀芥川龍之介》精選五篇芥川龍之介具代表性的短篇傑作——〈安心的鼻子〉是一篇幽默而令人過目難忘的小說。禪智和尚有一個長如木條的鼻子，他常受長鼻子困擾，吃飯需要弟子隨侍在旁，將鼻子用棍子撐起才能進食。但當他得到消除長鼻祕方而如願後，卻又懷念起原來的長鼻，最終，他會如何自處以對鼻子？'
 },
 {
-   title : '小王子',
+   title : '書名: 小王子',
    author: '作者: 安東尼.聖修伯里',
    publish: '出版社: 愛米粒',
    img: 'imgs/booklist20.jpg',
