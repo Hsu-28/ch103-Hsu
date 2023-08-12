@@ -51,10 +51,10 @@
             color: #fff;
         }
         .items-container{
-            margin: 0px 0 40px 0;
+            /* margin: 0px 0 40px 0; */
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            /* left: 50%;
+            transform: translateX(-50%); */
             top: 560px;
             z-index: 50;
             height: 44px;
@@ -106,13 +106,12 @@
         }
         .site-container{
             position: relative;
-            margin: 0 auto;
+            margin: 40px auto 20px auto;
             width: 80%;
             padding: 10px;
             background-color: #F4F4EC;
             display: flex;
             color: #313131;
-            margin-bottom: 20px;
             border-radius: 6px;
             flex-direction: column;
         }
@@ -455,10 +454,11 @@
         @media screen and (max-width: 600px) {
         .wrapper .carousel {
             grid-auto-columns: 100%;
+            
         }
         }
 
-
+        
     </style>
 </head>
 <body>
@@ -799,7 +799,7 @@
                 })
             })
     
-           
+         
         </script>
     <!-- carousel -->
     <script>
@@ -889,5 +889,23 @@ wrapper.addEventListener("mouseleave", autoPlay);
     </script>
 
 <script src="js/alluse.js"></script>
+<script>
+const itemsContainer = document.querySelector(".items-container");
+const scrollThreshold = 619; // 捲動到此位置時，固定 .items-container 元素
+
+// 監聽網頁滾動事件
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    if (scrollY > scrollThreshold) {
+        itemsContainer.style.position = "sticky";
+        itemsContainer.style.top = "0";
+    } else {
+        itemsContainer.style.position = "relative";
+        itemsContainer.style.top = "auto";
+    }
+});
+
+</script>
 </body>
 </html>
