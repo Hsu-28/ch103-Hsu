@@ -98,12 +98,17 @@
             memberLog.addEventListener("click", function(){
             rwdmember.style.display = "grid"; 
         });
-
+        const footlogin = document.getElementById('memR');
+        footlogin.addEventListener('click', function() {  
+        rwdmember.style.display = "grid";
+        });
+        
 
 
         
         let maxWidthThreshold = 768; 
         let liElement1 = document.getElementById("memA"); 
+        let liElement2 = document.getElementById("memR");
         let liElement3 = document.getElementById("memN");
         let liElement4 = document.getElementById("memC");
         
@@ -113,11 +118,17 @@
         
         if (currentWidth < maxWidthThreshold) {
             liElement1.innerHTML = `<a>關於書旅</a>`;
+            liElement2.innerHTML = `加入書旅`; 
             liElement3.innerHTML = `<a href="allnews.html">書旅消息</a>`;
             liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>`;
         } else {
             liElement1.innerHTML = `<a>關於書旅</a>`;
-            liElement3.innerHTML =` <a href="allnews.html">書旅消息</a>
+            liElement2.innerHTML = ` 加入書旅
+                            <ul>
+                                <li>旅友登入</li>
+                                <li>旅友註冊</li>
+                            </ul>`; 
+            liElement3.innerHTML =` <a href="allnews.html">最新消息</a>
                             <ul>
                                 <li>書旅小報</li>
                                 <li>媒體報導</li>

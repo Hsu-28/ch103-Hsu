@@ -464,6 +464,7 @@
             position: relative;
             margin-top: 40px;
         }
+
         .draw-straws h2{
             margin-top: 100px;
             color: #1c1b1b;
@@ -520,6 +521,7 @@
         }
         .draw-straws-content p{
             margin: 10px 0;
+            color: #3f3f3f;
         }
         .draw-straws-content h4{
             font-size: 18px;
@@ -533,6 +535,44 @@
             width: 16%;
             margin-top: 16px;
         }
+        label.data {
+  position   : relative;
+  cursor     : pointer;
+  display    : flex;
+  align-items: center;
+}
+
+input {
+  margin-right: 8px;
+}
+
+input:checked+span+.show-box {
+  background: #3a64a6;
+}
+
+ .show-box {
+  position     : absolute;
+  top          : 3px;
+  left         : 3px;
+  width        : 13px;
+  height       : 13px;
+  border-radius: 2px;
+  border       : 1px solid #d8d8d8;
+  background   : white;
+}
+
+ .show-box:before {
+  content     : '';
+  position    : absolute;
+  top         : 1px;
+  left        : 5px;
+  width       : 3px;
+  height      : 8px;
+  border      : solid white;
+  border-width: 0 2px 2px 0;
+  transform   : rotate(45deg);
+}  
+
         @keyframes spin {
             from{
                 transform: rotate(0deg);
@@ -1630,7 +1670,7 @@
                 <img src="imgs/book1.png" alt="" id="myimg">
             </div>
             <div class="draw-straws-content">
-                <h4 id="bookname">金魚都能懂的CSS必學屬性網頁設計必備寶典</h4>
+                <h4 id="bookname">書名: 金魚都能懂的CSS必學屬性網頁設計必備寶典</h4>
                 <p id="author">作者: Amos</p>
                 <p id="publish">出版社: 博碩文化</p>
                 <p>書籍簡介:</p>
@@ -1658,16 +1698,24 @@
                             <li>團隊成員</li>
                         </ul>
                     </li>
-
-                    <li id="memN"> <a href="allnews.html">書旅消息</a>
+                    <li id="memN"> <a href="allnews.html">最新消息</a>
                         <ul>
                             <li>書旅小報</li>
                             <li>媒體報導</li>
                             <li>全部消息</li>
                         </ul>
                     </li>
-                    <li> <a href="faqs.html">常見問題</a> </li>
                     <li> <a href="bookmap.html">書站地圖</a> </li>
+                    <li> <a href="faqs.html">常見問題</a> </li>
+                    <li id="memR"> 加入書旅</a>
+                        <ul>
+                            <li>會員登入</li>
+                            <li>會員註冊</li>
+                        </ul>
+                    </li>
+                    
+                    
+                    
                     <li id="memC"> <a href="contactUs.html">聯絡我們</a>
                         <ul>
                             <li>聯絡地址</li>
@@ -1729,20 +1777,23 @@
                     <span class="password-toggle" id="passwordToggle3"><i class="fa-solid rwd fa-eye-slash"></i></span>
                 </div>
             </div>
-            <div class="checkbox-group">
+            <label class="checkbox-group data">
                 <input type="checkbox" class="checkbox-input" id="newsletterCheckbox">
-                <label for="newsletterCheckbox">我願意接收書旅的最新消息</label>
-            </div>
-            <div class="checkbox-group">
+                <span for="newsletterCheckbox">我願意接收書旅的最新消息</span>
+                <div class="show-box"></div>
+            </label>
+
+            <label class="checkbox-group data">
                 <input type="checkbox" class="checkbox-input chi2" id="termsCheckbox">
-                <label for="termsCheckbox">我同意書旅服務條款及隱私權政策</label>
-            </div>
+                <span for="termsCheckbox">我同意書旅服務條款及隱私權政策</span>
+                <div class="show-box"> </div>
+            </label>
+
             <button class="btnRWD"  type="submit" value="Submit">確認註冊</button>
         </form>
     </div>
   
 </article>
-
 
 
 

@@ -26,7 +26,9 @@ footer{
     justify-content: center;
 }
 
-
+#memR:hover{
+    cursor: pointer;
+}
 .main-footer  ul{
     display: flex;
     flex-flow:  row wrap;
