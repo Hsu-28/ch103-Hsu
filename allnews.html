@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/member.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/8bfd57d05d.js" crossorigin="anonymous"></script>
-    <script src="js/alluse.js"></script>
     <style>
 
 
@@ -994,29 +993,28 @@
   
 </article>
 
-
    
     <script>
 
     const allBlocks = document.querySelectorAll(".all-block");
 
 
-    // allBlocks.forEach((block) => {
-    //     block.addEventListener("click", function () {
+    allBlocks.forEach((block) => {
+        block.addEventListener("click", function () {
 
-    //         const border = this.querySelector(".border");
+            const border = this.querySelector(".border");
 
-    //         const allBorders = document.querySelectorAll(".border");
-    //         allBorders.forEach((border) => {
-    //             border.style.display = "none";
-    //         });
+            const allBorders = document.querySelectorAll(".border");
+            allBorders.forEach((border) => {
+                border.style.display = "none";
+            });
 
-    //         if (border) {
-    //             border.style.display = "block";
-    //         }
+            if (border) {
+                border.style.display = "block";
+            }
 
-    //     });
-    // });
+        });
+    });
     
  
     allBlocks.forEach((block) => {
@@ -1073,10 +1071,16 @@
             mediacontent.style.display = 'block';
         }
     </script>  
-    <script src="js/alluse.js"></script>
-
+     
   
-    
+
+
+
+    <script src="js/alluse.js">
+
+
+
+    </script>
 
    
 
