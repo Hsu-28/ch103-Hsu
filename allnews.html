@@ -50,7 +50,9 @@
             transform: translate(-50%);
         }
       
-
+        header ul li a:hover{
+            cursor: pointer;
+        }
         .main{
             margin: auto;
             display: flex;
@@ -277,9 +279,7 @@
         header{
             height: 450px;
         }
-        .logo-vertical img{
-            display: none;
-        }
+        
         header h1 {
             top: 18%;
             font-size: 60px;
@@ -486,8 +486,13 @@
             display: block;
         }
 
-}
-
+        }
+        @media screen and (min-width: 768px) {
+            .logo-vertical img{
+                    display: none;
+                }
+            
+        }
 
     
     </style>

@@ -386,12 +386,12 @@
                             <li>團隊成員</li>
                         </ul>
                     </li>
-                    <li id="memR"> <a href="members.html">加入書旅</a>
+                    <!-- <li id="memR"> <a href="members.html">加入書旅</a>
                         <ul>
                             <li>會員登入</li>
                             <li>會員註冊</li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li id="memN"> <a href="allnews.html">書旅消息</a>
                         <ul>
                             <li>書旅小報</li>
@@ -532,7 +532,7 @@
 
 
     </script>
-     <script src="js/member.js">
+    <!-- <script>
         window.addEventListener('scroll', function() {
             let logoV = document.querySelector('.logo-vertical');
             let logoH = document.querySelector('.logo-horizontal');
@@ -543,10 +543,8 @@
                 logoV.style.display = 'block';
                 logoH.style.opacity = 0;
             }
-        });
-        
-        
-    </script>
+        });    
+    </script> -->
 
     <script>
 const passwordInput = document.getElementById("passwordInput");
@@ -607,17 +605,17 @@ let currentWidth = window.innerWidth;
 
 if (currentWidth < maxWidthThreshold) {
     liElement1.innerHTML = `<a>關於書旅</a>`;
-    liElement2.innerHTML = `<a href="allnews.html">書旅消息</a>`; 
+    // liElement2.innerHTML = `<a href="allnews.html">書旅消息</a>`; 
     liElement3.innerHTML = `<a href="allnews.html">書旅消息</a>`;
     liElement4.innerHTML = `<a href="contactUs.html">聯絡我們</a>`;
 } else {
     liElement1.innerHTML = `<a>關於書旅</a>`;
-    liElement2.innerHTML = ` <a href="allnews.html">書旅消息</a>
-                    <ul>
-                        <li>書旅小報</li>
-                        <li>媒體報導</li>
-                        <li>全部消息</li>
-                    </ul>`; 
+    // liElement2.innerHTML = ` <a href="allnews.html">書旅消息</a>
+    //                 <ul>
+    //                     <li>書旅小報</li>
+    //                     <li>媒體報導</li>
+    //                     <li>全部消息</li>
+    //                 </ul>`; 
     liElement3.innerHTML =` <a href="allnews.html">書旅消息</a>
                     <ul>
                         <li>書旅小報</li>
@@ -645,7 +643,7 @@ updateLiContent();
     <script>
         document.addEventListener("click", (event) => {
 const rwdmemberElement = document.getElementById("rwdmember");
-const articleElement = document.querySelector(".rwd"); // 請確保這是正確的article元素選擇器
+const articleElement = document.querySelector(".rwd");
 
 if (event.target === articleElement) {
    rwdmemberElement.style.display = "none";
