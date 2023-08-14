@@ -473,12 +473,12 @@ input:checked+span+.show-box {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-evenly;
+            justify-content: left;
         }
         .report{
             width: 40%;
             height: 370px;
-            margin: 10px 0;
+            margin: 10px 5%;
             box-shadow: 1px 1px 2px gray;
             cursor: pointer;
             background-color: #fff;
@@ -528,6 +528,19 @@ input:checked+span+.show-box {
             .logo-vertical img{
                     display: none;
                 }
+                nav ul .showline::after {
+            content: "";
+                position: absolute;
+                bottom: 3px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 104%;
+                height: 10px;
+                border-radius: 2px;
+                background-color: #FCDD65; 
+                z-index: -1;
+                display: block;
+        }
             
         }
 
@@ -545,17 +558,15 @@ input:checked+span+.show-box {
             </div>
             <span class="logo-horizontal"><a href="index.html"><img src="imgs/logo-horizontal.svg" alt=""></a> </span>
             <ul>
-                <li><a href="">關於書旅</a></li> 
-                <li><a href="allnews.html">最新消息</a></li>
-                <li><a href="bookmap.html">書站地圖</a></li>
-                <li><a href="faqs.html">常見問題</a></li>
-                <li > <a id = "memberLog"> 登入 / 註冊</a></li>
-                <li><a href="contactUs.html">聯絡我們</a></li>
-                <li><a href="booksearch.html">好書搜尋</a></li>
+                <li><a href="" class="navlist">關於書旅</a></li> 
+                <li><a href="allnews.html" class="navlist showline">最新消息</a></li>
+                <li><a href="bookmap.html" class="navlist" >書站地圖</a></li>
+                <li><a href="faqs.html" class="navlist">常見問題</a></li>
+                <li><a href="contactUs.html" class="navlist">聯絡我們</a></li>
+                <li > <a id = "memberLog" class="iconlist1"> <i class="fa-solid fa-user"></i></a></li>
+                <li><a href="booksearch.html" class="iconlist2"><i class="fa-solid fa-magnifying-glass"></i></a></li>
             </ul>
         </nav>
-        <h1>Lastest news</h1>
-        <h2>最新消息</h2>
     </header>
 
 <section class="main">

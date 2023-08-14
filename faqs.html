@@ -74,6 +74,7 @@
             align-items: center;
             transition: width 1s;  
             margin: auto;
+            cursor: pointer;
         }
 
         .question-title.change{
@@ -214,6 +215,19 @@ input:checked+span+.show-box {
                             rotate(-9.828deg);
                 
             }
+            nav ul .showline::after {
+            content: "";
+                position: absolute;
+                bottom: 3px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 104%;
+                height: 10px;
+                border-radius: 2px;
+                background-color: #FCDD65; 
+                z-index: -1;
+                display: block;
+        }
             header h2 {
                 position: absolute;
                 top: 48%;
@@ -259,27 +273,22 @@ input:checked+span+.show-box {
         <div class="nav-bgc"></div>
         <div class="nav-bar"><i class="fa-solid fa-bars"></i></div>
         <div class="nav-barX"><i class="fa-solid fa-xmark"></i></div>
-        <nav>     
+        <nav>
             <div class="logo-vertical">
                 <a href="index.html"><img src="imgs/logo-vertical.svg" alt=""></a> 
             </div>
             <span class="logo-horizontal"><a href="index.html"><img src="imgs/logo-horizontal.svg" alt=""></a> </span>
             <ul>
-                <li><a href="">關於書旅</a></li> 
-                <li><a href="allnews.html">最新消息</a></li>
-                <li><a href="bookmap.html">書站地圖</a></li>
-                <li><a href="faqs.html">常見問題</a></li>
-                <li > <a id = "memberLog"> 登入/註冊</a></li>
-                <li><a href="contactUs.html">聯絡我們</a></li>
-                <li><a href="booksearch.html">好書搜尋</a></li>
+                <li><a href="" class="navlist">關於書旅</a></li> 
+                <li><a href="allnews.html" class="navlist">最新消息</a></li>
+                <li><a href="bookmap.html" class="navlist" >書站地圖</a></li>
+                <li><a href="faqs.html" class="navlist showline">常見問題</a></li>
+                <li><a href="contactUs.html" class="navlist">聯絡我們</a></li>
+                <li > <a id = "memberLog" class="iconlist1"> <i class="fa-solid fa-user"></i></a></li>
+                <li><a href="booksearch.html" class="iconlist2"><i class="fa-solid fa-magnifying-glass"></i></a></li>
             </ul>
         </nav>
-        <div>
-            <h1 class="title"><strong>F</strong> &  <strong>Q</strong>s</h1>
-            <h2>常見問題</h2>
-        </div>
     </header>
-
     
     <article>
         <div class="qs">
@@ -672,3 +681,6 @@ if (event.target === articleElement) {
 </script>
 </body>
 </html> 
+
+
+

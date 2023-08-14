@@ -126,7 +126,7 @@ input:checked+span+.show-box {
             }
             .content{
                 width: 90%;
-                max-width: 1400px;
+                max-width: 1200px;
                 margin: 10px auto;
                 display: flex;
                 flex-flow: row wrap;
@@ -150,6 +150,7 @@ input:checked+span+.show-box {
                 border: 1px solid rgb(236, 234, 234);
                 margin: 10px 0;
                 color: #363636;
+                /* height: 300px; */
             }
             .cards:hover {
                 box-shadow: 1px 1px 4px rgb(116, 114, 114);
@@ -160,7 +161,18 @@ input:checked+span+.show-box {
             }
 
 
-            .cards:nth-child(2n+1)::after{
+            /* .cards:nth-child(2n+1)::after{
+                content:"";
+                width: 100%;
+                height: 80px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: #FCDD65;
+                z-index: -1;
+            } */
+
+            .cards:after{
                 content:"";
                 width: 100%;
                 height: 40%;
@@ -169,7 +181,8 @@ input:checked+span+.show-box {
                 top: 0;
                 background-color: #FCDD65;
                 z-index: -1;
-            }
+            } 
+            
             
             .card-img{
                 width: 80%;
@@ -245,6 +258,9 @@ input:checked+span+.show-box {
             .card-information div:last-of-type{
                 margin-bottom: 20px;
             }
+            .cards .card-title{
+                line-height: 1.5;
+            }
 
             @media screen and (min-width: 480px) {
                 .col{
@@ -273,6 +289,10 @@ input:checked+span+.show-box {
                 .cards div{
                     font-size: 16px;
                 }
+               header .fa-magnifying-glass:before, .fa-search:before{
+                font-size: 20px;
+                color: #edbe00; 
+               }
                 .card-author{
                     width: 100%;
                     display: inline-block;
@@ -290,7 +310,11 @@ input:checked+span+.show-box {
                     margin: 40px auto;
                 }
 
-        
+                .cards{
+                    height: 424px;
+                    margin: 16px 0;
+                }
+
                 input.searchbook{
                     height: 22px;
                     width: 180px;
@@ -314,6 +338,8 @@ input:checked+span+.show-box {
            
 
             }
+
+           
            
          
                 
@@ -333,19 +359,15 @@ input:checked+span+.show-box {
             </div>
             <span class="logo-horizontal"><a href="index.html"><img src="imgs/logo-horizontal.svg" alt=""></a> </span>
             <ul>
-                <li><a href="">關於書旅</a></li> 
-                <li><a href="allnews.html">最新消息</a></li>
-                <li><a href="bookmap.html">書站地圖</a></li>
-                <li><a href="faqs.html">常見問題</a></li>
-                <li > <a id = "memberLog"> 登入 / 註冊</a></li>
-                <li><a href="contactUs.html">聯絡我們</a></li>
-                <li><a href="booksearch.html">好書搜尋</a></li>
+                <li><a href="" class="navlist">關於書旅</a></li> 
+                <li><a href="allnews.html" class="navlist">最新消息</a></li>
+                <li><a href="bookmap.html" class="navlist" >書站地圖</a></li>
+                <li><a href="faqs.html" class="navlist">常見問題</a></li>
+                <li><a href="contactUs.html" class="navlist">聯絡我們</a></li>
+                <li > <a id = "memberLog" class="iconlist1"> <i class="fa-solid fa-user"></i></a></li>
+                <li><a href="booksearch.html" class="iconlist2"><i class="fa-solid fa-magnifying-glass"></i></a></li>
             </ul>
         </nav>
-        <div>
-            <h1 class="title">Book search</h1>
-            <h2>好書搜尋</h2>
-        </div>
     </header>
     <div class="search-bar">
         <div>

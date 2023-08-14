@@ -266,7 +266,20 @@ input:checked+span+.show-box {
             width: 140px;
             position: relative;
         }
-
+            nav ul .showline::after {
+            content: "";
+                position: absolute;
+                bottom: 3px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 104%;
+                height: 10px;
+                border-radius: 2px;
+                background-color: #FCDD65; 
+                z-index: -1;
+                display: block;
+        }
+        }
 
         .items-container ul li::after {
             content: "";
@@ -376,7 +389,7 @@ input:checked+span+.show-box {
             line-height: 1.5;
         }
 
-         }
+        
     
 
 
@@ -511,19 +524,16 @@ input:checked+span+.show-box {
             </div>
             <span class="logo-horizontal"><a href="index.html"><img src="imgs/logo-horizontal.svg" alt=""></a> </span>
             <ul>
-                <li><a href="">關於書旅</a></li> 
-                <li><a href="allnews.html">最新消息</a></li>
-                <li><a href="bookmap.html">書站地圖</a></li>
-                <li><a href="faqs.html">常見問題</a></li>
-                <li > <a id = "memberLog"> 登入 / 註冊</a></li>
-                <li><a href="contactUs.html">聯絡我們</a></li>
-                <li><a href="booksearch.html">好書搜尋</a></li>
+                <li><a href="" class="navlist">關於書旅</a></li> 
+                <li><a href="allnews.html" class="navlist">最新消息</a></li>
+                <li><a href="bookmap.html" class="navlist showline" >書站地圖</a></li>
+                <li><a href="faqs.html" class="navlist">常見問題</a></li>
+                <li><a href="contactUs.html" class="navlist">聯絡我們</a></li>
+                <li > <a id = "memberLog" class="iconlist1"> <i class="fa-solid fa-user"></i></a></li>
+                <li><a href="booksearch.html" class="iconlist2"><i class="fa-solid fa-magnifying-glass"></i></a></li>
             </ul>
         </nav>
-        <h1>Book point map</h1>
-        <h2>書站地圖</h2>
     </header>
-
        
 
              

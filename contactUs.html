@@ -20,47 +20,48 @@
             }
 
             label.data {
-  position   : relative;
-  cursor     : pointer;
-  display    : flex;
-  align-items: center;
-}
+        position   : relative;
+        cursor     : pointer;
+        display    : flex;
+        align-items: center;
+        }
 
-input {
-  margin-right: 8px;
-}
+        input {
+        margin-right: 8px;
+        }
 
-input:checked+span+.show-box {
-  background: #3a64a6;
-}
+        input:checked+span+.show-box {
+        background: #3a64a6;
+        }
 
- .show-box {
-  position     : absolute;
-  top          : 3px;
-  left         : 3px;
-  width        : 13px;
-  height       : 13px;
-  border-radius: 2px;
-  border       : 1px solid #d8d8d8;
-  background   : white;
-}
+        .show-box {
+        position     : absolute;
+        top          : 3px;
+        left         : 3px;
+        width        : 13px;
+        height       : 13px;
+        border-radius: 2px;
+        border       : 1px solid #d8d8d8;
+        background   : white;
+        }
 
- .show-box:before {
-  content     : '';
-  position    : absolute;
-  top         : 1px;
-  left        : 5px;
-  width       : 3px;
-  height      : 8px;
-  border      : solid white;
-  border-width: 0 2px 2px 0;
-  transform   : rotate(45deg);
-}  
+        .show-box:before {
+        content     : '';
+        position    : absolute;
+        top         : 1px;
+        left        : 5px;
+        width       : 3px;
+        height      : 8px;
+        border      : solid white;
+        border-width: 0 2px 2px 0;
+        transform   : rotate(45deg);
+        }  
 
 
         #textarea-Count{
             font-size: 8px;
             color: #adadad;
+            margin-top: 4px;
         }
         article.content{
         background-position: center;
@@ -225,12 +226,15 @@ input:checked+span+.show-box {
         article .contact-form .sexdiv input{
             width: 12px; 
             border-color: black;
+            margin-left: 0px;
+            margin-right: 20px;
         }
         article .contact-form .sexdiv label{
             width: 30px;
             margin-left: 25px;
             font-size: 12px;
-            padding-top: 2px;  
+            padding-top: 2px; 
+            color: #444444; 
         }
 
         article .contact-form .sexdiv label:first-of-type{
@@ -293,7 +297,11 @@ input:checked+span+.show-box {
                 height: 60px;
                 width: 70%;
             }
-            
+            article .contact-form .sexdiv label{
+                width: 30px;
+                margin-left: 0px;
+                
+            }
         }
 
 
@@ -314,6 +322,9 @@ input:checked+span+.show-box {
             height: 1400px;
             position: relative;
         }
+        article .contact-form .sexdiv label{
+            width: 40px;
+        }
 
         h1{
             color: white;            
@@ -326,6 +337,9 @@ input:checked+span+.show-box {
             font-family:  'Poppins', sans-serif;;
             z-index: 0;
             display: n;
+        }
+        article .contact-form .sexdiv label{
+            font-size: 16px;
         }
 
         article h2{
@@ -390,7 +404,7 @@ input:checked+span+.show-box {
         }
         div, 
         label{
-            font-size: 14px;
+            font-size: 16px;
         }
 
         article .contact-form .submit-btn{
@@ -422,6 +436,20 @@ input:checked+span+.show-box {
             height: 200px;
             border: 1px solid gray;
             margin-top: 15px;
+            
+        }
+        nav ul .showline::after {
+            content: "";
+                position: absolute;
+                bottom: 3px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 104%;
+                height: 10px;
+                border-radius: 2px;
+                background-color: #FCDD65; 
+                z-index: -1;
+                display: block;
         }
         }
         @media screen and (min-width: 900px) {
@@ -447,19 +475,19 @@ input:checked+span+.show-box {
         <div class="nav-bgc"></div>
         <div class="nav-bar"><i class="fa-solid fa-bars"></i></div>
         <div class="nav-barX"><i class="fa-solid fa-xmark"></i></div>
-        <nav>    
+        <nav>
             <div class="logo-vertical">
                 <a href="index.html"><img src="imgs/logo-vertical.svg" alt=""></a> 
             </div>
             <span class="logo-horizontal"><a href="index.html"><img src="imgs/logo-horizontal.svg" alt=""></a> </span>
             <ul>
-                <li><a href="">關於書旅</a></li> 
-                <li><a href="allnews.html">最新消息</a></li>
-                <li><a href="bookmap.html">書站地圖</a></li>
-                <li><a href="faqs.html">常見問題</a></li>
-                <li > <a id = "memberLog"> 登入/註冊</a></li>
-                <li><a href="contactUs.html">聯絡我們</a></li>
-                <li><a href="booksearch.html">好書搜尋</a></li>
+                <li><a href="" class="navlist">關於書旅</a></li> 
+                <li><a href="allnews.html" class="navlist">最新消息</a></li>
+                <li><a href="bookmap.html" class="navlist" >書站地圖</a></li>
+                <li><a href="faqs.html" class="navlist">常見問題</a></li>
+                <li><a href="contactUs.html" class="navlist showline">聯絡我們</a></li>
+                <li > <a id = "memberLog" class="iconlist1"> <i class="fa-solid fa-user"></i></a></li>
+                <li><a href="booksearch.html" class="iconlist2"><i class="fa-solid fa-magnifying-glass"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -516,9 +544,9 @@ input:checked+span+.show-box {
                   
                   <div class="content-div changeColor">
                     <label for="content-input">內容&nbsp;&nbsp; </label>
-                    <span id="textarea-Count">小提醒，字數上限200字，現在剩下200字喔!</span>
-                    <textarea id="content-input" maxlength="200"></textarea>
                     
+                    <textarea id="content-input" maxlength="200"></textarea>
+                    <span id="textarea-Count">小提醒，字數上限200字，現在剩下200字喔!</span>
                   </div>
                     <button type="submit" class="submit-btn" >確認送出</button>                   
             </form>

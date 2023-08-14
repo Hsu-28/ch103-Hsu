@@ -100,7 +100,7 @@
                 z-index: 1;
             }
             
-            nav ul li::after {
+            /* nav ul li::after {
                 content: "";
                 position: absolute;
                 bottom: 0px;
@@ -112,7 +112,7 @@
                 background-color: #3a64a6;
                 transition: width 0.3s ease; 
                 z-index: -1;
-            }
+            } */
             
             nav ul li:hover:after {
                 width: 80%; 
@@ -196,11 +196,7 @@
                 margin-top: 8px;
             }
             
-            /* .logo-vertical{
-                display: none;
-            } */
-
-            nav ul li::after {
+            nav ul .navlist::after {
                 content: "";
                 position: absolute;
                 bottom: 3px;
@@ -213,12 +209,55 @@
                 transition: width 0.3s ease; 
                 z-index: -1;
             }
+            nav ul .iconlist2{
+                font-size: 20px;
+            }
+            /* nav ul .iconlist1::after{
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 150%;
+                border-radius: 2px;
+                background-color: white;; 
+                transition: width 0.3s ease; 
+                z-index: -1;
+                
+            }
+            nav ul .iconlist2::after{
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 150%;
+                border-radius: 2px;
+                background-color: white; 
+                transition: width 0.3s ease; 
+                z-index: -1;
+                
+            } */
             .logo-horizontal{   
                 display: block;
             }
             
-            nav ul li:hover:after {
+            nav ul .navlist:hover:after {
                 width: 80%; 
+            } 
+            nav ul .iconlist1:hover:after {
+                width: 180%; 
+            } 
+            nav ul .iconlist1:hover {
+                color: #e0b000; 
+            } 
+            nav ul .iconlist2:hover:after {
+                width: 150%; 
+            } 
+            nav ul .iconlist2:hover {
+                color: #edbe00; 
             } 
             
             header ul li::before{
