@@ -1822,21 +1822,22 @@ input:checked+span+.show-box {
     </script>
     <script src="js/alluse.js"></script>
     <!-- 視窗下拉logo變換 -->
-    <script>        
-    window.addEventListener('scroll', function() {
-        let logoV = document.querySelector('.logo-vertical');
-        let logoH = document.querySelector('.logo-horizontal');
-        if (window.scrollY >= 30) {
-            logoV.style.display = 'none';
-            logoH.style.opacity = 1;
-        } else {
-            logoV.style.display = 'block';
-            logoH.style.opacity = 0;
-        }
+    <script>
+        window.addEventListener('scroll', function() {
+            if (window.innerWidth > 768) {
+                let logoV = document.querySelector('.logo-vertical');
+                let logoH = document.querySelector('.logo-horizontal');
+                if (window.scrollY >= 30) {
+                    logoV.style.display = 'none';
+                    logoH.style.opacity = 1;
+                } else {
+                    logoV.style.display = 'block';
+                    logoH.style.opacity = 0;
+                }
+            }
         });
-
-
     </script>
+    
     <!-- 註冊跳轉 -->
     <script>
             firstN.addEventListener("click", function(){
