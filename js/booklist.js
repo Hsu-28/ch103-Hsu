@@ -174,10 +174,15 @@ const books = [{
 },
 ]
 
-function changeBooks (){
-let i = Math.floor(Math.random()*books.length)
+
 
 // $('#apple').html(書名).fadeIn(1500)
+
+
+
+// 靠這個函式把書的內容資訊都換掉
+function changeBooks (){
+let i = Math.floor(Math.random()*books.length)
 
 let bookname = document.getElementById('bookname')
 bookname.innerHTML = books[i].title
@@ -196,6 +201,11 @@ bookIntroduce.innerHTML = books[i].content
 
 }
 
+
+
+
+
+// changeBook  是那個轉圈的 "再抽一次"，  點了之後執行函示 changeBooks
 let changeBook = document.getElementById('changeBook')
 changeBook.addEventListener('click',changeBooks)
 
