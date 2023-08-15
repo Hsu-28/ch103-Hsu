@@ -862,5 +862,21 @@ if (event.target === articleElement) {
 }
 });
 </script>
+
+<script>
+    $(function(){
+        
+        let maxnum = 200
+
+        $('#content-input').keyup(function(){
+            let nownum = $(this).val().length
+
+
+            $('#textarea-Count').html(`小提醒，字數上限200字，現在剩下${maxnum - nownum}字喔!`)
+        })
+
+    })
+
+</script>
 </body>
 </html>
